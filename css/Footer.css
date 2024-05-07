@@ -6,13 +6,13 @@
     font-family: lato, sans-serif;
     color: #A3B3BC;
 }
-.footer__container{
-    max-width: 1260px;
-    padding: 100px 15px 0;
-    margin: 0 auto;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
+.footer__inner{
+  max-width: 1260px;
+  padding: 100px 15px 0;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .footer__zag{
     color: white;
@@ -33,9 +33,7 @@
 .fotter_contact:hover{
     color: white;
 }
-label{
-    text-align: center;
-}
+
 .input__footer{
     display: block;
     line-height: 28px;
@@ -90,9 +88,7 @@ label{
     color: #A3B3BC;
     margin-right: 10px;
 }
-fieldset{
-    display: flex;
-}
+
 .form__text{
     text-align: center;
 }
@@ -125,9 +121,10 @@ fieldset{
     height: 100px;
     display: flex;
     justify-content: center;
+    align-items: center;
     transition: all .3s;
 }
-.button__up button{
+.button__up {
     width: 100%;
     height: 100px;
     display: flex;

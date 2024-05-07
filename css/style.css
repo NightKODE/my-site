@@ -1,0 +1,81 @@
+@font-face {
+  font-family: Cormorant;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cormorant'),
+    url('../Fonts/Cormorant/Cormorant-Regular.woff2') format('woff2'),
+    url('../Fonts/Cormorant/Cormorant-Regular.woff') format('woff'),
+    url('../Fonts/Cormorant/Cormorant-Regular.eot') format('eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Cormorant;
+  font-style: normal;
+  font-weight: 900;
+  src: local('Cormorant'),
+    url('../Fonts/Cormorant/Cormorant-Bold.woff2') format('woff2'),
+    url('../Fonts/Cormorant/Cormorant-Bold.woff') format('woff'),
+    url('../Fonts/Cormorant/Cormorant-Bold.eot') format('eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato'),
+    url('../Fonts/Lato/Lato-Regular.woff2') format('woff2'),
+    url('../Fonts/Lato/Lato-Regular.woff') format('woff'),
+    url('../Fonts/Lato/Lato-Regular.eot') format('eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  src: local('Lato'),
+    url('../Fonts/Lato/Lato-Bold.woff2') format('woff2'),
+    url('../Fonts/Lato/Lato-Bold.woff') format('woff'),
+    url('../Fonts/Lato/Lato-Bold.eot') format('eot');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lombardina;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lombardina'),
+    url('../Fonts/Lombardina/Lombardina.woff2') format('woff2'),
+    url('../Fonts/Lombardina/Lombardina.woff') format('woff'),
+    url('../Fonts/Lombardina/Lombardina.eot') format('eot');
+  font-display: swap;
+}
+
+/* ========================================== GLOBAL ========================================== */
+/* ========================================== GLOBAL ========================================== */
+.wrapper {
+  position: relative;
+}
+
+.main__inner {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+}
+
+.aside__1 {
+  min-width: 25%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+}
+
+.section {
+  height: 100%;
+  background: #c21818;
+  padding: 30px 15px;
+}
