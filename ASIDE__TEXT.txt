@@ -1,0 +1,226 @@
+        <!-- <aside class="aside__1">
+            <div class="wrapper__aside--1">
+                <div class="inner__aside">
+                    <div class="li__html">
+                        <div class="li__css--zag">HTML</div>
+                        <div class="li__css--linez"></div>
+                        <ul>
+                            <li class="li__css--p">
+                                <a href="#lesson_1">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">1.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_2">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">2.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_3">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">3.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_4">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">4.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_5">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">5.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_6">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">6.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_7">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">7.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_8">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">8.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_9">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">9.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_10">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">10.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_11">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">11.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_12">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">12.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_13">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">13.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="li__css">
+                        <div class="li__css--zag">CSS</div>
+                        <div class="li__css--linez"></div>
+                        <ul>
+                            <li class="li__css--p">
+                                <a href="#lesson_1">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">1. Обращение к селекторам.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_2">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">2. Стилизация текста.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_3">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">3. Единицы измерения.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_4">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">4. Подключение шрифтов.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_5">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">5. Position.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_6">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">6. Transform.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_7">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">7. Background.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_8">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">8. Transition.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_9">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">9. Animation.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_10">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">10. Flex-box.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_11">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">11. Grid.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_12">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">12. Псевдоклассы.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                            <li class="li__css--p">
+                                <a href="#lesson_13">
+                                    <button type="button" class="button__li">
+                                        <div class="button__element">13. Псевдоэлементы.</div>
+                                    </button>
+                                    <div class="li__css--line"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside> -->
