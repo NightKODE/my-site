@@ -4,7 +4,7 @@
   font-size: 24px;
   font-weight: 900;
   line-height: 150%;
-  background: #28313b;
+  background: #0a1014;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -66,26 +66,17 @@
 }
 
 .search__button-icon {
-  background: #28313b;
-}
-
-.search__button img {
-  width: 22px;
-  height: 22px;
-  background: fixed -webkit-linear-gradient(315deg, #485461 0%, #28313b 74%);
-  background: fixed linear-gradient(315deg, #485461 0%, #28313b 74%);
+  background: #0a1014;
 }
 
 .header__search-stroke {
-  background: fixed -webkit-linear-gradient(315deg, #485461 0%, #28313b 74%);
-  background: fixed linear-gradient(315deg, #485461 0%, #28313b 74%);
+  background:#0a1014;
   color: white;
   font-size: 18px;
 }
 
 .header__search-stroke::placeholder {
-  background: fixed -webkit-linear-gradient(315deg, #485461 0%, #28313b 74%);
-  background: fixed linear-gradient(315deg, #485461 0%, #28313b 74%);
+  background:#0a1014;
   color: #787A80;
 }
 

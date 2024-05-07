@@ -1,6 +1,5 @@
 .footer {
-    /* background-color: rgb(28,28,28); */
-    background-color: #3B4C56;
+    background-color: #0a1014;
     font-size: 20px;
     font-weight: 700;
     font-family: lato, sans-serif;
@@ -31,7 +30,7 @@
     margin-bottom: 0px;
 }
 .fotter_contact:hover{
-    color: white;
+    color: #f35510;
 }
 
 .input__footer{
@@ -140,7 +139,7 @@
     transition: all .3s;
 }
 .button__up:hover {
-    background: #546772;
+    background: #15242c;
 
 }
 .button__up:hover p{
