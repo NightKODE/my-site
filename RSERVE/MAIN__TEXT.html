@@ -1,0 +1,1531 @@
+<section class="section__CSS" id="CSS">
+  <article class="CSS__Lessons lesson__1" id="lesson__1">
+    <div class="heading">CSS lesson 1. <br> Обращение к селекторам.</div>
+    <hr>
+    <ul class="lesson__inner">
+      <li>Обращение к селектору класса через точку <br> .parent-blue{}</li>
+      <li>Обращение через айди <br> #id-1{}</li>
+      <li>Обращение к нескольким классам <br> .blinck1, .blinck2, .blinck3{}</li>
+      <li>Обращение через тег и его класс через точку <br> div.loga/span.loga{}</li>
+      <li>Обращение к классу через > <br> .parent-1>.child{}
+        <p>Тем самым стиль присваевается сомому элементу и дочернему.</p>
+      </li>
+    </ul>
+    <hr>
+  </article>
+  <article class="CSS__Lessons lesson__2" id="lesson__2">
+    <div class="heading">CSS lesson 2. <br> Стилизация текста.</div>
+    <hr>
+    <ul class="lesson__inner">
+      <li class="one">color:; - Определяет цвет шрифта.</li>
+      <li class="lesson2__fontfamily">
+        font-family:; - Определяет стиль шрифта.
+        <p class="text1">
+          Семейтв шрифтов указывается несколько, чтобы подгружать следующий, в случае отстутвия
+          какого-либо. Вконце
+          всегда
+          стваится serif или sans-serif.
+        </p>
+      </li>
+      <li class="lesson2__size">
+        font-size:; - Определяет размер шрифта.
+      </li>
+      <li class="lesson2__height">
+        line-height:; - Определяет размер строчки.
+      </li>
+      <li class="lesson2__style">
+        font-style:; - Определяет курсив шрифта.
+      </li>
+      <li class="lesson2__weight">
+        font-weight:; - Определяет жирность шрифта.
+      </li>
+      <li class="lesson2__text-align">
+        text-align:; - Определяет прикрепление к правому краю, левому краю или по центру.
+        <br> В данном случае по центру.
+      </li>
+      <li class="lesson2__decoration">
+        text-decoration:; - Определяет подчеркивание.
+      </li>
+      <li class="lesson2__shadow">
+        text-shadow:; - Определяет тень текста.
+      </li>
+      <li class="lesson2__transform">
+        text-transform:; - Определяет регистр.
+      </li>
+      <li class="lesson2__indent">
+        text-indent:; - Определяет отступ от края.
+      </li>
+      <li class="lesson2__spacing">
+        letter-spacing:; - Определяет расстояния между буквами.
+      </li>
+      <li class="lesson2__word-spacing">
+        word-spacing:; - Определяет растояние между словами.
+      </li>
+      <li class="lesson2__white-space">
+        white-space:; - Определяет сворачивается ли пробел и как.
+      </li>
+    </ul>
+    <hr>
+  </article>
+  <article class="CSS__Lessons lesson__3" id="lesson__3">
+    <div class="heading">CSS lesson 3. <br> Единицы измерения.</div>
+    <hr>
+    <div class="lesson__inner">
+      <div class="sub__heading">1. vh и vw</div>
+      <p>
+        Эти величины определяют процентное отбражение элемента на экране вьюпорта или девайса. <br>
+        1vh и 1vw равны одному проценту от вьюпорта.
+      </p>
+      <img class="img" src="/images/vwvh.jpg" alt="">
+      <div class="sub__heading">2. vmin и vmax.</div>
+      <p>
+        vmin - вычисления опираяются на минимальную сторону вьюпорта. Та, что меньше и будет влиять на
+        элемент для которго установлено свойство vmin.
+        Нижуе кубик с примером.
+      </p>
+      <div class="kubik">
+        <div class="kubik_text">Ширина данного блока зависит от меньшей стороны вьюпорта <br> и его
+          ширина будет 50% от нее.</div>
+      </div>
+      <div class="kubik_2">
+        <div class="kubik_text">Ширина данного блока зависит от большей стороны вьюпорта и его
+          ширинна
+          будет 50% от нее.</div>
+      </div>
+      <div class="sub__heading">3. em и rem.</div>
+      <p>
+        em - учитывает характеристики родительского элемента, обнуляещего файла или параметров
+        браузера
+        и умножает его на введенное количество. <br>
+        rem - учитывает характеристики только самого главного элемента (html) и умножает его на
+        введенное количество.
+      </p>
+      <div class="em-3">
+        Далеко-далеко, за.
+        <div class="em-3">
+          Далеко-далеко, за.
+          <div class="em-3">
+            Далеко-далеко, за.
+            <div class="em-3">
+              Далеко-далеко, за.
+              <div class="em-3">
+                Далеко-далеко, за.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>
+        Каждой строчке задан класс со стилем - font-size: 1.5em; <br> Видно, что каждая строчка
+        наследует
+        em размер опираясь на родителся. Последняя строчка перемножила все предыдущие и получилась
+        самой
+        большой.
+      </p>
+    </div>
+    <hr>
+  </article>
+  <article class="CSS__Lessons lesson__4" id="lesson__4">
+    <div class="heading">CSS lesson 4. <br> Подключение шрифтов. </div>
+    <hr>
+    <div class="lesson__inner">
+      <div class="CSS__Lesson CSS__Lesson--4">
+        <div class="sub__heading">1 вариант.</div>
+        <p>Подключить шрифт можно через тег link в шапке файла (head), и источником является какой-либо
+          ресурс.</p>
+        <p>Однако, если такой ресурс навернется, шрифт не подключится.</p>
+        <img class="img" src="/images/code-font.png" alt="">
+        <div class="sub__heading">2 вариант.</div>
+        <p>Во втором вариантер все сложнее, но он надежен как швейцарские часы. <br>Алгоритм такой:</p>
+        <ul>
+          <li>1. Скачиваем шрифт из любого источника, учитывая все характеристики шрифта.</li>
+          <li>2. Конвертируем шрифт в три формата: woff, woff2, eot.</li>
+          <li>3. Лучше закинуть все файлы одного семейства шрифта в одну папку.</li>
+          <li>4. Подключаем шрифт свойством ниже:</li>
+        </ul>
+        <img class="img" src="/images/@font-face.png" alt="">
+      </div>
+    </div>
+    <hr>
+  </article>
+  <article class="CSS__Lessons lesson__5" id="lesson__5">
+    <div class="heading">CSS lesson 5. <br> Position.</div>
+    <hr>
+    <div class="lesson__inner">
+      <div class="CSS__Lesson CSS__Lesson--5">
+        <ul>
+          <li><span class="termin__li">stiky</span> - Элемент позиционируется в соответствии с нормальным
+            потоком документа, а затем
+            смещается относительно его ближайшего прокручивающего предка и содержащего блока
+            (ближайший
+            родительский уровень блока), включая элементы, . связанные с таблицей, на основе
+            значений top, right, bottom, u left.</li>
+          <hr>
+          <li><span class="termin__li">absolute</span> - Элемент удаляется из обычного потока документов, и для
+            элемента в макете
+            страницы
+            не
+            создаётся пробела. Он расположен относительно его ближайшего относительно
+            позиционированного
+            предка, если таковой имеется; в противном случае он помещается относительно исходного
+            содержащего блока. Его конечная позиция определяется значениями top, right, bottom, n
+            left.
+          </li>
+          <hr>
+          <li><span class="termin__li">fixed</span> - Элемент выбивается из обычного потока документа, и для
+            элемента в макете
+            страницы не
+            создаётся пространство. Он позиционируется относительно исходного содержащего блока,
+            установленного viewport, за исключением случаев, когда один из его предков имеет
+            свойство
+            transform, perspective, или filter, установленное на что-то иное, кроме попе (см. CSS
+            Transforms
+            Spec), и в этом случае этот предок ведёт себя как содержащий блок.
+            (Обратите внимание, что существуют несогласованности браузера с
+            perspective u filter, способствующими содержанию формирования
+            блоков.) Его конечная позиция определяется значениями top, right, bottom и left. Это
+            значение
+            всегда создаёт новый контекст наложения. В печатных документах элемент помещается в одно
+            и
+            то же
+            положение на каждой странице.</li>
+          <hr>
+          <li><span class="termin__li">stiky</span> - Элемент позиционируется в соответствии с нормальным
+            потоком документа, а затем
+            смещается относительно его ближайшего прокручивающего предка и содержащего блока
+            (ближайший
+            родительский уровень блока), включая элементы, . связанные с таблицей, на основе
+            значений top, right, bottom, u left.</li>
+          <hr>
+        </ul>
+        <div class="wrapper_l5">
+          <div class="container__0">
+            <div class="block red">1</div>
+            <div class="block blue">
+              <div>2</div>
+              relative <br>
+              top: 20px; <br>
+              left: 30px;
+            </div>
+            <div class="block orange">
+              <div>3</div>
+              absolute<br>
+              top: 100px;<br>
+              left: 30px;
+            </div>
+            <div class="block green">
+              <div>4</div>
+              sticky<br>
+              top: 0px;<br>
+              left: 0px;
+            </div>
+            <div class="block purple">5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </article>
+  <article class="CSS__Lessons lesson__6" id="lesson__6">
+    <div class="heading">CSS lesson 6. <br> Transform.</div>
+    <hr>
+    <div class="lesson__inner">
+      <div class="translate">
+        <div class="container_1">
+          <h2 class="l6__title">Translate</h2>
+          <div class="translate__blocks">
+            <div class="translate__red red_block">
+              <div class="l6">transform: translate(0px,-100px);</div>
+            </div>
+            <div class="translate__blue blue_block">
+              <div class="l6">transform: translateY(20px);</div>
+            </div>
+          </div>
+          <div>
+            <div class="termin">translate</div> - преобразует объект в 2D плоскости. <p>Можно сказать работает
+              как position.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="rotate">
+        <div class="container_1">
+          <h2 class="l6__title">Rotate</h2>
+          <div class="rotate__blocks">
+            <div class="rotate__red red_block">
+              <div class="l6">transform: rotatex(970deg);</div>
+            </div>
+            <div class="rotate__blue blue_block">
+              <div class="l6">transform: rotate(45deg);</div>
+            </div>
+          </div>
+          <div>
+            <div class="termin">rotate</div> - поворачивает объект в 2D плоскости.
+          </div>
+          <p>
+            Можно задать точку вращения свойством transform-origin:;. <br>
+            Можно вращать вдоль оси X или Y.
+          </p>
+        </div>
+      </div>
+      <hr>
+      <div class="scale">
+        <div class="container_1">
+          <h2 class="l6__title">Scale</h2>
+          <div class="scale__blocks">
+            <div class="scale__red red_block">
+              <div class="l6">transform: scale(.8);</div>
+            </div>
+            <div class="scale__blue blue_block">
+              <div class="l6">transform: scaleX(2);</div>
+            </div>
+          </div>
+          <div>
+            <div class="termin">scale</div> - масштабирует (растягивает или сжимает) объект.
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="skew">
+        <div class="container_1">
+          <h2 class="l6__title">Skew</h2>
+          <div class="skew__blocks">
+            <div class="skew__red red_block">
+              Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
+              тексты.
+            </div>
+            <div class="skew__blue blue_block"></div>
+          </div>
+          <div>
+            <div class="termin">skew</div> - искажает элемент в 2D плоскости.
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </article>
+  <article class="CSS__Lessons lesson__7" id="lesson__7">
+    <div class="heading">CSS lesson 7. <br> Background.</div>
+    <hr>
+    <div class="lesson__inner">
+      <img class="img" src="/images/background.png" alt="">
+    </div>
+    <hr>
+  </article>
+  <article class="CSS__Lessons lesson__8" id="lesson__8">
+    <div class="heading">CSS lesson 8. <br> Transition.</div>
+    <hr>
+    <div class="lesson__inner">
+      <div class="cont_2">
+        <div class="transition">
+          <div class="block_t red_t"></div>
+          <div class="block_t blue_t"></div>
+          <div class="block_t orange_t"></div>
+          <div class="block_t purple_t"></div>
+        </div>
+      </div>
+      <hr>
+      <div>
+        <div class="termin">Transition</div> позволяет определять переходное состояние между двумя состояниями
+        элемента.
+      </div>
+      <p>Различные состояния могут быть определены с помощью псевдоклассов, таких как :hover или
+        :active
+        или установлены динамически с помощью JavaScript.</p>
+      <img class="img" src="/images/transition.png" alt="">
+    </div>
+    <hr>
+  </article>
+  <article class="CSS__Lessons lesson__9" id="lesson__9">
+    <div class="heading">CSS lesson 9. <br> Animation.</div>
+    <hr>
+    <div class="lesson__inner">
+      <div class="wrapper_a">
+        <div class="container_a">
+          <div class="block_a"></div>
+        </div>
+      </div>
+      <div class="pater">
+        <div class="polosa">Текст в прорези для глазa</div>
+        <div class="glaz"></div>
+      </div>
+      <hr>
+      <p>Правило @keyframes CSS управляет промежуточными шагами в последовательности
+        анимации CSS,
+        определяя стили для ключевых кадров (или путевых точек) в последовательности анимации. Это
+        дает
+        больший контроль над промежуточными этапами последовательности анимации, чем переходы.</p>
+      <hr>
+      <img class="img" src="/images/animation.png" alt="">
+    </div>
+    <hr>
+  </article>
+  <article class="CSS__Lessons lesson__10" id="lesson__10">
+    <div class="heading">CSS lesson 10. <br> Flex-box.</div>
+    <hr>
+    <div class="lesson__inner">
+      <div class="flexbox">
+        <div class="flexbox__item">
+          <div class="flexbox__item-content">1</div>
+        </div>
+        <div class="flexbox__item">
+          <div class="flexbox__item-content">2</div>
+        </div>
+        <div class="flexbox__item">
+          <div class="flexbox__item-content">3</div>
+        </div>
+      </div>
+      <div class="desc">
+        <div class="desc__item">
+          <div class="desc__color desc__color--f"></div>
+          <div class="desc__text">- Флексбокс</div>
+        </div>
+        <div class="desc__item">
+          <div class="desc__color desc__color--i"></div>
+          <div class="desc__text">- Элементы флексбокса</div>
+        </div>
+        <div class="desc__item">
+          <div class="desc__color desc__color--c"></div>
+          <div class="desc__text">- Контент</div>
+        </div>
+      </div>
+      <img src="/images/flexbox.png" alt="" class="img">
+    </div>
+    <hr>
+  </article>
+  <article class="CSS__Lessons lesson__11" id="lesson__11">
+    <div class="heading">CSS lesson 11. <br> Grid.</div>
+    <hr>
+    <div class="lesson__inner">
+      <div class="termin">Грид для демонстрации колонок и строк</div>
+      <div class="grid">
+        <div class="container_g">
+          <div class="grid-1">
+            <div class="grid-1__item grid-1__item--1 item">1</div>
+            <div class="grid-1__item grid-1__item--2 item">2</div>
+            <div class="grid-1__item grid-1__item--3 item">3</div>
+            <div class="grid-1__item grid-1__item--4 item">4</div>
+            <div class="grid-1__item grid-1__item--5 item">5</div>
+            <div class="grid-1__item grid-1__item--6 item">6</div>
+          </div>
+        </div>
+      </div>
+      <div class="t_g">
+        .grid-1 {<br>
+        display: grid;<br>
+        /* grid-template-columns: 1fr 1fr 1fr;<br>
+        grid-template-rows: 200px auto; */<br>
+        grid-template: repeat(2, 300px) / repeat(3, 1fr);<br>
+        justify-items: start;<br>
+        align-items: start;<br>
+        }<br>
+        .grid-1__item--1 {<br>
+        order: 1;<br>
+        }<br>
+        .grid-1__item--2 {<br>
+        order: 2;<br>
+        }<br>
+        .grid-1__item--3 {<br>
+        order: 5;<br>
+        }<br>
+        .grid-1__item--4 {<br>
+        order: 4;<br>
+        justify-self: stretch;<br>
+        align-self: center;<br>
+        }<br>
+        .grid-1__item--5 {<br>
+        order: 3;<br>
+        }<br>
+        .grid-1__item--6 {<br>
+        order: 6;<br>
+        }
+      </div>
+      <hr>
+      <div class="termin">Грид для демонстрации областей</div>
+      <div class="grid">
+        <div class="container_g">
+          <div class="grid-2">
+            <div class="grid-2__item grid-2__item--header item">header</div>
+            <div class="grid-2__item grid-2__item--main item">main</div>
+            <div class="grid-2__item grid-2__item--aside item">aside</div>
+            <div class="grid-2__item grid-2__item--footer item">footer</div>
+          </div>
+        </div>
+      </div>
+      <div class="t_g">.grid-2 {<br>
+        display: grid;<br>
+        grid-template:<br>
+        "header header"1fr "main aside"5fr "footer footer"2fr / 1fr 300px;<br>
+        }<br>
+        .grid-2__item--header {<br>
+        grid-area: header;<br>
+        }<br>
+        .grid-2__item--main {<br>
+        grid-area: main;<br>
+        }<br>
+        .grid-2__item--aside {<br>
+        grid-area: aside;<br>
+        }<br>
+        .grid-2__item--footer {<br>
+        grid-area: footer;<br>
+        }</div>
+      <hr>
+      <div class="termin">Грид для демонстрации неявной сетки</div>
+      <div class="grid">
+        <div class="container_g">
+          <div class="grid-3">
+            <div class="grid-3__item item">1</div>
+            <div class="grid-3__item item">2</div>
+            <div class="grid-3__item item">3</div>
+            <div class="grid-3__item item">4</div>
+            <div class="grid-3__item item">5</div>
+            <div class="grid-3__item grid-3__item--6 item">6</div>
+            <div class="grid-3__item grid-3__item--7 item">7</div>
+          </div>
+        </div>
+      </div>
+      <div class="t_g">
+        .grid-3 {<br>
+        display: grid;<br>
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;<br>
+        grid-auto-rows: 400px;<br>
+        /* grid-auto-columns: 500px; */<br>
+        grid-auto-flow: dense;<br>
+        }<br>
+        .grid-3__item--6 {<br>
+        grid-column: span 2;<br>
+        }
+      </div>
+      <hr>
+      <div class="termin">Грид для демонстрации работы конкретно с элементами</div>
+      <div class="grid">
+        <div class="container_g">
+          <div class="grid-4">
+            <div class="grid-4__item grid-4__item--1 item">1</div>
+            <div class="grid-4__item grid-4__item--2 item">2</div>
+            <div class="grid-4__item grid-4__item--3 item">3</div>
+            <div class="grid-4__item grid-4__item--4 item">4</div>
+            <div class="grid-4__item grid-4__item--5 item">5</div>
+            <div class="grid-4__item grid-4__item--6 item">6</div>
+          </div>
+        </div>
+      </div>
+      <div class="t_g">
+        .grid-4__item--3 {<br>
+        /* grid-row-start: 2;<br>
+        grid-row-end: 3;<br>
+        grid-column-start: 2;<br>
+        grid-column-end: 4; */<br>
+        /* grid-row: 2 / 3;<br>
+        grid-column: 2 /4; */<br>
+        grid-row: liner2 / liner3;<br>
+        grid-column: col3 / col4;<br>
+        }<br>
+      </div>
+      <img src="/images/grid.png" alt="" class="img">
+    </div>
+    <hr>
+  </article>
+  <article class="CSS__Lessons lesson__12" id="lesson__12">
+    <div class="heading">CSS lesson 12. <br> Псевдоклассы.</div>
+    <hr>
+    <div class="lesson__inner">
+      <div class="termin">Кнопка для демонстрации эффектов</div>
+      <div class="container__12">
+        <a class="link" href="http://google.com" target="blank">Здесь у нас ссылка</a>
+        <p class="p__l12">.link:visited{<br>
+          background: #6975ff;<br>
+          }<br>
+          .link:hover{<br>
+          background: rgb(72, 255, 72);<br>
+          }<br>
+          .link:active{<br>
+          background: #ff7e7e;<br>
+          }</p>
+        <div class="termin">Инпут</div>
+        <input class="input" type="text">
+        <p class="p__l12">
+          .input:focus{<br>
+          box-shadow: 0 0 10px 10px white;<br>
+          }
+        </p>
+      </div>
+      <div class="termin">Пункты для демонстрации обращения</div>
+      <div class="container__12">
+        <ul class="list">
+          <li class="list__item">Далеко-далеко, за словесными.</li>
+          <li class="list__item">Далеко-далеко, за словесными.</li>
+          <li class="list__item">Далеко-далеко, за словесными.</li>
+          <li class="list__item">Далеко-далеко, за словесными.</li>
+          <li class="list__item">Далеко-далеко, за словесными.</li>
+          <li class="list__item">Далеко-далеко, за словесными.</li>
+          <li class="list__item">Далеко-далеко, за словесными.</li>
+          <li class="list__item">Далеко-далеко, за словесными.</li>
+          <li class="list__item">Далеко-далеко, за словесными.</li>
+          <li class="list__item">Далеко-далеко, за словесными.</li>
+        </ul>
+      </div>
+      <p class="p__l12">
+        .list__item:first-child{<br>
+        color: red;<br>
+        }<br>
+        .list__item:last-child{<br>
+        color: rgb(0, 255, 42);<br>
+        }<br>
+        .list__item:nth-child(3){<br>
+        color: aquamarine;<br>
+        }<br>
+      </p>
+      <img src="/images/псевдоклассы.png" alt="" class="img">
+    </div>
+    <hr>
+  </article>
+  <article class="CSS__Lessons lesson__13" id="lesson__13">
+    <div class="heading">CSS lesson 13. <br> Псевдоэлементы.</div>
+    <hr>
+    <div class="lesson__inner">
+      <div class="block-wrapper">
+        <div class="block__13"></div>
+      </div>
+      <ul class="list">
+        <li class="list__item__13">Далеко-далеко, за словесными.</li>
+        <li class="list__item__13">Далеко-далеко, за словесными.</li>
+        <li class="list__item__13">Далеко-далеко, за словесными.</li>
+        <li class="list__item__13">Далеко-далеко, за словесными.</li>
+        <li class="list__item__13">Далеко-далеко, за словесными.</li>
+      </ul>
+      <a class="link__13" href="#">Изучить HTML</a>
+      <p class="text">
+        Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные
+        тексты. Ipsum единственное
+        над
+        рекламных от всех коварный рот букв! Жизни, текста текст залетают маленький оксмокс
+        безопасную запятых
+        путь
+        безорфографичный языкового, реторический точках выйти что? Над рыбного продолжил
+        выйти, что дал не
+        заманивший
+        проектах ipsum lorem. Взгляд семь они своих буквоград запятых?
+      </p>
+      <img src="/images/псевдоэлементы.png" alt="" class="img">
+    </div>
+    <hr>
+  </article>
+</section>
+====================================================== CSS ========================================================================
+.main__container {
+  font-family: Lato;
+  font-size: 30px;
+  line-height: 150%;
+}
+
+hr {
+  height: 3px;
+  background: rgb(243, 85, 16);
+  margin-bottom: 20px;
+  margin: 0 5%;
+  border-radius: 2px;
+}
+
+.heading {
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 150%;
+  text-align: center;
+  font-family: Lombardina;
+}
+
+.sub__heading {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+}
+.sub__heading::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 35px;
+  left: -20px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #f35510;
+}
+
+.lesson__inner {
+  padding: 30px 50px 30px 50px;
+}
+.lesson__inner p {
+  background: #596573;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin: 0 15px;
+}
+.lesson__inner li {
+  margin: 30px 0;
+}
+.lesson__inner li::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 35px;
+  left: -20px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #f35510;
+}
+.lesson__inner .termin {
+  font-weight: 700;
+}
+.lesson__inner .termin::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 35px;
+  left: -20px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #f35510;
+}
+
+.termin__li {
+  font-weight: 700;
+}
+
+.img {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 20px;
+}
+
+.lesson2__one {
+  color: rgb(255, 0, 0);
+}
+
+.lesson2__fontfamily {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.lesson2__text1 {
+  font-family: serif;
+}
+
+.lesson2__size {
+  font-size: 20px;
+}
+
+.lesson2__height {
+  line-height: 50px;
+}
+
+.lesson2__style {
+  font-style: italic;
+}
+
+.lesson2__weight {
+  font-weight: 900;
+}
+
+.lesson2__text-align {
+  text-align: center;
+}
+
+.lesson2__decoration {
+  text-decoration: underline;
+}
+
+.lesson2__shadow {
+  text-shadow: 2px 2px 2px #000;
+}
+
+.lesson2__transform {
+  text-transform: capitalize;
+}
+
+.lesson2__indent {
+  text-indent: 50px;
+}
+
+.lesson2__spacing {
+  letter-spacing: 5px;
+}
+
+.lesson2__word-spacing {
+  word-spacing: 10px;
+}
+
+.kubik {
+  width: 50vmin;
+  height: 200px;
+  background: #666666;
+  margin: 20px 0;
+  padding: 20px 0 20px;
+}
+
+.kubik_2 {
+  width: 50vmax;
+  height: 200px;
+  background: #666666;
+  margin: 20px 0;
+}
+
+.kubik_text {
+  color: white;
+  text-align: center;
+}
+
+.em-3 {
+  font-size: 1.5em;
+  line-height: normal;
+  color: white;
+}
+
+.lesson__4 img {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.wrapper__l5 {
+  padding: 100px 15px;
+  height: 600px;
+}
+
+.container__0 {
+  position: relative;
+  top: 0;
+  margin: 0 auto;
+  max-width: 1000px;
+  height: 500px;
+  border: 10px solid #999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+}
+
+.block {
+  height: 300px;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.842);
+          box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.842);
+}
+
+.red {
+  background-color: rgb(235, 118, 118);
+  color: white;
+  text-align: center;
+}
+
+.blue {
+  background-color: rgb(80, 91, 235);
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+
+.orange {
+  background-color: rgb(224, 158, 59);
+  position: absolute;
+  color: white;
+  text-align: center;
+  top: 100px;
+  left: 30px;
+}
+
+.green {
+  background-color: rgb(113, 212, 113);
+  position: sticky;
+  color: white;
+  text-align: center;
+  top: 0px;
+  left: 0px;
+}
+
+.purple {
+  background-color: rgb(205, 148, 231);
+  color: white;
+  text-align: center;
+  /* position: fixed;
+    top: 50px; */
+}
+
+.l6 {
+  font-family: serif;
+  color: white;
+  text-align: center;
+}
+
+.container_1 {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.line {
+  background-color: #fff;
+  height: 2px;
+}
+
+.translate, .rotate, .scale, .skew {
+  padding: 100px 0 0;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.translate__blocks,
+.rotate__blocks,
+.scale__blocks,
+.skew__blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+.red_block,
+.blue_block {
+  width: 300px;
+  height: 300px;
+}
+
+.red_block {
+  background-color: rgba(240, 82, 82, 0.699);
+}
+
+.blue_block {
+  background-color: rgba(102, 102, 228, 0.671);
+}
+
+.translate__red {
+  -webkit-transform: translate(0px, -100px);
+          transform: translate(0px, -100px);
+}
+
+.translate__blue {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.rotate__red {
+  -webkit-transform: rotatex(970deg);
+          transform: rotatex(970deg);
+}
+
+.rotate__blue {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.scale__red {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.scale__blue {
+  -webkit-transform: scaleX(2);
+          transform: scaleX(2);
+}
+
+.skew__red {
+  -webkit-transform: skew(70deg, 150deg);
+          transform: skew(70deg, 150deg);
+  font-family: "Courier New", Courier, monospace;
+  color: #fff;
+}
+
+.cont_2 {
+  margin-bottom: 50px;
+}
+
+.but {
+  background-color: #00ffff;
+  font-size: 5rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  -webkit-transition: border-radius 0.5s, background-color 0.5s 0.5s;
+  transition: border-radius 0.5s, background-color 0.5s 0.5s;
+}
+
+.but:hover {
+  border-radius: 50px;
+  background-color: #00ff22;
+}
+
+.transition_t {
+  height: 100%;
+}
+
+.block_t {
+  width: 10px;
+  height: 150px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.red_t {
+  background-color: rgb(221, 108, 108);
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.blue_t {
+  background-color: rgb(116, 108, 221);
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.orange_t {
+  background-color: rgb(221, 163, 108);
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.purple_t {
+  background-color: rgb(166, 108, 221);
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.transition:hover .block_t {
+  width: 100%;
+}
+
+.wrapper_a {
+  padding: 50px;
+  height: 300px;
+  background-color: #333;
+}
+
+.container_a {
+  position: relative;
+  height: 200px;
+  background-color: #444;
+}
+
+.block_a {
+  background-color: #fff;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+}
+
+.block_a {
+  -webkit-animation: move-block 3s linear alternate infinite running forwards;
+          animation: move-block 3s linear alternate infinite running forwards;
+  /* animation-name: ; */
+  /* animation-duration: ; */
+  /* animation-timing-function: ; */
+  /* animation-iteration-count: ; */
+  /* animation-direction: ; */
+  /* animation-delay: ; */
+  /* animation-fill-mode: ; */
+}
+
+.block_a:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes move-block {
+  0% {
+    left: 0;
+  }
+  50% {
+    border-radius: 50%;
+  }
+  100% {
+    left: calc(100% - 200px);
+  }
+}
+
+@keyframes move-block {
+  0% {
+    left: 0;
+  }
+  50% {
+    border-radius: 50%;
+  }
+  100% {
+    left: calc(100% - 200px);
+  }
+}
+.pater {
+  background-color: black;
+  height: 25px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.polosa {
+  font-family: serif;
+  line-height: 100%;
+  color: white;
+  float: left;
+  margin-right: 2%;
+  font-size: 20px;
+}
+
+.glaz {
+  background-color: rgb(255, 0, 0);
+  /* background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.9) 75%);
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.9) 75%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.9) 75%); */
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(0, 0, 0, 0.9)), color-stop(50%, rgba(0, 0, 0, 0.1)), color-stop(75%, rgba(0, 0, 0, 0.9)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.9) 75%);
+  color: white;
+  height: 100%;
+  width: 20%;
+  /* -webkit-animation: 4s linear 0s infinite alternate move_eye;
+    -moz-animation: 4s linear 0s infinite alternate move_eye;
+    -o-animation: 4s linear 0s infinite alternate move_eye; */
+  -webkit-animation: 1s linear 0s infinite alternate move_eye;
+          animation: 1s linear 0s infinite alternate move_eye;
+}
+
+@-webkit-keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+@keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+.glaz:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.flexbox {
+  border: 20px solid rgb(231, 203, 172);
+  margin-bottom: 20px;
+}
+
+.flexbox__item {
+  border: 20px solid rgb(143, 119, 91);
+}
+
+.flexbox__item-content {
+  background-color: rgb(83, 64, 44);
+  text-align: center;
+  padding: 50px;
+  font-size: 3rem;
+}
+
+.flexbox__item:nth-child(2) .flexbox__item-content {
+  padding: 75px 50px;
+}
+
+.desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.desc__text {
+  font-size: 25px;
+}
+
+.desc__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 50px;
+}
+
+.desc__color {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid #fff;
+}
+
+.desc__color--f {
+  background-color: rgb(231, 203, 172);
+}
+
+.desc__color--i {
+  background-color: rgb(143, 119, 91);
+}
+
+.desc__color--c {
+  background-color: rgb(83, 64, 44);
+}
+
+.flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* align-items: stretch; */
+  /* flex-wrap: wrap-reverse; */
+}
+
+.container_g {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grid {
+  margin-bottom: 20px;
+}
+
+.item {
+  border: 5px dashed #444;
+  font-size: 40px;
+  padding: 0.8em;
+  text-align: center;
+}
+
+.t_g {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+  font-size: 25px;
+  line-height: 100%;
+}
+
+/* -----1st_grid------ */
+.grid-1 {
+  display: -ms-grid;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px auto; */
+  -ms-grid-rows: (300px)[2];
+  -ms-grid-columns: (1fr)[3];
+      grid-template: repeat(2, 300px)/repeat(3, 1fr);
+  justify-items: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.grid-1__item--1 {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.grid-1__item--2 {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.grid-1__item--3 {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+}
+
+.grid-1__item--4 {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.grid-1__item--5 {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.grid-1__item--6 {
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+}
+
+/* -----2nd_grrid----- */
+.grid-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 5fr 2fr;
+  -ms-grid-columns: 1fr 300px;
+      grid-template: "header header" 1fr "main aside" 5fr "footer footer" 2fr/1fr 300px;
+}
+
+.grid-2__item--header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+
+.grid-2__item--main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+.grid-2__item--aside {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: aside;
+}
+
+.grid-2__item--footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+}
+
+/* ------3d_grid----- */
+.grid-3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template: 1fr 1fr/1fr 1fr 1fr;
+  grid-auto-rows: 400px;
+  /* grid-auto-columns: 500px; */
+  grid-auto-flow: dense;
+}
+
+.grid-3__item--6 {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+
+/* ------4th_grid------ */
+.grid-4 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 20px 1fr;
+  -ms-grid-columns: 1fr 50px 1fr 50px 1fr;
+      grid-template: [liner1] 1fr [liner2] 1fr [liner3]/[col1] 1fr [col2] 1fr [col3] 1fr [col4];
+  row-gap: 20px;
+  -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+          column-gap: 50px;
+}
+
+.grid-4__item--3 {
+  /* grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 4; */
+  /* grid-row: 2 / 3;
+    grid-column: 2 /4; */
+  grid-row: liner2/liner3;
+  grid-column: col3/col4;
+}
+
+.p__l12 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto 20px auto;
+}
+
+.container__12 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.link {
+  display: block;
+  background-color: #555;
+  border-radius: 2em;
+  padding: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 2em;
+  margin-bottom: 20px;
+  font-size: inherit;
+}
+
+/* -------------------------- */
+.link:visited {
+  background: #6975ff;
+}
+
+.link:hover {
+  background: rgb(72, 255, 72);
+}
+
+.link:active {
+  background: #ff7e7e;
+}
+
+.input {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.input:focus {
+  -webkit-box-shadow: 0 0 10px 10px white;
+          box-shadow: 0 0 10px 10px white;
+}
+
+.list__item:first-child {
+  color: red;
+}
+
+.list__item:last-child {
+  color: rgb(0, 255, 42);
+}
+
+.list__item:nth-child(3) {
+  color: aquamarine;
+}
+
+.link__13,
+.list,
+.block {
+  margin-bottom: 100px;
+}
+
+.block__13 {
+  background-color: rgb(199, 105, 105);
+  width: 100%;
+  height: 200px;
+  max-width: 200px;
+  border-radius: 1rem;
+}
+
+.link__13 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: rgb(111, 105, 199);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* ---------------------------------------- */
+.block-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.block-wrapper::before {
+  content: "before";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* display: block; */
+  background-color: rgb(199, 105, 105);
+  width: 100%;
+  height: 200px;
+  max-width: 200px;
+  border-radius: 1rem;
+}
+
+.block-wrapper::after {
+  content: "after";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* display: block; */
+  background-color: rgb(199, 105, 105);
+  width: 100%;
+  height: 200px;
+  max-width: 200px;
+  border-radius: 1rem;
+  position: absolute;
+  top: 0px;
+  left: 200px;
+}
+
+.list__item__13::before {
+  content: "";
+  display: inline-block;
+  background-color: aqua;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.link__13::after {
+  /* display: block; */
+  content: "";
+  width: 1em;
+  height: 1em;
+  background: url(/images/tab-icon.ico) 0 0/100% 100%;
+}
+
+.link__13:hover::after {
+  background: url(/images/thumbs-up.svg) 0 0/100% 100%;
+}
+
+.text::first-line {
+  color: #6aff00;
+}
+
+.text::first-letter {
+  font-size: 200%;
+}

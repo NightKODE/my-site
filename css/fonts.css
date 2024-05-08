@@ -52,32 +52,3 @@
     url('../Fonts/Lombardina/Lombardina.eot') format('eot');
   font-display: swap;
 }
-
-/* ========================================== GLOBAL ========================================== */
-/* ========================================== GLOBAL ========================================== */
-.wrapper {
-  position: relative;
-  color: white;
-  background: #28313b;
-}
-
-.main__inner {
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-  overflow: hidden;
-  display: flex;
-}
-
-.aside__1 {
-  width: 25%;
-  height: 100%;
-  background: #000;
-  color: #fff;
-}
-
-.section {
-  height: 100%;
-  background: #c21818;
-  padding: 30px 15px;
-}
