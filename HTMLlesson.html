@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/images/tab-icon.ico" type="icon">
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/Style.css">
+  <title>My site!</title>
+</head>
+
+<body>
+  <!-- <div class="font__test-box">
+    Просто полоса с текстом для теста стилей.
+    <div class="test__lato">
+      Тест стиля LATO - Lato test style
+    </div>
+    <div class="test__cormorant">
+      Тест стиля Cormorant - Cormorant test style
+    </div>
+    <div class="test__lombardina">
+      Тест стиля Lombardina - Lombardina test style
+    </div>
+  </div> -->
+  <div class="wrapper">
+    <!-- ========================================== HEADER ========================================== -->
+    <!-- ========================================== HEADER ========================================== -->
+    <header class="header" id="header">
+      <hr>
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__1st-block">
+            <div class="header__logo">
+              <img src="/images/head logo.svg" alt="Head Logo">
+            </div>
+            <div class="header__search-block">
+              <button class="search__button">
+                <div class="search__button-icon">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M9.625 2C5.41383 2 2 5.41383 2 9.625C2 13.8362 5.41383 17.25 9.625 17.25C11.7289 17.25 13.6322 16.3992 15.0128 15.0206C16.396 13.6393 17.25 11.7328 17.25 9.625C17.25 5.41383 13.8362 2 9.625 2ZM0 9.625C0 4.30926 4.30926 0 9.625 0C14.9407 0 19.25 4.30926 19.25 9.625C19.25 11.9242 18.4428 14.0363 17.098 15.6913L21.2065 19.7922C21.5973 20.1824 21.5979 20.8156 21.2078 21.2065C20.8176 21.5973 20.1844 21.5979 19.7935 21.2078L15.683 17.1047C14.0292 18.4455 11.9203 19.25 9.625 19.25C4.30926 19.25 0 14.9407 0 9.625Z"
+                      fill="#787A80" />
+                  </svg>
+                </div>
+              </button>
+              <input class="header__search-stroke" placeholder="Search in ...">
+              </input>
+            </div>
+          </div>
+          <ul class="header__nav-container">
+            <li class="header__nav-element"><a href="#HTML">HTML</a></li>
+            <li class="header__nav-element"><a target="_self" href="My site.html">CSS</a></li>
+            <!-- <li class="header__nav-element"><a target="_self" href="#GIT">GIT</a></li> -->
+            <!-- <li class="header__nav-element"><a target="_self" href="#JS">JS</a></li> -->
+            <li class="header__nav-element"><a target="_self" href="#podval">Footer</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </header>
+    <!-- ========================================== MAIN ========================================= -->
+    <!-- ========================================== MAIN ========================================= -->
+    <main class="main__container">
+      <div class="main__inner">
+        <section class="section" id="MAIN">
+          <article class="HTML__Lesson" id="lesson__1">
+            <div class="heading">Lesson 1<br> Структура сайта.</div>
+            <hr>
+            <img src="/images/html1.png" alt="" class="img">
+            <ul class="lesson__inner">
+              <li>Header - шапка сайта.
+                <p>Тут находится основная навигация сайта, поиск, ссилки, логотип и т.д.</p>
+              </li>
+              <li>Main - тело страницы.
+                <p>Тут находится основной контент разделенный другими семантическими тегами - Section и Article.</p>
+              </li>
+              <li>Footer - "подвал" сайта.
+                <p>Тут находятся различные ссылки на различные ресурсы, контактные данные, дополнительная информация и
+                  прочее.</p>
+              </li>
+              <li>Nav - набор ссылок.</li>
+              <li>Section - семантические единые разделы страницы.</li>
+              <li>Article - логически обособленнй блок.</li>
+            </ul>
+            <img src="/images/html2.jpg" alt="" class="img">
+            <hr>
+          </article>
+          <article class="HTML__Lesson" id="lesson__2">
+            <div class="heading">Lesson 2<br> Теги текстовых элементов.</div>
+            <hr>
+            <ul class="lesson__inner">
+              <li>h1, h2, h3, h4, h5, h6 - блочные теги предназначены для указания заголовков. Заголовков в html есть 6
+                уровней, от h1 (первый уровень) до h6 (последний уровень), каждый визуально выделен жирным шрифтом и его
+                соответствующим размером.
+                <p>
+                  Заголовки должны описывать содержание, это положительно влияет на
+                  оптимизацию
+                  сайта. Хорошей практикой считается указывать только один заголовок первого уровня h1, остальных может
+                  быть несколько. Заголовки должны указываться по иерархии, на первом уровне заголовок h1 дальше
+                  подзаголовок h2 и так далее
+                  соответствующим размером.
+                </p>
+              </li>
+              <li>p - абзац. Блочный тег, разделяет текст на отдельные абзацы, в конце добавляется отступ.</li>
+              <li>q - отображает текст как цитату, обрамляет его кавычками.</li>
+              <li>blockquote - отображает текст как цитату. По сравнению с тегом используется для длинных цитат,
+                оформляется отступами.</li>
+              <li>cite - выделяет цитату на материал из другого источника, обычно отображается курсивным шрифтом.</li>
+            </ul>
+            <hr>
+          </article>
+          <article class="HTML__Lesson" id="lesson__3">
+            <div class="heading">Lesson 3<br> Теги списков.</div>
+            <hr>
+            <ul class="lesson__inner">
+              <li>ul - маркированный список. Каждый элемент списка оборачивается тегами li</li>
+              <li>ol - нумерованный список. Каждый элемент списка оборачивается тегами li</li>
+              <li>dl - список терминов. Внутри используются теги: dt - название термина, dd - описание термина</li>
+            </ul>
+            <hr>
+          </article>
+          <article class="HTML__Lesson" id="lesson__4">
+            <div class="heading">Lesson 4<br> Вставка изображения.</div>
+            <hr>
+            <ul class="lesson__inner">
+              <li>
+                img - встраивает изображение в документ.
+                <p>
+                  Атрибут <span>src</span> обязателен и содержит путь к изображению, которое вы хотите встроить в
+                  документ. Атрибут <span>alt</span> содержит текстовое описание изображения, которое не обязательно, но
+                  невероятно полезно для доступности — программы чтения с экрана читают это описание своим
+                  пользователям, так они знают какое изображение показано, и так же оно отображается на странице, если
+                  изображение не может быть загружено по какой-либо причине.
+                </p>
+                <img src="/images/html4.jpg" alt="" class="img">
+              </li>
+              <li>
+                picture - служит контейнером для одного или более элементов <span>source</span>
+                и одного элемента <span>img</span> для обеспечения оптимальной версии изображения для различных размеров
+                экрана.
+                <p>Браузер рассмотрит каждый из дочерних элементов <span>source</span> и выберет один, соответствующий
+                  лучшему совпадению; если совпадений среди элементов <span>source</span> найдено не будет, то будет
+                  выбран файл, указанный атрибутом src элемента <span>img</span> . Затем выбранное изображение
+                  отображается в пространстве, занятом элементом <span>img</span>.</p>
+                <img src="/images/html3.jpg" alt="" class="img">
+              </li>
+              <li>
+                figure - Элемент иллюстрации с необязательной подписью
+                <p>Представляет самостоятельный контент, часто с подписью (заголовком), которая указывается с помощью
+                  элемента <span>figcaption</span>. Диаграмма и её подпись представляет собой единое целое.</p>
+                <img src="/images/html5.jpg" alt="" class="img">
+              </li>
+            </ul>
+            <hr>
+          </article>
+          <article class="HTML__Lesson" id="lesson__5">
+            <div class="heading">Lesson 5<br> Теги видео и аудио.</div>
+            <hr>
+            <ul class="lesson__inner">
+              <li>
+                video - используется для встраивания видео контента в документ.
+                <p>
+                  Видео элемент может содержать один или несколько источников видео. Чтобы указать источник видео,
+                  необходимо использовать атрибут <span>src</span> или элемент <span>source</span> браузер сам определит
+                  наиболее
+                  подходящий источник.
+                </p>
+                <video width="480px" controls loop poster="/images/maxresdefault.jpg">
+                  <source src="/images/the-neighbourhood-a-little-death.mp4" type="video/mp4">
+                  <source src="/images/the-neighbourhood-a-little-death.webm" type="video/webm">
+                  Этот браузер не поддерживает вставку видео.
+                </video>
+                <img src="/images/html6.jpg" alt="" class="img">
+              </li>
+              <li>
+                audio - используется для встраивания звукового контента в документ.
+                <p>Он может содержать один или более источников аудио, представленных с помощью атрибута src или
+                  элемента <span>source</span> – браузер выберет один наиболее подходящий. Он так же может
+                  предназначаться для потокового мультимедиа, используя интерфейс <span>MediaStream</span>.</p>
+                <div style="margin-top: 20px"><audio src="/images/TheNeighbourhoodDust.mp3" controls>hello</audio></div>
+                <div><audio src="/images/TheNeighbourhoodDevil'sAdvocate.mp3" controls></audio></div>
+                <div><audio src="/images/TheNeighbourhoodEverybody'sWatchingMe(UhOh).mp3" controls></audio></div>
+                <img src="/images/html7.jpg" alt="" class="img">
+              </li>
+              <li>
+                <div class="atributs">
+                  Атрибуты для <span>video</span> и <span>audio</span>.
+                </div>
+                <ul>
+                  <li><span>controls</span> - атрибут плеера (по умолчанию используется плеер браузера).</li>
+                  <li><span>loop</span> - зацикливание воспроизведения.</li>
+                  <li><span>autoplay</span> - автоматическое воспроизведение.</li>
+                  <li><span>muted</span> - отключение звука.</li>
+                  <li><span>preload="none"</span> - предзагрузка файла.
+                    <p><span>none</span> - Не загружать аудиофайл. <br>
+                      <span>metadata</span> - Загрузить только служебную информацию (продолжительность звучания и др.).
+                      <br>
+                      <span>auto</span> - Загрузить аудиофайл целиком при загрузке страницы.
+                    </p>
+                  </li>
+                  <li><span>width="480"</span> - атрибут ширины блока с видео.</li>
+                  <li><span>poster="..//"</span> - атрибут для вставки превью для видео.</li>
+                </ul>
+              </li>
+            </ul>
+            <hr>
+          </article>
+          <article class="HTML__Lesson" id="lesson__6">
+            <div class="heading">Lesson 6<br> Ссылки и кнопки.</div>
+            <hr>
+            <ul class="lesson__inner">
+              <li>
+                a - определяет гиперссылку для перехода на определённое место на странице или на другую страницу в
+                Интернете.
+                <img src="/images/html8.jpg" alt="" class="img">
+              </li>
+              <li>
+                button - создаёт кликабельную кнопку, которая может быть использована в формах или в любом другом месте
+                документа, который требует простой, стандартной кнопки.
+                <img src="/images/html9.jpg" alt="" class="img">
+              </li>
+              <li>
+                <div class="atributs">Атрибуты для <span>a</span> и <span>button</span>.</div>
+                <ul>
+                  <li><span>href</span> - Задает адрес документа, на который следует перейти.</li>
+                  <li><span>target</span> - Определяет тип переходя между адресами.
+                    <p>
+                      <span>_blank</span> - Загружает страницу в новое окно браузера.<br>
+                      <span>_self</span> - Загружает страницу в текущее окно. <br>
+                      <span>_parent</span> - Загружает страницу во фрейм-родитель, если фреймов нет, то это значение
+                      работает как _self. <br>
+                      <span>_top</span> - Отменяет все фреймы и загружает страницу в полном окне браузера, если фреймов
+                      нет, то это значение работает как _self.
+                    </p>
+                  </li>
+                  <li><span>type</span> - oпределяет тип кнопки, который устанавливает ее поведение в форме. По внешнему
+                    виду кнопки разного типа никак не различаются, но у каждой такой кнопки свои функции.
+                    <p>
+                      <span>button</span> - Обычная кнопка. <br>
+                      <span>reset</span> - Кнопка для очистки введенных данных формы и возвращения значений в
+                      первоначальное состояние. <br>
+                      <span>submit</span> - Кнопка для отправки данных формы на сервер.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <hr>
+          </article>
+          <article class="HTML__Lesson" id="lesson__7">
+            <div class="heading">Lesson 7<br> Теги таблицы.</div>
+            <hr>
+            <ul class="lesson__inner">
+              <li><span>table</span> - служит контейнером для элементов, определяющих содержимое таблицы.</li>
+              <li><span>caption</span> - предназначен для создания заголовка к таблице и может размещаться только внутри
+                контейнера <span>table</span>, причем сразу после открывающего тега. Такой заголовок представляет собой
+                текст, по умолчанию отображаемый перед таблицей и описывающий ее содержание.</li>
+              <li><span>thead</span> - предназначен для хранения одной или нескольких строк, которые представлены вверху
+                таблицы.</li>
+              <li><span>tr</span> - служит контейнером для создания строки таблицы.</li>
+              <li><span>th</span> - предназначен для создания одной ячейки таблицы, которая обозначается как
+                заголовочная.</li>
+              <li><span>td</span> - предназначен для создания одной ячейки таблицы.</li>
+              <li><span>tbody</span> - предназначен для хранения одной или нескольких строк таблицы.</li>
+              <li><span>tfoot</span>предназначен для хранения одной или нескольких строк, которые представлены внизу
+                таблицы.</li>
+            </ul>
+            <img src="/images/html10.jpg" alt="" class="img">
+            <table style="margin-bottom: 20px;" width="100%" border="5" cellspacing="0" cellpadding="4">
+              <caption>Таблица 3.2. Демонстрация катаболических
+                процессов организма</caption>
+              <tr>
+                <th>&nbsp;</th>
+                <th>Чебурашка</th>
+                <th>Крокодил Гена</th>
+                <th>Шапокляк</th>
+              </tr>
+              <tr>
+                <td>Съел, кг</td>
+                <td>5</td>
+                <td>2</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Выпил, л</td>
+                <td>6</td>
+                <td>8</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Смог, раз</td>
+                <td>5</td>
+                <td>5</td>
+                <td>1</td>
+              </tr>
+            </table>
+            <hr>
+          </article>
+          <article class="HTML__Lesson" id="lesson__8">
+            <div class="heading">Lesson 8<br> Форма.</div>
+            <hr>
+            <img src="/images/form.jpg" alt="" class="img">
+            <hr>
+          </article>
+          <article class="HTML__Lesson" id="lesson__9">
+            <div class="heading">Lesson 9<br> Глобальные атрибуты.</div>
+            <hr>
+            <ul class="lesson__inner">
+              <li><span>id</span> - задает стилевой идентификатор — уникальное имя элемента, которое используется для
+                изменения его стиля и обращения к нему через скрипты.</li>
+              <li><span>class</span> - применяется для стилизации элементов.</li>
+              <li><span>style</span> - применяется для стилизации элемента.
+                <p>В отличии от атрибута <span>class</span> имеет первичный приоритет.
+                </p>
+              </li>
+              <li><span>title</span> - атрибут показывающий текст-подсказку при наведении курсором на элемент.</li>
+              <li><span>tabindex</span> - переписывает порядок Tab-навигации по умолчанию в браузера.</li>
+            </ul>
+            <hr>
+          </article>
+          <article class="HTML__Lesson" id="lesson__10">
+            <div class="heading">Lesson 10<br> Строчные теги.</div>
+            <hr>
+            <img src="/images/html11.png" alt="" class="img">
+            <hr>
+          </article>
+        </section>
+        <!-- ========================================== ASIDE ========================================= -->
+        <!-- ========================================== ASIDE ========================================= -->
+        <aside class="aside__1">
+          <div class="sidebar__heading">
+            <hr>
+            HTML
+            <hr>
+          </div>
+          <ul class="aside__list">
+            <li class="li__css--p" title="Lesson 1">
+              <a class="sidebar__link" href="#lesson__1">
+                <div class="side__text">1.<p>Структура сайта.</p>
+                </div>
+                <div class="li__css--line"></div>
+              </a>
+            </li>
+            <li class="li__css--p" title="Lesson 2">
+              <a class="sidebar__link" href="#lesson__2">
+                <div class="side__text">2. <p>Теги текстовых элементов.</p>
+                </div>
+                <div class="li__css--line"></div>
+              </a>
+            </li>
+            <li class="li__css--p" title="Lesson 3">
+              <a class="sidebar__link" href="#lesson__3">
+                <div class="side__text">3. <p>Теги списков.</p>
+                </div>
+                <div class="li__css--line"></div>
+              </a>
+            </li>
+            <li class="li__css--p" title="Lesson 4">
+              <a class="sidebar__link" href="#lesson__4">
+                <div class="side__text">4. <p>Вставка изображения.</p>
+                </div>
+                <div class="li__css--line"></div>
+              </a>
+            </li>
+            <li class="li__css--p" title="Lesson 5">
+              <a class="sidebar__link" href="#lesson__5">
+                <div class="side__text">5. <p>Теги видео и аудио.</p>
+                </div>
+                <div class="li__css--line"></div>
+              </a>
+            </li>
+            <li class="li__css--p" title="Lesson 6">
+              <a class="sidebar__link" href="#lesson__6">
+                <div class="side__text">6. <p>Ссылки и кнопки.</p>
+                </div>
+                <div class="li__css--line"></div>
+              </a>
+            </li>
+            <li class="li__css--p" title="Lesson 7">
+              <a class="sidebar__link" href="#lesson__7">
+                <div class="side__text">7. <p>Теги таблицы.</p>
+                </div>
+                <div class="li__css--line"></div>
+              </a>
+            </li>
+            <li class="li__css--p" title="Lesson 8">
+              <a class="sidebar__link" href="#lesson__8">
+                <div class="side__text">8. <p>Форма.</p>
+                </div>
+                <div class="li__css--line"></div>
+              </a>
+            </li>
+            <li class="li__css--p" title="Lesson 9">
+              <a class="sidebar__link" href="#lesson__9">
+                <div class="side__text">9. <p>Глобальные атрибуты.</p>
+                </div>
+                <div class="li__css--line"></div>
+              </a>
+            </li>
+            <li class="li__css--p" title="Lesson 10">
+              <a class="sidebar__link" href="#lesson__10">
+                <div class="side__text">10. <p>Строчные теги.</p>
+                </div>
+                <div class="li__css--line"></div>
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+    <!-- ========================================== FOOTER ========================================= -->
+    <!-- ========================================== FOOTER ========================================= -->
+    <footer id="podval" class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="sblock">
+            <p class="footer__zag">Контактные данные</p>
+            <div class="footer__line"></div>
+            <ul>
+              <li class="fotter_contact"><a href="tel:+79937202040">+7(993)7202040</a></li>
+              <li class="fotter_contact"><a href="mailto:Felense2022@yandex.ru">Felense2022@yandex.ru</a></li>
+              <li class="fotter_contact"><a href="#">Instagram</a></li>
+              <li class="fotter_contact"><a href="#">Telegram</a></li>
+              <li class="fotter_contact"><a href="#">Facebook</a></li>
+              <li class="fotter_contact"><a href="#"></a>Vk</li>
+            </ul>
+          </div>
+          <div class="sblock">
+            <p class="footer__zag">Типа еще что-нибудь</p>
+            <div class="footer__line"></div>
+            <ul>
+              <li class="fotter_contact"><a href="#">Пункт</a></li>
+              <li class="fotter_contact"><a href="#">Пункт</a></li>
+              <li class="fotter_contact"><a href="#">Пункт</a></li>
+              <li class="fotter_contact"><a href="#">Пункт</a></li>
+              <li class="fotter_contact"><a href="#">Пункт</a></li>
+              <li class="fotter_contact"><a href="#">Пункт</a></li>
+            </ul>
+          </div>
+          <div class="form">
+            <div class="form__text">Оставьте тзыв.</div>
+            <div class="form__container">
+              <form action="" name="Форма в подвале">
+                <div class="input-1">
+                  <div class="form__text2">Имя Oтчество</div>
+                  <div class="form__text2">Почта</div>
+                  <div class="input__div"><input class="input__footer input__footer--1" placeholder="Иван Иванов"
+                      type="text"></div>
+                  <div class="input__div"><input class="input__footer" placeholder="@mail" type="text"></div>
+                </div>
+                <div class="textarea__container">
+                  <div class="form__text2">Отзыв</div>
+                  <textarea class="input__footer--otz" placeholder="Не пиши сюда больше..." name="text"></textarea>
+                </div>
+                <div class="form__buttons">
+                  <button class="but-1" type="submit">Подтвердить</BUtton>
+                  <button class="but-2" type="reset">Стереть</BUtton>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a class="button__up" href="#MAIN">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="18" viewBox="0 0 12 18" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M0.792893 6.20711C0.402369 5.81658 0.402369 5.18342 0.792893 4.79289L5.29289 0.292892C5.68342 -0.0976315 6.31658 -0.0976315 6.70711 0.292892L11.2071 4.79289C11.5976 5.18342 11.5976 5.81658 11.2071 6.20711C10.8166 6.59763 10.1834 6.59763 9.79289 6.20711L7 3.41421L7 17C7 17.5523 6.55228 18 6 18C5.44772 18 5 17.5523 5 17L5 3.41421L2.20711 6.20711C1.81658 6.59763 1.18342 6.59763 0.792893 6.20711Z"
+              fill="#979EA2" />
+          </svg>
+          <p>Вверх</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="18" viewBox="0 0 12 18" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M0.792893 6.20711C0.402369 5.81658 0.402369 5.18342 0.792893 4.79289L5.29289 0.292892C5.68342 -0.0976315 6.31658 -0.0976315 6.70711 0.292892L11.2071 4.79289C11.5976 5.18342 11.5976 5.81658 11.2071 6.20711C10.8166 6.59763 10.1834 6.59763 9.79289 6.20711L7 3.41421L7 17C7 17.5523 6.55228 18 6 18C5.44772 18 5 17.5523 5 17L5 3.41421L2.20711 6.20711C1.81658 6.59763 1.18342 6.59763 0.792893 6.20711Z"
+              fill="#979EA2" />
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

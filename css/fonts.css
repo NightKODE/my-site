@@ -52,3 +52,13 @@
     url('../Fonts/Lombardina/Lombardina.eot') format('eot');
   font-display: swap;
 }
+@font-face {
+  font-family: Fractur;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fractur'),
+    url('../Fonts/Fractur/Fractur.woff2') format('woff2'),
+    url('../Fonts/Fractur/Fractur.woff') format('woff'),
+    url('../Fonts/Fractur/Fractur.eot') format('eot');
+  font-display: swap;
+}
