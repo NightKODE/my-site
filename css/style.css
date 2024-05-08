@@ -23,12 +23,14 @@ html {
 .section {
   width: 75%;
 }
-.font__test{
+
+.font__test {
   font-family: Fractur;
   font-size: 50px;
   line-height: 125%;
   color: white;
 }
+
 /* ========================================== HEADER ========================================== */
 /* ========================================== HEADER ========================================== */
 .header {
@@ -148,6 +150,8 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  max-width: 500px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -157,11 +161,17 @@ html {
 }
 
 .header__nav-element {
-  margin-right: 50px;
+  margin-left: 20px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  display: flex;
+  /* align-items: center; */
 }
-
+.header__nav-icon{
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
 .header__nav-element:hover {
   color: rgb(243, 85, 16);
 }
@@ -177,7 +187,17 @@ html {
   font-size: 30px;
   line-height: 150%;
 }
-
+.main__text{
+  background: #596573;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 30px;
+}
+.main__text span{
+  background: #28313b;
+  border-radius: 5px;
+  padding: 0 10px;
+}
 hr {
   height: 3px;
   background: rgb(243, 85, 16);
@@ -199,11 +219,13 @@ hr {
   font-size: 40px;
   line-height: 150%;
 }
-.atributs{
+
+.atributs {
   font-weight: 700;
   font-size: 40px;
   line-height: 150%;
 }
+
 .sub__heading::before {
   content: "";
   display: block;
@@ -226,17 +248,20 @@ hr {
   padding: 0 15px;
   margin: 15px 0 0 15px;
 }
-.lesson__inner p span{
+
+.lesson__inner p span {
   background: #28313b;
   border-radius: 5px;
 }
-.lesson__inner span{
+
+.lesson__inner span {
   background: #596573;
   border-radius: 5px;
   padding: 0 10px;
 }
+
 .lesson__inner li {
-  margin: 30px 0;
+  margin: 30px;
 }
 
 .lesson__inner li::before {
@@ -279,13 +304,15 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-video{
+
+video {
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   position: relative;
   margin-top: 20px;
 }
+
 /* ------------- CSS__LESSON_2 ------------ */
 /* ------------- CSS__LESSON_2 ------------ */
 .lesson2__one {
@@ -371,12 +398,14 @@ video{
   line-height: normal;
   color: white;
 }
+
 /* ------------- CSS__LESSON_4 ------------ */
 /* ------------- CSS__LESSON_4 ------------ */
 .lesson__4 img {
   margin-bottom: 20px;
   width: 100%;
 }
+
 /* ------------- CSS__LESSON_5 ------------ */
 /* ------------- CSS__LESSON_5 ------------ */
 .wrapper__l5 {
@@ -446,6 +475,7 @@ video{
   /* position: fixed;
     top: 50px; */
 }
+
 /* ------------- CSS__LESSON_6 ------------ */
 /* ------------- CSS__LESSON_6 ------------ */
 .l6 {
@@ -539,6 +569,7 @@ h2 {
   font-family: "Courier New", Courier, monospace;
   color: #fff;
 }
+
 /* ------------- CSS__LESSON_8 ------------ */
 /* ------------- CSS__LESSON_8 ------------ */
 .cont_2 {
@@ -607,6 +638,7 @@ h2 {
 .transition:hover .block_t {
   width: 100%;
 }
+
 /* ------------- CSS__LESSON_9 ------------ */
 /* ------------- CSS__LESSON_9 ------------ */
 .wrapper_a {
@@ -731,6 +763,7 @@ h2 {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
+
 /* ------------- CSS__LESSON_10 ------------ */
 /* ------------- CSS__LESSON_10 ------------ */
 .flexbox {
@@ -802,6 +835,7 @@ h2 {
   /* align-items: stretch; */
   /* flex-wrap: wrap-reverse; */
 }
+
 /* ------------- CSS__LESSON_11 ------------ */
 /* ------------- CSS__LESSON_11 ------------ */
 .container_g {
@@ -963,6 +997,7 @@ h2 {
   grid-row: liner2/liner3;
   grid-column: col3/col4;
 }
+
 /* ------------- CSS__LESSON_12 ------------ */
 /* ------------- CSS__LESSON_12 ------------ */
 .p__l12 {
@@ -1029,6 +1064,7 @@ h2 {
 .list__item:nth-child(3) {
   color: aquamarine;
 }
+
 /* ------------- CSS__LESSON_13 ------------ */
 /* ------------- CSS__LESSON_13 ------------ */
 .link__13,
@@ -1135,17 +1171,32 @@ h2 {
 .text::first-letter {
   font-size: 200%;
 }
-
+/* ------------- SCSS__LESSON ------------ */
+/* ------------- SCSS__LESSON ------------ */
+.lesson__container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.SCSS__Lessons .sub__heading{
+  text-align: center;
+}
+.SCSS__Lessons .sub__heading::before{
+  display: none;
+}
 /* ========================================== SIDEBAR ========================================== */
 /* ========================================== SIDEBAR ========================================== */
-.aside__1 {
+.aside {
   position: relative;
   width: 25%;
   background: #0a1014;
   color: #fff;
   padding: 30px 10px;
 }
-
+.aside__inner{
+  position: sticky;
+  top: 81px;
+  z-index: 7;
+}
 .sidebar__heading {
   font-family: Cormorant, sans-serif, serif;
   font-size: 50px;
@@ -1155,9 +1206,6 @@ h2 {
 
 .aside__list {
   margin-top: 20px;
-  position: sticky;
-  top: 81px;
-  z-index: 7;
 }
 
 .sidebar__link {
@@ -1178,12 +1226,15 @@ h2 {
   transition: 0.3s ease-out;
   border-radius: 10px;
 }
-.li__css--p{
+
+.li__css--p {
   margin-bottom: 3px;
 }
-.li__css--p:last-child{
+
+.li__css--p:last-child {
   margin-bottom: 0px;
 }
+
 .li__css--p:hover .li__css--line {
   width: 100%;
 }
