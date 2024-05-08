@@ -55,10 +55,14 @@
 
 /* ========================================== GLOBAL ========================================== */
 /* ========================================== GLOBAL ========================================== */
+html{
+  scroll-behavior: smooth;
+}
 .wrapper {
   position: relative;
   color: white;
   background: #28313b;
+
 }
 
 .main__inner {
@@ -66,15 +70,8 @@
   max-width: 1400px;
   padding: 0 15px;
   margin: 0 auto;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
-}
-
-.aside__1 {
-  /* width: 75%; */
-  height: 100%;
-  background: #000;
-  color: #fff;
 }
 .section__CSS{
   width: 75%;

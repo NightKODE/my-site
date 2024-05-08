@@ -1,0 +1,38 @@
+.aside__1 {
+  position: relative;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 30px 10px;
+}
+.aside__list{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 81px;
+  z-index: 7;
+}
+.li__css--line{
+    width: 0%;
+    height: 3px;
+    /* padding: 0 5%; */
+    margin: 0 auto 0 auto;
+    background: rgb(243, 85, 16);
+    transition: .5s ease-out;
+}
+
+.li__css--p:hover .li__css--line{
+    width: 100%;
+}
+.li__css--p:hover .side__text{
+    /* text-indent: 20px; */
+    margin-left: 5%;
+}
+.side__text{
+    line-height: 40px;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    /* text-indent: 10px; */
+    transition: .5s ease-out;
+    text-wrap: nowrap;
+}
