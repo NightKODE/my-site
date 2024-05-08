@@ -6,6 +6,11 @@
   text-align: center;
   
 }
+@mixin sub__heading{
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+}
 @mixin line{
   height: 3px;
   background: rgb(243, 85, 16);
