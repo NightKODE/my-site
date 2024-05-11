@@ -27,6 +27,7 @@ html {
 .section {
   width: 75%;
   padding: 0 2%;
+  position: relative;
 }
 
 .font__test {
@@ -205,11 +206,16 @@ html {
   font-size: 30px;
   line-height: 150%;
 }
+
 article{
   background: hsla(212, 20%, 19%, 0.5);
   border-radius: 30px;
   margin-bottom: 30px;
   padding: 30px;
+  position: relative;
+}
+.first__article{
+  margin: 50px 0;
 }
 .main__text{
   background: hsl(212, 13%, 40%, 0.5);
@@ -303,7 +309,9 @@ hr {
 .lesson__inner .termin {
   font-weight: 700;
 }
-
+.lesson__inner .sub__heading{
+  text-align: left;
+}
 .lesson__inner .termin::before {
   content: "";
   display: block;
@@ -327,6 +335,8 @@ hr {
   transform: translateX(-50%);
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 5px;
+  border: solid 1px white;
 }
 
 video {
@@ -1201,10 +1211,10 @@ h2 {
   display: flex;
   justify-content: space-evenly;
 }
-.SCSS__Lessons .sub__heading{
+article .sub__heading{
   text-align: center;
 }
-.SCSS__Lessons .sub__heading::before{
+article .sub__heading::before{
   display: none;
 }
 /* ========================================== SIDEBAR ========================================== */
@@ -1214,6 +1224,7 @@ h2 {
   width: 25%;
 }
 .aside__inner{
+  overflow: hidden;
   position: sticky;
   top: 111px;
   z-index: 7;
@@ -1236,7 +1247,7 @@ h2 {
 
 .sidebar__link {
   position: relative;
-  /* display: flex; */
+  display: flex;
 }
 
 .li__css--line {
@@ -1278,11 +1289,12 @@ h2 {
   text-wrap: nowrap;
 }
 
-.side__text p {
+.sidebar__link p {
   color: white;
   font-size: 18px;
   display: inline;
   margin-left: 10px;
+  text-wrap: wrap;
 }
 
 /* ========================================== FOOTER ========================================== */
