@@ -2,12 +2,16 @@
 /* ========================================== GLOBAL ========================================== */
 html {
   scroll-behavior: smooth;
+  background-image: url(/images/fon.jpg) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .wrapper {
   position: relative;
   color: white;
-  background: #28313b;
+  /* background: #28313b; */
 
 }
 
@@ -22,6 +26,7 @@ html {
 
 .section {
   width: 75%;
+  padding: 0 2%;
 }
 
 .font__test {
@@ -39,14 +44,25 @@ html {
   font-size: 24px;
   font-weight: 900;
   line-height: 150%;
-  background: #0a1014;
+  background-image: url(/images/fon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* background-color: hsla(0, 0%, 0%, 0.6); */
+  /* background: white; */
+  margin-bottom: 30px;
   position: sticky;
   top: 0;
   z-index: 700;
 }
-
+.header__container{
+  background-color: hsla(0, 0%, 0%, 0.6);
+}
+.header__container hr{
+  margin: 0;
+}
 .header__inner {
-  max-width: 1200px;
+  max-width: 1400px;
   padding: 0 15px;
   margin: 0 auto;
   height: 100%;
@@ -84,7 +100,8 @@ html {
   display: -ms-flexbox;
   display: flex;
   overflow-x: hidden;
-  border: solid 3px #787A80;
+  background-color: hsla(0, 0%, 0%, 0.6);
+  border: solid 3px hsl(225, 3%, 49%, 0.5);
   border-radius: 20px;
   padding: 5px 5px 5px 5px;
   width: 11%;
@@ -112,37 +129,38 @@ html {
 }
 
 .search__button-icon {
-  background: #0a1014;
+  background: black;
+  /* background: transparent; */
 }
 
 .header__search-stroke {
-  background: #0a1014;
+  background: black;
   color: white;
   font-size: 18px;
 }
 
 .header__search-stroke::-webkit-input-placeholder {
-  background: #0a1014;
+  background: black;
   color: #787A80;
 }
 
 .header__search-stroke::-moz-placeholder {
-  background: #0a1014;
+  background: black;
   color: #787A80;
 }
 
 .header__search-stroke:-ms-input-placeholder {
-  background: #0a1014;
+  background: black;
   color: #787A80;
 }
 
 .header__search-stroke::-ms-input-placeholder {
-  background: #0a1014;
+  background: black;
   color: #787A80;
 }
 
 .header__search-stroke::placeholder {
-  background: #0a1014;
+  background: black;
   color: #787A80;
 }
 
@@ -187,8 +205,14 @@ html {
   font-size: 30px;
   line-height: 150%;
 }
+article{
+  background: hsla(212, 20%, 19%, 0.5);
+  border-radius: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
 .main__text{
-  background: #596573;
+  background: hsl(212, 13%, 40%, 0.5);
   border-radius: 15px;
   padding: 30px;
   margin: 30px;
@@ -243,8 +267,8 @@ hr {
 }
 
 .lesson__inner p {
-  background: #596573;
-  border-radius: 5px;
+  background: hsl(212, 13%, 40%, 0.5);
+  border-radius: 15px;
   padding: 0 15px;
   margin: 15px 0 0 15px;
 }
@@ -418,7 +442,7 @@ video {
   top: 0;
   margin: 0 auto;
   max-width: 1000px;
-  height: 500px;
+  height: 800px;
   border: 10px solid #999;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -464,7 +488,7 @@ video {
   position: sticky;
   color: white;
   text-align: center;
-  top: 0px;
+  top: 81px;
   left: 0px;
 }
 
@@ -844,7 +868,7 @@ h2 {
 }
 
 .grid {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .item {
@@ -1070,7 +1094,7 @@ h2 {
 .link__13,
 .list,
 .block {
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
 }
 
 .block__13 {
@@ -1188,14 +1212,16 @@ h2 {
 .aside {
   position: relative;
   width: 25%;
-  background: #0a1014;
-  color: #fff;
-  padding: 30px 10px;
 }
 .aside__inner{
   position: sticky;
-  top: 81px;
+  top: 111px;
   z-index: 7;
+  background: hsl(0, 0%, 0%, 0.6);
+  color: #fff;
+  border-radius: 30px;
+  padding: 30px 10px;
+  margin-bottom: 30px;
 }
 .sidebar__heading {
   font-family: Cormorant, sans-serif, serif;
@@ -1221,7 +1247,7 @@ h2 {
   width: 0%;
   height: 100%;
   margin: 0 auto 0 auto;
-  background: rgb(243, 85, 16);
+  background: hsl(18, 90%, 51%, 0.3);
   -webkit-transition: 0.5s ease-out;
   transition: 0.3s ease-out;
   border-radius: 10px;
@@ -1242,7 +1268,6 @@ h2 {
 .li__css--p:hover .side__text {
   color: white;
 }
-
 .side__text {
   line-height: 40px;
   text-align: left;
@@ -1263,11 +1288,11 @@ h2 {
 /* ========================================== FOOTER ========================================== */
 /* ========================================== FOOTER ========================================== */
 .footer {
-  background-color: #0a1014;
+  background-color: hsla(0, 0%, 0%, 0.6);
   font-size: 20px;
   font-weight: 700;
   font-family: lato, sans-serif;
-  color: #A3B3BC;
+  color: #868a8c;
 }
 
 .footer__inner {
@@ -1311,9 +1336,8 @@ h2 {
 .input__footer {
   display: block;
   line-height: 28px;
-  border: solid 2px #979EA2;
-  border-radius: 3px;
-  background: #5E6D76;
+  border-radius: 5px;
+  background: hsla(0, 0%, 0%, 0.4);
   color: #ffffff;
   padding: 0 0 0 10px;
 }
@@ -1351,19 +1375,19 @@ h2 {
 }
 
 .form {
-  padding: 30px;
-  border: solid 3px;
+  padding: 20px;
   border-radius: 30px;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  background-color: #4F606A;
+  background: hsla(212, 20%, 19%, 0.5);
+  color: white;
 }
 
 .form__text {
   -moz-text-align-last: center;
   text-align-last: center;
-  margin-bottom: 30px;
+  margin:20px 0 30px;
 }
 
 .form__text2 {
@@ -1379,9 +1403,8 @@ h2 {
   height: 150px;
   display: block;
   line-height: 20px;
-  border: solid 2px #979EA2;
-  border-radius: 3px;
-  background: #5E6D76;
+  background: hsla(0, 0%, 0%, 0.4);
+  border-radius: 5px;
   color: #ffffff;
   overflow-y: scroll;
   padding: 0 10px 0 10px;
@@ -1417,7 +1440,9 @@ h2 {
 .form__text {
   text-align: center;
 }
-
+.form__container{
+  margin-bottom: 20px;
+}
 .textarea__container {
   margin-bottom: 30px;
 }
@@ -1436,20 +1461,26 @@ h2 {
   height: 30px;
   margin: 0 5px;
   border-radius: 3px;
-  background-color: #3B4C56;
   color: #A3B3BC;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+button{
+  background: hsl(212, 13%, 40%, 0.5);
 
+
+}
 .but-1:hover {
   background-color: rgb(243, 85, 16);
   color: white;
+  font-size: 17px;
 }
 
 .but-2:hover {
   background-color: rgb(243, 85, 16);
   color: white;
+  font-size: 17px;
+
 }
 
 .button__up {
@@ -1494,18 +1525,18 @@ h2 {
 }
 
 .button__up:hover {
-  background: #15242c;
+  background: rgba(39, 48, 58, 0.5);
 }
 
 .button__up:hover p {
-  color: white;
+  color: #f35510;
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
   margin: 100px;
 }
 
 .button__up:hover path {
-  fill: #fff;
+  fill: #f35510;
 }
 
 .button__up svg {
