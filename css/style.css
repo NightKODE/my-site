@@ -36,6 +36,7 @@ html {
   line-height: 125%;
   color: white;
 }
+
 .Snippets__Lesson img{
   width: 75%;
 }
@@ -369,9 +370,11 @@ hr {
   margin-bottom: 20px;
   padding: 5px;
   border: solid 1px white;
+  width: 50%;
+}
+.img--l{
   width: 100%;
 }
-
 video {
   left: 50%;
   -webkit-transform: translateX(-50%);
