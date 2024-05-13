@@ -23,13 +23,13 @@ html {
   /* overflow: hidden; */
   display: flex;
 }
-
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .section {
-  width: 75%;
+  width: 75%; 
   padding: 0 2%;
   position: relative;
 }
-
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .font__test {
   font-family: Fractur;
   font-size: 50px;
@@ -254,7 +254,8 @@ article {
 }
 
 .main__text span {
-  background: #28313b;
+  /* background: #28313b; */
+  background-color: #f35510;
   border-radius: 5px;
   padding: 0 10px;
 }
@@ -311,12 +312,14 @@ hr {
 }
 
 .lesson__inner p span {
-  background: #28313b;
+  /* background: #28313b; */
+  background: #f35510;
   border-radius: 5px;
 }
 
 .lesson__inner span {
-  background: #596573;
+  /* background: #596573; */
+  background: #f35510;
   border-radius: 5px;
   padding: 0 10px;
 }
@@ -1357,7 +1360,9 @@ h2 {
   display: flex;
   justify-content: space-evenly;
 }
-
+.lesson__container img{
+  max-width: 350px;
+}
 article .sub__heading {
   text-align: center;
 }
