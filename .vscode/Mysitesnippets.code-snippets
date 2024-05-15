@@ -82,4 +82,18 @@
     ],
     "description": "::before-after"
   }
+  "main__text":{
+    "scope": "html",
+    "prefix": "dmt",
+    "body": [
+      "<div class=\"main__text\">$1</div>"
+    ]
+  }
+  "sub__heading":{
+    "scope": "html",
+    "prefix": "dsh",
+    "body": [
+      "<div class=\"sub__heading\">$1</div>"
+    ]
+  }
 }

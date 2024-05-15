@@ -129,7 +129,7 @@ html {
   border: solid 3px hsl(225, 3%, 49%, 0.5);
   border-radius: 20px;
   padding: 5px 5px 5px 5px;
-  width: 11%;
+  width: 39px;
   height: 39px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
@@ -139,7 +139,9 @@ html {
   width: 100%;
   border: solid 3px rgb(243, 85, 16);
 }
-
+.header__search-block:hover .header__search-stroke{
+  width: 200px;
+}
 .header__search-block path {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -155,15 +157,20 @@ html {
 
 .search__button-icon {
   background: black;
-  /* background: transparent; */
 }
 
 .header__search-stroke {
   background: black;
   color: white;
   font-size: 18px;
+  width: 0px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
-
+.header__search-block:focus .header__search-block{
+  width: 100%;
+  /* transition: none; */
+}
 .header__search-stroke::-webkit-input-placeholder {
   background: black;
   color: #787A80;
@@ -194,10 +201,9 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-width: 500px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: end;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -208,15 +214,19 @@ html {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: flex;
-  /* align-items: center; */
+  /* justify-content: space-between; */
+  /* width: max-content; */
+  align-items: center;
 }
 
 .header__nav-icon {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   margin-right: 5px;
 }
-
+.header__nav-icon svg{
+  top: 50%;
+}
 .header__nav-element:hover {
   color: rgb(243, 85, 16);
 }
@@ -288,7 +298,7 @@ hr {
   line-height: 150%;
 }
 
-.sub__heading::before {
+/* .sub__heading::after {
   content: "";
   display: block;
   position: relative;
@@ -298,7 +308,8 @@ hr {
   width: 10px;
   border-radius: 50%;
   background: #f35510;
-}
+  z-index: 1;
+} */
 
 .lesson__inner {
   padding: 30px 50px 30px 50px;
@@ -1468,12 +1479,13 @@ article .sub__heading::before {
 
 .side__text {
   line-height: 100%;
-  text-align: left;
+  /* text-align: left; */
   color: #8f8f8f;
   font-size: 20px;
   -webkit-transition: 0.5s ease-out;
   transition: 0.3s ease-out;
-  text-wrap: nowrap;
+  /* text-wrap: nowrap; */
+  display: flex;
 }
 
 .sidebar__link p {
@@ -1752,4 +1764,47 @@ button {
 .button__up:hover svg {
   -webkit-transform: scale(2);
   transform: scale(2);
+}
+/* ---------------------- adaptive --------------------------- */
+/* ---------------------- adaptive --------------------------- */
+/* -- 1300 --  */
+@media(max-width: 1300px){
+  /* --------------- header -------------- */
+  .header__nav-element p{
+    display: none;
+  }
+  .header__nav-icon{
+    margin-right: 0px;
+    height: 40px;
+    width:40px;
+  }
+  .header__search-block{
+    width: 100%;
+  }
+
+  .header__search-block:hover{
+    transition: none;
+  }
+  .header__search-stroke:hover{
+    transition: none;
+  }
+  .header__search-stroke{
+    width: 200px;
+  }
+  /* ------------ main --------- */
+  /* --------- aisde ---------- */
+  .sidebar__heading{
+    font-size: 35px;
+  }
+}
+@media(max-width:1000px){
+  /* ---------header---------- */
+  /* --------- main ---------- */
+  .section{
+    width: 100%;
+  }
+  /* --------- aside --------- */
+.aside {
+  display: none;
+}
 }
