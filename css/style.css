@@ -113,11 +113,7 @@ html {
 
 .header__logo {
   margin-right: 30px;
-}
-
-.header__logo img {
   width: 75px;
-  height: 75px;
 }
 
 .header__search-block {
@@ -252,15 +248,15 @@ article {
   position: relative;
 }
 
-.first__article {
-  margin: 50px 0;
+.lesson__inner{
+  padding:  50px 50px 0 50px;
 }
 
 .main__text {
   background: hsl(212, 13%, 40%, 0.5);
   border-radius: 15px;
   padding: 30px;
-  margin: 30px;
+  margin-bottom: 50px;
 }
 
 .main__text span {
@@ -272,9 +268,10 @@ article {
 
 hr {
   height: 3px;
-  background: rgb(243, 85, 16);
-  margin-bottom: 20px;
-  margin: 0 5%;
+  background: #f35510;
+  /* margin-bottom: 20px; */
+  /* margin: 0 5%; */
+  padding: 0 5%;
   border-radius: 2px;
 }
 
@@ -290,9 +287,17 @@ hr {
   display: none;
 }
 .sub__heading {
+  font-family: Cormorant;
+  text-align: center;
   font-weight: 700;
   font-size: 40px;
   line-height: 150%;
+  margin-bottom: 50px;
+  width: fit-content;
+  border-top: dashed #f35510;
+  border-bottom: dashed #f35510;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .atributs {
@@ -314,35 +319,40 @@ hr {
   z-index: 1;
 } */
 
-.lesson__inner {
-  padding: 30px 50px 30px 50px;
+.lesson__list {
+  padding:0 0 50px 0;
 }
 
-.lesson__inner p {
+.lesson__list p {
   background: hsl(212, 13%, 40%, 0.5);
   border-radius: 15px;
-  padding: 0 15px;
-  margin: 15px 0 0 15px;
+  padding: 0 15px 0 15px;
+  margin: 25px 0 0 0;
 }
 
-.lesson__inner p span {
+.lesson__list p span {
   /* background: #28313b; */
   background: #f35510;
   border-radius: 5px;
 }
 
-.lesson__inner span {
+.lesson__list span {
   /* background: #596573; */
   background: #f35510;
   border-radius: 5px;
   padding: 0 10px;
 }
 
-.lesson__inner li {
-  margin: 30px;
+.lesson__list li {
+  margin: 50px 0;
 }
-
-.lesson__inner li::before {
+.lesson__list li:first-child {
+  margin: 0 0 50px 0 ;
+}
+.lesson__list li:last-child {
+  margin: 50px 0 0 0;
+}
+.lesson__list li::before {
   content: "";
   display: block;
   position: relative;
@@ -354,15 +364,11 @@ hr {
   background: #f35510;
 }
 
-.lesson__inner .termin {
-  font-weight: 700;
-}
-
-.lesson__inner .sub__heading {
+.lesson__list .sub__heading {
   text-align: left;
 }
 
-.lesson__inner .termin::before {
+.lesson__list .termin::before {
   content: "";
   display: block;
   position: relative;
@@ -374,20 +380,23 @@ hr {
   background: #f35510;
 }
 
-.termin__li {
-  font-weight: 700;
-}
-
 .img {
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 5px;
+  /* margin-top: 20px; */
+  margin-bottom: 50px;
+  /* padding: 0 0 50px; */
   border: solid 1px white;
   width: 50%;
+}
+.lesson__inner img:first-child{
+
+}
+.lesson__list .img{
+  margin-top: 25px;
+  margin-bottom: 0px;
 }
 .img--l{
   width: 100%;
@@ -397,7 +406,7 @@ video {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   position: relative;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .lesson__link{
@@ -499,8 +508,9 @@ video {
 /* ------------- CSS__LESSON_5 ------------ */
 /* ------------- CSS__LESSON_5 ------------ */
 .wrapper__l5 {
-  padding: 100px 15px;
-  height: 600px;
+  /* padding: 100px 15px; */
+  /* height: 600px; */
+  margin-bottom: 50px;
 }
 
 .container__0 {
@@ -1373,23 +1383,16 @@ h2 {
 }
 /* ------------- SCSS__LESSON ------------ */
 /* ------------- SCSS__LESSON ------------ */
-.lesson__container {
+.lesson__image-container {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 50px;
 }
-.lesson__container img{
+.lesson__image-container img{
   max-width: 350px;
 }
-article .sub__heading {
-  text-align: center;
-}
-
-article .sub__heading::before {
-  display: none;
-}
-
-/* ========================================== SIDEBAR ========================================== */
-/* ========================================== SIDEBAR ========================================== */
+/* ========================================== ASIDE ========================================== */
+/* ========================================== ASIDE ========================================== */
 .aside {
   position: relative;
   width: 25%;
@@ -1420,31 +1423,11 @@ article .sub__heading::before {
   overflow-Y: auto;
   overflow-x: hidden;
 }
-
-/* ----------- scroll-bar ------------ */
-/* ----------- scroll-bar ------------ */
-.aside__list::-webkit-scrollbar {
-  background: hsla(212, 20%, 19%, 0.5);
-  width: 10px;
-}
-
-.aside__list::-webkit-scrollbar-thumb {
-  width: 6px;
-  background: rgb(243, 85, 16);
-  border-radius: 5px;
-  margin: 10px 0;
-}
-
-.aside__list::-webkit-scrollbar-button {
-  background: rgb(243, 85, 16);
-  height: 15px;
-  border-radius: 5px;
-}
-
 .sidebar__link {
+  line-height: 150%;
   position: relative;
   display: flex;
-  transition: all .3s;
+  transition: 0.3s ease-out;
 }
 
 .li__css--line {
@@ -1462,9 +1445,8 @@ article .sub__heading::before {
 }
 
 .li__css--p {
-  padding: 10px 0;
   position: relative;
-  margin-bottom: 5px;
+  height: fit-content;
 }
 
 .li__css--p:last-child {
@@ -1484,13 +1466,10 @@ article .sub__heading::before {
 }
 
 .side__text {
-  line-height: 100%;
-  /* text-align: left; */
   color: #8f8f8f;
   font-size: 20px;
   -webkit-transition: 0.5s ease-out;
   transition: 0.3s ease-out;
-  /* text-wrap: nowrap; */
   display: flex;
 }
 
@@ -1501,7 +1480,25 @@ article .sub__heading::before {
   margin-left: 10px;
   text-wrap: wrap;
 }
+/* ----------- scroll-bar ------------ */
+/* ----------- scroll-bar ------------ */
+.aside__list::-webkit-scrollbar {
+  background: hsla(212, 20%, 19%, 0.5);
+  width: 10px;
+}
 
+.aside__list::-webkit-scrollbar-thumb {
+  width: 6px;
+  background: rgb(243, 85, 16);
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.aside__list::-webkit-scrollbar-button {
+  background: rgb(243, 85, 16);
+  height: 15px;
+  border-radius: 5px;
+}
 /* ========================================== FOOTER ========================================== */
 /* ========================================== FOOTER ========================================== */
 .footer {
@@ -1775,7 +1772,7 @@ button {
 /* ---------------------- adaptive --------------------------- */
 /* -- 1300 --  */
 @media(max-width: 1300px){
-  /* --------------- header -------------- */
+  /* --------------- HEADER -------------- */
   .header__nav-element p{
     display: none;
   }
@@ -1797,7 +1794,7 @@ button {
   .header__search-stroke{
     width: 200px;
   }
-  /* ------------ main --------- */
+  /* ------------ MAIN --------- */
   .heading span{
     display: none;
   }
@@ -1807,19 +1804,25 @@ button {
   .heading hr{
     display: none;
   }
-  /* --------- aisde ---------- */
+  .lesson__inner{
+    padding:  30px 30px 0 30px;
+  }
+  .img{
+    margin-bottom: 30px;
+  }
+  /* --------- ASIDE ---------- */
   .sidebar__heading{
     font-size: 35px;
   }
 }
 /* --------------- 1000px ---------------- */
 @media(max-width:1000px){
-  /* ---------header---------- */
-  /* --------- main ---------- */
+  /* ---------HEADER---------- */
+  /* --------- MAIN ---------- */
   .section{
     width: 100%;
   }
-  /* --------- aside --------- */
+  /* --------- ASIDE --------- */
 .aside {
   display: none;
 }

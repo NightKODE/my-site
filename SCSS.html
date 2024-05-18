@@ -37,7 +37,14 @@
         <div class="header__inner">
           <div class="header__1st-block">
             <div class="header__logo">
-              <img src="/images/head logo.svg" alt="Head Logo">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                <path style="fill:#25B6D2;"
+                  d="M0,260.908l174.648-81.136v38.568l-132.08,57.848v0.728l132.08,57.848v38.568L0,292.212V260.908z" />
+                <path style="fill:#415E72;" d="M201.6,387.9l77.864-263.8h36.752L238.4,387.9H201.6z" />
+                <path style="fill:#E04F5F;" d="M512,293.284L337.352,373.34v-38.568l134.992-57.848v-0.728L337.352,218.34v-38.568L512,259.828
+	              V293.284z" />
+              </svg>
             </div>
             <div class="header__search-block">
               <button class="search__button">
@@ -161,10 +168,12 @@
         <section class="section" id="CSS">
           <article>
             <hr>
-            <div class="first__article">
-              SASS или же SCSS это препроцессор, который служит для быстрого написания CSS стилей.
-              Благодаря SASS вы можете добавить переменные, функции, наследование и многое другое к обычному документу
-              CSS.
+            <div class="lesson__inner">
+              <div class="main__text">
+                SASS или же SCSS это препроцессор, который служит для быстрого написания CSS стилей.
+                Благодаря SASS вы можете добавить переменные, функции, наследование и многое другое к обычному документу
+                CSS.
+              </div>
             </div>
             <hr>
           </article>
@@ -172,44 +181,48 @@
             <hr>
             <div class="heading"><span>Lesson 1. <br> Переменные.</span><p>L1. Переменные.</p></div>
             <hr>
-            <div class="main__text">
-              Функция переменных нужна для того, чтобы редактировать свойство в CSS при помощи
-              нее, а не скролить весь файл в поисках нужного значения у искомого свойтсва.
-            </div>
-            <div class="lesson__container">
-              <div class="lesson__block-img">
-                <div class="sub__heading">SCSS</div>
-                <img src="/images/scss20.jpg" alt="" class="img img--l">
+            <div class="lesson__inner">
+              <div class="main__text">
+                Функция переменных нужна для того, чтобы редактировать свойство в CSS при помощи
+                нее, а не скролить весь файл в поисках нужного значения у искомого свойтсва.
               </div>
-              <div class="lesson__block-img">
-                <div class="sub__heading">CSS</div>
-                <img src="/images/scss21.jpg" alt="" class="img img--l">
+              <div class="lesson__image-container">
+                <div class="lesson__block-img">
+                  <div class="sub__heading">SCSS</div>
+                  <img src="/images/scss20.jpg" alt="" class="img img--l">
+                </div>
+                <div class="lesson__block-img">
+                  <div class="sub__heading">CSS</div>
+                  <img src="/images/scss21.jpg" alt="" class="img img--l">
+                </div>
               </div>
+              <ul class="lesson__list">
+                <li>Сначала прописываем знак доллара <span>$</span>.</li>
+                <li>Затем без пробелов прописывается имя переменной(любое).</li>
+                <li>После чего прописывается его значение или свойство.</li>
+              </ul>
             </div>
-            <ul class="lesson__inner">
-              <li>Сначала прописываем знак доллара <span>$</span>.</li>
-              <li>Затем без пробелов прописывается имя переменной(любое).</li>
-              <li>После чего прописывается его значение или свойство.</li>
-            </ul>
             <hr>
           </article>
           <article class="SCSS__Lessons lesson__2" id="lesson__2">
             <hr>
             <div class="heading"><span>Lesson 2. <br> Синтаксис.</span><p>L2. Синтаксис.</p></div>
             <hr>
-            <div class="lesson__container ">
-              <div class="lesson__block-image">
-                <div class="sub__heading">SASS</div>
-                <img src="/images/scss2.jpg" alt="" class="img img--l">
+            <div class="lesson__inner">
+              <div class=" lesson__image-container ">
+                <div class="lesson__block-image">
+                  <div class="sub__heading">SASS</div>
+                  <img src="/images/scss2.jpg" alt="" class="img img--l">
+                </div>
+                <div class="lesson__block-image">
+                  <div class="sub__heading">SCSS</div>
+                  <img src="/images/scss1.jpg" alt="" class="img img--l">
+                </div>
               </div>
-              <div class="lesson__block-image">
-                <div class="sub__heading">SCSS</div>
-                <img src="/images/scss1.jpg" alt="" class="img img--l">
+              <div class="main__text">
+                Различие заключается лишь в том, что SCSS подразумевает наличие скобок как CSS, а в
+                SASS вложенность и принадлежность зависит от отступов.
               </div>
-            </div>
-            <div class="main__text">
-              Различие заключается лишь в том, что SCSS подразумевает наличие скобок как CSS, а в
-              SASS вложенность и принадлежность зависит от отступов.
             </div>
             <hr>
           </article>
@@ -217,97 +230,103 @@
             <hr>
             <div class="heading"><span>Lesson 3. <br> Вложенность стилей.</span><p>L3. Вложенность стилей.</p></div>
             <hr>
-            <div class="main__text">
-              Вложенность позволяет упростить написание стилей для дочерних элементов.
-            </div>
-            <div class="lesson__container">
-              <div class="lesson__block-image">
-                <div class="sub__heading">SCSS</div>
-                <img src="/images/scss3.jpg" alt="" class="img img--l">
+            <div class="lesson__inner">
+              <div class="main__text">
+                Вложенность позволяет упростить написание стилей для дочерних элементов.
               </div>
-              <div class="lesson__block-image">
-                <div class="sub__heading">CSS</div>
-                <img src="/images/scss4.jpg" alt="" class="img img--l">
+              <div class=" lesson__image-container">
+                <div class="lesson__block-image">
+                  <div class="sub__heading">SCSS</div>
+                  <img src="/images/scss3.jpg" alt="" class="img img--l">
+                </div>
+                <div class="lesson__block-image">
+                  <div class="sub__heading">CSS</div>
+                  <img src="/images/scss4.jpg" alt="" class="img img--l">
+                </div>
               </div>
+              <ul class="lesson__list">
+                <li>Сначала прописывается класс илемента. Внутри можно прописать стили для него же.</li>
+                <li>Далее прописывается класс дочернего элемента.</li>
+                <li>Затем задаются стили для этого дочернего элемента.</li>
+              </ul>
             </div>
-            <ul class="lesson__inner">
-              <li>Сначала прописывается класс илемента. Внутри можно прописать стили для него же.</li>
-              <li>Далее прописывается класс дочернего элемента.</li>
-              <li>Затем задаются стили для этого дочернего элемента.</li>
-            </ul>
             <hr>
           </article>
           <article class="SCSS__Lessons lesson__4" id="lesson__4">
             <hr>
             <div class="heading"><span>Lesson 4. <br> Миксины.</span><p>L4. Миксины.</p></div>
             <hr>
-            <div class="main__text">
-              Миксин - некий шаблон с заранее заданными стилями и свойствами, которые можно повторно использовать, чтобы
-              не прописывать одни и те же стили каждый раз. Прописывается он вначале файла стилей или в отдельном файле.
-            </div>
-            <div class="lesson__container">
-              <div class="lesson__block">
-                <div class="sub__heading">Mixin</div>
-                <img src="/images/scss5.jpg" alt="" class="img">
+            <div class="lesson__inner">
+              <div class="main__text">
+                Миксин - некий шаблон с заранее заданными стилями и свойствами, которые можно повторно использовать, чтобы
+                не прописывать одни и те же стили каждый раз. Прописывается он вначале файла стилей или в отдельном файле.
               </div>
-              <div class="lesson__block">
-                <div class="sub__heading">SCSS</div>
-                <img src="/images/scss6.jpg" alt="" class="img">
+              <div class=" lesson__image-container">
+                <div class="lesson__block">
+                  <div class="sub__heading">Mixin</div>
+                  <img src="/images/scss5.jpg" alt="" class="img">
+                </div>
+                <div class="lesson__block">
+                  <div class="sub__heading">SCSS</div>
+                  <img src="/images/scss6.jpg" alt="" class="img">
+                </div>
+                <div class="lesson__block">
+                  <div class="sub__heading">CSS</div>
+                  <img src="/images/scss7.jpg" alt="" class="img">
+                </div>
               </div>
-              <div class="lesson__block">
-                <div class="sub__heading">CSS</div>
-                <img src="/images/scss7.jpg" alt="" class="img">
+              <ul class="lesson__list">
+                <li>Миксин прописывается с помощью at-правила <span>@minix</span>.</li>
+                <li>После задается имя миксина. Оно будет испоховаться при подключении.</li>
+                <li>Затем прописываются необходимые стили.</li>
+                <div class="sub__heading">Подключение миксина</div>
+                <li>Подключается миксин при помощи at-правила <span>@include</span>.</li>
+                <li>Сначала просивывается класс элемента. Внутри можно прописывать дополнительные стили. стили </li>
+                <li>Далее внутри прописывается <span>@include</span> и <span>имя миксина</span>.</li>
+              </ul>
+              <div class="sub__heading">Аргументы в миксинах.</div>
+              <div class="main__text">
+                При определении миксина, аргументы пишутся как имена переменных, разделённые запятыми внутри круглых
+                скобок сразу после имени. Затем, при подключении миксина, значения могут быть переданы аналогичным
+                образом.
               </div>
-            </div>
-            <ul class="lesson__inner">
-              <li>Миксин прописывается с помощью at-правила <span>@minix</span>.</li>
-              <li>После задается имя миксина. Оно будет испоховаться при подключении.</li>
-              <li>Затем прописываются необходимые стили.</li>
-              <div class="sub__heading">Подключение миксина</div>
-              <li>Подключается миксин при помощи at-правила <span>@include</span>.</li>
-              <li>Сначала просивывается класс элемента. Внутри можно прописывать дополнительные стили. стили </li>
-              <li>Далее внутри прописывается <span>@include</span> и <span>имя миксина</span>.</li>
-            </ul>
-            <div class="sub__heading">Аргументы в миксинах.</div>
-            <div class="main__text">
-              При определении миксина, аргументы пишутся как имена переменных, разделённые запятыми внутри круглых
-              скобок сразу после имени. Затем, при подключении миксина, значения могут быть переданы аналогичным
-              образом.
-            </div>
-            <div class="main__text">
-              Можно прописывать значения для всех заданных аргументов не используя само название аргумента, в таком
-              случае переменные задаются в порядке очереди самих аргументов через запятую, поэтому аргументы , которые
-              могут в дальнейшем меняться лучше прописать вначале.
-            </div>
-            <div class="lesson__container">
-              <div class="lesson__block-img">
-                <div class="sub__heading">SCSS</div>
-                <img src="/images/scss8.jpg" alt="" class="img">
+              <div class="main__text">
+                Можно прописывать значения для всех заданных аргументов не используя само название аргумента, в таком
+                случае переменные задаются в порядке очереди самих аргументов через запятую, поэтому аргументы , которые
+                могут в дальнейшем меняться лучше прописать вначале.
               </div>
-              <div class="lesson__block-img">
-                <div class="sub__heading">CSS</div>
-                <img src="/images/scss9.jpg" alt="" class="img">
+              <div class="lesson__image-container">
+                <div class="lesson__block-img">
+                  <div class="sub__heading">SCSS</div>
+                  <img src="/images/scss8.jpg" alt="" class="img">
+                </div>
+                <div class="lesson__block-img">
+                  <div class="sub__heading">CSS</div>
+                  <img src="/images/scss9.jpg" alt="" class="img">
+                </div>
               </div>
+              <div class="main__text">Для подключения миксина, заданного в другом файле, нужно в начале файла стилей
+                прописать <span>@imoprt "url";</span> и указать в ковычках путь к файлу с миксинами.</div>
+              <img src="/images/scss10.jpg" alt="" class="img">
             </div>
-            <div class="main__text">Для подключения миксина, заданного в другом файле, нужно в начале файла стилей
-              прописать <span>@imoprt "url";</span> и указать в ковычках путь к файлу с миксинами.</div>
-            <img src="/images/scss10.jpg" alt="" class="img">
             <hr>
           </article>
           <article class="SCSS__Lessons lesson__5" id="lesson__5">
             <hr>
             <div class="heading"><span>Lesson 5. <br> Псевдоклассы и псевдоэлементы. </span><p>L5. Псевдоклассы и псевдоэлементы.</p></div>
             <hr>
-            <div class="main__text">Псевдоэлементы провисываеются внутри класса, которому его надо задать, только
-              вначале нужно поставить амперсант <span>&</span></div>
-            <div class="lesson__container">
-              <div class="lesson__block-img">
-                <div class="sub__heading">SCSS</div>
-                <img src="/images/scss11.jpg" alt="" class="img img--l">
-              </div>
-              <div class="lesson__block-img">
-                <div class="sub__heading">CSS</div>
-                <img src="/images/scss12.jpg" alt="" class="img img--l">
+            <div class="lesson__inner">
+              <div class="main__text">Псевдоэлементы провисываеются внутри класса, которому его надо задать, только
+                вначале нужно поставить амперсант <span>&</span></div>
+              <div class="lesson__image-container">
+                <div class="lesson__block-img">
+                  <div class="sub__heading">SCSS</div>
+                  <img src="/images/scss11.jpg" alt="" class="img img--l">
+                </div>
+                <div class="lesson__block-img">
+                  <div class="sub__heading">CSS</div>
+                  <img src="/images/scss12.jpg" alt="" class="img img--l">
+                </div>
               </div>
             </div>
             <hr>
@@ -316,26 +335,28 @@
             <hr>
             <div class="heading"><span>Lesson 6. <br> Математические функции.</span><p>L6. Математические функции.</p></div>
             <hr>
-            <div class="main__text">
-              Мат. операторы применяются для вычисления переменных в свойствах, и работает как математическое
-              вычисление.
-            </div>
-            <div class="lesson__container">
-              <div class="lesson__inner-img">
-                <div class="sub__heading">SCSS</div>
-                <img src="/images/scss13.jpg" alt="" class="img img--l">
+            <div class="lesson__inner">
+              <div class="main__text">
+                Мат. операторы применяются для вычисления переменных в свойствах, и работает как математическое
+                вычисление.
               </div>
-              <div class="lesson__inner-img">
-                <div class="sub__heading">CSS</div>
-                <img src="/images/scss14.jpg" alt="" class="img img--l">
+              <div class="lesson__image-container">
+                <div class="lesson__list-img">
+                  <div class="sub__heading">SCSS</div>
+                  <img src="/images/scss13.jpg" alt="" class="img img--l">
+                </div>
+                <div class="lesson__list-img">
+                  <div class="sub__heading">CSS</div>
+                  <img src="/images/scss14.jpg" alt="" class="img img--l">
+                </div>
               </div>
-            </div>
-            <div class="main__text">
-              Так же в операторах можно оиспользовать уже заданные или предположительные переменные.
-            </div>
-            <img src="/images/scss15.jpg" alt="" class="img">
-            <div class="main__text">
-              В примере может использоваться только один тип единиц исчисления.
+              <div class="main__text">
+                Так же в операторах можно оиспользовать уже заданные или предположительные переменные.
+              </div>
+              <img src="/images/scss15.jpg" alt="" class="img">
+              <div class="main__text">
+                В примере может использоваться только один тип единиц исчисления.
+              </div>
             </div>
             <hr>
           </article>
@@ -343,47 +364,49 @@
             <hr>
             <div class="heading"><span>Lesson 7. <br>Операторы условия, циклы и @content.</span><p>L7. Операторы условия, циклы и @content.</p></div>
             <hr>
-            <div class="sub__heading">Условия.</div>
-            <div class="main__text">Для выполнения условия необходимо вызвать оператор <span>@if</span> указывая в
-              скобках само условие применения свойств.</div>
-            <img src="/images/scss16.jpg" alt="" class="img">
-            <div class="main__text">В данном примере условие выполняется через значение переменной больше либо равно, но
-              есть и другие:
-              <li>>(>=) - больше(больше либо равно)</li>
-              <li>
-                <(<=) - меньше(меньше либо равно)</li>
-              <li>== - равно</li>
-              <li>!= - не равно</li>
-            </div>
-            <div class="main__text">Оператор <span>@else</span> вызывается, если необходимо примененить свойств в случае
-              невыполнения условия оператором <span>@if</span>.</div>
-            <div class="sub__heading">Циклы.</div>
-            <div class="lesson__container">
-              <div class="lesson__block-img">
-                <div class="sub__heading">SCSS</div>
-                <img src="/images/scss17.jpg" alt="" class="img img--l">
+            <div class="lesson__inner">
+              <div class="sub__heading">Условия.</div>
+              <div class="main__text">Для выполнения условия необходимо вызвать оператор <span>@if</span> указывая в
+                скобках само условие применения свойств.</div>
+              <img src="/images/scss16.jpg" alt="" class="img">
+              <div class="main__text">В данном примере условие выполняется через значение переменной больше либо равно, но
+                есть и другие:
+                <li>>(>=) - больше(больше либо равно)</li>
+                <li>
+                  <(<=) - меньше(меньше либо равно)</li>
+                <li>== - равно</li>
+                <li>!= - не равно</li>
               </div>
-              <div class="lesson__block-img">
-                <div class="sub__heading">CSS</div>
-                <img src="/images/scss18.jpg" alt="" class="img img--l">
+              <div class="main__text">Оператор <span>@else</span> вызывается, если необходимо примененить свойств в случае
+                невыполнения условия оператором <span>@if</span>.</div>
+              <div class="sub__heading">Циклы.</div>
+              <div class=" lesson__image-container">
+                <div class="lesson__block-img">
+                  <div class="sub__heading">SCSS</div>
+                  <img src="/images/scss17.jpg" alt="" class="img img--l">
+                </div>
+                <div class="lesson__block-img">
+                  <div class="sub__heading">CSS</div>
+                  <img src="/images/scss18.jpg" alt="" class="img img--l">
+                </div>
               </div>
+              <div class="main__text">Директива <span>@for</span> выводит набор стилей заданное число раз. Для каждого
+                повторения используется переменная-счётчик для изменения вывода</div>
+              <ul class="lesson__list">
+                <li>Сначала вызывается оператор <span>@for</span>, затем ему задается переменная в диапазоне от
+                  <span>ftom</span>(включительно) до <span>through</span>(включительно)(<span>to</span> исключительно).
+                </li>
+                <li>Внутри прописывается конструктор классов с неоходимыми свойствами.</li>
+              </ul>
+              <div class="sub__heading">@content</div>
+              <div class="main__text">Протокол <span>@content</span> применяется для локального внесения изменений в
+                миксин.</div>
+              <img src="/images/scss19.jpg" alt="" class="img">
+              <ul class="lesson__list">
+                <li>Сначала в миксин добавляется оператор <span>@content</span>.</li>
+                <li>Затем при поключении внутри протокола <span>@include</span> прописывются дополнительние свойтсва.</li>
+              </ul>
             </div>
-            <div class="main__text">Директива <span>@for</span> выводит набор стилей заданное число раз. Для каждого
-              повторения используется переменная-счётчик для изменения вывода</div>
-            <ul class="lesson__inner">
-              <li>Сначала вызывается оператор <span>@for</span>, затем ему задается переменная в диапазоне от
-                <span>ftom</span>(включительно) до <span>through</span>(включительно)(<span>to</span> исключительно).
-              </li>
-              <li>Внутри прописывается конструктор классов с неоходимыми свойствами.</li>
-            </ul>
-            <div class="sub__heading">@content</div>
-            <div class="main__text">Протокол <span>@content</span> применяется для локального внесения изменений в
-              миксин.</div>
-            <img src="/images/scss19.jpg" alt="" class="img">
-            <ul class="lesson__inner">
-              <li>Сначала в миксин добавляется оператор <span>@content</span>.</li>
-              <li>Затем при поключении внутри протокола <span>@include</span> прописывются дополнительние свойтсва.</li>
-            </ul>
             <hr>
           </article>
         </section>

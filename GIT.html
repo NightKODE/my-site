@@ -37,7 +37,14 @@
         <div class="header__inner">
           <div class="header__1st-block">
             <div class="header__logo">
-              <img src="/images/head logo.svg" alt="Head Logo">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                <path style="fill:#25B6D2;"
+                  d="M0,260.908l174.648-81.136v38.568l-132.08,57.848v0.728l132.08,57.848v38.568L0,292.212V260.908z" />
+                <path style="fill:#415E72;" d="M201.6,387.9l77.864-263.8h36.752L238.4,387.9H201.6z" />
+                <path style="fill:#E04F5F;" d="M512,293.284L337.352,373.34v-38.568l134.992-57.848v-0.728L337.352,218.34v-38.568L512,259.828
+	              V293.284z" />
+              </svg>
             </div>
             <div class="header__search-block">
               <button class="search__button">
@@ -161,10 +168,12 @@
         <section class="section" id="GIT">
           <article>
             <hr>
-            <div class="first__article">
-              GIT - распределенная система управления версиями. <br> <br>
-              На каждом компьютере хранится полная версия репозитория, что позволяет локально работать над продуктом,
-              даже без интернета.
+            <div class="lesson__inner">
+              <div class="main__text">
+                GIT - распределенная система управления версиями. <br> <br>
+                На каждом компьютере хранится полная версия репозитория, что позволяет локально работать над продуктом,
+                даже без интернета.
+              </div>
             </div>
             <hr>
           </article>
@@ -172,33 +181,37 @@
             <hr>
             <div class="heading"><span>Lesson 1. <br> Для чего нужен GIT.</span><p>L1. Для чего нужен GIT.</p></div>
             <hr>
-            <ul class="lesson__inner">
-              <li>Позволяет сохранить разные версии проекта. </li>
-              <li>Позволяет быстро переходить к разным версиям проекта. </li>
-              <li>Позволяет откатиться к предыдущим версиям приложения.</li>
-              <li>Упрощает и улучшает процесс командной работы над одним проектом. </li>
-              <li>Позволяет осуществлять разработку различных функций в проекте в отдельной ветке независимо от всех
-                остальных разработчиков.</li>
-            </ul>
+            <div class="lesson__inner">
+              <ul class="lesson__list">
+                <li>Позволяет сохранить разные версии проекта. </li>
+                <li>Позволяет быстро переходить к разным версиям проекта. </li>
+                <li>Позволяет откатиться к предыдущим версиям приложения.</li>
+                <li>Упрощает и улучшает процесс командной работы над одним проектом. </li>
+                <li>Позволяет осуществлять разработку различных функций в проекте в отдельной ветке независимо от всех
+                  остальных разработчиков.</li>
+              </ul>
+            </div>
             <hr>
           </article>
           <article class="GIT__Lessons lesson__2" id="lesson__2">
             <hr>
             <div class="heading"><span>Lesson 2. <br> GIT и GitHub.</span><p>L2. GIT и GitHub.</p></div>
             <hr>
-            <div class="lesson__container">
-              <div class="lesson__block-img">
-                <div class="sub__heading">GIT</div>
-                <div class="main__text">
-                  Распределенная система контроля версий.
-                  Локальная работа над продуктом: создание веток, ответвлений, версий и т.д.
+            <div class="lesson__inner">
+              <div class="lesson__image-container">
+                <div class="lesson__block-img">
+                  <div class="sub__heading">GIT</div>
+                  <div class="main__text">
+                    Распределенная система контроля версий.
+                    Локальная работа над продуктом: создание веток, ответвлений, версий и т.д.
+                  </div>
                 </div>
-              </div>
-              <div class="lesson__block">
-                <div class="sub__heading">GitHub</div>
-                <div class="main__text">
-                  Сервис хостинга Git репозиториев.
-                  Хранит основную версию продукта для разработчиков.
+                <div class="lesson__block">
+                  <div class="sub__heading">GitHub</div>
+                  <div class="main__text">
+                    Сервис хостинга Git репозиториев.
+                    Хранит основную версию продукта для разработчиков.
+                  </div>
                 </div>
               </div>
             </div>
@@ -208,214 +221,228 @@
             <hr>
             <div class="heading"><span>Lesson 3. <br> Рабочие области GIT.</span><p>L3. Рабочие области GIT.</p></div>
             <hr>
-            <ul class="lesson__inner">
-              <li>
-                <span>Working directory</span> - рабочая директория.
-                <p>Видимая область проекта в которой содержатся файлы (папка проекта). </p>
-                <img src="/images/git1.jpg" alt="" class="img">
-              </li>
-              <li>
-                <span>Staging area</span> - индекс.
-                <p>
-                  В эту область добавляются файлы перед сохранением. <br> <br>
-                  <span>git status</span> - показывает изменения в индексе которые были подготовлены для сохранения
-                  (коммита).
-                </p>
-                <img src="/images/git2.jpg" alt="" class="img img--l">
-              </li>
-              <li>
-                <span>Repository</span> - репозиторий (папка.git).
-                <p>
-                  Здесь сохраняются все версии файлов проекта. <br> <br>
-                  Так же тут сохраняются коммиты (указатели на определенные версии проекта). <br> <br>
-                  На примере папки Objekts (в ней сохраняются все объекты репозитория).
-                </p>
-                <img src="/images/git3.jpg" alt="" class="img img--l">
-                <p>
-                  Папки появляются после создания объектов gitом. <br> <br>
-                  Файлы с длинными названиями (их названия основаны на хешах git-объектов). <br> <br>
-                  При изменении файла, в репозитории (папка Objects) сохранится два разных файла (первая версия и
-                  вторая).
-                </p>
-              </li>
-            </ul>
+            <div class="lesson__inner">
+              <ul class="lesson__list">
+                <li>
+                  <span>Working directory</span> - рабочая директория.
+                  <p>Видимая область проекта в которой содержатся файлы (папка проекта). </p>
+                  <img src="/images/git1.jpg" alt="" class="img">
+                </li>
+                <li>
+                  <span>Staging area</span> - индекс.
+                  <p>
+                    В эту область добавляются файлы перед сохранением. <br> <br>
+                    <span>git status</span> - показывает изменения в индексе которые были подготовлены для сохранения
+                    (коммита).
+                  </p>
+                  <img src="/images/git2.jpg" alt="" class="img img--l">
+                </li>
+                <li>
+                  <span>Repository</span> - репозиторий (папка.git).
+                  <p>
+                    Здесь сохраняются все версии файлов проекта. <br> <br>
+                    Так же тут сохраняются коммиты (указатели на определенные версии проекта). <br> <br>
+                    На примере папки Objekts (в ней сохраняются все объекты репозитория).
+                  </p>
+                  <img src="/images/git3.jpg" alt="" class="img img--l">
+                  <p>
+                    Папки появляются после создания объектов gitом. <br> <br>
+                    Файлы с длинными названиями (их названия основаны на хешах git-объектов). <br> <br>
+                    При изменении файла, в репозитории (папка Objects) сохранится два разных файла (первая версия и
+                    вторая).
+                  </p>
+                </li>
+              </ul>
+            </div>
             <hr>
           </article>
           <article class="GIT__Lessons lesson__4" id="lesson__4">
             <hr>
             <div class="heading"><span>Lesson 4. <br> Рабочий процесс GIT.</span><p>L4. Рабочий процесс GIT.</p></div>
             <hr>
-            <ul class="lesson__inner">
-              <li>1. Создается папка с файлами - проект. <br> В нее добавлять файлы можно традиционным и не только
-                способами.</li>
-              <li>2. В терминале прописывается команда <span>git init</span>. <br> Она нужно для инициализации
-                репозитория GIT и создания скрытой папки.git. </li>
-              <li>3. В индекс файлы добавляются командой - <span>git add “name”</span> <br>После команды прописывается
-                имя файла, если поставить точку, то добавятся все модифицированные файлы и созданные. </li>
-              <li>4. После добавления изменений в индекс можно сохранить текущую версию проекта в репозиторий командой -
-                <span>git commit -m "messege"</span>.
-              </li>
-              <li>5. Командой <span>git checkout</span> можно перейти к определенной версии проекта. <br> Из репозитория
-                в рабочую директорию перезаписываются файлы, либо добавляются, либо удаляются, тем самым проект будет
-                состоять из нужных версий файлов. </li>
-            </ul>
+            <div class="lesson__inner">
+              <ul class="lesson__list">
+                <li>1. Создается папка с файлами - проект. <br> В нее добавлять файлы можно традиционным и не только
+                  способами.</li>
+                <li>2. В терминале прописывается команда <span>git init</span>. <br> Она нужно для инициализации
+                  репозитория GIT и создания скрытой папки.git. </li>
+                <li>3. В индекс файлы добавляются командой - <span>git add “name”</span> <br>После команды прописывается
+                  имя файла, если поставить точку, то добавятся все модифицированные файлы и созданные. </li>
+                <li>4. После добавления изменений в индекс можно сохранить текущую версию проекта в репозиторий командой -
+                  <span>git commit -m "messege"</span>.
+                </li>
+                <li>5. Командой <span>git checkout</span> можно перейти к определенной версии проекта. <br> Из репозитория
+                  в рабочую директорию перезаписываются файлы, либо добавляются, либо удаляются, тем самым проект будет
+                  состоять из нужных версий файлов. </li>
+              </ul>
+            </div>
             <hr>
           </article>
           <article class="GIT__Lessons lesson__5" id="lesson__5">
             <hr>
             <div class="heading"><span>Lesson 5. <br> Статусы отслеживания файллов.</span><p>L5. Статусы отслеживания файллов.</p></div>
             <hr>
-            <ul class="lesson__inner">
-              <li>
-                <div class="sub__heading">Untracked - неотслеживаемый.</div>
-                <p>
-                  Новые файлы, добавленные в рабочую директорию имеют статус "неотслеживаемые” т.к. еще не находятся в
-                  репозитории. Этот статус имеют все новые файлы изначально.
-                </p>
-              </li>
-              <li>
-                <div class="sub__heading">Staged - подготовленный.</div>
-                <p>
-                  Файлы, добавленные в индекс для сохранения командой <span>git add</span>, имеют статус
-                  “подготовленные”
-                </p>
-              </li>
-              <li>
-                <div class="sub__heading">Unmpdified - немодифицированный.</div>
-                <p>
-                  Файлы, сохраненные в репозиторий командой <br> <span>git commit</span>, имеют статус
-                  “немодифицированный”
-                </p>
-              </li>
-              <li>
-                <div class="sub__heading">Modified - модифицированный.</div>
-                <p>
-                  Файлы (находящиеся в РД, индексе и репозитории), взятые для каких-либо изменений, имеют статус
-                  модифицированные. Они могут в дальнейшем иметь статус “подготовленные” и “немодифицированные”.
-                </p>
-              </li>
-            </ul>
+            <div class="lesson__inner">
+              <ul class="lesson__list">
+                <li>
+                  <span>Untracked</span> - неотслеживаемый.
+                  <p>
+                    Новые файлы, добавленные в рабочую директорию имеют статус "неотслеживаемые” т.к. еще не находятся в
+                    репозитории. Этот статус имеют все новые файлы изначально.
+                  </p>
+                </li>
+                <li>
+                  <span>Staged</span> - подготовленный.
+                  <p>
+                    Файлы, добавленные в индекс для сохранения командой <span>git add</span>, имеют статус
+                    “подготовленные”
+                  </p>
+                </li>
+                <li>
+                  <span>Unmpdified</span> - немодифицированный.
+                  <p>
+                    Файлы, сохраненные в репозиторий командой <br> <span>git commit</span>, имеют статус
+                    “немодифицированный”
+                  </p>
+                </li>
+                <li>
+                  <span>Modified</span> - модифицированный.
+                  <p>
+                    Файлы (находящиеся в РД, индексе и репозитории), взятые для каких-либо изменений, имеют статус
+                    модифицированные. Они могут в дальнейшем иметь статус “подготовленные” и “немодифицированные”.
+                  </p>
+                </li>
+              </ul>
+            </div>
             <hr>
           </article>
           <article class="GIT__Lessons lesson__6" id="lesson__6">
             <hr>
             <div class="heading"><span>Lesson 6. <br> Объекты GIT.</span><p>L6. Объекты GIT.</p></div>
             <hr>
-            <ul class="lesson__inner">
-              <li><span>Commit</span> - указатель на дерево (ссылка). </li>
-              <li><span>Blob</span> - файл.</li>
-              <li><span>Tree</span> - папка.</li>
-              <div class="lesson__container">
-                <div class="lesson__block-img">
-                  <img src="/images/git4.jpg" alt="" class="img img--l">
+            <div class="lesson__inner">
+              <ul class="lesson__list">
+                <li><span>Commit</span> - указатель на дерево (ссылка). </li>
+                <li><span>Blob</span> - файл.</li>
+                <li><span>Tree</span> - папка.</li>
+                <div class=" lesson__image-container">
+                  <div class="lesson__block-img">
+                    <img src="/images/git4.jpg" alt="" class="img img--l">
+                  </div>
+                  <div class="lesson__block-img">
+                    <img src="/images/git5.jpg" alt="" class="img img--l">
+                  </div>
                 </div>
-                <div class="lesson__block-img">
-                  <img src="/images/git5.jpg" alt="" class="img img--l">
-                </div>
-              </div>
-            </ul>
+              </ul>
+            </div>
             <hr>
           </article>
           <article class="GIT__Lessons lesson__7" id="lesson__7">
             <hr>
             <div class="heading"><span>Lesson 7. <br> Удаленный репозиторий GitHub.</span><p>L7. Удаленный репозиторий GitHub.</p></div>
             <hr>
-            <div class="main__text">
-              Удаленный репозиторий позволяет хранить проект удаленно. <br><br>
-              Удаленные репозитории бывают публичные и частные. публичные репозитории могут скачивать все без
-              ограничений, но загружать изменения в него только с личным доступом. Личный доступ дает админ репозитория
-              ( владелец на GitHub ). С частным репозиторием работать можно только с личным доступом.
+            <div class="lesson__inner">
+              <div class="main__text">
+                Удаленный репозиторий позволяет хранить проект удаленно. <br><br>
+                Удаленные репозитории бывают публичные и частные. публичные репозитории могут скачивать все без
+                ограничений, но загружать изменения в него только с личным доступом. Личный доступ дает админ репозитория
+                ( владелец на GitHub ). С частным репозиторием работать можно только с личным доступом.
+              </div>
+              <div class="sub__heading">Как работать с удаленным репозиторием.</div>
+              <ul class="lesson__list">
+                <li>1. Сначала уделенный репозиторий скачивается на компьютер командой <span>git clone "url"</span>.
+                  <p>
+                    При скачивании git создает связь между локальным и удаленным репозиториями, при этом уделенному
+                    репозиторию задается имя по умолчанию - origin
+                  </p>
+                </li>
+                <li>
+                  Далее необходимо подключить удаленный репозиторий к локальному командой <br> <span>git remote add origin
+                    "url"</span> ( имя удаленного репозитория заданное на GItHub при его создании ).
+                  <p>После этого на удаленный репозиторий можно загружать какие-лмбо изменения, но связь с ветками еще не
+                    устанавлена, это нужно делать далее. </p>
+                </li>
+                <li>
+                  Теперь локальную ветку (например “new-feature”) необходимо связать с удаленной веткой (например “main”,
+                  как правило связывают ветки с одинаковым названием) командой <span>git push –u origin "branch"</span>.
+                  <p>После создания связи между ветками загружать обновления можно обычной командой <span>git push</span>.
+                  </p>
+                </li>
+                <li>
+                  После проделанных действий загружать и скачивать какие-либо изменения в локальной ветке можно командами
+                  <span>git push</span> и <span>git pull</span> соответственно.
+                </li>
+              </ul>
             </div>
-            <div class="sub__heading">Как работать с удаленным репозиторием.</div>
-            <ul class="lesson__inner">
-              <li>1. Сначала уделенный репозиторий скачивается на компьютер командой <span>git clone "url"</span>.
-                <p>
-                  При скачивании git создает связь между локальным и удаленным репозиториями, при этом уделенному
-                  репозиторию задается имя по умолчанию - origin
-                </p>
-              </li>
-              <li>
-                Далее необходимо подключить удаленный репозиторий к локальному командой <br> <span>git remote add origin
-                  "url"</span> ( имя удаленного репозитория заданное на GItHub при его создании ).
-                <p>После этого на удаленный репозиторий можно загружать какие-лмбо изменения, но связь с ветками еще не
-                  устанавлена, это нужно делать далее. </p>
-              </li>
-              <li>
-                Теперь локальную ветку (например “new-feature”) необходимо связать с удаленной веткой (например “main”,
-                как правило связывают ветки с одинаковым названием) командой <span>git push –u origin "branch"</span>.
-                <p>После создания связи между ветками загружать обновления можно обычной командой <span>git push</span>.
-                </p>
-              </li>
-              <li>
-                После проделанных действий загружать и скачивать какие-либо изменения в локальной ветке можно командами
-                <span>git push</span> и <span>git pull</span> соответственно.
-              </li>
-            </ul>
             <hr>
           </article>
           <article class="GIT__Lessons lesson__8" id="lesson__8">
             <hr>
             <div class="heading"><span>Lesson 8. <br> Команды GIT.</span><p>L8. Команды GIT.</p></div>
             <hr>
-            <div class="sub__heading">Основные.</div>
-            <ul class="lesson__inner">
-              <li><span>git init</span> - cоздание репозитория</li>
-              <li><span>git status</span> - отображает текущее состояние репозитория </li>
-              <li><span>git add "file"</span> - добавляет файлы в индекс (поставив точку вместо имени файла добавятся
-                все измененные файлы) </li>
-              <li><span>git commit –m "message"</span> - создание коммита с записью изменений в репозиторий </li>
-              <li><span>git log</span> - просмотр истории изменений </li>
-              <li><span>git checkout "commit hash" </span>- переход в определенную версию проекта по хэшу коммита </li>
-            </ul>
-            <div class="sub__heading">Ветвление.</div>
-            <ul class="lesson__inner">
-              <li><span>git checkout "branch name"</span> - переход на определенную версию проекта по названию ветки
-              </li>
-              <li><span>git branch "branch name"</span> - создание ветки </li>
-              <li><span>git checkout –b "branch name"</span> - создание ветки и переход в нее </li>
-              <li><span>git branch</span> - отображение существующих веток </li>
-              <li><span>git branch –d "branch name"</span> - удаление ветки ( текущую ветку удалить нельзя ) </li>
-              <li><span>git branch -m "name"</span> - переименование текущей ветки имя. </li>
-              <li><span>git merge –m "message" "feature branch name"</span> - слияние другой ветки в текущую </li>
-            </ul>
-            <div class="sub__heading">Удаленный репозиторий.</div>
-            <ul class="lesson__inner">
-              <li><span>git clone "url" </span>- клонирование удаленного репозитория к себе на компьютер. </li>
-              <li><span>git pull</span> - загрузка и применение изменений с удаленной ветки в локальную. </li>
-              <li><span>git push</span> - загрузка изменений из локальной ветки в ветку удаленного репозитория. </li>
-              <li><span>git branch –a</span> - отображает все ветки, включая те, которые находятся в удаленных репозиториях. </li>
-              <li><span>git remote add origin "url"</span> - подключение удаленного репозитория. </li>
-              <li><span>git push –u origin "branch"</span> - загрузка изменения из локальной ветки в удаленную с созданием связи между ними.</li>
-              <li><span>git push –u origin "branch"</span> - загрузка изменения из локальной ветки в удаленную с созданием связи между ними. После создания связи между ветками загружать обновления можно обычной командой git push.</li>
-            </ul>
-            <div class="sub__heading">Прочие.</div>
-            <ul class="lesson__inner">
-              <li><span>git –version</span> - проверка версии </li>
-              <li><span>git config --global user.name “...”</span> - установка имени юзера </li>
-              <li><span>git config --global user.mail “...”</span> - установка почты юзера </li>
-              <li><span>git config --list</span> - проверить настройки git </li>
-              <li><span>git cat-file -t "name"</span> - чтение типа файла.</li>
-              <li><span>git cat-file -p "name"</span> - чтение содержимого файла.</li>
-              <li><span>git remote</span> - проверка подключения удаленного репозитория </li>
-              <li><span>git remote –v</span> - проверка связи между локальным и удаленным репозиториями </li>
-              <li><span>git branch -vv</span> - список и состояние всех локальных и удаленных веток (только данные, которые обновлены с удаленного сервера). </li>
-            </ul>
+            <div class="lesson__inner">
+              <div class="sub__heading">Основные.</div>
+              <ul class="lesson__list">
+                <li><span>git init</span> - cоздание репозитория</li>
+                <li><span>git status</span> - отображает текущее состояние репозитория </li>
+                <li><span>git add "file"</span> - добавляет файлы в индекс (поставив точку вместо имени файла добавятся
+                  все измененные файлы) </li>
+                <li><span>git commit –m "message"</span> - создание коммита с записью изменений в репозиторий </li>
+                <li><span>git log</span> - просмотр истории изменений </li>
+                <li><span>git checkout "commit hash" </span>- переход в определенную версию проекта по хэшу коммита </li>
+              </ul>
+              <div class="sub__heading">Ветвление.</div>
+              <ul class="lesson__list">
+                <li><span>git checkout "branch name"</span> - переход на определенную версию проекта по названию ветки
+                </li>
+                <li><span>git branch "branch name"</span> - создание ветки </li>
+                <li><span>git checkout –b "branch name"</span> - создание ветки и переход в нее </li>
+                <li><span>git branch</span> - отображение существующих веток </li>
+                <li><span>git branch –d "branch name"</span> - удаление ветки ( текущую ветку удалить нельзя ) </li>
+                <li><span>git branch -m "name"</span> - переименование текущей ветки имя. </li>
+                <li><span>git merge –m "message" "feature branch name"</span> - слияние другой ветки в текущую </li>
+              </ul>
+              <div class="sub__heading">Удаленный репозиторий.</div>
+              <ul class="lesson__list">
+                <li><span>git clone "url" </span>- клонирование удаленного репозитория к себе на компьютер. </li>
+                <li><span>git pull</span> - загрузка и применение изменений с удаленной ветки в локальную. </li>
+                <li><span>git push</span> - загрузка изменений из локальной ветки в ветку удаленного репозитория. </li>
+                <li><span>git branch –a</span> - отображает все ветки, включая те, которые находятся в удаленных репозиториях. </li>
+                <li><span>git remote add origin "url"</span> - подключение удаленного репозитория. </li>
+                <li><span>git push –u origin "branch"</span> - загрузка изменения из локальной ветки в удаленную с созданием связи между ними.</li>
+                <li><span>git push –u origin "branch"</span> - загрузка изменения из локальной ветки в удаленную с созданием связи между ними. После создания связи между ветками загружать обновления можно обычной командой git push.</li>
+              </ul>
+              <div class="sub__heading">Прочие.</div>
+              <ul class="lesson__list">
+                <li><span>git –version</span> - проверка версии </li>
+                <li><span>git config --global user.name “...”</span> - установка имени юзера </li>
+                <li><span>git config --global user.mail “...”</span> - установка почты юзера </li>
+                <li><span>git config --list</span> - проверить настройки git </li>
+                <li><span>git cat-file -t "name"</span> - чтение типа файла.</li>
+                <li><span>git cat-file -p "name"</span> - чтение содержимого файла.</li>
+                <li><span>git remote</span> - проверка подключения удаленного репозитория </li>
+                <li><span>git remote –v</span> - проверка связи между локальным и удаленным репозиториями </li>
+                <li><span>git branch -vv</span> - список и состояние всех локальных и удаленных веток (только данные, которые обновлены с удаленного сервера). </li>
+              </ul>
+            </div>
             <hr>
           </article>
           <article class="GIT__Lessons lesson__9" id="lesson__9">
             <hr>
             <div class="heading"><span>Lesson 9. <br> Команды для консоли.</span><p>L9. Команды для консоли.</p></div>
             <hr>
-            <ul class="lesson__inner">
-              <li><span>cd ~/Desktop</span> - переход в папку для работы в ней (тильда обозначает корневую папку юзера/рабочий стол) </li>
-              <li><span>cd ..</span> - выход в родительскую папку (на уровень выше ) </li>
-              <li><span>mkdir my-project</span> - создание новой папки (имя папки)      </li>
-              <li><span>ls</span> - проверка наличия файлов в папке </li>
-              <li><span>ls –Force</span> - отобразить скрытые папки в папке </li>
-              <li><span>echo "Some text" > file.txt</span> - создание файла (текст в самом файле, название файла и его расширение ) </li>
-              <li><span>cat file.txt</span> - чтение файла </li>
-              <li><span>rm file.txt</span> - удаление файла </li>
-            </ul>
+            <div class="lesson__inner">
+              <ul class="lesson__list">
+                <li><span>cd ~/Desktop</span> - переход в папку для работы в ней (тильда обозначает корневую папку юзера/рабочий стол) </li>
+                <li><span>cd ..</span> - выход в родительскую папку (на уровень выше ) </li>
+                <li><span>mkdir my-project</span> - создание новой папки (имя папки)      </li>
+                <li><span>ls</span> - проверка наличия файлов в папке </li>
+                <li><span>ls –Force</span> - отобразить скрытые папки в папке </li>
+                <li><span>echo "Some text" > file.txt</span> - создание файла (текст в самом файле, название файла и его расширение ) </li>
+                <li><span>cat file.txt</span> - чтение файла </li>
+                <li><span>rm file.txt</span> - удаление файла </li>
+              </ul>
+            </div>
             <hr>
           </article>
         </section>

@@ -37,7 +37,14 @@
         <div class="header__inner">
           <div class="header__1st-block">
             <div class="header__logo">
-              <img src="/images/head logo.svg" alt="Head Logo">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                <path style="fill:#25B6D2;"
+                  d="M0,260.908l174.648-81.136v38.568l-132.08,57.848v0.728l132.08,57.848v38.568L0,292.212V260.908z" />
+                <path style="fill:#415E72;" d="M201.6,387.9l77.864-263.8h36.752L238.4,387.9H201.6z" />
+                <path style="fill:#E04F5F;" d="M512,293.284L337.352,373.34v-38.568l134.992-57.848v-0.728L337.352,218.34v-38.568L512,259.828
+	              V293.284z" />
+              </svg>
             </div>
             <div class="header__search-block">
               <button class="search__button">
@@ -160,11 +167,13 @@
       <div class="main__inner">
         <section class="section" id="CSS">
           <article class="CSS__Lessons lesson__1" id="lesson__1">
-            <div class="article__inner">
-              <hr>
-              <div class="heading"><span>Lesson 1. <br> Обращение к селекторам.</span><p>L1. Обращение к селекторам.</p></div>
-              <hr>
-              <ul class="lesson__inner">
+            <hr>
+            <div class="heading"><span>Lesson 1. <br> Обращение к селекторам.</span>
+              <p>L1. Обращение к селекторам.</p>
+            </div>
+            <hr>
+            <div class="lesson__inner">
+              <ul class="lesson__list">
                 <li>Обращение к селектору класса через точку <br> .parent-blue{}</li>
                 <li>Обращение через айди <br> #id-1{}</li>
                 <li>Обращение к нескольким классам <br> .blinck1, .blinck2, .blinck3{}</li>
@@ -173,221 +182,237 @@
                   <p>Тем самым стиль присваевается сомому элементу и дочернему.</p>
                 </li>
               </ul>
-              <hr>
             </div>
+            <hr>
           </article>
           <article class="CSS__Lessons lesson__2" id="lesson__2">
             <hr>
-            <div class="heading"><span>Lesson 2. <br> Стилизация текста.</span><p>L2. Стилизация текста.</p></div>
+            <div class="heading"><span>Lesson 2. <br> Стилизация текста.</span>
+              <p>L2. Стилизация текста.</p>
+            </div>
             <hr>
-            <ul class="lesson__inner">
-              <li class="one">color:; - Определяет цвет шрифта.</li>
-              <li class="lesson2__fontfamily">
-                font-family:; - Определяет стиль шрифта.
-                <p class="text1">
-                  Семейтв шрифтов указывается несколько, чтобы подгружать следующий, в случае отстутвия
-                  какого-либо. Вконце
-                  всегда
-                  стваится serif или sans-serif.
-                </p>
-              </li>
-              <li class="lesson2__size">
-                font-size:; - Определяет размер шрифта.
-              </li>
-              <li class="lesson2__height">
-                line-height:; - Определяет размер строчки.
-              </li>
-              <li class="lesson2__style">
-                font-style:; - Определяет курсив шрифта.
-              </li>
-              <li class="lesson2__weight">
-                font-weight:; - Определяет жирность шрифта.
-              </li>
-              <li class="lesson2__text-align">
-                text-align:; - Определяет прикрепление к правому краю, левому краю или по центру.
-                <br> В данном случае по центру.
-              </li>
-              <li class="lesson2__decoration">
-                text-decoration:; - Определяет подчеркивание.
-              </li>
-              <li class="lesson2__shadow">
-                text-shadow:; - Определяет тень текста.
-              </li>
-              <li class="lesson2__transform">
-                text-transform:; - Определяет регистр.
-              </li>
-              <li class="lesson2__indent">
-                text-indent:; - Определяет отступ от края.
-              </li>
-              <li class="lesson2__spacing">
-                letter-spacing:; - Определяет расстояния между буквами.
-              </li>
-              <li class="lesson2__word-spacing">
-                word-spacing:; - Определяет растояние между словами.
-              </li>
-              <li class="lesson2__white-space">
-                white-space:; - Определяет сворачивается ли пробел и как.
-              </li>
-            </ul>
+            <div class="lesson__inner">
+              <ul class="lesson__list">
+                <li class="one">color:; - Определяет цвет шрифта.</li>
+                <li class="lesson2__fontfamily">
+                  font-family:; - Определяет стиль шрифта.
+                  <p class="text1">
+                    Семейтв шрифтов указывается несколько, чтобы подгружать следующий, в случае отстутвия
+                    какого-либо. Вконце
+                    всегда
+                    стваится serif или sans-serif.
+                  </p>
+                </li>
+                <li class="lesson2__size">
+                  font-size:; - Определяет размер шрифта.
+                </li>
+                <li class="lesson2__height">
+                  line-height:; - Определяет размер строчки.
+                </li>
+                <li class="lesson2__style">
+                  font-style:; - Определяет курсив шрифта.
+                </li>
+                <li class="lesson2__weight">
+                  font-weight:; - Определяет жирность шрифта.
+                </li>
+                <li class="lesson2__text-align">
+                  text-align:; - Определяет прикрепление к правому краю, левому краю или по центру.
+                  <br> В данном случае по центру.
+                </li>
+                <li class="lesson2__decoration">
+                  text-decoration:; - Определяет подчеркивание.
+                </li>
+                <li class="lesson2__shadow">
+                  text-shadow:; - Определяет тень текста.
+                </li>
+                <li class="lesson2__transform">
+                  text-transform:; - Определяет регистр.
+                </li>
+                <li class="lesson2__indent">
+                  text-indent:; - Определяет отступ от края.
+                </li>
+                <li class="lesson2__spacing">
+                  letter-spacing:; - Определяет расстояния между буквами.
+                </li>
+                <li class="lesson2__word-spacing">
+                  word-spacing:; - Определяет растояние между словами.
+                </li>
+                <li class="lesson2__white-space">
+                  white-space:; - Определяет сворачивается ли пробел и как.
+                </li>
+              </ul>
+            </div>
             <hr>
           </article>
           <article class="CSS__Lessons lesson__3" id="lesson__3">
             <hr>
-            <div class="heading"><span>Lesson 3. <br> Единицы измерения.</span><p>L3. Единицы измерения.</p></div>
+            <div class="heading"><span>Lesson 3. <br> Единицы измерения.</span>
+              <p>L3. Единицы измерения.</p>
+            </div>
             <hr>
             <div class="lesson__inner">
-              <div class="sub__heading">1. vh и vw</div>
-              <p>
-                Эти величины определяют процентное отбражение элемента на экране вьюпорта или девайса. <br>
-                1vh и 1vw равны одному проценту от вьюпорта.
-              </p>
-              <img class="img" src="/images/vwvh.jpg" alt="">
-              <div class="sub__heading">2. vmin и vmax.</div>
-              <p>
-                vmin - вычисления опираяются на минимальную сторону вьюпорта. Та, что меньше и будет влиять на
-                элемент для которго установлено свойство vmin.
-                Нижуе кубик с примером.
-              </p>
-              <div class="kubik">
-                <div class="kubik_text">Ширина данного блока зависит от меньшей стороны вьюпорта <br> и его
-                  ширина будет 50% от нее.</div>
-              </div>
-              <div class="kubik_2">
-                <div class="kubik_text">Ширина данного блока зависит от большей стороны вьюпорта и его
-                  ширинна
-                  будет 50% от нее.</div>
-              </div>
-              <div class="sub__heading">3. em и rem.</div>
-              <p>
-                em - учитывает характеристики родительского элемента, обнуляещего файла или параметров
-                браузера
-                и умножает его на введенное количество. <br>
-                rem - учитывает характеристики только самого главного элемента (html) и умножает его на
-                введенное количество.
-              </p>
-              <div class="em-3">
-                Далеко-далеко, за.
-                <div class="em-3">
-                  Далеко-далеко, за.
+              <ul class="lesson__list">
+                <li>
+                  1. vh и vw
+                  <p>
+                    Эти величины определяют процентное отбражение элемента на экране вьюпорта или девайса. <br>
+                    1vh и 1vw равны одному проценту от вьюпорта.
+                  </p>
+                  <img class="img" src="/images/vwvh.jpg" alt="">
+                </li>
+                <li>
+                  2. vmin и vmax.
+                  <p>
+                    vmin - вычисления опираяются на минимальную сторону вьюпорта. Та, что меньше и будет влиять на
+                    элемент для которго установлено свойство vmin.
+                    Нижуе кубик с примером.
+                  </p>
+                  <div class="kubik">
+                    <div class="kubik_text">Ширина данного блока зависит от меньшей стороны вьюпорта <br> и его
+                      ширина будет 50% от нее.</div>
+                  </div>
+                  <div class="kubik_2">
+                    <div class="kubik_text">Ширина данного блока зависит от большей стороны вьюпорта и его
+                      ширинна
+                      будет 50% от нее.</div>
+                  </div>
+                </li>
+                <li>
+                  3. em и rem.
+                  <p>
+                    em - учитывает характеристики родительского элемента, обнуляещего файла или параметров
+                    браузера
+                    и умножает его на введенное количество. <br>
+                    rem - учитывает характеристики только самого главного элемента (html) и умножает его на
+                    введенное количество.
+                  </p>
                   <div class="em-3">
                     Далеко-далеко, за.
                     <div class="em-3">
                       Далеко-далеко, за.
                       <div class="em-3">
                         Далеко-далеко, за.
+                        <div class="em-3">
+                          Далеко-далеко, за.
+                          <div class="em-3">
+                            Далеко-далеко, за.
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <p>
-                Каждой строчке задан класс со стилем - font-size: 1.5em; <br> Видно, что каждая строчка
-                наследует
-                em размер опираясь на родителся. Последняя строчка перемножила все предыдущие и получилась
-                самой
-                большой.
-              </p>
+                  <p>
+                    Каждой строчке задан класс со стилем - font-size: 1.5em; <br> Видно, что каждая строчка
+                    наследует
+                    em размер опираясь на родителся. Последняя строчка перемножила все предыдущие и получилась
+                    самой
+                    большой.
+                  </p>
+                </li>
+              </ul>
             </div>
             <hr>
           </article>
           <article class="CSS__Lessons lesson__4" id="lesson__4">
             <hr>
-            <div class="heading"><span>Lesson 4. <br> Подключение шрифтов. </span><p>L4. Подключение шрифтов.</p></div>
+            <div class="heading"><span>Lesson 4. <br> Подключение шрифтов. </span>
+              <p>L4. Подключение шрифтов.</p>
+            </div>
             <hr>
             <div class="lesson__inner">
-              <div class="CSS__Lesson CSS__Lesson--4">
-                <div class="sub__heading">1 вариант.</div>
-                <p>Подключить шрифт можно через тег link в шапке файла (head), и источником является какой-либо
-                  ресурс.</p>
-                <p>Однако, если такой ресурс навернется, шрифт не подключится.</p>
-                <img class="img" src="/images/code-font.png" alt="">
-                <div class="sub__heading">2 вариант.</div>
-                <p>Во втором вариантер все сложнее, но он надежен как швейцарские часы. <br>Алгоритм такой:</p>
-                <ul>
-                  <li>1. Скачиваем шрифт из любого источника, учитывая все характеристики шрифта.</li>
-                  <li>2. Конвертируем шрифт в три формата: woff, woff2, eot.</li>
-                  <li>3. Лучше закинуть все файлы одного семейства шрифта в одну папку.</li>
-                  <li>4. Подключаем шрифт свойством ниже:</li>
-                </ul>
-                <img class="img" src="/images/@font-face.png" alt="">
-              </div>
+              <ul class="lesson__list">
+                <li>
+                  1 вариант.
+                  <p>Подключить шрифт можно через тег link в шапке файла (head), и источником является какой-либо
+                    ресурс.</p>
+                  <p>Однако, если такой ресурс навернется, шрифт не подключится.</p>
+                  <img class="img" src="/images/code-font.png" alt="">
+                </li>
+                <li>
+                  2 вариант.
+                  <p>Во втором вариантер все сложнее, но он надежен как швейцарские часы. <br>Алгоритм такой:</p>
+                  <ul>
+                    <li>1. Скачиваем шрифт из любого источника, учитывая все характеристики шрифта.</li>
+                    <li>2. Конвертируем шрифт в три формата: woff, woff2, eot.</li>
+                    <li>3. Лучше закинуть все файлы одного семейства шрифта в одну папку.</li>
+                    <li>4. Подключаем шрифт свойством ниже:</li>
+                  </ul>
+                  <img class="img" src="/images/@font-face.png" alt="">
+                </li>
+              </ul>
             </div>
             <hr>
           </article>
           <article class="CSS__Lessons lesson__5" id="lesson__5">
             <hr>
-            <div class="heading"><span>Lesson 5. <br> Position.</span><p>L5. Position.</p></div>
+            <div class="heading"><span>Lesson 5. <br> Position.</span>
+              <p>L5. Position.</p>
+            </div>
             <hr>
             <div class="lesson__inner">
-              <div class="CSS__Lesson CSS__Lesson--5">
-                <ul>
-                  <li><span class="termin__li">stiky</span> - Элемент позиционируется в соответствии с нормальным
-                    потоком документа, а затем
-                    смещается относительно его ближайшего прокручивающего предка и содержащего блока
-                    (ближайший
-                    родительский уровень блока), включая элементы, . связанные с таблицей, на основе
-                    значений top, right, bottom, u left.</li>
-                  <hr>
-                  <li><span class="termin__li">absolute</span> - Элемент удаляется из обычного потока документов, и для
-                    элемента в макете
-                    страницы
-                    не
-                    создаётся пробела. Он расположен относительно его ближайшего относительно
-                    позиционированного
-                    предка, если таковой имеется; в противном случае он помещается относительно исходного
-                    содержащего блока. Его конечная позиция определяется значениями top, right, bottom, n
-                    left.
-                  </li>
-                  <hr>
-                  <li><span class="termin__li">fixed</span> - Элемент выбивается из обычного потока документа, и для
-                    элемента в макете
-                    страницы не
-                    создаётся пространство. Он позиционируется относительно исходного содержащего блока,
-                    установленного viewport, за исключением случаев, когда один из его предков имеет
-                    свойство
-                    transform, perspective, или filter, установленное на что-то иное, кроме попе (см. CSS
-                    Transforms
-                    Spec), и в этом случае этот предок ведёт себя как содержащий блок.
-                    (Обратите внимание, что существуют несогласованности браузера с
-                    perspective u filter, способствующими содержанию формирования
-                    блоков.) Его конечная позиция определяется значениями top, right, bottom и left. Это
-                    значение
-                    всегда создаёт новый контекст наложения. В печатных документах элемент помещается в одно
-                    и
-                    то же
-                    положение на каждой странице.</li>
-                  <hr>
-                  <li><span class="termin__li">stiky</span> - Элемент позиционируется в соответствии с нормальным
-                    потоком документа, а затем
-                    смещается относительно его ближайшего прокручивающего предка и содержащего блока
-                    (ближайший
-                    родительский уровень блока), включая элементы, . связанные с таблицей, на основе
-                    значений top, right, bottom, u left.</li>
-                  <hr>
-                </ul>
-                <div class="wrapper_l5">
-                  <div class="container__0">
-                    <div class="block red">1</div>
-                    <div class="block blue">
-                      <div>2</div>
-                      relative <br>
-                      top: 20px; <br>
-                      left: 30px;
-                    </div>
-                    <div class="block orange">
-                      <div>3</div>
-                      absolute<br>
-                      top: 100px;<br>
-                      left: 30px;
-                    </div>
-                    <div class="block green">
-                      <div>4</div>
-                      sticky<br>
-                      top: 0px;<br>
-                      left: 0px;
-                    </div>
-                    <div class="block purple">5</div>
+              <ul class="lesson__list">
+                <li><span>stiky</span> - Элемент позиционируется в соответствии с нормальным
+                  потоком документа, а затем
+                  смещается относительно его ближайшего прокручивающего предка и содержащего блока
+                  (ближайший
+                  родительский уровень блока), включая элементы, . связанные с таблицей, на основе
+                  значений top, right, bottom, u left.</li>
+                <li><span>absolute</span> - Элемент удаляется из обычного потока документов, и для
+                  элемента в макете
+                  страницы
+                  не
+                  создаётся пробела. Он расположен относительно его ближайшего относительно
+                  позиционированного
+                  предка, если таковой имеется; в противном случае он помещается относительно исходного
+                  содержащего блока. Его конечная позиция определяется значениями top, right, bottom, n
+                  left.
+                </li>
+                <li><span>fixed</span> - Элемент выбивается из обычного потока документа, и для
+                  элемента в макете
+                  страницы не
+                  создаётся пространство. Он позиционируется относительно исходного содержащего блока,
+                  установленного viewport, за исключением случаев, когда один из его предков имеет
+                  свойство
+                  transform, perspective, или filter, установленное на что-то иное, кроме попе (см. CSS
+                  Transforms
+                  Spec), и в этом случае этот предок ведёт себя как содержащий блок.
+                  (Обратите внимание, что существуют несогласованности браузера с
+                  perspective u filter, способствующими содержанию формирования
+                  блоков.) Его конечная позиция определяется значениями top, right, bottom и left. Это
+                  значение
+                  всегда создаёт новый контекст наложения. В печатных документах элемент помещается в одно
+                  и
+                  то же
+                  положение на каждой странице.</li>
+                <li><span>stiky</span> - Элемент позиционируется в соответствии с нормальным
+                  потоком документа, а затем
+                  смещается относительно его ближайшего прокручивающего предка и содержащего блока
+                  (ближайший
+                  родительский уровень блока), включая элементы, . связанные с таблицей, на основе
+                  значений top, right, bottom, u left.</li>
+              </ul>
+              <div class="wrapper__l5">
+                <div class="container__0">
+                  <div class="block red">1</div>
+                  <div class="block blue">
+                    <div>2</div>
+                    relative <br>
+                    top: 20px; <br>
+                    left: 30px;
                   </div>
+                  <div class="block orange">
+                    <div>3</div>
+                    absolute<br>
+                    top: 100px;<br>
+                    left: 30px;
+                  </div>
+                  <div class="block green">
+                    <div>4</div>
+                    sticky<br>
+                    top: 0px;<br>
+                    left: 0px;
+                  </div>
+                  <div class="block purple">5</div>
                 </div>
               </div>
             </div>
@@ -395,77 +420,81 @@
           </article>
           <article class="CSS__Lessons lesson__6" id="lesson__6">
             <hr>
-            <div class="heading"><span>Lesson 6. <br> Transform.</span><p>L6. Transform.</p></div>
+            <div class="heading"><span>Lesson 6. <br> Transform.</span>
+              <p>L6. Transform.</p>
+            </div>
             <hr>
             <div class="lesson__inner">
-              <div class="translate">
-                <div class="container_1">
-                  <h2 class="l6__title">Translate</h2>
-                  <div class="translate__blocks">
-                    <div class="translate__red red_block">
-                      <div class="l6">transform: translate(0px,-100px);</div>
+              <div class="lesson__list">
+                <div class="translate">
+                  <div class="container_1">
+                    <h2 class="l6__title">Translate</h2>
+                    <div class="translate__blocks">
+                      <div class="translate__red red_block">
+                        <div class="l6">transform: translate(0px,-100px);</div>
+                      </div>
+                      <div class="translate__blue blue_block">
+                        <div class="l6">transform: translateY(20px);</div>
+                      </div>
                     </div>
-                    <div class="translate__blue blue_block">
-                      <div class="l6">transform: translateY(20px);</div>
+                    <div>
+                      <div class="termin">translate</div> - преобразует объект в 2D плоскости. <p>Можно сказать работает
+                        как position.</p>
                     </div>
-                  </div>
-                  <div>
-                    <div class="termin">translate</div> - преобразует объект в 2D плоскости. <p>Можно сказать работает
-                      как position.</p>
                   </div>
                 </div>
-              </div>
-              <hr>
-              <div class="rotate">
-                <div class="container_1">
-                  <h2 class="l6__title">Rotate</h2>
-                  <div class="rotate__blocks">
-                    <div class="rotate__red red_block">
-                      <div class="l6">transform: rotatex(970deg);</div>
+                <hr>
+                <div class="rotate">
+                  <div class="container_1">
+                    <h2 class="l6__title">Rotate</h2>
+                    <div class="rotate__blocks">
+                      <div class="rotate__red red_block">
+                        <div class="l6">transform: rotatex(970deg);</div>
+                      </div>
+                      <div class="rotate__blue blue_block">
+                        <div class="l6">transform: rotate(45deg);</div>
+                      </div>
                     </div>
-                    <div class="rotate__blue blue_block">
-                      <div class="l6">transform: rotate(45deg);</div>
+                    <div>
+                      <div class="termin">rotate</div> - поворачивает объект в 2D плоскости.
                     </div>
-                  </div>
-                  <div>
-                    <div class="termin">rotate</div> - поворачивает объект в 2D плоскости.
-                  </div>
-                  <p>
-                    Можно задать точку вращения свойством transform-origin:;. <br>
-                    Можно вращать вдоль оси X или Y.
-                  </p>
-                </div>
-              </div>
-              <hr>
-              <div class="scale">
-                <div class="container_1">
-                  <h2 class="l6__title">Scale</h2>
-                  <div class="scale__blocks">
-                    <div class="scale__red red_block">
-                      <div class="l6">transform: scale(.8);</div>
-                    </div>
-                    <div class="scale__blue blue_block">
-                      <div class="l6">transform: scaleX(2);</div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="termin">scale</div> - масштабирует (растягивает или сжимает) объект.
+                    <p>
+                      Можно задать точку вращения свойством transform-origin:;. <br>
+                      Можно вращать вдоль оси X или Y.
+                    </p>
                   </div>
                 </div>
-              </div>
-              <hr>
-              <div class="skew">
-                <div class="container_1">
-                  <h2 class="l6__title">Skew</h2>
-                  <div class="skew__blocks">
-                    <div class="skew__red red_block">
-                      Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
-                      тексты.
+                <hr>
+                <div class="scale">
+                  <div class="container_1">
+                    <h2 class="l6__title">Scale</h2>
+                    <div class="scale__blocks">
+                      <div class="scale__red red_block">
+                        <div class="l6">transform: scale(.8);</div>
+                      </div>
+                      <div class="scale__blue blue_block">
+                        <div class="l6">transform: scaleX(2);</div>
+                      </div>
                     </div>
-                    <div class="skew__blue blue_block"></div>
+                    <div>
+                      <div class="termin">scale</div> - масштабирует (растягивает или сжимает) объект.
+                    </div>
                   </div>
-                  <div>
-                    <div class="termin">skew</div> - искажает элемент в 2D плоскости.
+                </div>
+                <hr>
+                <div class="skew">
+                  <div class="container_1">
+                    <h2 class="l6__title">Skew</h2>
+                    <div class="skew__blocks">
+                      <div class="skew__red red_block">
+                        Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
+                        тексты.
+                      </div>
+                      <div class="skew__blue blue_block"></div>
+                    </div>
+                    <div>
+                      <div class="termin">skew</div> - искажает элемент в 2D плоскости.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -474,42 +503,51 @@
           </article>
           <article class="CSS__Lessons lesson__7" id="lesson__7">
             <hr>
-            <div class="heading"><span>Lesson 7. <br> Background.</span><p>L7. Background.</p></div>
+            <div class="heading"><span>Lesson 7. <br> Background.</span>
+              <p>L7. Background.</p>
+            </div>
             <hr>
             <div class="lesson__inner">
-              <img class="img img--l" src="/images/background.png" alt="">
+              <div class="lesson__list">
+                <img class="img img--l" src="/images/background.png" alt="">
+              </div>
             </div>
             <hr>
           </article>
           <article class="CSS__Lessons lesson__8" id="lesson__8">
             <hr>
-            <div class="heading"><span>Lesson 8. <br> Transition.</span><p>L8. Transition.</p></div>
+            <div class="heading"><span>Lesson 8. <br> Transition.</span>
+              <p>L8. Transition.</p>
+            </div>
             <hr>
             <div class="lesson__inner">
-              <div class="cont_2">
-                <div class="transition">
-                  <div class="block_t red_t"></div>
-                  <div class="block_t blue_t"></div>
-                  <div class="block_t orange_t"></div>
-                  <div class="block_t purple_t"></div>
+              <div class="lesson__list">
+                <div class="cont_2">
+                  <div class="transition">
+                    <div class="block_t red_t"></div>
+                    <div class="block_t blue_t"></div>
+                    <div class="block_t orange_t"></div>
+                    <div class="block_t purple_t"></div>
+                  </div>
                 </div>
+                <hr>
+                <div>
+                  <div class="termin">Transition</div> позволяет определять переходное состояние между двумя состояниями
+                  элемента.
+                </div>
+                <p>Различные состояния могут быть определены с помощью псевдоклассов, таких как :hover или
+                  :active
+                  или установлены динамически с помощью JavaScript.</p>
+                <img class="img img--l" src="/images/transition.png" alt="">
               </div>
-              <hr>
-              <div>
-                <div class="termin">Transition</div> позволяет определять переходное состояние между двумя состояниями
-                элемента.
-              </div>
-              <p>Различные состояния могут быть определены с помощью псевдоклассов, таких как :hover или
-                :active
-                или установлены динамически с помощью JavaScript.</p>
-              <img class="img img--l" src="/images/transition.png" alt="">
             </div>
             <hr>
           </article>
           <article class="CSS__Lessons lesson__9" id="lesson__9">
             <hr>
-            <hr>
-            <div class="heading"><span>Lesson 9. <br> Animation.</span><p>L9. Animation.</p></div>
+            <div class="heading"><span>Lesson 9. <br> Animation.</span>
+              <p>L9. Animation.</p>
+            </div>
             <hr>
             <div class="lesson__inner">
               <div class="wrapper_a">
@@ -521,348 +559,368 @@
                 <div class="polosa">Текст в прорези для глазa</div>
                 <div class="glaz"></div>
               </div>
-              <p>Правило @keyframes CSS управляет промежуточными шагами в последовательности
+              <div class="main__text">Правило @keyframes CSS управляет промежуточными шагами в последовательности
                 анимации CSS,
                 определяя стили для ключевых кадров (или путевых точек) в последовательности анимации. Это
                 дает
-                больший контроль над промежуточными этапами последовательности анимации, чем переходы.</p>
+                больший контроль над промежуточными этапами последовательности анимации, чем переходы.</div >
               <img class="img img--l" src="/images/animation.png" alt="">
             </div>
             <hr>
           </article>
           <article class="CSS__Lessons lesson__10" id="lesson__10">
             <hr>
-            <div class="heading"><span>Lesson 10. <br> Flex-box.</span><p>L10. Flex-box.</p></div>
+            <div class="heading"><span>Lesson 10. <br> Flex-box.</span>
+              <p>L10. Flex-box.</p>
+            </div>
             <hr>
             <div class="lesson__inner">
-              <div class="flexbox">
-                <div class="flexbox__item">
-                  <div class="flexbox__item-content">1</div>
+              <div class="lesson__list">
+                <div class="flexbox">
+                  <div class="flexbox__item">
+                    <div class="flexbox__item-content">1</div>
+                  </div>
+                  <div class="flexbox__item">
+                    <div class="flexbox__item-content">2</div>
+                  </div>
+                  <div class="flexbox__item">
+                    <div class="flexbox__item-content">3</div>
+                  </div>
                 </div>
-                <div class="flexbox__item">
-                  <div class="flexbox__item-content">2</div>
+                <div class="desc">
+                  <div class="desc__item">
+                    <div class="desc__color desc__color--f"></div>
+                    <div class="desc__text">- Флексбокс</div>
+                  </div>
+                  <div class="desc__item">
+                    <div class="desc__color desc__color--i"></div>
+                    <div class="desc__text">- Элементы флексбокса</div>
+                  </div>
+                  <div class="desc__item">
+                    <div class="desc__color desc__color--c"></div>
+                    <div class="desc__text">- Контент</div>
+                  </div>
                 </div>
-                <div class="flexbox__item">
-                  <div class="flexbox__item-content">3</div>
-                </div>
+                <img src="/images/flexbox.png" alt="" class="img img--l">
               </div>
-              <div class="desc">
-                <div class="desc__item">
-                  <div class="desc__color desc__color--f"></div>
-                  <div class="desc__text">- Флексбокс</div>
-                </div>
-                <div class="desc__item">
-                  <div class="desc__color desc__color--i"></div>
-                  <div class="desc__text">- Элементы флексбокса</div>
-                </div>
-                <div class="desc__item">
-                  <div class="desc__color desc__color--c"></div>
-                  <div class="desc__text">- Контент</div>
-                </div>
-              </div>
-              <img src="/images/flexbox.png" alt="" class="img img--l">
             </div>
             <hr>
           </article>
           <article class="CSS__Lessons lesson__11" id="lesson__11">
             <hr>
-            <div class="heading"><span>Lesson 11. <br> Grid.</span><p>L11. Grid.</p></div>
+            <div class="heading"><span>Lesson 11. <br> Grid.</span>
+              <p>L11. Grid.</p>
+            </div>
             <hr>
             <div class="lesson__inner">
-              <div class="termin">Грид для демонстрации колонок и строк</div>
-              <div class="grid">
-                <div class="container_g">
-                  <div class="grid-1">
-                    <div class="grid-1__item grid-1__item--1 item">1</div>
-                    <div class="grid-1__item grid-1__item--2 item">2</div>
-                    <div class="grid-1__item grid-1__item--3 item">3</div>
-                    <div class="grid-1__item grid-1__item--4 item">4</div>
-                    <div class="grid-1__item grid-1__item--5 item">5</div>
-                    <div class="grid-1__item grid-1__item--6 item">6</div>
+              <div class="lesson__list">
+                <div class="termin">Грид для демонстрации колонок и строк</div>
+                <div class="grid">
+                  <div class="container_g">
+                    <div class="grid-1">
+                      <div class="grid-1__item grid-1__item--1 item">1</div>
+                      <div class="grid-1__item grid-1__item--2 item">2</div>
+                      <div class="grid-1__item grid-1__item--3 item">3</div>
+                      <div class="grid-1__item grid-1__item--4 item">4</div>
+                      <div class="grid-1__item grid-1__item--5 item">5</div>
+                      <div class="grid-1__item grid-1__item--6 item">6</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <img src="/images/grid2.jpg" alt="" class="img img--l" >
-              <div class="termin">Грид для демонстрации областей</div>
-              <div class="grid">
-                <div class="container_g">
-                  <div class="grid-2">
-                    <div class="grid-2__item grid-2__item--header item">header</div>
-                    <div class="grid-2__item grid-2__item--main item">main</div>
-                    <div class="grid-2__item grid-2__item--aside item">aside</div>
-                    <div class="grid-2__item grid-2__item--footer item">footer</div>
+                <img src="/images/grid2.jpg" alt="" class="img img--l">
+                <div class="termin">Грид для демонстрации областей</div>
+                <div class="grid">
+                  <div class="container_g">
+                    <div class="grid-2">
+                      <div class="grid-2__item grid-2__item--header item">header</div>
+                      <div class="grid-2__item grid-2__item--main item">main</div>
+                      <div class="grid-2__item grid-2__item--aside item">aside</div>
+                      <div class="grid-2__item grid-2__item--footer item">footer</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <img src="/images/grid3.jpg" alt="" class="img img--l">
-              <div class="termin">Грид для демонстрации неявной сетки</div>
-              <div class="grid">
-                <div class="container_g">
-                  <div class="grid-3">
-                    <div class="grid-3__item item">1</div>
-                    <div class="grid-3__item item">2</div>
-                    <div class="grid-3__item item">3</div>
-                    <div class="grid-3__item item">4</div>
-                    <div class="grid-3__item item">5</div>
-                    <div class="grid-3__item grid-3__item--6 item">6</div>
-                    <div class="grid-3__item grid-3__item--7 item">7</div>
+                <img src="/images/grid3.jpg" alt="" class="img img--l">
+                <div class="termin">Грид для демонстрации неявной сетки</div>
+                <div class="grid">
+                  <div class="container_g">
+                    <div class="grid-3">
+                      <div class="grid-3__item item">1</div>
+                      <div class="grid-3__item item">2</div>
+                      <div class="grid-3__item item">3</div>
+                      <div class="grid-3__item item">4</div>
+                      <div class="grid-3__item item">5</div>
+                      <div class="grid-3__item grid-3__item--6 item">6</div>
+                      <div class="grid-3__item grid-3__item--7 item">7</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <img src="/images/grid4.jpg" alt="" class="img">
-              <div class="termin">Грид для демонстрации работы конкретно с элементами</div>
-              <div class="grid">
-                <div class="container_g">
-                  <div class="grid-4">
-                    <div class="grid-4__item grid-4__item--1 item">1</div>
-                    <div class="grid-4__item grid-4__item--2 item">2</div>
-                    <div class="grid-4__item grid-4__item--3 item">3</div>
-                    <div class="grid-4__item grid-4__item--4 item">4</div>
-                    <div class="grid-4__item grid-4__item--5 item">5</div>
-                    <div class="grid-4__item grid-4__item--6 item">6</div>
+                <img src="/images/grid4.jpg" alt="" class="img">
+                <div class="termin">Грид для демонстрации работы конкретно с элементами</div>
+                <div class="grid">
+                  <div class="container_g">
+                    <div class="grid-4">
+                      <div class="grid-4__item grid-4__item--1 item">1</div>
+                      <div class="grid-4__item grid-4__item--2 item">2</div>
+                      <div class="grid-4__item grid-4__item--3 item">3</div>
+                      <div class="grid-4__item grid-4__item--4 item">4</div>
+                      <div class="grid-4__item grid-4__item--5 item">5</div>
+                      <div class="grid-4__item grid-4__item--6 item">6</div>
+                    </div>
                   </div>
                 </div>
+                <img src="/images/grid5.jpg" alt="" class="img">
+                <img src="/images/grid.png" alt="" class="img img--l">
               </div>
-              <img src="/images/grid5.jpg" alt="" class="img">
-              <img src="/images/grid.png" alt="" class="img img--l">
             </div>
             <hr>
           </article>
           <article class="CSS__Lessons lesson__12" id="lesson__12">
             <hr>
-            <div class="heading"><span>Lesson 12. <br> Псевдоклассы.</span><p>L12. Псевдоклассы.</p></div>
+            <div class="heading"><span>Lesson 12. <br> Псевдоклассы.</span>
+              <p>L12. Псевдоклассы.</p>
+            </div>
             <hr>
             <div class="lesson__inner">
-              <div class="termin">Кнопка для демонстрации эффектов</div>
-              <div class="container__12">
-                <a class="link" href="http://google.com" target="blank">Здесь у нас ссылка</a>
-                <p class="p__l12">.link:visited{<br>
-                  background: #6975ff;<br>
-                  }<br>
-                  .link:hover{<br>
-                  background: rgb(72, 255, 72);<br>
-                  }<br>
-                  .link:active{<br>
-                  background: #ff7e7e;<br>
-                  }</p>
-                <div class="termin">Инпут</div>
-                <input class="input" type="text">
+              <div class="lesson__list">
+                <div class="termin">Кнопка для демонстрации эффектов</div>
+                <div class="container__12">
+                  <a class="link" href="http://google.com" target="blank">Здесь у нас ссылка</a>
+                  <p class="p__l12">.link:visited{<br>
+                    background: #6975ff;<br>
+                    }<br>
+                    .link:hover{<br>
+                    background: rgb(72, 255, 72);<br>
+                    }<br>
+                    .link:active{<br>
+                    background: #ff7e7e;<br>
+                    }</p>
+                  <div class="termin">Инпут</div>
+                  <input class="input" type="text">
+                  <p class="p__l12">
+                    .input:focus{<br>
+                    box-shadow: 0 0 10px 10px white;<br>
+                    }
+                  </p>
+                </div>
+                <div class="termin">Пункты для демонстрации обращения</div>
+                <div class="container__12">
+                  <ul class="list">
+                    <li class="list__item">Далеко-далеко, за словесными.</li>
+                    <li class="list__item">Далеко-далеко, за словесными.</li>
+                    <li class="list__item">Далеко-далеко, за словесными.</li>
+                    <li class="list__item">Далеко-далеко, за словесными.</li>
+                    <li class="list__item">Далеко-далеко, за словесными.</li>
+                    <li class="list__item">Далеко-далеко, за словесными.</li>
+                    <li class="list__item">Далеко-далеко, за словесными.</li>
+                    <li class="list__item">Далеко-далеко, за словесными.</li>
+                    <li class="list__item">Далеко-далеко, за словесными.</li>
+                    <li class="list__item">Далеко-далеко, за словесными.</li>
+                  </ul>
+                </div>
                 <p class="p__l12">
-                  .input:focus{<br>
-                  box-shadow: 0 0 10px 10px white;<br>
-                  }
+                  .list__item:first-child{<br>
+                  color: red;<br>
+                  }<br>
+                  .list__item:last-child{<br>
+                  color: rgb(0, 255, 42);<br>
+                  }<br>
+                  .list__item:nth-child(3){<br>
+                  color: aquamarine;<br>
+                  }<br>
                 </p>
+                <img src="/images/псевдоклассы.png" alt="" class="img img--l">
               </div>
-              <div class="termin">Пункты для демонстрации обращения</div>
-              <div class="container__12">
-                <ul class="list">
-                  <li class="list__item">Далеко-далеко, за словесными.</li>
-                  <li class="list__item">Далеко-далеко, за словесными.</li>
-                  <li class="list__item">Далеко-далеко, за словесными.</li>
-                  <li class="list__item">Далеко-далеко, за словесными.</li>
-                  <li class="list__item">Далеко-далеко, за словесными.</li>
-                  <li class="list__item">Далеко-далеко, за словесными.</li>
-                  <li class="list__item">Далеко-далеко, за словесными.</li>
-                  <li class="list__item">Далеко-далеко, за словесными.</li>
-                  <li class="list__item">Далеко-далеко, за словесными.</li>
-                  <li class="list__item">Далеко-далеко, за словесными.</li>
-                </ul>
-              </div>
-              <p class="p__l12">
-                .list__item:first-child{<br>
-                color: red;<br>
-                }<br>
-                .list__item:last-child{<br>
-                color: rgb(0, 255, 42);<br>
-                }<br>
-                .list__item:nth-child(3){<br>
-                color: aquamarine;<br>
-                }<br>
-              </p>
-              <img src="/images/псевдоклассы.png" alt="" class="img img--l">
             </div>
             <hr>
           </article>
           <article class="CSS__Lessons lesson__13" id="lesson__13">
             <hr>
-            <div class="heading"><span>Lesson 13. <br> Псевдоэлементы.</span><p>L13. Псевдоэлементы.</p></div>
+            <div class="heading"><span>Lesson 13. <br> Псевдоэлементы.</span>
+              <p>L13. Псевдоэлементы.</p>
+            </div>
             <hr>
             <div class="lesson__inner">
-              <div class="block-wrapper">
-                <div class="block__13"></div>
+              <div class="lesson__list">
+                <div class="block-wrapper">
+                  <div class="block__13"></div>
+                </div>
+                <ul class="list">
+                  <li class="list__item__13">Далеко-далеко, за словесными.</li>
+                  <li class="list__item__13">Далеко-далеко, за словесными.</li>
+                  <li class="list__item__13">Далеко-далеко, за словесными.</li>
+                  <li class="list__item__13">Далеко-далеко, за словесными.</li>
+                  <li class="list__item__13">Далеко-далеко, за словесными.</li>
+                </ul>
+                <a class="link__13" href="#">Изучить HTML</a>
+                <p class="text">
+                  Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные
+                  тексты. Ipsum единственное
+                  над
+                  рекламных от всех коварный рот букв! Жизни, текста текст залетают маленький оксмокс
+                  безопасную запятых
+                  путь
+                  безорфографичный языкового, реторический точках выйти что? Над рыбного продолжил
+                  выйти, что дал не
+                  заманивший
+                  проектах ipsum lorem. Взгляд семь они своих буквоград запятых?
+                </p>
+                <img src="/images/псевдоэлементы.png" alt="" class="img img--l">
               </div>
-              <ul class="list">
-                <li class="list__item__13">Далеко-далеко, за словесными.</li>
-                <li class="list__item__13">Далеко-далеко, за словесными.</li>
-                <li class="list__item__13">Далеко-далеко, за словесными.</li>
-                <li class="list__item__13">Далеко-далеко, за словесными.</li>
-                <li class="list__item__13">Далеко-далеко, за словесными.</li>
-              </ul>
-              <a class="link__13" href="#">Изучить HTML</a>
-              <p class="text">
-                Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные
-                тексты. Ipsum единственное
-                над
-                рекламных от всех коварный рот букв! Жизни, текста текст залетают маленький оксмокс
-                безопасную запятых
-                путь
-                безорфографичный языкового, реторический точках выйти что? Над рыбного продолжил
-                выйти, что дал не
-                заманивший
-                проектах ipsum lorem. Взгляд семь они своих буквоград запятых?
-              </p>
-              <img src="/images/псевдоэлементы.png" alt="" class="img img--l">
             </div>
             <hr>
           </article>
           <article class="CSS__Lessons lesson__14" id="lesson__14">
             <hr>
-            <div class="heading"><span>Lesson 14. <br> Scrollbar.</span><p>L14. Scrollbar.</p></div>
+            <div class="heading"><span>Lesson 14. <br> Scrollbar.</span>
+              <p>L14. Scrollbar.</p>
+            </div>
             <hr>
-            <ul class="lesson__inner">
-              <li>
-                1. Как убрать полосу прокрутки CSS
-                <p class="text1">
-                  Скрыть полосу прокрутки можно как у отдельного элемента на странице, так и у всей страницы целиком.
-                  Сделать это не сложно, достаточно написать следующее свойство: <br><br>
-                  /*Убрать полосу прокрутки у элемента*/ <br>
-                  <span>.element::-webkit-scrollbar</span> {
-                  width: 0;
-                  } <br><br>
-                  /*Убрать полосу прокрутки для всей страницы*/ <br>
-                  <span>::-webkit-scrollbar</span> {
-                  width: 0;
-                  }
-                </p>
-              </li>
-              <li>
-                2. Как изменить скроллбар CSS
-                <p class="text1">
-                  <span>-webkit-scrollbar</span> состоит различных псевдо-элементов: <br><br>
-                  <span>::-webkit-scrollbar</span> — это фон самого скроллбара. <br>
-                  <span>::-webkit-scrollbar-button</span> — кнопки направления на полосе прокрутки. <br>
-                  <span>::-webkit-scrollbar-track</span> — пустое пространство под индикатором прокрутки. <br>
-                  <span>::-webkit-scrollbar-thumb</span> — индикатор прокрутки, перетаскиваемый элемент. <br>
-                </p>
+            <div class="lesson__inner">
+              <ul class="lesson__list">
+                <li>
+                  1. Как убрать полосу прокрутки CSS
+                  <p class="text1">
+                    Скрыть полосу прокрутки можно как у отдельного элемента на странице, так и у всей страницы целиком.
+                    Сделать это не сложно, достаточно написать следующее свойство: <br><br>
+                    /*Убрать полосу прокрутки у элемента*/ <br>
+                    <span>.element::-webkit-scrollbar</span> {
+                    width: 0;
+                    } <br><br>
+                    /*Убрать полосу прокрутки для всей страницы*/ <br>
+                    <span>::-webkit-scrollbar</span> {
+                    width: 0;
+                    }
+                  </p>
+                </li>
+                <li>
+                  2. Как изменить скроллбар CSS
+                  <p class="text1">
+                    <span>-webkit-scrollbar</span> состоит различных псевдо-элементов: <br><br>
+                    <span>::-webkit-scrollbar</span> — это фон самого скроллбара. <br>
+                    <span>::-webkit-scrollbar-button</span> — кнопки направления на полосе прокрутки. <br>
+                    <span>::-webkit-scrollbar-track</span> — пустое пространство под индикатором прокрутки. <br>
+                    <span>::-webkit-scrollbar-thumb</span> — индикатор прокрутки, перетаскиваемый элемент. <br>
+                  </p>
 
-              </li>
-              <li>
-                3. Примеры.
-                <div class="p44-list">
-                  <div class="p44-element" id="p44-scroll-5">
-                    <div class="p44-overflow">
-                      <b>Пример 1</b>
+                </li>
+                <li>
+                  3. Примеры.
+                  <div class="p44-list">
+                    <div class="p44-element" id="p44-scroll-5">
+                      <div class="p44-overflow">
+                        <b>Пример 1</b>
 
+                      </div>
+                    </div>
+                    <div class="p44-element" id="p44-scroll-6" style="">
+                      <div class="p44-overflow">
+                        <b>Пример 2</b>
+                        <p class="text1"></p>
+                      </div>
+                    </div>
+                    <div class="p44-element" id="p44-scroll-7">
+                      <div class="p44-overflow">
+                        <b>Пример 3</b>
+                        <p class="text1"></p>
+                      </div>
+                    </div>
+                    <div class="p44-element" id="p44-scroll-8">
+                      <div class="p44-overflow">
+                        <b>Пример 4</b>
+                        <p class="text1"></p>
+                      </div>
                     </div>
                   </div>
-                  <div class="p44-element" id="p44-scroll-6" style="">
-                    <div class="p44-overflow">
-                      <b>Пример 2</b>
-                      <p class="text1"></p>
-                    </div>
-                  </div>
-                  <div class="p44-element" id="p44-scroll-7">
-                    <div class="p44-overflow">
-                      <b>Пример 3</b>
-                      <p class="text1"></p>
-                    </div>
-                  </div>
-                  <div class="p44-element" id="p44-scroll-8">
-                    <div class="p44-overflow">
-                      <b>Пример 4</b>
-                      <p class="text1"></p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                Пример 1.
-                <p class="text1">
-                  #p44-scroll-5::-webkit-scrollbar { <br>
-                  width: 10px; <br>
-                  background-color: #f9f9fd; <br>
-                  } <br> <br>
-                  #p44-scroll-5::-webkit-scrollbar-thumb { <br>
-                  border-radius: 10px; <br>
-                  background-color: #18aaaa; <br>
-                  } <br> <br>
-                  #p44-scroll-5::-webkit-scrollbar-track { <br>
-                  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2); <br>
-                  border-radius: 10px; <br>
-                  background-color: #f9f9fd; <br>
-                  } <br> <br>
-                  #p44-scroll-5::-webkit-scrollbar-button { <br>
-                  display: none; <br>
-                  }
-                </p>
-              </li>
-              <li>
-                Пример 2.
-                <p class="text1">
-                  #p44-scroll-6::-webkit-scrollbar { <br>
-                  width: 10px; <br>
-                  } <br><br>
-                  #p44-scroll-6::-webkit-scrollbar-track <br> {
-                  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset; <br>
-                  background-color: #f9f9fd; <br>
-                  } <br><br>
-                  #p44-scroll-6::-webkit-scrollbar-thumb { <br>
-                  background-color: #f2bf93; <br>
-                  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .25) 25%, <br>
-                  transparent 25%, <br>
-                  transparent 50%, <br>
-                  rgba(255, 255, 255, .25) 50%, <br>
-                  rgba(255, 255, 255, .25) 75%, <br>
-                  transparent 75%, <br>
-                  transparent); <br>
-                  } <br><br>
-                  #p44-scroll-6::-webkit-scrollbar-button { <br>
-                  display: none; <br>
-                  }
-                </p>
-              </li>
-              <li>
-                Пример 3.
-                <p class="text1">
-                  #p44-scroll-7::-webkit-scrollbar { <br>
-                  width: 10px; <br>
-                  } <br><br>
-                  #p44-scroll-7::-webkit-scrollbar-track { <br>
-                  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset; <br>
-                  background-color: #f9f9fd; <br>
-                  } <br><br>
-                  #p44-scroll-7::-webkit-scrollbar-thumb { <br>
-                  background-color: #356184; <br>
-                  background-image: -webkit-gradient(linear, 0 0, 0 100%, <br>
-                  color-stop(.5, rgba(255, 255, 255, .25)), <br>
-                  color-stop(.5, transparent), to(transparent)); <br>
-                  } <br><br>
-                  #p44-scroll-7::-webkit-scrollbar-button { <br>
-                  display: none; <br>
-                  }
-                </p>
-              </li>
-              <li>
-                Пример 4.
-                <p class="text1">
-                  #p44-scroll-8::-webkit-scrollbar { <br>
-                  width: 10px; <br>
-                  } <br><br>
-                  #p44-scroll-8::-webkit-scrollbar-track { <br>
-                  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset; <br>
-                  background-color: #f9f9fd; <br>
-                  border-radius: 10px; <br>
-                  } <br><br>
-                  #p44-scroll-8::-webkit-scrollbar-thumb { <br>
-                  border-radius: 10px; <br>
-                  background: linear-gradient(180deg, #00c6fb, #005bea); <br>
-                  } <br><br>
-                  #p44-scroll-8::-webkit-scrollbar-button { <br>
-                  display: none; <br>
-                  }
-                </p>
-              </li>
-            </ul>
+                </li>
+                <li>
+                  Пример 1.
+                  <p class="text1">
+                    #p44-scroll-5::-webkit-scrollbar { <br>
+                    width: 10px; <br>
+                    background-color: #f9f9fd; <br>
+                    } <br> <br>
+                    #p44-scroll-5::-webkit-scrollbar-thumb { <br>
+                    border-radius: 10px; <br>
+                    background-color: #18aaaa; <br>
+                    } <br> <br>
+                    #p44-scroll-5::-webkit-scrollbar-track { <br>
+                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2); <br>
+                    border-radius: 10px; <br>
+                    background-color: #f9f9fd; <br>
+                    } <br> <br>
+                    #p44-scroll-5::-webkit-scrollbar-button { <br>
+                    display: none; <br>
+                    }
+                  </p>
+                </li>
+                <li>
+                  Пример 2.
+                  <p class="text1">
+                    #p44-scroll-6::-webkit-scrollbar { <br>
+                    width: 10px; <br>
+                    } <br><br>
+                    #p44-scroll-6::-webkit-scrollbar-track <br> {
+                    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset; <br>
+                    background-color: #f9f9fd; <br>
+                    } <br><br>
+                    #p44-scroll-6::-webkit-scrollbar-thumb { <br>
+                    background-color: #f2bf93; <br>
+                    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .25) 25%, <br>
+                    transparent 25%, <br>
+                    transparent 50%, <br>
+                    rgba(255, 255, 255, .25) 50%, <br>
+                    rgba(255, 255, 255, .25) 75%, <br>
+                    transparent 75%, <br>
+                    transparent); <br>
+                    } <br><br>
+                    #p44-scroll-6::-webkit-scrollbar-button { <br>
+                    display: none; <br>
+                    }
+                  </p>
+                </li>
+                <li>
+                  Пример 3.
+                  <p class="text1">
+                    #p44-scroll-7::-webkit-scrollbar { <br>
+                    width: 10px; <br>
+                    } <br><br>
+                    #p44-scroll-7::-webkit-scrollbar-track { <br>
+                    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset; <br>
+                    background-color: #f9f9fd; <br>
+                    } <br><br>
+                    #p44-scroll-7::-webkit-scrollbar-thumb { <br>
+                    background-color: #356184; <br>
+                    background-image: -webkit-gradient(linear, 0 0, 0 100%, <br>
+                    color-stop(.5, rgba(255, 255, 255, .25)), <br>
+                    color-stop(.5, transparent), to(transparent)); <br>
+                    } <br><br>
+                    #p44-scroll-7::-webkit-scrollbar-button { <br>
+                    display: none; <br>
+                    }
+                  </p>
+                </li>
+                <li>
+                  Пример 4.
+                  <p class="text1">
+                    #p44-scroll-8::-webkit-scrollbar { <br>
+                    width: 10px; <br>
+                    } <br><br>
+                    #p44-scroll-8::-webkit-scrollbar-track { <br>
+                    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset; <br>
+                    background-color: #f9f9fd; <br>
+                    border-radius: 10px; <br>
+                    } <br><br>
+                    #p44-scroll-8::-webkit-scrollbar-thumb { <br>
+                    border-radius: 10px; <br>
+                    background: linear-gradient(180deg, #00c6fb, #005bea); <br>
+                    } <br><br>
+                    #p44-scroll-8::-webkit-scrollbar-button { <br>
+                    display: none; <br>
+                    }
+                  </p>
+                </li>
+              </ul>
+            </div>
             <hr>
           </article>
         </section>
