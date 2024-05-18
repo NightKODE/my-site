@@ -284,8 +284,11 @@ hr {
   line-height: 150%;
   text-align: center;
   font-family: Cormorant;
+  margin: 0 40px 0 40px;
 }
-
+.heading p{
+  display: none;
+}
 .sub__heading {
   font-weight: 700;
   font-size: 40px;
@@ -397,6 +400,9 @@ video {
   margin-top: 20px;
 }
 
+.lesson__link{
+  text-decoration: underline;
+}
 /* ------------- CSS__LESSON_2 ------------ */
 /* ------------- CSS__LESSON_2 ------------ */
 .lesson2__one {
@@ -1792,11 +1798,21 @@ button {
     width: 200px;
   }
   /* ------------ main --------- */
+  .heading span{
+    display: none;
+  }
+  .heading p{
+    display: inline;
+  }
+  .heading hr{
+    display: none;
+  }
   /* --------- aisde ---------- */
   .sidebar__heading{
     font-size: 35px;
   }
 }
+/* --------------- 1000px ---------------- */
 @media(max-width:1000px){
   /* ---------header---------- */
   /* --------- main ---------- */
