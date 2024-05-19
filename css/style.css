@@ -23,12 +23,32 @@ html {
   /* overflow: hidden; */
   display: flex;
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: #000000c4;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s;
+}
+
+.overlay--show {
+  visibility: visible;
+  opacity: 1;
+}
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .section {
-  width: 75%; 
+  width: 75%;
   padding: 0 2%;
   position: relative;
 }
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .font__test {
   font-family: Fractur;
@@ -37,7 +57,7 @@ html {
   color: white;
 }
 
-.Snippets__Lesson img{
+.Snippets__Lesson img {
   width: 75%;
 }
 
@@ -60,6 +80,10 @@ html {
 
 /* ========================================== HEADER ========================================== */
 /* ========================================== HEADER ========================================== */
+.burger {
+  display: none;
+}
+
 .header {
   font-family: Lato;
   color: white;
@@ -135,9 +159,11 @@ html {
   width: 100%;
   border: solid 3px rgb(243, 85, 16);
 }
-.header__search-block:hover .header__search-stroke{
+
+.header__search-block:hover .header__search-stroke {
   width: 200px;
 }
+
 .header__search-block path {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -163,10 +189,12 @@ html {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
-.header__search-block:focus .header__search-block{
+
+.header__search-block:focus .header__search-block {
   width: 100%;
   /* transition: none; */
 }
+
 .header__search-stroke::-webkit-input-placeholder {
   background: black;
   color: #787A80;
@@ -220,9 +248,11 @@ html {
   height: 25px;
   margin-right: 5px;
 }
-.header__nav-icon svg{
+
+.header__nav-icon svg {
   top: 50%;
 }
+
 .header__nav-element:hover {
   color: rgb(243, 85, 16);
 }
@@ -248,8 +278,8 @@ article {
   position: relative;
 }
 
-.lesson__inner{
-  padding:  50px 50px 0 50px;
+.lesson__inner {
+  padding: 50px 50px 0 50px;
 }
 
 .main__text {
@@ -283,9 +313,11 @@ hr {
   font-family: Cormorant;
   margin: 0 40px 0 40px;
 }
-.heading p{
+
+.heading p {
   display: none;
 }
+
 .sub__heading {
   font-family: Cormorant;
   text-align: center;
@@ -320,7 +352,7 @@ hr {
 } */
 
 .lesson__list {
-  padding:0 0 50px 0;
+  padding: 0 0 50px 0;
 }
 
 .lesson__list p {
@@ -346,12 +378,15 @@ hr {
 .lesson__list li {
   margin: 50px 0;
 }
+
 .lesson__list li:first-child {
-  margin: 0 0 50px 0 ;
+  margin: 0 0 50px 0;
 }
+
 .lesson__list li:last-child {
   margin: 50px 0 0 0;
 }
+
 .lesson__list li::before {
   content: "";
   display: block;
@@ -391,16 +426,18 @@ hr {
   border: solid 1px white;
   width: 50%;
 }
-.lesson__inner img:first-child{
 
-}
-.lesson__list .img{
+.lesson__inner img:first-child {}
+
+.lesson__list .img {
   margin-top: 25px;
   margin-bottom: 0px;
 }
-.img--l{
+
+.img--l {
   width: 100%;
 }
+
 video {
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -409,9 +446,10 @@ video {
   margin-top: 25px;
 }
 
-.lesson__link{
+.lesson__link {
   text-decoration: underline;
 }
+
 /* ------------- CSS__LESSON_2 ------------ */
 /* ------------- CSS__LESSON_2 ------------ */
 .lesson2__one {
@@ -1361,9 +1399,11 @@ h2 {
       color-stop(.5, rgba(255, 255, 255, .25)),
       color-stop(.5, transparent), to(transparent));
 }
+
 #p44-scroll-7::-webkit-scrollbar-button {
   display: none;
 }
+
 #p44-scroll-8::-webkit-scrollbar {
   width: 10px;
 }
@@ -1378,9 +1418,11 @@ h2 {
   border-radius: 10px;
   background: linear-gradient(180deg, #00c6fb, #005bea);
 }
+
 #p44-scroll-8::-webkit-scrollbar-button {
   display: none;
 }
+
 /* ------------- SCSS__LESSON ------------ */
 /* ------------- SCSS__LESSON ------------ */
 .lesson__image-container {
@@ -1388,9 +1430,11 @@ h2 {
   justify-content: space-evenly;
   margin-bottom: 50px;
 }
-.lesson__image-container img{
+
+.lesson__image-container img {
   max-width: 350px;
 }
+
 /* ========================================== ASIDE ========================================== */
 /* ========================================== ASIDE ========================================== */
 .aside {
@@ -1423,6 +1467,7 @@ h2 {
   overflow-Y: auto;
   overflow-x: hidden;
 }
+
 .sidebar__link {
   line-height: 150%;
   position: relative;
@@ -1480,6 +1525,7 @@ h2 {
   margin-left: 10px;
   text-wrap: wrap;
 }
+
 /* ----------- scroll-bar ------------ */
 /* ----------- scroll-bar ------------ */
 .aside__list::-webkit-scrollbar {
@@ -1499,6 +1545,7 @@ h2 {
   height: 15px;
   border-radius: 5px;
 }
+
 /* ========================================== FOOTER ========================================== */
 /* ========================================== FOOTER ========================================== */
 .footer {
@@ -1517,6 +1564,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1768,62 +1816,207 @@ button {
   -webkit-transform: scale(2);
   transform: scale(2);
 }
+
 /* ---------------------- adaptive --------------------------- */
 /* ---------------------- adaptive --------------------------- */
 /* -- 1300 --  */
-@media(max-width: 1300px){
+@media(max-width: 1300px) {
+
   /* --------------- HEADER -------------- */
-  .header__nav-element p{
+  .header__nav-element p {
     display: none;
   }
-  .header__nav-icon{
+
+  .header__nav-icon {
     margin-right: 0px;
     height: 40px;
-    width:40px;
+    width: 40px;
   }
-  .header__search-block{
+
+  .header__search-block {
     width: 100%;
   }
 
-  .header__search-block:hover{
+  .header__search-block:hover {
     transition: none;
   }
-  .header__search-stroke:hover{
+
+  .header__search-stroke:hover {
     transition: none;
   }
-  .header__search-stroke{
+
+  .header__search-stroke {
     width: 200px;
   }
+
   /* ------------ MAIN --------- */
-  .heading span{
+  .heading span {
     display: none;
   }
-  .heading p{
+
+  .heading p {
     display: inline;
   }
-  .heading hr{
+
+  .heading hr {
     display: none;
   }
-  .lesson__inner{
-    padding:  30px 30px 0 30px;
+
+  .lesson__inner {
+    padding: 30px 30px 0 30px;
   }
-  .img{
+
+  .img {
     margin-bottom: 30px;
   }
+
   /* --------- ASIDE ---------- */
-  .sidebar__heading{
+  .sidebar__heading {
     font-size: 35px;
   }
 }
+
 /* --------------- 1000px ---------------- */
-@media(max-width:1000px){
+@media(max-width:1000px) {
+
   /* ---------HEADER---------- */
+  .header__top {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 100;
+    min-width: 320px;
+    transform: translateX(100%);
+    transition: all .3s;
+  }
+
+  .header__top--open {
+    transform: translateX(0%);
+  }
+
   /* --------- MAIN ---------- */
-  .section{
+  .section {
     width: 100%;
   }
+
   /* --------- ASIDE --------- */
-.aside {
-  display: none;
+  .aside {
+    display: none;
+  }
+
+  /* --------- FOOTER --------- */
+  .sblock{
+    margin-bottom: 50px;
+  }
 }
+
+@media(max-width: 810px) {
+
+  /* ---------HEADER---------- */
+  .header {
+    position: relative;
+    margin: 0px;
+  }
+
+  .header__container {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: hsla(0, 0%, 0%, 0.6);
+    z-index: 100;
+    min-width: 320px;
+    transform: translateX(100%);
+    transition: all .3s;
+
+  }
+
+  .header__1st-block {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 50px 0;
+  }
+
+  .header__logo {
+    margin-right: 0px;
+  }
+
+  .header__inner {
+    flex-direction: column;
+    justify-content: start;
+    padding: 30px 0 30px 0;
+  }
+
+  .header__nav-container {
+    flex-direction: column;
+  }
+
+  .header__nav-element p {
+    display: inline;
+  }
+
+  .header__nav-element {
+    padding: 30px;
+    margin-left: 0px;
+  }
+
+  .burger {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 150;
+    height: 60px;
+    width: 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+  }
+
+  .burger span {
+    display: block;
+    height: 4px;
+    width: 30px;
+    border-radius: 3px;
+    background: #f35510;
+    margin: 4px 0;
+  }
+
+  .burger::before, .burger::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 30px;
+    border-radius: 3px;
+    background: #f35510;
+  }
+
+  .burger--follow {
+    border-radius: 50%;
+    background-color: hsla(0, 0%, 0%, 0.6);
+    top: 15px;
+    right: 15px;
+    /* box-shadow: 0 1px 8px #a1a1a1; */
+  }
+
+  .header__top--open {
+    transform: translateX(0%);
+  }
+
+  /* --------- MAIN ---------- */
+  .main__container {
+    padding-top: 50px;
+  }
+}
+
+@media(max-width: 500px) {
+
+  /* ---------HEADER---------- */
+  .header__container {
+    width: 100%;
+  }
 }
