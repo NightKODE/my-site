@@ -23,7 +23,7 @@
       "  <hr>",
       "  <div class=\"heading\"><span>Lesson $1<br> .</span><p>L$1. </p></div>",
       "  <hr>",
-      "  <div class=\"lessin__inner\">",
+      "  <div class=\"lesson__inner\">",
       "    <ul class=\"lesson__list\">",
       "      <li></li>",
       "      <li></li>",

@@ -293,7 +293,16 @@
               <ul class="lesson__list">
                 <li>1. Все переменные необходимо объявлять перед их использованием. </li>
                 <li>2. При объявлении переменных использовать <span>const</span> везде, где только возможно. </li>
+                <li>3. Внутри функции не изменять переменные из внешних областей видимости.
+                  <p>Для этого лучше объявлять переменные внутри функции.</p>
+                </li>
               </ul>
+              <div class="sub__heading">Строгий режим.</div>
+              <div class="main__text">Чтобы избежать автоматического создания переменной в глобальной области видимости, необходимо использовать <span>строгий режим</span>.</div>
+              <div class="main__text"><span>Строгий режим</span> - это инстрункция интрепритатора JavaScript анализировать код более пристально.</div>
+              <div class="main__text">Чтобы включить <span>строгий режим</span> необходимо в начале файла написать <span>'use strict'</span>.</div>
+              <div class="main__text">В таком случае <span>строгий режим</span> просто не даст использовать перменную без ее объявления и будет выдавать ошибку.</div>
+              <div class="main__text">Подробнее о строгом режиме <a href="#lesson__№" class="lesson__link"><span>смотреть тут</span></a></div>
             </div>
             <hr>
           </article>
@@ -387,13 +396,36 @@
           </article>
           <article class="JS__Lesson" id="lesson__7">
             <hr>
-            <div class="heading"><span>Lesson 7<br> Оператор удаления.</span>
+            <div class="heading"><span>Lesson 7<br> Операторы.</span>
               <p>L7. Оператор удаления.</p>
             </div>
             <hr>
             <div class="lesson__inner">
-              <div class="main__text">Оператором удаления можно удалить то или иное свойство у объекта. </div>
-              <img src="/images/JS12.jpg" alt="" class="img">
+              <div class="main__text"><span>Оператор</span> - это встроенная в JavaScript Функция.</div>
+              <ul class="lesson__list">
+                <li>Операторы быают: арифметические - <span>+</span> <span>-</span> <span>*</span> <span>/</span></li>
+                <li>Сравнения - <span>===</span> <span>!==</span> <span><=</span> <span>>=</span></li>
+                <li>Логические - <span>! (не)</span> <span>&& (и)</span> <span>|| (или)</span></li>
+                <li>Опертор присваивания - <span>=</span> <br>
+                  <img src="/images/JS39.jpg" alt="" class="img">
+                </li>
+              </ul>
+              <div class="sub__heading">Текстовые операторы</div>
+              <ul class="lesson__list">
+                <li><span>typeof</span> - С помощью этого оператора можно проверить тип того или иного значения.
+                </li>
+                <li><span>instanceof</span> - С помощью этого оператора можно проверить принадлежность объекта к тому или иному классу.</li>
+                <li><span>new</span></li>
+                <li><span>delete</span> - Оператором удаления можно удалить то или иное свойство у объекта. <br>
+                  <img src="/images/JS12.jpg" alt="" class="img">                
+                </li>
+              </ul>
+              <div class="main__text"><span>Операнды</span> - это то, что находится справа или слева от оператора.</div>
+              <div class="main__text"></div>
+              <div class="main__text"></div>
+              <div class="main__text"></div>
+              <div class="main__text"></div>
+              <div class="main__text"> </div>
             </div>
             <hr>
           </article>
@@ -589,6 +621,47 @@
             </div>
             <hr>
           </article>
+          <article class="JS__Lesson" id="lesson__14">
+            <hr>
+            <div class="heading"><span>Lesson 14<br> Области видимости.</span><p>L1. Области видимости</p></div>
+            <hr>
+            <div class="lesson__inner">
+              <div class="main__text">Обдасть видимости определяется границы действия переменной.</div>
+              <img src="/images/JS35.jpg" alt="" class="img">
+              <div class="main__text">Есть глобальные переменные, которые объявлены в глобальной обласьт видимости, а есть локальный переменные, которые объявлены в локальной области видимости. 
+                Если попробовать получить лоступ к переменной <span>b</span> в локальной области видимости 1, то мы увидим результат переменной <span>b</span>, объявленной в глобальной области видимости.
+              </div>
+              <img src="/images/JS36.jpg" alt="" class="img">
+              <div class="main__text">В данном примере функция является локальной областью видимости, в которой была создана еще одна переменная с именем <span>b</span>. 
+                Так же внутри этой функции было присвоено значение переменной <span>a = true</span>, однако присвоено оно пременной <span>a</span> из глобальной области видимости.
+              </div>
+              <img src="/images/JS37.jpg" alt="" class="img">
+              <div class="main__text">
+                В данном примере создается переменная <span>myFn</span>, внутри нее создается перменная <span>innerFn</span>,
+                и если попытаться вызвать функцию <span>innerFn</span>, то произойдет ошибка, т.к. <span>innerFn</span>
+                существиет только внутри функции <span>myFn</span>.
+              </div>
+              <img src="/images/JS38.jpg" alt="" class="img">
+              <div class="main__text">
+                Если в локальной области видимости присваяивать значения необъявленным переменным, 
+                то по завершению кода эти переменные будут созданы овтоматически. Так делать крайне не рекомендуется.
+              </div>
+            </div>
+            <hr>
+          </article>
+          <article class="JS__Lesson" id="lesson__15">
+            <hr>
+            <div class="heading"><span>Lesson 15<br> .</span><p>L15. </p></div>
+            <hr>
+            <div class="lesson__inner">
+              <ul class="lesson__list">
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <hr>
+          </article>
         </section>
         <!-- ========================================== ASIDE ========================================= -->
         <!-- ========================================== ASIDE ========================================= -->
@@ -600,103 +673,109 @@
               <hr>
             </div>
             <ul class="aside__list">
-              <li class="li__css--p" title="Lesson 1">
-                <a class="sidebar__link" href="#lesson__1">
+              <li class="aside__element" title="Lesson 1">
+                <a class="aside__link" href="#lesson__1">
                   <div class="side__text">1.<p>Самое важное в JavaScript</p>
                   </div>
                 </a>
-                <div class="li__css--line"></div>
+                <div class="aside__line"></div>
               </li>
-              <li class="li__css--p" title="Lesson 2">
-                <a class="sidebar__link" href="#lesson__2">
+              <li class="aside__element" title="Lesson 2">
+                <a class="aside__link" href="#lesson__2">
                   <div class="side__text">2. <p>Выражения</p>
                   </div>
                 </a>
-                <div class="li__css--line"></div>
+                <div class="aside__line"></div>
               </li>
-              <li class="li__css--p" title="Lesson 3">
-                <a class="sidebar__link" href="#lesson__3">
+              <li class="aside__element" title="Lesson 3">
+                <a class="aside__link" href="#lesson__3">
                   <div class="side__text">3. <p>Переменные</p>
                   </div>
                 </a>
-                <div class="li__css--line"></div>
+                <div class="aside__line"></div>
+                <!-- <div class="aside__themes-container">
+                  <a href="#" class="aside__theme"><p>Как называть переменные</p>
+                  <a href="#" class="aside__theme"><p>Объявление переменных</p>
+                  <a href="#" class="aside__theme"><p>Правила работы</p>
+                  <a href="#" class="aside__theme"><p>Строгий режим</p>
+                </div> -->
               </li>
-              <li class="li__css--p" title="Lesson 4">
-                <a class="sidebar__link" href="#lesson__4">
+              <li class="aside__element" title="Lesson 4">
+                <a class="aside__link" href="#lesson__4">
                   <div class="side__text">4. <p>Типы переменных</p>
                   </div>
                 </a>
-                <div class="li__css--line"></div>
+                <div class="aside__line"></div>
               </li>
-              <li class="li__css--p" title="Lesson 5">
-                <a class="sidebar__link" href="#lesson__5">
+              <li class="aside__element" title="Lesson 5">
+                <a class="aside__link" href="#lesson__5">
                   <div class="side__text">5. <p>Динамическая типизация</p>
                   </div>
                 </a>
-                <div class="li__css--line"></div>
+                <div class="aside__line"></div>
               </li>
-              <li class="li__css--p" title="Lesson 6">
-                <a class="sidebar__link" href="#lesson__6">
+              <li class="aside__element" title="Lesson 6">
+                <a class="aside__link" href="#lesson__6">
                   <div class="side__text">6. <p>Объекты</p>
                   </div>
                 </a>
-                <div class="li__css--line"></div>
+                <div class="aside__line"></div>
               </li>
-              <li class="li__css--p" title="Lesson 7">
-                <a class="sidebar__link" href="#lesson__7">
-                  <div class="side__text">7. <p>Оператор удаления</p>
+              <li class="aside__element" title="Lesson 7">
+                <a class="aside__link" href="#lesson__7">
+                  <div class="side__text">7. <p>Операторы</p>
                   </div>
                 </a>
-                <div class="li__css--line"></div>
+                <div class="aside__line"></div>
               </li>
-              <li class="li__css--p" title="Lesson 8">
-                <a class="sidebar__link" href="#lesson__8">
+              <li class="aside__element" title="Lesson 8">
+                <a class="aside__link" href="#lesson__8">
                   <div class="side__text">8. <p>Квадратные скобки</p>
                   </div>
                 </a>
-                <div class="li__css--line"></div>
+                <div class="aside__line"></div>
               </li>
-              <li class="li__css--p" title="Lesson 9">
-                <a class="sidebar__link" href="#lesson__9">
+              <li class="aside__element" title="Lesson 9">
+                <a class="aside__link" href="#lesson__9">
                   <div class="side__text">9. <p>Вложенные свойства</p>
                   </div>
                 </a>
-                <div class="li__css--line"></div>
+                <div class="aside__line"></div>
               </li>
-              <li class="li__css--p" title="Lesson 10">
-                <a class="sidebar__link" href="#lesson__10">
+              <li class="aside__element" title="Lesson 10">
+                <a class="aside__link" href="#lesson__10">
                   <div class="side__text">10. <p>Использование переменных</p>
                   </div>
                 </a>
-                <div class="li__css--line"></div>
+                <div class="aside__line"></div>
               </li>
-              <li class="li__css--p" title="Lesson 11">
-                <a class="sidebar__link" href="#lesson__11">
+              <li class="aside__element" title="Lesson 11">
+                <a class="aside__link" href="#lesson__11">
                   <div class="side__text">11. <p>JSON</p>
                   </div>
                 </a>
-                <div class="li__css--line"></div>
+                <div class="aside__line"></div>
               </li>
-              <li class="li__css--p" title="Lesson 12">
-                <a class="sidebar__link" href="#lesson__12">
+              <li class="aside__element" title="Lesson 12">
+                <a class="aside__link" href="#lesson__12">
                   <div class="side__text">12. <p>Мутация в JavaScript</p>
                   </div>
                 </a>
-                <div class="li__css--line"></div>
+                <div class="aside__line"></div>
               </li>
-              <li class="li__css--p" title="Lesson 13">
-                <a class="sidebar__link" href="#lesson__13">
+              <li class="aside__element" title="Lesson 13">
+                <a class="aside__link" href="#lesson__13">
                   <div class="side__text">13. <p>Функции</p>
                   </div>
                 </a>
-                <div class="li__css--line"></div>
+                <div class="aside__line"></div>
               </li>
-              <li class="li__css--p" title="Lesson 14">
-                <a class="sidebar__link" href="#lesson__14">
+              <li class="aside__element" title="Lesson 14">
+                <a class="aside__link" href="#lesson__14">
                   <div class="side__text">14. <p>Область видимости</p>
                   </div>
                 </a>
-                <div class="li__css--line"></div>
+                <div class="aside__line"></div>
               </li>
             </ul>
           </div>

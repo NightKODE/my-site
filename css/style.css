@@ -7,6 +7,7 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 /* #007388 */
 /* background: hsl(18, 90%, 51%, 0.3); */
 .wrapper {
@@ -430,14 +431,10 @@ hr {
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  /* margin-top: 20px; */
   margin-bottom: 50px;
-  /* padding: 0 0 50px; */
   border: solid 1px white;
   width: 50%;
 }
-
-.lesson__inner img:first-child {}
 
 .lesson__list .img {
   margin-top: 25px;
@@ -552,13 +549,6 @@ th {
   font-size: 1.5em;
   line-height: normal;
   color: white;
-}
-
-/* ------------- CSS__LESSON_4 ------------ */
-/* ------------- CSS__LESSON_4 ------------ */
-.lesson__4 img {
-  margin-bottom: 20px;
-  width: 100%;
 }
 
 /* ------------- CSS__LESSON_5 ------------ */
@@ -1490,14 +1480,14 @@ h2 {
   overflow-x: hidden;
 }
 
-.sidebar__link {
-  line-height: 150%;
+.aside__link {
   position: relative;
   display: flex;
+  line-height: 150%;
   transition: 0.3s ease-out;
 }
 
-.li__css--line {
+.aside__line {
   position: absolute;
   top: 0;
   z-index: -1;
@@ -1511,26 +1501,44 @@ h2 {
   border-radius: 10px;
 }
 
-.li__css--p {
+.aside__element {
   position: relative;
   height: fit-content;
 }
 
-.li__css--p:last-child {
+.aside__element:last-child {
   margin-bottom: 0px;
 }
 
-.li__css--p:hover .li__css--line {
+.aside__element:hover .aside__line {
   width: 100%;
 }
 
-.li__css--p:hover .sidebar__link {
+.aside__element:hover .aside__link {
   margin-left: 10px;
 }
 
-.li__css--p:hover .side__text {
+.aside__element:hover .side__text {
   color: white;
 }
+
+/* .aside__themes-container {
+  overflow: hidden;
+  padding-left: 50px;
+  height: 0;
+}
+
+.aside__theme {
+  color: #8f8f8f;
+  font-size: 15px;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.3s ease-out;
+
+}
+
+.aside__theme p {
+  color: white;
+} */
 
 .side__text {
   color: #8f8f8f;
@@ -1540,7 +1548,7 @@ h2 {
   display: flex;
 }
 
-.sidebar__link p {
+.aside__link p {
   color: white;
   font-size: 18px;
   display: inline;
@@ -2044,13 +2052,15 @@ button {
   }
 
   .main__text {
-    padding: 15px ;
+    padding: 15px;
     margin-bottom: 20px;
   }
-  .lesson__image-container{
+
+  .lesson__image-container {
     flex-direction: column;
     justify-content: center;
   }
+
   /* ------------ FOOTER ------------- */
 }
 
