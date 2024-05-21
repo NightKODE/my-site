@@ -157,131 +157,199 @@
     <!-- ========================================== MAIN ========================================= -->
     <main class="main__container" id="MAIN">
       <div class="main__inner">
-        <section>
-          <article class="Snippets__Lesson" id="lesson__Snippets">
+        <section class="section">
+          <article class="links" id="links">
             <hr>
-            <div class="heading">Snippets. <br> Как ускорить разработку - сниппеты.
-            </div>
+            <div class="heading"><span>Полезные ссылки.</div>
             <hr>
             <div class="lesson__inner">
-              <p class="main__text">
-                Сниппет, грубо говоря, это кусок заранее написанного кода, который можно вызывать внутри среды Vs Code.
-                Представляет из себя json код, который содержит префикс, тело и описание сниппета. В данном случае мы
-                рассмотрим такие сниппеты, которые можно вставить в любом месте нашего файла.
-              </p>
-              <ul class="lesson__list">
-                <li>Сниппеты по умолчанию
-                  <p>
-                    В VS Code есть снипппеты по умолчанию, которые уже имеются в среде после установки. Самый популярный
-                    –
-                    это кусок html кода, который встраивается в вашу страницу. Так, например, если создать файл
-                    index.html и
-                    в первой строчке файла поставить “!” знак и нажать на “Tab”, то у вас встроится следующий код:
-                  </p>
-                  <img src="/images/snp1.jpg" alt="" class="img">
-                  <p>
-                    Это пустой шаблон html страницы. После встраивания данного сниппета вы можете менять его так, как
-                    Вам
-                    это
-                    нужно.
-                  </p>
-                  </pre>
-                </li>
-                <li>
-                  Как это работает?
-                  <p>
-                    Сниппеты работают по принципу Emmet. Если вы когда-либо писали сайты или создавали приложения в
-                    Visual
-                    Studio, то, наверное, знаете про Emmet. Это набор встроенных или установленных плагинов, которые
-                    ускоряют разработку путем написания меньшего объема кода. По сути, то же, что будем делать и мы.
-                    Так,
-                    например, в html с помощью emmet Вы можете писать длинные конструкции в одну строчку и
-                    преобразовывать
-                    их таким образом:
-                  </p>
-                  <img src="/images/snp2.jpg" alt="" class="img">
-                  <p>Нажмем Tab и преобразуем в...</p>
-                  <img src="/images/snp3.jpg" alt="" class="img">
-                </li>
-                <li>
-                  Собственные сниппеты.
-                  <p>
-                    После того, как мы разобрались, что такое сниппеты и какие они бывают по умолчанию, время
-                    разобраться с
-                    тем, как создать свой собственный. Чтобы создать свой сниппет в Visual Studio Code, необходимо
-                    перейти
-                    во вкладку “File” → “Preferences” → “User Snippets”.
-                  </p>
-                  <img src="/images/snp4.jpg" alt="" class="img">
-                  <p>После этого в верху окна откроется окно выбора / создания сниппета:</p>
-                  <img src="/images/snp5.jpg" alt="" class="img">
-                  <p>Здесь до горизонтальной разделительной черты находятся ваши собственные сниппеты. Далее есть пункт,
-                    который создает Глобальный сниппет «New Global Snippets file…», он может быть вызван и применен в
-                    любом
-                    проекте и на любом языке. Также можно создать локальный сниппет для конкретного проекта: «New
-                    Snippets
-                    file for ‘Project_name’…». В данном случае Ваш сниппет также может быть вызван в любом ЯП (Языке
-                    программирования), но внутри вашего проекта или внутри директории, для которой Вы открыли VS Code.
-                    Ниже
-                    идет список ЯП, для которых можно написать персонализированные сниппеты. Для всех самых и не самых
-                    популярных ЯП имеется возможность создать свой сниппет.
-                  </p>
-                </li>
-              </ul>
-              <hr>
-              <div class="heading">Практика.</div>
-              <hr>
-              <p>
-                Все сниппеты создаются одинаково. Рассмотрим пример создания глобального сниппета.
-              </p>
-              <ul class="lesson__inner">
-                <li>
-                  1. Перейдем во вкладку <span>“File” → “Preferences” → “User Snippets”</span>
-                </li>
-                <li>
-                  2. Выберем <span>«New Global Snippets file…»</span>
-                  <img src="/images/snp6.jpg" alt="" class="img">
-                </li>
-                <li>3. Введем в появившемся окне наименование сниппета: «Test-snippet»</li>
-                <li>4. Перед нами откроется окно с закомментированным текстом.
-                  <img src="/images/snp7.jpg" alt="" class="img">
-                </li>
-                <li>5. Создаем и заполняем свой json фрагмент, сохраняем и все. Ваш сниппет готов</li>
-              </ul>
-              <hr>
-              <div class="heading">Как заполнить?</div>
-              <hr>
-              <div>Раскомментируем все, что находится ниже слова «Example:».</div>
-              <p class="main__text">
-                <span>«Print to console»</span> — это наименование сниппета, он будет отображаться вам при вызове
-                данного
-                сниппета при условии, если отсутствует описание сниппета:
-              </p>
-              <img src="/images/snp8.jpg" alt="" class="img">
-              <img src="/images/snp9.jpg" alt="" class="img">
-              <p class="main__text">
-                <span>«scope»</span> — это поле отображает языки и проекты, где можно использовать вызов данного
-                сниппета. Т.к. по
-                умолчанию стоит javascript и typescript, то, кроме данных файлов, нигде вызвать сниппет не получится.
-              </p>
-              <p class="main__text">
-                <span>«prefix»</span> — это префикс вашего сниппета, т.е. короткое название, по которому будет
-                вызываться ваш сниппет.
-              </p class="main__text">
-              <p class="main__text">
-                <span>«body»</span> — это тело сниппета, здесь хранится то, что напечатается после нажатия на кнопку
-                “Tab”.
-              </p>
-              <p class="main__text">
-                <span>«description»</span> — это поле «описание», которое поможет вам понять какой именно сниппет Вы
-                вызываете.
-              </p>
-              <img src="/images/snp10.jpg" alt="" class="img">
-              <img src="/images/snp11.jpg" alt="" class="img">
+              <div class="main__text">В этом разделе представлены ссылки на полезные сайты для Фронтенда.</div>
+            </div>
+            <hr>
+          </article>
+          <article class="links" id="links__1">
+            <hr>
+            <div class="heading"><span>MDN web doc.</span></div>
+            <hr>
+            <div class="lesson__inner">
+              <div class="link__container">
+                <a href="https://developer.mozilla.org/ru/" target="_blank">
+                  <div class="link__image"> </div>
+                  <div class="link__text">developer.mozilla.org</div>
+                </a>
+              </div>
+              <div class="main__text">
+                Ресурсы для разработчиков,
+                созданные разработчиками
+                <br>
+                Документирует веб-технологии, включая CSS, HTML и JavaScript, с 2005 года.
+                <br>
+                Этот ресурс содержит практически все необходимые сведенья для верстки.
+              </div>
+            </div>
+            <hr>
+          </article>
+          <article class="links" id="links__2">
+            <hr>
+            <div class="heading"><span>Can i use</span></div>
+            <hr>
+            <div class="lesson__inner">
+              <div class="link__container">
+                <a href="https://caniuse.com/" target="_blank">
+                  <div class="link__image link__image--ciu"> </div>
+                  <div class="link__text">caniuse.com</div>
+                </a>
+              </div>
+              <div class="main__text">На этом сайте можно проверить стили на совместимость с браузерами, прежде, чем их
+                использовать.</div>
+            </div>
+            <hr>
+          </article>
+          <article class="links" id="links__3">
+            <hr>
+            <div class="heading"><span>Slik</span></div>
+            <hr>
+            <div class="lesson__inner">
+              <div class="link__container">
+                <a href="https://kenwheeler.github.io/slick/" target="_blank">
+                  <div class="link__image link__image--slik"> </div>
+                  <div class="link__text">kenwheeler.github.io/slick</div>
+                </a>
+              </div>
+              <div class="main__text">На этом сайте находится информация по настройке slik slider.</div>
+            </div>
+            <hr>
+          </article>
+          <article class="links" id="links__4">
+            <hr>
+            <div class="heading"><span>Anyconv</span></div>
+            <hr>
+            <div class="lesson__inner">
+              <div class="link__container">
+                <a href="https://anyconv.com/ttf-to-eot-converter/" target="_blank">
+                  <div class="link__image link__image--any"></div>
+                  <div class="link__text">anyconv.com</div>
+                </a>
+              </div>
+              <div class="main__text">На этом сайте можно переформатировать шрифт из любого формата в любой формат.
+              </div>
+            </div>
+            <hr>
+          </article>
+          <article class="links" id="links__5">
+            <hr>
+            <div class="heading"><span>Gradients.app</span></div>
+            <hr>
+            <div class="lesson__inner">
+              <div class="link__container">
+                <a href="https://gradients.app/ru/new" target="_blank">
+                  <div class="link__image link__image--gra"></div>
+                  <div class="link__text">gradients.app</div>
+                </a>
+              </div>
+              <div class="main__text">На этом сайте лекго делается нужный градиент.</div>
+            </div>
+            <hr>
+          </article>
+          <article class="links" id="links__6">
+            <hr>
+            <div class="heading"><span>Icon-icons</span></div>
+            <hr>
+            <div class="lesson__inner">
+              <div class="link__container">
+                <a href="https://icon-icons.com/" target="_blank">
+                  <div class="link__image link__image--ico"></div>
+                  <div class="link__text">icon-icons.com</div>
+                </a>
+              </div>
+              <div class="main__text">На этом ресурсе можно бесплатно скачать иконки и изображения в svg формате.</div>
+            </div>
+            <hr>
+          </article>
+          <article class="links" id="links__7">
+            <hr>
+            <div class="heading"><span>Snipped generator</span></div>
+            <hr>
+            <div class="lesson__inner">
+              <div class="link__container">
+                <a href="https://snippet-generator.app/" target="_blank">
+                  <div class="link__image link__image--sni"></div>
+                  <div class="link__text">snippet-generator.app</div>
+                </a>
+              </div>
+              <div class="main__text">На этом сайте можно очень легко сделать сниппеты.</div>
             </div>
             <hr>
           </article>
         </section>
+        <!-- ========================================== ASIDE ========================================= -->
+        <!-- ========================================== ASIDE ========================================= -->
+        <aside class="aside">
+          <div class="aside__inner">
+            <div class="sidebar__heading">
+              <hr>
+              Links
+              <hr>
+            </div>
+            <ul class="aside__list">
+              <li class="aside__element" title="Lesson 1">
+                <a class="aside__link" href="#links__1">
+                  <div class="side__text"><p>MDN</p>
+                  </div>
+                </a>
+                <div class="aside__line"></div>
+              </li>
+              <li class="aside__element" title="Lesson 2">
+                <a class="aside__link" href="#links__2">
+                  <div class="side__text"><p>Can i use</p>
+                  </div>
+                </a>
+                <div class="aside__line"></div>
+              </li>
+              <li class="aside__element" title="Lesson 3">
+                <a class="aside__link" href="#links__3">
+                  <div class="side__text"><p>Slik</p>
+                  </div>
+                </a>
+                <div class="aside__line"></div>
+                <!-- <div class="aside__themes-container">
+                  <a href="#" class="aside__theme"><p>Как называть переменные</p>
+                  <a href="#" class="aside__theme"><p>Объявление переменных</p>
+                  <a href="#" class="aside__theme"><p>Правила работы</p>
+                  <a href="#" class="aside__theme"><p>Строгий режим</p>
+                </div> -->
+              </li>
+              <li class="aside__element" title="Lesson 4">
+                <a class="aside__link" href="#links__4">
+                  <div class="side__text"><p>Anyconv</p>
+                  </div>
+                </a>
+                <div class="aside__line"></div>
+              </li>
+              <li class="aside__element" title="Lesson 5">
+                <a class="aside__link" href="#links__5">
+                  <div class="side__text"><p>Gradients</p>
+                  </div>
+                </a>
+                <div class="aside__line"></div>
+              </li>
+              <li class="aside__element" title="Lesson 6">
+                <a class="aside__link" href="#links__6">
+                  <div class="side__text"><p>Icons</p>
+                  </div>
+                </a>
+                <div class="aside__line"></div>
+              </li>
+              <li class="aside__element" title="Lesson 7">
+                <a class="aside__link" href="#links__7">
+                  <div class="side__text"><p>Snipped generator</p>
+                  </div>
+                </a>
+                <div class="aside__line"></div>
+              </li>
+            </ul>
+          </div>
+        </aside>
       </div>
     </main>
     <!-- ========================================== FOOTER ========================================= -->
@@ -305,9 +373,9 @@
             <p class="footer__zag">Дополнительно</p>
             <div class="footer__line"></div>
             <ul>
-              <li class="fotter_contact"><a href="#MAIN">Сниппеты</a></li>
-              <li class="fotter_contact"><a href="Links.html">Полезные ссылки</a></li>
-              <li class="fotter_contact"><a href="VSCode.html">Настройка VSCode</a></li>
+              <li class="fotter_contact"><a href="Snippets.html">Сниппеты</a></li>
+              <li class="fotter_contact"><a href="#MAIN">Полезные ссылки</a></li>
+              <li class="fotter_contact"><a href="VSCode.html">Расширение VSCode</a></li>
               <li class="fotter_contact"><a href="#">Пункт</a></li>
               <li class="fotter_contact"><a href="#">Пункт</a></li>
               <li class="fotter_contact"><a href="#">Пункт</a></li>

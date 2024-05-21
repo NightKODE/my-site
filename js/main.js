@@ -15,4 +15,10 @@ $(function(){
     $('.header__container').toggleClass('header__top--open')
     $('.overlay').toggleClass('overlay--show')
   })
+  // $('.aside__link').on('click', function (e) {
+  //   e.preventDefault()
+  //   $('.header__container').toggleClass('header__top--open')
+  //   $('.aside__themes-container').addClass('h100')
+  //   $('.overlay').toggleClass('overlay--show')
+  // })
 })
