@@ -278,7 +278,6 @@ html {
 
 article {
   background: rgba(183, 183, 183, 0.1);
-  box-shadow: 0 4px 30px rgba(143, 143, 143, 0.1);
   backdrop-filter: blur(8.9px);
   -webkit-backdrop-filter: blur(8.9px);
   border: 1px solid rgba(0, 0, 0, 0.21);
@@ -504,9 +503,6 @@ video {
 
 }
 .link__image img{
-  /* height: 100%; */
-  /* position: absolute; */
-  /* left: 0;top: 0; */
   width: 100%;
   object-fit: cover;
   z-index: -1;
@@ -516,23 +512,23 @@ video {
   top: 0;
   left: 0;
   width: fit-content;
-  /* height: 100px; */
   padding: 10px 30px;
-  background: #59657344;
+  background: transparent;
+  color: transparent;
   border-radius: 10px;
   transition: all .4s ease-in;
-}
-.link__container:hover img{
-  /* box-shadow: inset 100px 100px #fff; */
-
+  text-wrap: nowrap;
 }
 .link__container:hover .link__image{
   transform: scale(1.4) translateX(50px);
-  box-shadow: inset 100px 100px 100px 100px #00c5fb41;
+  /* box-shadow: inset 100px 100px 100px 100px #00c5fb41; */
+  filter: blur(4px);
 }
 .link__container:hover .link__text{
-  transform: translateX(200px);
-  top: 40%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  margin: auto auto auto auto;
   background: #eaf0f7;
   color: #0075fb;
 }
