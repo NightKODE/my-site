@@ -461,7 +461,7 @@
               <ul class="lesson__list">
                 <li>Операторы быают: арифметические - <span>+</span> <span>-</span> <span>*</span> <span>/</span></li>
                 <li>Сравнения - <span>===</span> <span>!==</span> <span>
-                    <=< /span> <span>>=</span></li>
+                    <= </span> <span>>=</span></li>
                 <li>Логические - <span>! (не)</span> <span>&& (и)</span> <span>|| (или)</span></li>
                 <li>Опертор присваивания - <span>=</span> <br>
                   <img src="/images/JS39.jpg" alt="" class="img">
@@ -785,11 +785,35 @@
           </article>
           <article class="JS__Lesson" id="lesson__15">
             <hr>
-            <h1><span>Lesson 15<br> .</span>
-              <p>L15. </p>
+            <h1><span>Lesson 15<br> Массивы.</span>
+              <p>L15. Массивы.</p>
             </h1>
             <hr>
             <div class="lesson__inner">
+              <div class="main__text">Массивы <span>array</span> позволяют хранить данные упорядоченным списком
+                чего-либо, что предоставляет методы управления порядком элементов. Они могут хранить абсолютно разные
+                значения.</div>
+              <h2>Формат записи массивов:</h2>
+              <img src="/images/JS52.jpg" alt="" class="img">
+              <div class="main__text">При объявлении массива JS создаёт свойства от 0 до бесконечности (в зависимости от
+                колличества объектов массива), значением этих свойств будут непосредственно сами объекты в порядке их
+                объявления, и свойство <span>lenght</span>, а его значение зависит от общего колличества объектов.</div>
+              <img src="/images/JS53.jpg" alt="" class="img">
+              <h2>Массивы VS объекты</h2>
+              <div class="main__text">Если попробовать объявить переменную с такими же свойствами как у массива, то на
+                выходе в консоли мы получим такие же свойства за исключением <span>__proto__</span>. Однако по факту они
+                абсолютно разные объекты.</div>
+              <div class="main__text">Поскольку свойство массива <span>lenght</span> создается самим JS то его значение
+                будет всегда актуальным(если удалить или добавить новый объект в массив). В объекте же это свойство (при
+                тех же манипуляциях) останется таким, каким было задано при объявлении объекта.</div>
+              <img src="/images/JS54.jpg" alt="" class="img">
+              <h2>Чтение свойств объекта</h2>
+              <img src="/images/JS55.jpg" alt="" class="img">
+              <div class="main__text">Чтобы получить доступ к оъекты массива нужно при вызове этого массива написать в
+                конце квадратные скобки и внутри написать индекс требуемого объекта <span>от 0!</span>.
+                Таким же способом можно добавлять новые объекты в массив или менять существующие на новые.
+              </div>
+              <img src="/images/JS56.jpg" alt="" class="img">
               <ul class="lesson__list">
                 <li></li>
                 <li></li>
@@ -909,6 +933,13 @@
               <li class="aside__element" title="Lesson 14">
                 <a class="aside__link" href="#lesson__14">
                   <div class="side__text">14. <p>Область видимости</p>
+                  </div>
+                </a>
+                <div class="aside__line"></div>
+              </li>
+              <li class="aside__element" title="Lesson 15">
+                <a class="aside__link" href="#lesson__15">
+                  <div class="side__text">15. <p>Область видимости</p>
                   </div>
                 </a>
                 <div class="aside__line"></div>
