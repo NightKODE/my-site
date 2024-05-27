@@ -21,7 +21,7 @@
     "body": [
       "<article class=\"$2__Lesson\" id=\"lesson__$1\">",
       "  <hr>",
-      "  <div class=\"heading\"><span>Lesson $1<br> .</span><p>L$1. </p></div>",
+      "  <h1><span>Lesson $1<br> .</span><p>L$1. </p></h1>",
       "  <hr>",
       "  <div class=\"lesson__inner\">",
       "    <ul class=\"lesson__list\">",
@@ -34,7 +34,7 @@
       "</article>"
     ],
     "description": "Article"
-  }
+  },
  
   "Img container": {
     "scope": "html",
@@ -52,7 +52,7 @@
       "</div>"
     ],
     "description": "Img container"
-  }
+  },
   "font-fase": {
     "scope": "css, scss, sass",
     "prefix": "fface",
@@ -69,7 +69,7 @@
       "}"
     ],
     "description": "font-fase"
-  }
+  },
   "::before-after": {
     "scope": "css, scss, sass",
     "prefix": "bfore",
@@ -83,7 +83,7 @@
       "  transform:;"
     ],
     "description": "::before-after"
-  }
+  },
   "main__text":{
     "scope": "html",
     "prefix": "dmt",

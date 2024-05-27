@@ -272,7 +272,7 @@ html {
 /* ========================================== MAIN ========================================== */
 .main__container {
   font-family: Lato;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 150%;
   top: 0;
 }
@@ -295,8 +295,8 @@ article {
 .main__text {
   background: hsl(212, 13%, 40%, 0.5);
   border-radius: 15px;
-  padding: 30px;
-  margin-bottom: 50px;
+  padding: 5px 15px;
+  margin-bottom: 30px;
 }
 
 .main__text span {
@@ -368,15 +368,15 @@ h2 {
 }
 
 .lesson__list li {
-  margin: 50px 0;
+  margin: 25px 0;
 }
 
 .lesson__list li:first-child {
-  margin: 0 0 50px 0;
+  margin: 0 0 25px 0;
 }
 
 .lesson__list li:last-child {
-  margin: 50px 0 0 0;
+  margin: 25px 0 0 0;
 }
 
 .lesson__list li::before {
@@ -1579,29 +1579,6 @@ th {
   height: fit-content;
 }
 
-/* .aside__inner::before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 50px;
-  top: 0;
-  left: 0;
-  transform: ;
-  box-shadow: inset 10px 10px 10px 10px  white;
-} */
-
-/* .aside__element::after {
-  position: absolute;
-  content: "";
-  display: ;
-  width: ;
-  height: ;
-  top: ;
-  left: ;
-  transform: ;
-} */
-
 .aside__element:last-child {
   margin-bottom: 0px;
 }
@@ -1650,6 +1627,7 @@ th {
   color: white;
   font-size: 18px;
   display: inline;
+  line-height: 200%;
   margin-left: 10px;
   text-wrap: wrap;
 }
