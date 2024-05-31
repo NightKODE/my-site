@@ -817,7 +817,7 @@
             </div>
             <hr>
           </article>
-          <article class="__Lesson" id="lesson__16">
+          <article class="JS__Lesson" id="lesson__16">
             <hr>
             <h1><span>Lesson 16<br> Браузерное окружение, спецификации.</span>
               <p>L16. Браузерное окружение, спецификации</p>
@@ -865,7 +865,7 @@
             </div>
             <hr>
           </article>
-          <article class="__Lesson" id="lesson__17">
+          <article class="JS__Lesson" id="lesson__17">
             <hr>
             <h1><span>Lesson 17<br> DOM дерево.</span>
               <p>L17. DOM дерево</p>
@@ -949,7 +949,592 @@
                 <li><span>document</span> – «входная точка» в DOM.</li>
                 <li>Узлы-элементы – HTML-теги, основные строительные блоки.</li>
                 <li>Текстовые узлы – содержат текст.</li>
-                <li>Комментарии – иногда в них можно включить информацию, которая не будет показана, но доступна в DOM для чтения JS.</li>
+                <li>Комментарии – иногда в них можно включить информацию, которая не будет показана, но доступна в DOM
+                  для чтения JS.</li>
+              </ul>
+            </div>
+            <hr>
+          </article>
+          <article class="JS__Lesson" id="lesson__18">
+            <hr>
+            <h1><span>Lesson 18<br> Навигация по DOM-элементам.</span>
+              <p>L18. Навигация по DOM-элементам</p>
+            </h1>
+            <hr>
+            <div class="lesson__inner">
+              <div class="main__text">
+                <span>DOM</span> позволяет нам делать что угодно с элементами и их содержимым, но для начала нужно
+                получить
+                соответствующий <span>DOM-объект</span>. <br><br>
+                Все операции с <span>DOM</span> начинаются с объекта <span>document</span>. Это главная «точка входа» в
+                <span>DOM</span>. Из него мы можем
+                получить доступ к любому узлу. <br><br>
+                Так выглядят основные ссылки, по которым можно переходить между узлами <span>DOM</span>:
+              </div>
+              <img src="/images/JS65.jpg" alt="" class="img">
+              <ul class="lesson__list">
+                <h3>Сверху: documentElement и body</h2>
+                  <li>
+                    Самые верхние элементы дерева доступны как свойства объекта <span>document</span>
+                  </li>
+                  <li>
+                    Самый верхний узел документа: <span>document.documentElement</span>. В DOM он соответствует тегу
+                    <span>html</span>.
+                  </li>
+                  <li>
+                    Другой часто используемый DOM-узел – узел тега <span>body</span>: <span>document.body</span>.
+                  </li>
+                  <li>
+                    Тег <span>head</span> доступен как <span>document.head</span>.
+                  </li>
+                  <div class="main__text">
+                    <div class="att-icon">
+                      <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                        <path
+                          d="M24 44C29.5228 44 34.5228 41.7614 38.1421 38.1421C41.7614 34.5228 44 29.5228 44 24C44 18.4772 41.7614 13.4772 38.1421 9.85786C34.5228 6.23858 29.5228 4 24 4C18.4772 4 13.4772 6.23858 9.85786 9.85786C6.23858 13.4772 4 18.4772 4 24C4 29.5228 6.23858 34.5228 9.85786 38.1421C13.4772 41.7614 18.4772 44 24 44Z"
+                          fill="#2F88FF" stroke="black" stroke-width="4" stroke-linejoin="round" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M24 37C25.3807 37 26.5 35.8807 26.5 34.5C26.5 33.1193 25.3807 32 24 32C22.6193 32 21.5 33.1193 21.5 34.5C21.5 35.8807 22.6193 37 24 37Z"
+                          fill="white" />
+                        <path d="M24 12V28" stroke="white" stroke-width="4" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    Есть одна тонкость: <span>document.body</span> может быть равен <span>null</span>. <br><br>
+                    Нельзя получить доступ к элементу, которого ещё не существует в момент выполнения скрипта. <br><br>
+                    В частности, если скрипт находится в <span>head</span>, <span>document.body</span> в нём недоступен,
+                    потому что браузер его ещё не прочитал.
+                  </div>
+                  <h3>Дети: childNodes, firstChild, lastChild</h2>
+                    <li>
+                      Дочерние узлы (или дети) – элементы, которые являются непосредственными детьми узла. Другими
+                      словами, элементы, которые лежат непосредственно внутри данного. Например, <span>head</span> и
+                      <span>body</span> являются детьми элемента <span>html</span>.
+                    </li>
+                    <li>
+                      Потомки – все элементы, которые лежат внутри данного, включая детей, их детей и т.д.
+                    </li>
+                    <li>
+                      Коллекция <span>childNodes</span> содержит список всех детей, включая текстовые узлы.
+                    </li>
+                    <img src="/images/JS66.jpg" alt="" class="img img--l">
+                    <li>
+                      Обратим внимание на маленькую деталь. Если запустить пример выше, то последним будет выведен
+                      элемент <span>script</span>. На самом деле, в документе есть ещё «какой-то HTML-код», но на момент
+                      выполнения скрипта браузер ещё до него не дошёл, поэтому скрипт не видит его.
+                    </li>
+                    <li>
+                      Свойства <span>firstChild</span> и <span>lastChild</span> обеспечивают быстрый доступ к первому
+                      и последнему дочернему
+                      элементу.
+                    </li>
+                    <li>
+                      Они, по сути, являются всего лишь сокращениями. Если у тега есть дочерние узлы, условие ниже
+                      всегда верно:
+                    </li>
+                    <img src="/images/JS67.jpg" alt="" class="img img--l">
+                    <li>
+                      Для проверки наличия дочерних узлов существует также специальная функция
+                      <span>elem.hasChildNodes()</span>.
+                    </li>
+              </ul>
+              <h2>DOM-коллекции</h2>
+              <div class="main__text">Как мы уже видели, <span>childNodes</span> похож на массив. На самом деле это не
+                массив, а
+                коллекция – особый перебираемый объект-псевдомассив. <br><br>
+                И есть два важных следствия из этого:</div>
+            </div>
+            <div class="main__text">1. Для перебора коллекции мы можем использовать <span>for..of</span>:</div>
+            <img src="/images/JS68.jpg" alt="" class="img">
+            <div class="main__text">Это работает, потому что коллекция является перебираемым объектом (есть требуемый
+              для этого метод <span>Symbol.iterator</span>).</div>
+            <div class="main__text">2. Методы массивов не будут работать, потому что коллекция – это не массив:</div>
+            <img src="/images/JS69.jpg" alt="" class="img img--l">
+            <div class="main__text">Первый пункт – это хорошо для нас. Второй – бывает неудобен, но можно пережить. Если
+              нам хочется использовать именно методы массива, то мы можем создать настоящий массив из коллекции,
+              используя <span>Array.from</span>:</div>
+            <img src="/images/JS70.jpg" alt="" class="img img--l">
+            <div class="main__text">
+              <div class="info-icon">
+                <svg viewBox="0 0 64 64">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #00a4b5;
+                      }
+
+                      .cls-2 {
+                        fill: #00cde2;
+                      }
+
+                      .cls-3 {
+                        fill: #fff;
+                      }
+                    </style>
+                  </defs>
+                  <title>Info</title>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <circle class="cls-1" cx="32" cy="32" r="32" />
+                      <circle class="cls-2" cx="32" cy="32" r="24" />
+                      <g id="HGC71j.tif">
+                        <path class="cls-3"
+                          d="M24.38,32.89a28.91,28.91,0,0,1,7.1-4.47,12.1,12.1,0,0,1,3.36-1,1.52,1.52,0,0,1,1.82,1.22,6.09,6.09,0,0,1-.11,2.91c-.72,3.07-1.57,6.11-2.35,9.17a6.06,6.06,0,0,0-.29,1.73c0,.49.19.63.67.51a8,8,0,0,0,2.22-1c.32-.2.62-.41.92-.63s.31-.23.55.09l.72,1v.12a4.3,4.3,0,0,0-.62.55,18.9,18.9,0,0,1-8.79,5H28.41a2,2,0,0,1-1.58-1.93,6.78,6.78,0,0,1,.12-2.24c.55-2.66,1.25-5.29,1.86-7.94.21-.92.48-1.83.62-2.77.07-.46-.08-.59-.53-.49a2.91,2.91,0,0,0-.36.1,15.73,15.73,0,0,0-3,1.45c-.22.14-.33.11-.45-.12-.21-.38-.44-.75-.66-1.12Z" />
+                        <path class="cls-3"
+                          d="M36.21,16.29a4.27,4.27,0,0,1,1.21.46,3.22,3.22,0,0,1,1.25,3.44A4.24,4.24,0,0,1,35,23.37a3.55,3.55,0,0,1-2.66-.64A2.59,2.59,0,0,1,31.38,21a4,4,0,0,1,1.23-3.66,4.24,4.24,0,0,1,2.24-1.1Z" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <h3>DOM-коллекции живые</h3> <br>
+              Почти все DOM-коллекции, за небольшим исключением, живые. Другими словами, они отражают текущее состояние
+              DOM. <br><br>
+              Если мы сохраним ссылку на elem.childNodes и добавим/удалим узлы в DOM, то они появятся в сохранённой
+              коллекции автоматически.
+            </div>
+            <div class="main__text">
+              <div class="info-icon">
+                <svg viewBox="0 0 64 64">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #00a4b5;
+                      }
+
+                      .cls-2 {
+                        fill: #00cde2;
+                      }
+
+                      .cls-3 {
+                        fill: #fff;
+                      }
+                    </style>
+                  </defs>
+                  <title>Info</title>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <circle class="cls-1" cx="32" cy="32" r="32" />
+                      <circle class="cls-2" cx="32" cy="32" r="24" />
+                      <g id="HGC71j.tif">
+                        <path class="cls-3"
+                          d="M24.38,32.89a28.91,28.91,0,0,1,7.1-4.47,12.1,12.1,0,0,1,3.36-1,1.52,1.52,0,0,1,1.82,1.22,6.09,6.09,0,0,1-.11,2.91c-.72,3.07-1.57,6.11-2.35,9.17a6.06,6.06,0,0,0-.29,1.73c0,.49.19.63.67.51a8,8,0,0,0,2.22-1c.32-.2.62-.41.92-.63s.31-.23.55.09l.72,1v.12a4.3,4.3,0,0,0-.62.55,18.9,18.9,0,0,1-8.79,5H28.41a2,2,0,0,1-1.58-1.93,6.78,6.78,0,0,1,.12-2.24c.55-2.66,1.25-5.29,1.86-7.94.21-.92.48-1.83.62-2.77.07-.46-.08-.59-.53-.49a2.91,2.91,0,0,0-.36.1,15.73,15.73,0,0,0-3,1.45c-.22.14-.33.11-.45-.12-.21-.38-.44-.75-.66-1.12Z" />
+                        <path class="cls-3"
+                          d="M36.21,16.29a4.27,4.27,0,0,1,1.21.46,3.22,3.22,0,0,1,1.25,3.44A4.24,4.24,0,0,1,35,23.37a3.55,3.55,0,0,1-2.66-.64A2.59,2.59,0,0,1,31.38,21a4,4,0,0,1,1.23-3.66,4.24,4.24,0,0,1,2.24-1.1Z" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <h3>DOM-коллекции – только для чтения</h3> <br>
+              DOM-коллекции, и даже более – все навигационные свойства, перечисленные в этой главе, доступны только для
+              чтения. <br><br>
+              Мы не можем заменить один дочерний узел на другой, просто написав <span>childNodes[i] = ...</span>.
+              <br><br>
+              Для изменения DOM требуются другие методы. Мы увидим их в следующей главе. <br><br>
+            </div>
+            <h2>Соседи и узлы</h2>
+            <div class="main__text">
+              Соседи – это узлы, у которых один и тот же родитель. Например, здесь <span>head</span> и <span>body</span>
+              соседи:
+            </div>
+            <img src="/images/JS71.jpg" alt="" class="img">
+            <ul class="lesson__list">
+              <li>говорят, что <span>body</span> – «следующий» или «правый» сосед <span>head</span></li>
+              <li>также можно сказать, что <span>head</span> «предыдущий» или «левый» сосед <span>body</span></li>
+            </ul>
+            <div class="main__text">
+              Следующий узел того же родителя (следующий сосед) – в свойстве <span>nextSibling</span>, а предыдущий – в
+              <span>previousSibling</span>. <br><br>
+              Родитель доступен через <span>parentNode</span>.
+            </div>
+            <img src="/images/JS72.jpg" alt="" class="img img--l">
+            <p>Навигационные свойства, описанные выше, относятся ко всем узлам в документе. В частности, в
+              <span>childNodes</span>
+              находятся и текстовые узлы и узлы-элементы и узлы-комментарии, если они есть.
+            </p>
+            <p>Но для большинства задач текстовые узлы и узлы-комментарии нам не нужны. Мы хотим манипулировать
+              узлами-элементами, которые представляют собой теги и формируют структуру страницы.</p>
+            <p>Поэтому давайте рассмотрим дополнительный набор ссылок, которые учитывают только узлы-элементы:</p>
+            <img src="/images/JS73.jpg" alt="" class="img">
+            <p>Эти ссылки похожи на те, что раньше, только в ряде мест стоит слово Element:</p>
+            <ul class="lesson__list">
+              <li>
+                <span>children</span> – коллекция детей, которые являются элементами.
+              </li>
+              <li><span>firstElementChild</span>, <span>lastElementChild</span> – первый и последний дочерний элемент.</li>
+              <li>
+                <span>previousElementSibling</span>, <span>nextElementSibling</span> – соседи-элементы.
+              </li>
+              <li><span>parentElement</span> – родитель-элемент.</li>
+            </ul>
+            <div class="main__text--code">
+              <div class="code-icon">
+                <svg viewBox="0 0 64 64">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #cfd8dd;
+                      }
+
+                      .cls-2 {
+                        fill: #92a6ad;
+                      }
+
+                      .cls-3 {
+                        fill: #37474f;
+                      }
+
+                      .cls-4 {
+                        fill: #78909c;
+                      }
+
+                      .cls-5 {
+                        fill: #74d800;
+                      }
+
+                      .cls-6 {
+                        fill: #ffda00;
+                      }
+
+                      .cls-7 {
+                        fill: #f74f80;
+                      }
+                    </style>
+                  </defs>
+                  <title>Code</title>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <path class="cls-1" d="M4,0H60a4,4,0,0,1,4,4v8a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" />
+                      <circle class="cls-2" cx="6" cy="6" r="2" />
+                      <circle class="cls-2" cx="12" cy="6" r="2" />
+                      <circle class="cls-2" cx="18" cy="6" r="2" />
+                      <path class="cls-3"
+                        d="M0,12H64a0,0,0,0,1,0,0V60a4,4,0,0,1-4,4H4a4,4,0,0,1-4-4V12A0,0,0,0,1,0,12Z" />
+                      <rect class="cls-4" x="6" y="18" width="10" height="2" />
+                      <rect class="cls-4" x="10" y="22" width="22" height="2" />
+                      <rect class="cls-4" x="10" y="50" width="26" height="2" />
+                      <rect class="cls-4" x="10" y="26" width="28" height="2" />
+                      <rect class="cls-4" x="14" y="30" width="36" height="2" />
+                      <rect class="cls-4" x="14" y="34" width="28" height="2" />
+                      <rect class="cls-4" x="14" y="38" width="20" height="2" />
+                      <rect class="cls-4" x="14" y="42" width="26" height="2" />
+                      <rect class="cls-4" x="10" y="46" width="6" height="2" />
+                      <rect class="cls-4" x="6" y="54" width="6" height="2" />
+                      <rect class="cls-5" x="12" y="18" width="6" height="2" />
+                      <rect class="cls-5" x="16" y="22" width="8" height="2" />
+                      <rect class="cls-5" x="26" y="26" width="8" height="2" />
+                      <rect class="cls-5" x="22" y="30" width="8" height="2" />
+                      <rect class="cls-5" x="34" y="34" width="6" height="2" />
+                      <rect class="cls-5" x="28" y="38" width="6" height="2" />
+                      <rect class="cls-6" x="14" y="38" width="6" height="2" />
+                      <rect class="cls-6" x="14" y="30" width="6" height="2" />
+                      <rect class="cls-6" x="14" y="34" width="6" height="2" />
+                      <rect class="cls-6" x="10" y="26" width="6" height="2" />
+                      <rect class="cls-6" x="10" y="50" width="6" height="2" />
+                      <rect class="cls-5" x="14" y="42" width="6" height="2" />
+                      <rect class="cls-5" x="20" y="50" width="6" height="2" />
+                      <rect class="cls-7" x="24" y="34" width="6" height="2" />
+                      <rect class="cls-7" x="18" y="26" width="6" height="2" />
+                      <rect class="cls-7" x="28" y="42" width="6" height="2" />
+                      <rect class="cls-7" x="26" y="50" width="6" height="2" />
+                      <rect class="cls-7" x="44" y="30" width="6" height="2" />
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <h3>Объекты кода</h3>
+              <ul class="lesson__list">
+                <li><span>document</span> - входная точка <span>DOM</span></li>
+                <li><span>document.documentElement</span> - самый первый(верхний) элемент дерева, он равен
+                  <span>html</span>
+                </li>
+                <li><span>document.body</span> - тэг <span>body</span></li>
+                <li><span>childNodes[]</span> - коллекция всех детей элемента, включая текстовые элементы</li>
+                <li><span>firstChild</span> и <span>lastChild</span> - обеспечивают быстрый доступ к первому и
+                  последнему узлу</li>
+                <li><span>elem.hasChildNodes()</span> - проверяет наличие дочерних узлов</li>
+                <li><span>Array.from</span> - делает массив из объекта</li>
+                <li><span>nextSibling</span> - следующий узел того же родителя</li>
+                <li><span>previousSibling</span> - предыдущий узел того же родителя</li>
+                <li><span>parentNode</span> - родитель узла</li>
+                <li><span>children</span> – коллекция детей, которые являются элементами</li>
+                <li><span>firstElementChild</span>, <span>lastElementChild</span> – первый и последний дочерний элемент</li>
+                <li><span>previousElementSibling</span>, <span>nextElementSibling</span> – соседи-элементы.</li>
+                <li><span>parentElement</span> – родитель-элемент</li>
+              </ul>
+            </div>
+            <hr>
+          </article>
+          <article class="JS__Lesson" id="lesson__19">
+            <hr>
+            <h1><span>Lesson 19<br> Поиск.</span>
+              <p>L19. Поиск</p>
+            </h1>
+            <hr>
+            <div class="lesson__inner">
+              <div class="main__text">
+                Свойства навигации по DOM хороши, когда элементы расположены рядом. А что, если
+                нет? Как получить произвольный элемент страницы? Для этого в DOM есть дополнительные методы поиска.
+              </div>
+              <h2>document.getElementById или просто id</h2>
+              <div class="main__text">Если у элемента есть атрибут id, то мы можем получить его вызовом
+                <span>document.getElementById(id)</span>, где бы он ни находился. <br><br>
+                Например:</div>
+              <img src="/images/JS74.jpg" alt="" class="img">
+              <div class="main__text">Также есть глобальная переменная с именем, указанным в id:</div>
+              <img src="/images/JS75.jpg" alt="" class="img img--l">
+              <div class="main__text">…Но это только если мы не объявили в JavaScript переменную с таким же именем,
+                иначе она будет иметь приоритет.</div>
+              <div class="main__text">
+                <div class="att-icon">
+                  <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                    <path
+                      d="M24 44C29.5228 44 34.5228 41.7614 38.1421 38.1421C41.7614 34.5228 44 29.5228 44 24C44 18.4772 41.7614 13.4772 38.1421 9.85786C34.5228 6.23858 29.5228 4 24 4C18.4772 4 13.4772 6.23858 9.85786 9.85786C6.23858 13.4772 4 18.4772 4 24C4 29.5228 6.23858 34.5228 9.85786 38.1421C13.4772 41.7614 18.4772 44 24 44Z"
+                      fill="#2F88FF" stroke="black" stroke-width="4" stroke-linejoin="round" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M24 37C25.3807 37 26.5 35.8807 26.5 34.5C26.5 33.1193 25.3807 32 24 32C22.6193 32 21.5 33.1193 21.5 34.5C21.5 35.8807 22.6193 37 24 37Z"
+                      fill="white" />
+                    <path d="M24 12V28" stroke="white" stroke-width="4" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+                Пожалуйста, не используйте такие глобальные переменные для доступа к элементам! <br><br>
+                Это поведение соответствует стандарту, но поддерживается в основном для совместимости, как осколок
+                далёкого прошлого. <br><br>
+                Браузер пытается помочь нам, смешивая пространства имён JS и DOM. Это удобно для простых скриптов,
+                которые находятся прямо в HTML, но, вообще говоря, не очень хорошо. Возможны конфликты имён. Кроме того,
+                при чтении JS-кода, не видя HTML, непонятно, откуда берётся переменная. <br><br>
+                В этом учебнике мы будем обращаться к элементам по id в примерах для краткости, когда очевидно, откуда
+                берётся элемент. <br><br>
+                В реальной жизни лучше использовать <span>document.getElementById</span>.
+              </div>
+              <div class="main__text">
+                <div class="att-icon">
+                  <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                    <path
+                      d="M24 44C29.5228 44 34.5228 41.7614 38.1421 38.1421C41.7614 34.5228 44 29.5228 44 24C44 18.4772 41.7614 13.4772 38.1421 9.85786C34.5228 6.23858 29.5228 4 24 4C18.4772 4 13.4772 6.23858 9.85786 9.85786C6.23858 13.4772 4 18.4772 4 24C4 29.5228 6.23858 34.5228 9.85786 38.1421C13.4772 41.7614 18.4772 44 24 44Z"
+                      fill="#2F88FF" stroke="black" stroke-width="4" stroke-linejoin="round" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M24 37C25.3807 37 26.5 35.8807 26.5 34.5C26.5 33.1193 25.3807 32 24 32C22.6193 32 21.5 33.1193 21.5 34.5C21.5 35.8807 22.6193 37 24 37Z"
+                      fill="white" />
+                    <path d="M24 12V28" stroke="white" stroke-width="4" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+                Только <span>document.getElementById</span>, а не <span>anyElem.getElementById</span> <br><br>
+                Метод <span>getElementById</span> можно вызвать только для объекта <span>document</span>. Он
+                осуществляет поиск по id по всему
+                документу.
+              </div>
+              <h2>querySelectorAll</h2>
+              <div class="main__text">Самый универсальный метод поиска – это <span>elem.querySelectorAll(css)</span>, он
+                возвращает
+                все элементы внутри <span>elem</span>, удовлетворяющие данному CSS-селектору. <br><br>
+                Следующий запрос получает все элементы <span>li</span>, которые являются последними потомками в
+                <span>ul</span>:
+              </div>
+              <img src="/images/JS76.jpg" alt="" class="img">
+              <div class="main__text">Этот метод действительно мощный, потому что можно использовать любой CSS-селектор.
+              </div>
+              <div class="main__text">
+                <div class="info-icon">
+                  <svg viewBox="0 0 64 64">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: #00a4b5;
+                        }
+
+                        .cls-2 {
+                          fill: #00cde2;
+                        }
+
+                        .cls-3 {
+                          fill: #fff;
+                        }
+                      </style>
+                    </defs>
+                    <title>Info</title>
+                    <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                        <circle class="cls-1" cx="32" cy="32" r="32" />
+                        <circle class="cls-2" cx="32" cy="32" r="24" />
+                        <g id="HGC71j.tif">
+                          <path class="cls-3"
+                            d="M24.38,32.89a28.91,28.91,0,0,1,7.1-4.47,12.1,12.1,0,0,1,3.36-1,1.52,1.52,0,0,1,1.82,1.22,6.09,6.09,0,0,1-.11,2.91c-.72,3.07-1.57,6.11-2.35,9.17a6.06,6.06,0,0,0-.29,1.73c0,.49.19.63.67.51a8,8,0,0,0,2.22-1c.32-.2.62-.41.92-.63s.31-.23.55.09l.72,1v.12a4.3,4.3,0,0,0-.62.55,18.9,18.9,0,0,1-8.79,5H28.41a2,2,0,0,1-1.58-1.93,6.78,6.78,0,0,1,.12-2.24c.55-2.66,1.25-5.29,1.86-7.94.21-.92.48-1.83.62-2.77.07-.46-.08-.59-.53-.49a2.91,2.91,0,0,0-.36.1,15.73,15.73,0,0,0-3,1.45c-.22.14-.33.11-.45-.12-.21-.38-.44-.75-.66-1.12Z" />
+                          <path class="cls-3"
+                            d="M36.21,16.29a4.27,4.27,0,0,1,1.21.46,3.22,3.22,0,0,1,1.25,3.44A4.24,4.24,0,0,1,35,23.37a3.55,3.55,0,0,1-2.66-.64A2.59,2.59,0,0,1,31.38,21a4,4,0,0,1,1.23-3.66,4.24,4.24,0,0,1,2.24-1.1Z" />
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <h3>Псевдоклассы тоже работают</h3> <br>
+                Псевдоклассы в CSS-селекторе, в частности <span>:hover</span> и <span>:active</span>, также
+                поддерживаются. Например,
+                <span>document.querySelectorAll(':hover')</span> вернёт коллекцию (в порядке вложенности: от внешнего к
+                внутреннему)
+                из текущих элементов под курсором мыши.
+              </div>
+              <h2>querySelector</h2>
+              <div class="main__text">
+                Метод <span>elem.querySelector(css)</span> возвращает первый элемент, соответствующий данному
+                CSS-селектору. <br><br>
+                Иначе говоря, результат такой же, как при вызове <span>elem.querySelectorAll(css)[0]</span>, но он
+                сначала найдёт все
+                элементы, а потом возьмёт первый, в то время как <span>elem.querySelector</span> найдёт только первый и
+                остановится.
+                Это быстрее, кроме того, его короче писать.
+              </div>
+              <h2>matches</h2>
+              <div class="main__text">Предыдущие методы искали по DOM. Метод <span>elem.matches(css)</span> ничего не
+                ищет, а
+                проверяет, удовлетворяет ли <span>elem</span> CSS-селектору, и возвращает
+                <span>true</span> или <span>false</span>. <br><br>
+                Этот метод удобен, когда мы перебираем элементы (например, в массиве или в чём-то подобном) и пытаемся
+                выбрать те из них, которые нас интересуют. <br><br>
+                Например:
+              </div>
+              <img src="/images/JS77.jpg" alt="" class="img">
+              <h2>closest</h2>
+              <div class="main__text">Предки элемента – родитель, родитель родителя, его родитель и так далее. Вместе
+                они образуют цепочку иерархии от элемента до вершины. <br><br>
+                Метод <span>elem.closest(css)</span> ищет ближайшего предка, который соответствует CSS-селектору. Сам
+                элемент также
+                включается в поиск. <br><br>
+                Другими словами, метод <span>closest</span> поднимается вверх от элемента и проверяет каждого из
+                родителей. Если он
+                соответствует селектору, поиск прекращается. Метод возвращает либо предка, либо <span>null</span>, если
+                такой элемент
+                не найден. <br><br>
+                Например:</div>
+              <img src="/images/JS78.jpg" alt="" class="img">
+              <h2>getElementsBy*
+              </h2>
+              <div class="main__text">Существуют также другие методы поиска элементов по тегу, классу и так далее. На
+                данный момент, они скорее исторические, так как <span>querySelector</span> более чем эффективен. Здесь
+                мы рассмотрим
+                их для полноты картины, также вы можете встретить их в старом коде.</div>
+              <ul class="lesson__list">
+                <li>
+                  <span>elem.getElementsByTagName(tag)</span> ищет элементы с данным тегом и возвращает их коллекцию.
+                  Передав "*" вместо тега, можно получить всех потомков.
+                </li>
+                <li>
+                  <span>elem.getElementsByClassName(className)</span> возвращает элементы, которые имеют данный
+                  CSS-класс.
+                </li>
+                <li>
+                  <span>document.getElementsByName(name)</span> возвращает элементы с заданным атрибутом name. Очень
+                  редко используется.
+                </li>
+              </ul>
+              <h2>Живые коллекции</h2>
+              <div class="main__text">
+                Все методы "<span>getElementsBy*</span>" возвращают живую коллекцию. Такие коллекции всегда отражают
+                текущее
+                состояние документа и автоматически обновляются при его изменении. <br><br>
+                В приведённом ниже примере есть два скрипта. <br><br>
+                1.Первый создаёт ссылку на коллекцию <span>div</span>. На этот момент её длина равна 1.
+                2. Второй скрипт запускается после того, как браузер встречает ещё один <span>div</span>, теперь её
+                длина – 2.
+              </div>
+              <img src="/images/JS79.jpg" alt="" class="img">
+              <div class="main__text">
+                Напротив, <span>querySelectorAll</span> возвращает статическую коллекцию. Это похоже на
+                фиксированный массив элементов. Если мы будем использовать его в примере выше, то оба скрипта вернут
+                длину коллекции, равную 1.</div>
+            </div>
+            <div class="main__text--code">
+              <div class="code-icon">
+                <svg viewBox="0 0 64 64">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #cfd8dd;
+                      }
+
+                      .cls-2 {
+                        fill: #92a6ad;
+                      }
+
+                      .cls-3 {
+                        fill: #37474f;
+                      }
+
+                      .cls-4 {
+                        fill: #78909c;
+                      }
+
+                      .cls-5 {
+                        fill: #74d800;
+                      }
+
+                      .cls-6 {
+                        fill: #ffda00;
+                      }
+
+                      .cls-7 {
+                        fill: #f74f80;
+                      }
+                    </style>
+                  </defs>
+                  <title>Code</title>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <path class="cls-1" d="M4,0H60a4,4,0,0,1,4,4v8a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" />
+                      <circle class="cls-2" cx="6" cy="6" r="2" />
+                      <circle class="cls-2" cx="12" cy="6" r="2" />
+                      <circle class="cls-2" cx="18" cy="6" r="2" />
+                      <path class="cls-3"
+                        d="M0,12H64a0,0,0,0,1,0,0V60a4,4,0,0,1-4,4H4a4,4,0,0,1-4-4V12A0,0,0,0,1,0,12Z" />
+                      <rect class="cls-4" x="6" y="18" width="10" height="2" />
+                      <rect class="cls-4" x="10" y="22" width="22" height="2" />
+                      <rect class="cls-4" x="10" y="50" width="26" height="2" />
+                      <rect class="cls-4" x="10" y="26" width="28" height="2" />
+                      <rect class="cls-4" x="14" y="30" width="36" height="2" />
+                      <rect class="cls-4" x="14" y="34" width="28" height="2" />
+                      <rect class="cls-4" x="14" y="38" width="20" height="2" />
+                      <rect class="cls-4" x="14" y="42" width="26" height="2" />
+                      <rect class="cls-4" x="10" y="46" width="6" height="2" />
+                      <rect class="cls-4" x="6" y="54" width="6" height="2" />
+                      <rect class="cls-5" x="12" y="18" width="6" height="2" />
+                      <rect class="cls-5" x="16" y="22" width="8" height="2" />
+                      <rect class="cls-5" x="26" y="26" width="8" height="2" />
+                      <rect class="cls-5" x="22" y="30" width="8" height="2" />
+                      <rect class="cls-5" x="34" y="34" width="6" height="2" />
+                      <rect class="cls-5" x="28" y="38" width="6" height="2" />
+                      <rect class="cls-6" x="14" y="38" width="6" height="2" />
+                      <rect class="cls-6" x="14" y="30" width="6" height="2" />
+                      <rect class="cls-6" x="14" y="34" width="6" height="2" />
+                      <rect class="cls-6" x="10" y="26" width="6" height="2" />
+                      <rect class="cls-6" x="10" y="50" width="6" height="2" />
+                      <rect class="cls-5" x="14" y="42" width="6" height="2" />
+                      <rect class="cls-5" x="20" y="50" width="6" height="2" />
+                      <rect class="cls-7" x="24" y="34" width="6" height="2" />
+                      <rect class="cls-7" x="18" y="26" width="6" height="2" />
+                      <rect class="cls-7" x="28" y="42" width="6" height="2" />
+                      <rect class="cls-7" x="26" y="50" width="6" height="2" />
+                      <rect class="cls-7" x="44" y="30" width="6" height="2" />
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <h3>Объекты кода</h3>
+              <ul class="lesson__list">
+                <li><span>document.getElementById(id)</span> - возвращает элемент по id</li>
+                <li><span>elem.querySelectorAll(css)</span> - возвращает все элементы внутри <span>elem</span>(переменная), удовлетворяющие данному CSS-селектору</li>
+                <li><span>elem.querySelector(css)</span> - возвращает первый элемент, соответствующий данному CSS-селектору</li>
+                <li><span>elem.matches(css)</span> - проверяет, удовлетворяет ли <span>elem</span> CSS-селектору, и возвращает <span>true</span> или <span>false</span></li>
+                <li><span>elem.closest(css)</span> - ищет ближайшего предка, который соответствует CSS-селектору. Сам элемент также включается в поиск.</li>
+                <li><span>elem.getElementsByTagName(tag)</span> - ищет элементы с данным тегом и возвращает их коллекцию. Передав "*" вместо тега, можно получить всех потомков.</li>
+                <li><span>elem.getElementsByClassName(className)</span> - возвращает элементы, которые имеют данный CSS-класс.</li>
+                <li><span>document.getElementsByName(name)</span> - возвращает элементы с заданным атрибутом name. Очень редко используется.</li>
+                <li><span>elemA.contains(elemB)</span> вернёт <span>true</span>, если <span>elemB</span> находится внутри <span>elemA</span> (<span>elemB</span> потомок <span>elemA</span>) или когда elemA==<span>elemB</span></li>
               </ul>
             </div>
             <hr>
@@ -1086,6 +1671,20 @@
               <li class="aside__element" title="Lesson 17">
                 <a class="aside__link" href="#lesson__17">
                   <div class="side__text">17. <p>DOM дерево</p>
+                  </div>
+                </a>
+                <div class="aside__line"></div>
+              </li>
+              <li class="aside__element" title="Lesson 18">
+                <a class="aside__link" href="#lesson__18">
+                  <div class="side__text">18. <p>Навигация по DOM элементам</p>
+                  </div>
+                </a>
+                <div class="aside__line"></div>
+              </li>
+              <li class="aside__element" title="Lesson 18">
+                <a class="aside__link" href="#lesson__18">
+                  <div class="side__text">18. <p>Поиск по DOM элементам</p>
                   </div>
                 </a>
                 <div class="aside__line"></div>

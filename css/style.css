@@ -291,12 +291,28 @@ article {
 .lesson__inner {
   padding: 50px 50px 0 50px;
 }
-
-.main__text {
-  background: hsl(212, 13%, 40%, 0.5);
+p {
+  margin-bottom: 30px;
+}
+.header__nav-element p{
+  margin: 0;
+}
+.side__text p{
+  margin: 0;
+}
+.main__text, .main__text--code {
+  background: #59657380;
   border-radius: 15px;
   padding: 5px 15px;
   margin-bottom: 30px;
+}
+.main__text--code{
+  background-color: rgb(0, 0, 0);
+  border: solid 3px #00b8ff;
+}
+.main__text--code .lesson__list{
+  margin-left: 50px;
+
 }
 
 .main__text span {
@@ -305,7 +321,21 @@ article {
   border-radius: 5px;
   padding: 0 10px;
 }
-
+.main__text  h3{
+  margin: 0 0 30px 0;
+  display: inline-block;
+}
+.main__text--code h3{
+  margin: 0 0 30px 0;
+  display: inline-block;
+}
+.att-icon, .info-icon, .code-icon{
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  transform: translateY(8px);
+  margin-right: 15px;
+}
 hr {
   height: 3px;
   background: #007388;
@@ -328,7 +358,7 @@ h1 p {
   display: none;
 }
 
-h2 {
+h2, h3 {
   font-family: Cormorant;
   text-align: center;
   font-weight: 700;
@@ -342,7 +372,11 @@ h2 {
   margin-right: auto;
 
 }
-
+h3 {
+  font-size: 30px;
+  border-top: dotted #007388;
+  border-bottom: dotted #007388;
+}
 .lesson__list {
   padding: 0 0 50px 0;
 }
@@ -370,7 +404,6 @@ h2 {
 .lesson__list li {
   margin: 25px 0;
 }
-
 .lesson__list li:first-child {
   margin: 0 0 25px 0;
 }
@@ -378,12 +411,21 @@ h2 {
 .lesson__list li:last-child {
   margin: 25px 0 0 0;
 }
+.main__text--code li{
+  margin: 0 0 10px 0;
+}
+.main__text--code li:first-child{
+  margin: 0 0 10px 0;
+}
+.main__text--code li:last-child{
+  margin: 0 0 10px 0;
+}
 
 .lesson__list li::before {
   content: "";
   display: block;
   position: relative;
-  top: 27px;
+  top: 20px;
   left: -20px;
   height: 10px;
   width: 10px;
@@ -391,20 +433,9 @@ h2 {
   background: #007388;
 }
 
-.lesson__list h2 {
+.lesson__list h3 {
   text-align: left;
-}
-
-.lesson__list .termin::before {
-  content: "";
-  display: block;
-  position: relative;
-  top: 35px;
-  left: -20px;
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  background: #007388;
+  margin: 0;
 }
 
 .img {
