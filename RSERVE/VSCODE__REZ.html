@@ -140,127 +140,63 @@
   <main class="main__container" id="MAIN">
     <div class="main__inner">
       <section>
-        <article class="Snippets__Lesson" id="lesson__Snippets">
+        <article class="vscode" id="VSCode">
           <hr>
-          <h1>Snippets. <br> Как ускорить разработку - сниппеты.
-          </h1>
+          <h1><span>Настройка VSCode</h1>
           <hr>
           <div class="lesson__inner">
-            <p class="main__text">
-              Сниппет, грубо говоря, это кусок заранее написанного кода, который можно вызывать внутри среды Vs Code.
-              Представляет из себя json код, который содержит префикс, тело и описание сниппета. В данном случае мы
-              рассмотрим такие сниппеты, которые можно вставить в любом месте нашего файла.
-            </p>
-            <ul class="lesson__list">
-              <li>Сниппеты по умолчанию
-                <p>
-                  В VS Code есть снипппеты по умолчанию, которые уже имеются в среде после установки. Самый популярный
-                  –
-                  это кусок html кода, который встраивается в вашу страницу. Так, например, если создать файл
-                  index.html и
-                  в первой строчке файла поставить “!” знак и нажать на “Tab”, то у вас встроится следующий код:
-                </p>
-                <img src="/images/snp1.jpg" alt="" class="img">
-                <p>
-                  Это пустой шаблон html страницы. После встраивания данного сниппета вы можете менять его так, как
-                  Вам
-                  это
-                  нужно.
-                </p>
-                </pre>
-              </li>
-              <li>
-                Как это работает?
-                <p>
-                  Сниппеты работают по принципу Emmet. Если вы когда-либо писали сайты или создавали приложения в
-                  Visual
-                  Studio, то, наверное, знаете про Emmet. Это набор встроенных или установленных плагинов, которые
-                  ускоряют разработку путем написания меньшего объема кода. По сути, то же, что будем делать и мы.
-                  Так,
-                  например, в html с помощью emmet Вы можете писать длинные конструкции в одну строчку и
-                  преобразовывать
-                  их таким образом:
-                </p>
-                <img src="/images/snp2.jpg" alt="" class="img">
-                <p>Нажмем Tab и преобразуем в...</p>
-                <img src="/images/snp3.jpg" alt="" class="img">
-              </li>
-              <li>
-                Собственные сниппеты.
-                <p>
-                  После того, как мы разобрались, что такое сниппеты и какие они бывают по умолчанию, время
-                  разобраться с
-                  тем, как создать свой собственный. Чтобы создать свой сниппет в Visual Studio Code, необходимо
-                  перейти
-                  во вкладку “File” → “Preferences” → “User Snippets”.
-                </p>
-                <img src="/images/snp4.jpg" alt="" class="img">
-                <p>После этого в верху окна откроется окно выбора / создания сниппета:</p>
-                <img src="/images/snp5.jpg" alt="" class="img">
-                <p>Здесь до горизонтальной разделительной черты находятся ваши собственные сниппеты. Далее есть пункт,
-                  который создает Глобальный сниппет «New Global Snippets file…», он может быть вызван и применен в
-                  любом
-                  проекте и на любом языке. Также можно создать локальный сниппет для конкретного проекта: «New
-                  Snippets
-                  file for ‘Project_name’…». В данном случае Ваш сниппет также может быть вызван в любом ЯП (Языке
-                  программирования), но внутри вашего проекта или внутри директории, для которой Вы открыли VS Code.
-                  Ниже
-                  идет список ЯП, для которых можно написать персонализированные сниппеты. Для всех самых и не самых
-                  популярных ЯП имеется возможность создать свой сниппет.
-                </p>
-              </li>
-            </ul>
-            <hr>
-            <h1>Практика.</h1>
-            <hr>
-            <p>
-              Все сниппеты создаются одинаково. Рассмотрим пример создания глобального сниппета.
-            </p>
-            <ul class="lesson__inner">
-              <li>
-                1. Перейдем во вкладку <span>“File” → “Preferences” → “User Snippets”</span>
-              </li>
-              <li>
-                2. Выберем <span>«New Global Snippets file…»</span>
-                <img src="/images/snp6.jpg" alt="" class="img">
-              </li>
-              <li>3. Введем в появившемся окне наименование сниппета: «Test-snippet»</li>
-              <li>4. Перед нами откроется окно с закомментированным текстом.
-                <img src="/images/snp7.jpg" alt="" class="img">
-              </li>
-              <li>5. Создаем и заполняем свой json фрагмент, сохраняем и все. Ваш сниппет готов</li>
-            </ul>
-            <hr>
-            <h1>Как заполнить?</h1>
-            <hr>
-            <div>Раскомментируем все, что находится ниже слова «Example:».</div>
-            <p class="main__text">
-              <span>«Print to console»</span> — это наименование сниппета, он будет отображаться вам при вызове
-              данного
-              сниппета при условии, если отсутствует описание сниппета:
-            </p>
-            <img src="/images/snp8.jpg" alt="" class="img">
-            <img src="/images/snp9.jpg" alt="" class="img">
-            <p class="main__text">
-              <span>«scope»</span> — это поле отображает языки и проекты, где можно использовать вызов данного
-              сниппета. Т.к. по
-              умолчанию стоит javascript и typescript, то, кроме данных файлов, нигде вызвать сниппет не получится.
-            </p>
-            <p class="main__text">
-              <span>«prefix»</span> — это префикс вашего сниппета, т.е. короткое название, по которому будет
-              вызываться ваш сниппет.
-            </p class="main__text">
-            <p class="main__text">
-              <span>«body»</span> — это тело сниппета, здесь хранится то, что напечатается после нажатия на кнопку
-              “Tab”.
-            </p>
-            <p class="main__text">
-              <span>«description»</span> — это поле «описание», которое поможет вам понять какой именно сниппет Вы
-              вызываете.
-            </p>
-            <img src="/images/snp10.jpg" alt="" class="img">
-            <img src="/images/snp11.jpg" alt="" class="img">
+            <div class="main__text">В этом разделе представлены настройки VSCode для удобства и упрощения работы в
+              этом редактооре.</div>
           </div>
+          <ul class="lesson__list">
+            <li>
+              Russian language pack
+              <div class="main__text">Переводит интерфейс на русский язык.</div>
+              <img src="/images/vsc1.jpg" alt="" class="img">
+            </li>
+            <li>
+              Live server
+              <div class="main__text">Это расширение отрывает html файл прямо в браузере, что позволяет видеть
+                изменения кода прямо онлайн.</div>
+              <img src="/images/vsc2.jpg" alt="" class="img">
+            </li>
+            <li>
+              Indent rainbow
+              <div class="main__text">Подсвечивает отступы разными цветами для лучшей читаемости кода.</div>
+              <img src="/images/vsc3.jpg" alt="" class="img">
+            </li>
+            <li>
+              Image preview
+              <div class="main__text">Показывает мини изображения напротив тегов или стилей.</div>
+              <img src="/images/vsc4.jpg" alt="" class="img">
+            </li>
+            <li>
+              htmltagwrap
+              <div class="main__text">Позволяет обернуть выделенный код html в любой тег.</div>
+              <img src="/images/vsc5.jpg" alt="" class="img">
+            </li>
+            <li>
+              CSS tractor
+              <div class="main__text">Позволяет из выделенного кода html вычленить все классы и вставить их в css
+                файл.</div>
+              <img src="/images/vsc6.jpg" alt="" class="img">
+            </li>
+            <li>
+              CSS peek
+              <div class="main__text">Позволяет посмотреть примененные стили наведясь на тег html.</div>
+              <img src="/images/vsc7.jpg" alt="" class="img">
+            </li>
+            <li>
+              CSS formater
+              <div class="main__text">Позволяет форматировать CSS файл.</div>
+              <img src="/images/vsc8.jpg" alt="" class="img">
+            </li>
+            <li>
+              Code runner
+              <div class="main__text">Позволяет запускать код прямо в редакторе во встроенном терминале..</div>
+              <img src="/images/vsc9.jpg" alt="" class="img">
+            </li>
+          </ul>
           <hr>
         </article>
       </section>
@@ -287,9 +223,9 @@
           <p class="footer__zag">Дополнительно</p>
           <div class="footer__line"></div>
           <ul>
-            <li class="fotter_contact"><a href="#MAIN">Сниппеты</a></li>
+            <li class="fotter_contact"><a href="Snippets.html">Сниппеты</a></li>
             <li class="fotter_contact"><a href="Links.html">Полезные ссылки</a></li>
-            <li class="fotter_contact"><a href="VSCode.html">Настройка VSCode</a></li>
+            <li class="fotter_contact"><a href="#MAIN">Настройка VSCode</a></li>
             <li class="fotter_contact"><a href="#">Пункт</a></li>
             <li class="fotter_contact"><a href="#">Пункт</a></li>
             <li class="fotter_contact"><a href="#">Пункт</a></li>
