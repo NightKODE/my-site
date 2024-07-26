@@ -21,7 +21,7 @@
     "body": [
       "<article class=\"$2__Lesson\" id=\"lesson__$1\">",
       "  <hr>",
-      "  <h1><span>Lesson $1<br> .</span><p>L$1. </p></h1>",
+      "  <h1><span>Lesson $1<br> $3.</span><p>L$1. $3</p></h1>",
       "  <hr>",
       "  <div class=\"lesson__inner\">",
       "    <ul class=\"lesson__list\">",
