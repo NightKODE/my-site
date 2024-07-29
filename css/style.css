@@ -317,7 +317,7 @@ p {
   background: rgba(89, 101, 115, 0.5019607843);
   border-radius: 15px;
   padding: 5px 15px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .main__text--code {
@@ -422,6 +422,7 @@ h3 {
   background: #007388;
   border-radius: 5px;
   padding: 0 10px;
+  text-wrap: nowrap;
 }
 
 .lesson__list li {
@@ -476,8 +477,8 @@ h3 {
 }
 
 .lesson__list .img {
-  margin-top: 25px;
-  margin-bottom: 0px;
+  /* margin-top: 25px; */
+  /* margin-bottom: 0px; */
 }
 
 .img--l {
@@ -620,7 +621,7 @@ video {
 .slide__button-container{
   overflow: hidden;
 }
-.slide-button, .fade-button{
+.slide-button, .fade-button, .jQuery__detach-button{
   padding: 20px;
   margin-bottom: 20px;
   color: white;
@@ -631,6 +632,27 @@ video {
   width: 100px;
   background-color: #fff;
 }
+
+.jQuery__detach-container{
+  display: flex;
+  width: 100%;
+  height: 200px;
+  }
+
+.jQuery__detach-element{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  }
+
+.jQuery__detach-text{
+  padding: 30px;
+  border: solid 3px #007388;
+  border-radius: 10px;
+  }
+
+
 /* ------------- CSS__LESSON_2 ------------ */
 /* ------------- CSS__LESSON_2 ------------ */
 td {
@@ -2330,8 +2352,8 @@ button {
   }
 
   .lesson__list .img {
-    margin-top: 5px;
-    margin-bottom: 0px;
+    /* margin-top: 5px; */
+    /* margin-bottom: 0px; */
   }
 
   .lesson__list li:first-child {

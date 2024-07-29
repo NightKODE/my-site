@@ -1,6 +1,5 @@
-
-
 $(document).ready(function () {
+  // Header burrger follow
   setInterval(() => {
     if ($(window).scrollTop() > 0 && $('.header__container').hasClass('header__top--open') === false) {
       $('.burger').addClass('burger--follow')
@@ -8,21 +7,26 @@ $(document).ready(function () {
       $('.burger').removeClass('burger--follow')
     }
   }, 0);
-
-  $('.burger, .overlay').on('click', function (e) {
+// Header overlay
+  $('.burger, .overlay').on('click', function(e) {
     e.preventDefault()
     $('.header__container').toggleClass('header__top--open')
     $('.overlay').toggleClass('overlay--show')
   })
-
+// Header footer link
+  $('.podval').click(function(){
+    $('.header__container').removeClass('header__top--open');
+    $('.overlay').removeClass('overlay--show')
+  })
+// Aside
+  // $('.aside__element').on('click', function () {
+  //   $('.aside__themes-container').slideDown('slow')
+  // })
+// jQuery lesson 1
   $('.query__button').on('click', function () {
     $('.query__text').hide(1000)
   })
-
-  $('.aside__element').on('click', function () {
-    $('.aside__themes-container').slideDown('slow')
-
-  })
+// jQuery lesson 5
   $('.button-hide').on('click', function () {
     $('.doblebutton-text_1').hide(1000)
   })
@@ -53,9 +57,44 @@ $(document).ready(function () {
 
   $('.animate-button').click(function () {
     $('.animate__text').animate({
-      'background': 'black',
+      'background-color': '#000000',
       'width': '100%'
     })
   })
+// jQuery lesson 6
+  $('.--left').click(function () {
+    queryDetach.appendTo('.--left-element')
+    if (queryDetach) {
+      queryDetach.appendTo('.--left-element');
+      // queryDetach = null;
+      // } else{
+      //   queryDetach = $('.jQuery__detach-text').detach();
+    }
+  })
+  $('.--right').click(function () {
+    queryDetach.appendTo('.--right-element')
+    if (queryDetach) {
+      queryDetach.appendTo('.--right-element');
+      // queryDetach = null;
+      // } else{
+      //   queryDetach = $('.jQuery__detach-text').detach()
+    }
+  })
 
+  function showHeight(element, height) {
+    $('.paragraph').text('Высота элемента ' + element + ' равна ' + height)
+  }
+  $('.getp').click(function(){
+    showHeight('paragraph', $('.paragraph').height())
+  })
+  $('.getd').click(function(){
+    showHeight('document', $(document).height())
+  })
+  $('.getw').click(function(){
+    showHeight('window', $(window).height())
+  })
+
+  $('.innerh').click(function(){
+    $('.innerh-text').text(innerHeight.innerHeight())
+  })
 })

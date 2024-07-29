@@ -159,9 +159,8 @@
               </a>
             </li>
             <li>
-              <a class="header__nav-element" href="#podval">Footer</a>
+              <a class="header__nav-element podval" href="#podval">Footer</a>
             </li>
-
           </ul>
         </div>
         <hr>
@@ -854,18 +853,106 @@
                     <span>.prependTo()</span> вставляет содержимое непосредственно в область, стоящую в аргументе.
                   </li>
                   <li><span>.after()</span> - Добавляет заданное содержимое после элементов на странице.
-                    <span>.insertAfter()</span> вставляет содержимое непосредственно в область, стоящую в аргументе.</li>
+                    <span>.insertAfter()</span> вставляет содержимое непосредственно в область, стоящую в аргументе.
+                  </li>
                   <li><span>.before()</span> - Добавляет заданное содержимое перед элементами на странице.
                     <span>.insertBefore()</span> вставляет содержимое непосредственно в область, стоящую в аргументе.
                   </li>
                   <li><span>.wrap()</span> - Окружает элементы на странице заданными html-элементами.
-                    <span>.wrapAll()</span> вставляет содержимое непосредственно в область, стоящую в аргументе.</li>
+                    <span>.wrapAll()</span> окружает все элеменнты с указанным селектором в заданным html-элементом.
+                  </li>
                   <li><span>.wrapInner()</span> - Окружает содержимое элементов на странице заданными html-элементами.
                   </li>
                 </ul>
               </div>
-              <hr>
+              <h2>Замена элементов</h2>
+              <ul class="lesson__list">
+                <li><span>replaceWith</span> - заменяет элемент на тот, который указан в аргументе.</li>
+                <li><span>replaceAll</span> - этот метод ставит указанный элемент на место того, который указан в
+                  аргументе.</li>
+                <img src="/images/jq5.jpg" alt="" class="img">
+              </ul>
+              <h3>Клонирование</h3>
+              <div class="main__text">
+                <span>clone()</span> - позволяет клонировать элемент для дальнейшей встаки куда-либо. Так же с помщью
+                этого метода можно клонировать обработчики событий.
+              </div>
+              <img src="/images/jq6.jpg" alt="" class="img">
+              <h3>Удлание элемента</h3>
+              <div class="main__text">
+                <span>detach</span> - позволяет удалить элемент из DOM, но при этом сохраняет о нем все данные в jQuery,
+                что позволяет работать с ним в будущем.
+              </div>
+              <div class="jQuery__detach-container">
+                <div class="jQuery__detach-element --left-element">
+                  <button class="jQuery__detach-button --left">Вставить влево</button>
+                  <div class="jQuery__detach-text">Блок с текстом</div>
+                </div>
+                <div class="jQuery__detach-element --right-element">
+                  <button class="jQuery__detach-button --right">Вставить вправо</button>
+                </div>
+              </div>
+              <h3>Очистка</h3>
+              <div class="main__text">
+                <span>empty()</span> - убирает содержимое элемента, но не навсегда. <br><br>
+                <span>remove()</span> - удаляет содержимое элемента навсегда.
+              </div>
+              <h2>Параметры стилей</h2>
+              <ul class="lesson__list">
+                <li>
+                  <div class="main__text">
+                    <span>offset()</span> - возвращает позицию DOM элемента относительно документа.
+                  </div>
+                  <img src="/images/jq7.jpg" alt="" class="img img--l">
+                  <div class="main__text positionOffset"></div>
+                  <div class="main__text">Чтобы с помощью метода <span>offset()</span> утановить элемент где-либо, нужно
+                    писать так:
+                    <span>$('.class').offset({top:10, left:100})</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="main__text">
+                    <span>psition()</span> - возвращает позицию DOМ элемента относительно родителя.
+                  </div>
+                  <img src="/images/jq8.jpg" alt="" class="img img--l">
+                  <div class="main__text positionPosition"></div>
+                </li>
+                <li>
+                  <div class="main__text">
+                    <span>height()</span> - возвращает высоту элемента за вычетом отступов и границ. Значения возвращаются без указания единиц измерения.
+                  </div>
+                  <div class="jQuery__button-container">
+                    <button class="getp">Paragraph</button>
+                    <button class="getd">Document</button>
+                    <button class="getw">Window</button>
+                  </div>
+                  <div class="main__text paragraph"></div>
+                </li>
+                <li>
+                  <div class="main__text"><span>innerHeight()</span> - возвращает высоту элемента включая падинги.</div>
+                </li>
+                <div class="jQuery__button-container">
+                  <button class="innerh">Проверить высоту этой кнопки</button>
+
+                  <div class="main__text">Высота кнопки: <span class="innerh-text"></span></div>
+                </div>
+              </ul>
+            </div>
+            <hr>
           </article>
+          <!-- <article class="jQuery" id="lesson__7">
+            <hr>
+            <h1><span>Lesson 7<br> Адаптивное меню.</span><p>L7. Адаптивное меню</p></h1>
+            <hr>
+            <div class="lesson__inner">
+              <ul class="lesson__list">
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <hr>
+          </article> -->
         </section>
         <!-- ========================================== ASIDE ========================================= -->
         <!-- ========================================== ASIDE ========================================= -->
@@ -915,39 +1002,11 @@
               </li>
               <li class="aside__element" title="Lesson 6">
                 <a class="aside__link" href="#lesson__6">
-                  <div class="side__text">6. <p>.</p>
+                  <div class="side__text">6. <p>Манипуляции с DOM.</p>
                   </div>
                 </a>
                 <div class="aside__line"></div>
-              </li>
-              <li class="aside__element" title="Lesson 7">
-                <a class="aside__link" href="#lesson__7">
-                  <div class="side__text">7. <p>.</p>
-                  </div>
-                </a>
-                <div class="aside__line"></div>
-              </li>
-              <li class="aside__element" title="Lesson 8">
-                <a class="aside__link" href="#lesson__8">
-                  <div class="side__text">8. <p>.</p>
-                  </div>
-                </a>
-                <div class="aside__line"></div>
-              </li>
-              <li class="aside__element" title="Lesson 9">
-                <a class="aside__link" href="#lesson__9">
-                  <div class="side__text">9. <p>.</p>
-                  </div>
-                </a>
-                <div class="aside__line"></div>
-              </li>
-              <li class="aside__element" title="Lesson 10">
-                <a class="aside__link" href="#lesson__10">
-                  <div class="side__text">10. <p>.</p>
-                  </div>
-                </a>
-                <div class="aside__line"></div>
-              </li>
+              </li>              
             </ul>
           </div>
         </aside>
