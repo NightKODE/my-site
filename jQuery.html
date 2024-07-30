@@ -9,12 +9,16 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/Style.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
   <!-- <link rel="script" href="js/jquery-3.7.1.js"> -->
   <title>My site!</title>
 </head>
 
 <body>
   <div class="wrapper">
+    <a href="#MAIN" class="button__back-to-top" title="Вернуться на верх">
+      <div>Вверх</div>
+    </a>
     <div class="overlay"></div>
     <!-- ========================================== HEADER ========================================== -->
     <!-- ========================================== HEADER ========================================== -->
@@ -904,7 +908,6 @@
                     <span>offset()</span> - возвращает позицию DOM элемента относительно документа.
                   </div>
                   <img src="/images/jq7.jpg" alt="" class="img img--l">
-                  <div class="main__text positionOffset"></div>
                   <div class="main__text">Чтобы с помощью метода <span>offset()</span> утановить элемент где-либо, нужно
                     писать так:
                     <span>$('.class').offset({top:10, left:100})</span>
@@ -915,11 +918,11 @@
                     <span>psition()</span> - возвращает позицию DOМ элемента относительно родителя.
                   </div>
                   <img src="/images/jq8.jpg" alt="" class="img img--l">
-                  <div class="main__text positionPosition"></div>
                 </li>
                 <li>
                   <div class="main__text">
-                    <span>height()</span> - возвращает высоту элемента за вычетом отступов и границ. Значения возвращаются без указания единиц измерения.
+                    <span>height()</span> - возвращает высоту элемента за вычетом отступов и границ. Значения
+                    возвращаются без указания единиц измерения.
                   </div>
                   <div class="jQuery__button-container">
                     <button class="getp">Paragraph</button>
@@ -933,26 +936,105 @@
                 </li>
                 <div class="jQuery__button-container">
                   <button class="innerh">Проверить высоту этой кнопки</button>
-
                   <div class="main__text">Высота кнопки: <span class="innerh-text"></span></div>
                 </div>
               </ul>
             </div>
             <hr>
           </article>
-          <!-- <article class="jQuery" id="lesson__7">
+          <article class="jQuery__Lesson" id="lesson__7">
             <hr>
-            <h1><span>Lesson 7<br> Адаптивное меню.</span><p>L7. Адаптивное меню</p></h1>
+            <h1><span>Lesson 7<br> Слайдер.</span>
+              <p>L7. Слайдер</p>
+            </h1>
             <hr>
             <div class="lesson__inner">
-              <ul class="lesson__list">
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
+              <div class="slider__container">
+                <div class="slider__prev n"><a href="#">
+                    << /a>
+                </div>
+                <div class="slider">
+                  <img class="slider__img curry" src="/images/obl1.jpg">
+                  <img class="slider__img" src="/images/obl2.jpeg">
+                  <img class="slider__img" src="/images/obl3.jpg">
+                  <img class="slider__img" src="/images/obl4.jpg">
+                  <img class="slider__img" src="/images/obl5.jpg">
+                </div>
+                <div class="slider__next n"><a href="#">></a></div>
+              </div>
+              <img src="/images/jq9.jpg" alt="" class="img">
             </div>
             <hr>
-          </article> -->
+          </article>
+          <article class="jQuery__Lesson" id="lesson__8">
+            <hr>
+            <h1><span>Lesson 8<br> Кнопка "вверх".</span>
+              <p>L8. Кнопка "вверх"</p>
+            </h1>
+            <hr>
+            <div class="lesson__inner">
+              <img src="/images/jq10.jpg" alt="" class="img">
+            </div>
+            <hr>
+          </article>
+          <article class="jQuery__Lesson" id="lesson__9">
+            <hr>
+            <h1><span>Lesson 9<br> Счетчик чисел.</span>
+              <p>L9. Счетчик чисел</p>
+            </h1>
+            <hr>
+            <div class="lesson__inner">
+              <div class="wrapper__number">
+                <div class="counter col-fourth">
+                  <i class="fa fa-code fa-2x"></i>
+                  <div class="count">234234</div>
+                  <p class="count-text"></p>
+                </div>
+                <div class="counter col-fourth">
+                  <i class="fa fa-coffee fa-2x"></i>
+                  <div class="count">987</div>
+                  <p class="count-text"></p>
+                </div>
+                <div class="counter col-fourth">
+                  <i class="fa fa-lightbulb-o fa-2x"></i>
+                  <div class="count">765</div>
+                  <p class="count-text"></p>
+                </div>
+                <div class="counter col-fourth end">
+                  <i class="fa fa-bug fa-2x"></i>
+                  <div class="count">1345</div>
+                  <p class="count-text"></p>
+                </div>
+              </div>
+              <img src="/images/jq11.jpg" alt="" class="img">
+            </div>
+            <hr>
+          </article>
+          <article class="jQuery__Lesson" id="lesson__10">
+            <hr>
+            <h1><span>Lesson 10<br> To do приложение.</span>
+              <p>L10. To do приложение</p>
+            </h1>
+            <hr>
+            <div class="lesson__inner">
+              <div id="container">
+                <div id="tasks">
+                  <div id="notification">Task list is empty.</div>
+                  <ul id="tasksList">
+                  </ul>
+                </div>
+                <div id="task__footer">
+                  <input type="text" id="taskInput" placeholder="Your task">
+                  <button id="taskAdd">+</button>
+                </div>
+              </div>
+              <h2>HTML</h2>
+              <img src="/images/jq13.jpg" alt="" class="img">
+              <h2>jQuery</h2>
+              <img src="/images/jq12.jpg" alt="" class="img img--l">
+            </div>
+            <hr>
+          </article>
         </section>
         <!-- ========================================== ASIDE ========================================= -->
         <!-- ========================================== ASIDE ========================================= -->
@@ -1006,7 +1088,35 @@
                   </div>
                 </a>
                 <div class="aside__line"></div>
-              </li>              
+              </li>
+              <li class="aside__element" title="Lesson 7">
+                <a class="aside__link" href="#lesson__7">
+                  <div class="side__text">7. <p>Slider.</p>
+                  </div>
+                </a>
+                <div class="aside__line"></div>
+              </li>
+              <li class="aside__element" title="Lesson 8">
+                <a class="aside__link" href="#lesson__8">
+                  <div class="side__text">8. <p>Back to top button.</p>
+                  </div>
+                </a>
+                <div class="aside__line"></div>
+              </li>
+              <li class="aside__element" title="Lesson 9">
+                <a class="aside__link" href="#lesson__9">
+                  <div class="side__text">9. <p>Счетчик чисел.</p>
+                  </div>
+                </a>
+                <div class="aside__line"></div>
+              </li>
+              <li class="aside__element" title="Lesson 10">
+                <a class="aside__link" href="#lesson__10">
+                  <div class="side__text">10. <p>To do приложение.</p>
+                  </div>
+                </a>
+                <div class="aside__line"></div>
+              </li>
             </ul>
           </div>
         </aside>

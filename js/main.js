@@ -7,26 +7,26 @@ $(document).ready(function () {
       $('.burger').removeClass('burger--follow')
     }
   }, 0);
-// Header overlay
-  $('.burger, .overlay').on('click', function(e) {
+  // Header overlay
+  $('.burger, .overlay').on('click', function (e) {
     e.preventDefault()
     $('.header__container').toggleClass('header__top--open')
     $('.overlay').toggleClass('overlay--show')
   })
-// Header footer link
-  $('.podval').click(function(){
+  // Header footer link
+  $('.podval').click(function () {
     $('.header__container').removeClass('header__top--open');
     $('.overlay').removeClass('overlay--show')
   })
-// Aside
+  // Aside
   // $('.aside__element').on('click', function () {
   //   $('.aside__themes-container').slideDown('slow')
   // })
-// jQuery lesson 1
+  // jQuery lesson 1
   $('.query__button').on('click', function () {
     $('.query__text').hide(1000)
   })
-// jQuery lesson 5
+  // jQuery lesson 5
   $('.button-hide').on('click', function () {
     $('.doblebutton-text_1').hide(1000)
   })
@@ -61,7 +61,8 @@ $(document).ready(function () {
       'width': '100%'
     })
   })
-// jQuery lesson 6
+  // jQuery lesson 6
+  const queryDetach = $('.jQuery__detach-text').detach();
   $('.--left').click(function () {
     queryDetach.appendTo('.--left-element')
     if (queryDetach) {
@@ -84,17 +85,99 @@ $(document).ready(function () {
   function showHeight(element, height) {
     $('.paragraph').text('Высота элемента ' + element + ' равна ' + height)
   }
-  $('.getp').click(function(){
+  $('.getp').click(function () {
     showHeight('paragraph', $('.paragraph').height())
   })
-  $('.getd').click(function(){
+  $('.getd').click(function () {
     showHeight('document', $(document).height())
   })
-  $('.getw').click(function(){
+  $('.getw').click(function () {
     showHeight('window', $(window).height())
   })
-
-  $('.innerh').click(function(){
+  const innerHeight = $('.innerh')
+  $('.innerh').click(function () {
     $('.innerh-text').text(innerHeight.innerHeight())
+  })
+  // Slider
+  $('.slider__next').click(function (e) {
+    e.preventDefault();
+    const sImg = $('.slider__img.curry');
+    const sImgIndex = $('.slider__img.curry').index();
+    const nextImgIndex = sImgIndex + 1;
+    const nextImg = $('.slider__img').eq(nextImgIndex);
+    sImg.fadeOut(1000);
+    sImg.removeClass('curry');
+    if (nextImgIndex == ($('.slider__img:last').index() + 1)) {
+      $('.slider__img').eq(0).fadeIn(1000);
+      $('.slider__img').eq(0).addClass('curry');
+    } else {
+      nextImg.fadeIn(1000);
+      nextImg.addClass('curry');
+    }
+  })
+  $('.slider__prev').click(function (e) {
+    e.preventDefault();
+    const sImg = $('.slider__img.curry');
+    const sImgIndex = $('.slider__img.curry').index();
+    const prevImgIndex = sImgIndex - 1;
+    const prevImg = $('.slider__img').eq(prevImgIndex);
+
+    sImg.fadeOut(1000);
+    sImg.removeClass('curry');
+    prevImg.fadeIn(1000);
+    prevImg.addClass('curry');
+  })
+  // Back to top button
+  const $btnTop = $('.button__back-to-top');
+  $btnTop.fadeOut();
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop() >= 20) {
+      $btnTop.fadeIn(500);
+    } else {
+      $btnTop.fadeOut(10);
+    }
+  })
+  $btnTop.on('click', function () {
+    $('html,body').animate({ scrollTop: 0}, 900)
+  })
+  // Счетчик
+  $('.count').each(function () {
+    $(this).prop('Counter', 0).animate({
+      Counter: $(this).text()
+    }, {
+      duration: 4000,
+      easing: 'swing',
+      step: function (now) {
+        $(this).text(Math.ceil(now));
+      }
+    })
+  })
+  // To Do Task
+  const $tasksList = $('#tasksList');
+  const $taskInput = $('#taskInput');
+  const $notification = $('#tasksNotification');
+
+  const displayNotification = function () {
+    if (!$tasksList.children().length) {
+      $notification.fadeIn('fast')
+    } else {
+      $notification.css('display', 'none')
+    }
+  }
+
+  $('#taskAdd').on('click', function () {
+    if (!$taskInput.val()) { return false; }
+
+    $tasksList.append("<li>" + $taskInput.val() + "<button class='delete'>&#10006</button></li>");
+    $taskInput.val("");
+    displayNotification();
+    $('.delete').on('click', function () {
+      let $parent = $(this).parent();
+      $parent.css('animation', 'fadeOut .3s linear');
+      setTimeout(function () {
+        $parent.remove();
+        displayNotification();
+      }, 295)
+    })
   })
 })
