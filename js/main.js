@@ -1,12 +1,12 @@
 $(document).ready(function () {
   // Header burrger follow
-  setInterval(() => {
-    if ($(window).scrollTop() > 0 && $('.header__container').hasClass('header__top--open') === false) {
-      $('.burger').addClass('burger--follow')
-    } else {
-      $('.burger').removeClass('burger--follow')
-    }
-  }, 0);
+  // setInterval(() => {
+  //   if ($(window).scrollTop() > 0 && $('.header__container').hasClass('header__top--open') === false) {
+  //     $('.burger').addClass('burger--follow')
+  //   } else {
+  //     $('.burger').removeClass('burger--follow')
+  //   }
+  // }, 0);
   // Header overlay
   $('.burger, .overlay').on('click', function (e) {
     e.preventDefault()
@@ -19,9 +19,9 @@ $(document).ready(function () {
     $('.overlay').removeClass('overlay--show')
   })
   // Aside
-  // $('.aside__element').on('click', function () {
-  //   $('.aside__themes-container').slideDown('slow')
-  // })
+  $('.aside__element').on('click', function () {
+    $(this).$('.aside__themes-container').slideDown('slow')
+  })
   // jQuery lesson 1
   $('.query__button').on('click', function () {
     $('.query__text').hide(1000)
@@ -138,7 +138,7 @@ $(document).ready(function () {
     }
   })
   $btnTop.on('click', function () {
-    $('html,body').animate({ scrollTop: 0}, 900)
+    $('html,body').animate({ scrollTop: 0 }, 900)
   })
   // Счетчик
   $('.count').each(function () {
@@ -180,4 +180,23 @@ $(document).ready(function () {
       }, 295)
     })
   })
+  //SKILLBAR
+  $('.skillbar').each(function () {
+    $(this).find('.skillbar-bar').animate({
+      width: $(this).attr('data-percent')
+    }, 2000)
+  })
+  //ACCORDION
+  $('.accordion-header').on("click", function () {
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $(this).next('.accordion-body').slideUp(300);
+    } else {
+      $('.accordion-header').removeClass('active');
+      $('.accordion-body').slideUp(300);
+      $(this).addClass('active');
+      $(this).next('.accordion-body').slideDown(300);
+    }
+  })
+
 })

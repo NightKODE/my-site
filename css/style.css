@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ========================================== GLOBAL ========================================== */
 /* ========================================== GLOBAL ========================================== */
 html {
@@ -48,13 +49,13 @@ html {
 
 .button__back-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   left: 20px;
   z-index: 100;
   width: 150px;
   height: 60px;
   display: block;
-  background: rgba(183, 183, 183, 0.1);
+  background: rgba(255, 255, 255, 0.176);
   -webkit-backdrop-filter: blur(8.9px);
           backdrop-filter: blur(8.9px);
   border: 1px solid rgba(0, 0, 0, 0.21);
@@ -335,6 +336,7 @@ article {
   margin-bottom: 30px;
   padding: 30px;
   position: relative;
+  overflow: hidden;
 }
 
 .lesson__inner {
@@ -1177,6 +1179,104 @@ th {
     margin-top: -50px;
   }
 }
+/* ------------- SKILLBAR ------------ */
+/* ------------- SKILLBAR ------------ */
+.skillbar {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  background: #eee;
+  height: 35px;
+  border-radius: 3px;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  -webkit-transition-property: width, background-color;
+  transition-property: width, background-color;
+}
+
+.skillbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+  font-size: 13px;
+  background: #6adcfa;
+  color: white;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.skillbar-title span {
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  height: 35px;
+  line-height: 35px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.skillbar-bar {
+  height: 35px;
+  width: 0;
+  background: #6adcfa;
+  border-radius: 3px;
+}
+
+.skillbar-bar-percent {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 11px;
+  height: 35px;
+  line-height: 35px;
+  color: #444;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* ------------- ACCORDION ------------ */
+/* ------------- ACCORDION ------------ */
+.accordion {
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  margin: 0 auto 50px;
+  padding-left: 0;
+  width: 50%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  min-height: 3rem;
+  line-height: 3rem;
+  padding: 0 1rem;
+  color: #333;
+}
+.accordion-header:after {
+  content: "➕";
+  font-size: 0.6rem;
+  color: #777;
+  float: right;
+}
+
+.active:after {
+  content: "➖";
+}
+
+.accordion-body {
+  display: none;
+  padding: 1rem;
+  border-bottom: 1px solid #777;
+}
+
+.active {
+  display: block;
+}
+
 /* ------------- CSS__LESSON_6 ------------ */
 /* ------------- CSS__LESSON_6 ------------ */
 .l6 {
@@ -2564,8 +2664,7 @@ button {
     display: -ms-flexbox;
     display: flex;
     position: fixed;
-    top: 0;
-    right: 0;
+    right: 20px;
     z-index: 150;
     height: 60px;
     width: 60px;
@@ -2581,6 +2680,9 @@ button {
     align-items: center;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+    border-radius: 50%;
+    background-color: hsla(0, 0%, 100%, 0.124);
+    bottom: 10px;
   }
   .burger span {
     display: block;
@@ -2600,9 +2702,7 @@ button {
     background: #007388;
   }
   .burger--follow {
-    border-radius: 50%;
-    background-color: hsla(0, 0%, 0%, 0.6);
-    top: 15px;
+    bottom: 15px;
     right: 15px;
     /* box-shadow: 0 1px 8px #a1a1a1; */
   }
