@@ -46,37 +46,79 @@ $(document).ready(function () {
   $('.header__button-light-theme').on('click', function () {
     $(this).toggleClass('light');
     if ($(this).hasClass('light')) {
-      $('.moon').css('display', 'none');
-      $('.sun').css('display', 'block');
-      $('.wrapper').css('color', 'black');
+      $('.moon').css('top', '30px');
+      $('.sun').css('top', '0px');
       $('.header').css('background-image', 'url(/images/mramor.jpg)');
       $('html').css('background-image', 'url(/images/mramor.jpg)');
+      $('.wrapper').css('color', 'black');;
       $('.header__inner').css('color', 'black');
       $('.header__container').css('background-color', 'hsl(0deg 0% 0% / 0%)');
       $('.aside__inner').css('background-color', 'hsl(0deg 0% 0% / 0%)');
       $('footer').css('background-color', 'hsl(0deg 0% 0% / 0%)');
       $('hr').css('background', '#f35510');
-      $('.main__text--code').css('background', 'rgb(255 255 255 / 39%)')
-      $('.main__text--code').css('border', 'solid 3px #f35510')
-      $('.footer').css('color', 'black')
-      $('.aside__inner').css('color', 'black')
-      $('.side__text').css('color', 'black')
-      $('.side__text').children('p').css('color', 'black')
+      $('.main__text--code').css('background', 'rgb(255 255 255 / 39%)');
+      $('.main__text--code').css('border', 'solid 3px #f35510');
+      $('.footer').css('color', 'black');
+      $('.aside__inner').css('color', 'black');
+      $('.side__text').css('color', 'black');
+      $('.side__text').children('p').css('color', 'black');
+      $('.lesson__list').children().children('span').css('background', '#f35510');
+      $('.main__text').css('background', 'rgb(255 255 255 / 60%)');
+      $('.main__text').children('span').css('background', '#f35510');
+      $('button').css('background','white');
+      $('button').css('color','black');
+      $('h2').css('border-top', 'dashed #f35510');
+      $('h2').css('border-bottom', 'dashed #f35510');
+      $('.aside__line').css('background', 'rgb(243 85 16 / 42%)');
+      $('h3').css('border-top', 'dashed #f35510');
+      $('h3').css('border-bottom', 'dashed #f35510');
+      $('.header__button-light-theme').css('background-color', 'white');
+      $('.header__search-block').css('background-color', 'white');
+      $('.search__button-icon').css('background-color', 'white');
+      $('.header__search-block').children('input').removeClass('header__search-stroke');
+      $('.header__search-block').children('input').toggleClass('header__search-stroke-light');
+      $('.lesson__list').children().children('p').css('background', 'rgb(255 255 255 / 39%)');
+      $('.lesson__list').children().children('p').children('span').css('background', '#f35510');
+      $('.main__text').$('span').css('background', '#f35510');
+
     } else {
-      $('.moon').css('display', 'block');
-      $('.sun').css('display', 'none');
-      $('.wrapper').css('color', 'white');
+      $('.moon').css('top', '0px');
+      $('.sun').css('top', '30px');
       $('.header').css('background-image', 'url(/images/grass1.jpg)');
       $('html').css('background-image', 'url(/images/grass1.jpg)');
-      $('.header__inner').css('color', 'white');
-      $('.header__container').css('background-color', 'hsla(0, 0%, 0%, 0.6)');
-      $('.aside__inner').css('background-color', 'hsla(0, 0%, 0%, 0.6)')
-      $('.main__text--code').css('border', 'solid 3px #00b8ff')
-      $('hr').css('background', '')
-}
+      $('.wrapper').css('color', '');
+      $('.header__inner').css('color', '');
+      $('.header__container').css('background-color', '');
+      $('.aside__inner').css('background-color', '');
+      $('footer').css('background-color', '');
+      $('.main__text--code').css('background', '');
+      $('.main__text--code').css('border', '');
+      $('hr').css('background', '');
+      $('.aside__inner').css('color', '');
+      $('.side__text').css('color', '')
+      $('.side__text').children('p').css('color', '')
+      $('.lesson__list').children().children('span').css('background', '');
+      $('.main__text').css('background', '');
+      $('.main__text').children('span').css('background', '');
+      $('button').css('background','');
+      $('button').css('color','');
+      $('h2').css('border-top', '');
+      $('h2').css('border-bottom', '');
+      $('.aside__line').css('background', '');
+      $('h3').css('border-top', '');
+      $('h3').css('border-bottom', '');
+      $('.header__button-light-theme').css('background-color', '');
+      $('.header__search-block').css('background-color', '');
+      $('.search__button-icon').css('background-color', '');
+      $('.header__search-block').children('input').removeClass('header__search-stroke-light');
+      $('.header__search-block').children('input').toggleClass('header__search-stroke');
+      $('.lesson__list').children().children('p').css('background', '');
+      $('.lesson__list').children().children('p').children('span').css('background', '');
+      $('.main__text').$('span').css('background', '');
+    }
   });
-// jQuery lesson 1
-$('.query__button').on('click', function () {
+  // jQuery lesson 1
+  $('.query__button').on('click', function () {
   $('.query__text').hide(1000)
 })
 // jQuery lesson 5

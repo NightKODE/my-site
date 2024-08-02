@@ -7,14 +7,15 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-/* #007388 */
-/* background: hsl(18, 90%, 51%, 0.3); */
 .wrapper {
   position: relative;
   color: white;
-  /* background: #28313b; */
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .main__inner {
@@ -131,21 +132,23 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  /* background-color: hsla(0, 0%, 0%, 0.6); */
-  /* background: white; */
   margin-bottom: 30px;
   position: sticky;
   top: 0;
   z-index: 700;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header__container {
   background-color: hsla(0, 0%, 0%, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(143, 143, 143, 0.1);
-  box-shadow: 0 4px 30px rgba(143, 143, 143, 0.1);
-  backdrop-filter: blur(8.9px);
+          box-shadow: 0 4px 30px rgba(143, 143, 143, 0.1);
   -webkit-backdrop-filter: blur(8.9px);
+          backdrop-filter: blur(8.9px);
   border: 1px solid rgba(0, 0, 0, 0.21);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header__container hr {
@@ -161,11 +164,13 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header__1st-block {
@@ -205,6 +210,14 @@ html {
 
 .header__search-block:hover .header__search-stroke {
   width: 200px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header__search-block:hover .header__search-stroke-light {
+  width: 200px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header__search-block path {
@@ -222,6 +235,8 @@ html {
 
 .search__button-icon {
   background: black;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header__search-stroke {
@@ -233,34 +248,87 @@ html {
   transition: all 0.3s ease-in;
 }
 
+.header__search-stroke-light {
+  background: white;
+  color: black;
+  font-size: 18px;
+  width: 0px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
 .header__search-block:focus .header__search-block {
   width: 250px;
-  /* transition: none; */
 }
 
 .header__search-stroke::-webkit-input-placeholder {
   background: black;
   color: #787A80;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header__search-stroke::-moz-placeholder {
   background: black;
   color: #787A80;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header__search-stroke:-ms-input-placeholder {
   background: black;
   color: #787A80;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header__search-stroke::-ms-input-placeholder {
   background: black;
   color: #787A80;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header__search-stroke::placeholder {
   background: black;
   color: #787A80;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header__search-stroke-light::-webkit-input-placeholder {
+  background-color: white;
+  color: #404144;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header__search-stroke-light::-moz-placeholder {
+  background-color: white;
+  color: #404144;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header__search-stroke-light:-ms-input-placeholder {
+  background-color: white;
+  color: #404144;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header__search-stroke-light::-ms-input-placeholder {
+  background-color: white;
+  color: #404144;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header__search-stroke-light::placeholder {
+  background-color: white;
+  color: #404144;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header__nav-container {
@@ -332,13 +400,10 @@ html {
   height: 39px;
 }
 .header__button-light-theme:hover {
-  border: solid 3px #007388;
-}
-.header__button-light-theme:hover svg {
-  fill: #007388;
+  border: solid 3px #f35510;
 }
 .header__button-light-theme:hover path {
-  fill: #007388;
+  fill: #f35510;
 }
 
 .button-light__icon {
@@ -356,10 +421,20 @@ html {
   transition: all 0.3s;
 }
 
+.moon {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .sun {
-  display: none;
+  top: 30px;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.sun svg {
+  fill: #f35510;
 }
 
 /* ========================================== MAIN ========================================== */
@@ -397,6 +472,8 @@ p {
 
 .side__text p {
   margin: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .main__text,
@@ -405,6 +482,8 @@ p {
   border-radius: 15px;
   padding: 5px 15px;
   margin-bottom: 50px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .main__text--code {
@@ -414,13 +493,16 @@ p {
 
 .main__text--code .lesson__list {
   margin-left: 50px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .main__text span {
-  /* background: #28313b; */
   background-color: #007388;
   border-radius: 5px;
   padding: 0 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .main__text h3 {
@@ -447,10 +529,10 @@ p {
 hr {
   height: 3px;
   background: #007388;
-  /* margin-bottom: 20px; */
-  /* margin: 0 5%; */
   padding: 0 5%;
   border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 h1 {
@@ -481,6 +563,8 @@ h3 {
   border-bottom: dashed #007388;
   margin-left: auto;
   margin-right: auto;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 h3 {
@@ -498,20 +582,16 @@ h3 {
   border-radius: 15px;
   padding: 0 15px 0 15px;
   margin: 25px 0 0 0;
-}
-
-.lesson__list p span {
-  /* background: #28313b; */
-  background: #007388;
-  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .lesson__list span {
-  /* background: #596573; */
   background: #007388;
   border-radius: 5px;
   padding: 0 10px;
-  text-wrap: nowrap;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .lesson__list li {
@@ -720,6 +800,8 @@ video {
   margin-bottom: 20px;
   color: white;
   border-radius: 15px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 .--hide {
@@ -2148,14 +2230,16 @@ th {
   z-index: 7;
   background: hsla(0, 0%, 0%, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(143, 143, 143, 0.1);
-  box-shadow: 0 4px 30px rgba(143, 143, 143, 0.1);
-  backdrop-filter: blur(8.9px);
+          box-shadow: 0 4px 30px rgba(143, 143, 143, 0.1);
   -webkit-backdrop-filter: blur(8.9px);
+          backdrop-filter: blur(8.9px);
   border: 1px solid rgba(0, 0, 0, 0.21);
   color: #fff;
   border-radius: 30px;
   padding: 30px 10px;
   margin-bottom: 30px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .sidebar__heading {
@@ -2249,7 +2333,6 @@ th {
 .side__text {
   color: #8f8f8f;
   font-size: 20px;
-  -webkit-transition: 0.5s ease-out;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
   display: -webkit-box;
@@ -2299,14 +2382,16 @@ th {
 .footer {
   background-color: hsla(0, 0%, 0%, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(143, 143, 143, 0.1);
-  box-shadow: 0 4px 30px rgba(143, 143, 143, 0.1);
-  backdrop-filter: blur(8.9px);
+          box-shadow: 0 4px 30px rgba(143, 143, 143, 0.1);
   -webkit-backdrop-filter: blur(8.9px);
+          backdrop-filter: blur(8.9px);
   border: 1px solid rgba(0, 0, 0, 0.21);
   font-size: 20px;
   font-weight: 700;
   font-family: lato, sans-serif;
   color: #868a8c;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .footer__inner {
@@ -2487,6 +2572,8 @@ th {
 
 button {
   background: hsla(212, 13%, 40%, 0.5);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .but-1:hover {
@@ -2594,6 +2681,9 @@ button {
     transition: none;
   }
   .header__search-stroke {
+    width: 200px;
+  }
+  .header__search-stroke-light {
     width: 200px;
   }
   /* ------------ MAIN --------- */
