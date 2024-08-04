@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="/images/tab-icon.ico" type="icon">
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/Style.css">
@@ -13,24 +16,9 @@
 </head>
 
 <body>
-  <!-- <div class="font__test-box">
-    Просто полоса с текстом для теста стилей.
-    <div class="test__lato">
-      Тест стиля LATO - Lato test style
-    </div>
-    <div class="test__cormorant">
-      Тест стиля Cormorant - Cormorant test style
-    </div>
-    <div class="test__lombardina">
-      Тест стиля Lombardina - Lombardina test style
-    </div>
-  </div> -->
   <div class="wrapper">
     <a href="#MAIN" class="button__back-to-top" title="Вернуться на верх">
       <div>Вверх</div>
-    </a>
-    <a class="button__themes">
-      <div>Темы</div>
     </a>
     <div class="overlay"></div>
     <!-- ========================================== HEADER ========================================== -->
@@ -99,13 +87,13 @@
                   </svg>
                 </div>
               </button>
-              <input class="header__search-stroke" placeholder="Search in ..." type="text">
+              <input class="header__search-stroke" placeholder="Search in ...">
               </input>
             </div>
           </div>
           <ul class="header__nav-container">
             <li>
-              <a href="#MAIN" class="header__nav-element">
+              <a href="HTML.html" class="header__nav-element">
                 <div class="header__nav-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                     <title>file_type_html</title>
@@ -211,9 +199,7 @@
                 <p>jQuery</p>
               </a>
             </li>
-            <li>
-              <a class="header__nav-element podval" href="#podval" >Footer</a>
-            </li>
+            <li class="header__nav-element podval"><a href="#podval">Footer</a></li>
           </ul>
         </div>
         <hr>
@@ -221,8 +207,8 @@
     </header>
     <!-- ========================================== MAIN ========================================= -->
     <!-- ========================================== MAIN ========================================= -->
-    <main class="main__container">
-      <div class="main__inner">
+    <main class="main__container" id="MAIN">
+      <div class="main__inner" id="MAINhtml">
         <section class="section" id="MAIN">
           <article class="HTML__Lesson" id="lesson__1">
             <hr>
@@ -687,7 +673,7 @@
             <ul>
               <li class="fotter_contact"><a href="Snippets.html">Сниппеты</a></li>
               <li class="fotter_contact"><a href="Links.html">Полезные ссылки</a></li>
-              <li class="fotter_contact"><a href="VSCode.html">Настройка VSCode</a></li>
+              <li class="fotter_contact"><a href="#MAIN">Настройка VSCode</a></li>
               <li class="fotter_contact"><a href="#">Пункт</a></li>
               <li class="fotter_contact"><a href="#">Пункт</a></li>
               <li class="fotter_contact"><a href="#">Пункт</a></li>
@@ -735,90 +721,8 @@
         </a>
       </div>
     </footer>
-    <div class="aside__inner aside__mobile">
-      <div class="sidebar__heading">
-        <hr>
-        HTML
-        <hr>
-      </div>
-      <ul class="aside__list">
-        <li class="aside__element" title="Lesson 1">
-          <a class="aside__link" href="#lesson__1">
-            <div class="side__text"><span>1.</span>
-              <p>Структура сайта.</p>
-            </div>
-            <div class="aside__line"></div>
-          </a>
-        </li>
-        <li class="aside__element" title="Lesson 2">
-          <a class="aside__link" href="#lesson__2">
-            <div class="side__text">2. <p>Теги текстовых элементов.</p>
-            </div>
-            <div class="aside__line"></div>
-          </a>
-        </li>
-        <li class="aside__element" title="Lesson 3">
-          <a class="aside__link" href="#lesson__3">
-            <div class="side__text">3. <p>Теги списков.</p>
-            </div>
-            <div class="aside__line"></div>
-          </a>
-        </li>
-        <li class="aside__element" title="Lesson 4">
-          <a class="aside__link" href="#lesson__4">
-            <div class="side__text">4. <p>Вставка изображения.</p>
-            </div>
-            <div class="aside__line"></div>
-          </a>
-        </li>
-        <li class="aside__element" title="Lesson 5">
-          <a class="aside__link" href="#lesson__5">
-            <div class="side__text">5. <p>Теги видео и аудио.</p>
-            </div>
-            <div class="aside__line"></div>
-          </a>
-        </li>
-        <li class="aside__element" title="Lesson 6">
-          <a class="aside__link" href="#lesson__6">
-            <div class="side__text">6. <p>Ссылки и кнопки.</p>
-            </div>
-            <div class="aside__line"></div>
-          </a>
-        </li>
-        <li class="aside__element" title="Lesson 7">
-          <a class="aside__link" href="#lesson__7">
-            <div class="side__text">7. <p>Теги таблицы.</p>
-            </div>
-            <div class="aside__line"></div>
-          </a>
-        </li>
-        <li class="aside__element" title="Lesson 8">
-          <a class="aside__link" href="#lesson__8">
-            <div class="side__text">8. <p>Форма.</p>
-            </div>
-            <div class="aside__line"></div>
-          </a>
-        </li>
-        <li class="aside__element" title="Lesson 9">
-          <a class="aside__link" href="#lesson__9">
-            <div class="side__text">9. <p>Глобальные атрибуты.</p>
-            </div>
-            <div class="aside__line"></div>
-          </a>
-        </li>
-        <li class="aside__element" title="Lesson 10">
-          <a class="aside__link" href="#lesson__10">
-            <div class="side__text">10. <p>Строчные теги.</p>
-            </div>
-            <div class="aside__line"></div>
-          </a>
-        </li>
-      </ul>
-    </div>
   </div>
+  <script src="js/jquery-3.7.1.js"></script>
+  <script src="js/main.js"></script>
 </body>
-<script src="js/jquery-3.7.1.js"></script>
-<script src="js/main.js"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
-
 </html>

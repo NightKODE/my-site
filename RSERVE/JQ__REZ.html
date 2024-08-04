@@ -1,0 +1,1225 @@
+<div class="main__inner" id="MAINJQ">
+  <section class="section" id="MAIN">
+    <article class="jQuery__Lesson" id="jQuerylesson__0">
+      <hr>
+      <div class="lesson__inner">
+        <div class="main__text">
+          jQuery — это бесплатная библиотека языка JavaScript для фронтенд-разработки.
+          <br>
+          У jQuery собственный синтаксис, который содержит фрагменты кода JavaScript, выраженные короткими
+          командами. В библиотеке предусмотрены команды для решения типовых задач во фронтенд-разработке.
+          <br>
+        </div>
+        <h2>Функции jQuery:</h2>
+        <ul class="lesson__list">
+          <li>создание визуальных эффектов </li>
+          <li>разработка сложной анимации </li>
+          <li>создание элементов пользовательского интерфейса </li>
+          <li>использование AJAX для обновления контента на странице без ее перезагрузки </li>
+          <li>манипуляция объектами страницы благодаря взаимодействию с DOM </li>
+        </ul>
+      </div>
+      <hr>
+    </article>
+    <article class="jQuery__Lesson" id="jQuerylesson__1">
+      <hr>
+      <h1><span>Lesson 1<br> Инициализация и синтаксис.</span>
+        <p>L1. Инициализация и синтаксис</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        Что бы написать какой-либо скрипт нужно:
+        <ul class="lesson__list">
+          <li>Написать слово jQuery</li>
+          <li>В свкобках написать селектор элемента над которым необходимо произвести манипуляции</li>
+          <li>Через точку написать метод самого дейтсвия</li>
+        </ul>
+        <div class="main__text">
+          Например: <br><br>
+          этот скрипт скрывает заголовк в течении трех секунд: <span>jQuery("h1").hide(3000)</span>
+        </div>
+        <h2>Улучшение первого скрипта</h2>
+        <ul class="lesson__list">
+          <li>Вместо слова <span>jQuery</span> можно писать <span>$</span></li>
+          <li>Любой скрипт, который взаимодействиет с элементами нужно убернуть в "рэди-функцию"
+            <span>$(document).ready(function(){})</span>
+          </li>
+        </ul>
+        <h2>Событие после нажатия на кнопку</h2>
+        <div class="main__text">Что бы скрипт срабатывал после нажатия на кнопку, его нужно обернуть в
+          "функцию-событие": <span>$("button").on("click", function(){})</span></div>
+        <button class="query__button">
+          Нажми
+        </button>
+        <div class="query__text">
+          Текст, который должен пропасть.
+        </div>
+      </div>
+      <hr>
+    </article>
+    <article class="jQuery__Lesson" id="jQuerylesson__2">
+      <hr>
+      <h1><span>Lesson 2<br> Селекторы в jQuery.</span>
+        <p>L2. Селекторы в jQuery</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <div class="main__text">Обращения к селекторам в jQuery проиходят так же как и в JavaScript. При обращении
+          селектор необходимо писать в кавычках.</div>
+        <ul class="lesson__list">
+          <li>Обращение через id - "#id"</li>
+          <li>Обращение через class - ".class"</li>
+          <li>Обращение через tag - "tag"</li>
+          <li>Обращение через * - выбирает все элементы</li>
+        </ul>
+        <div class="main__text">Так же можно обратиться к нескольким селекторам через пробел. При обращении к
+          селекторам через пробел в случае с тегами, будет выполняться поиск дочерних тегов.
+          В ткаом случае можно записать обращение двумя способами: <span>$("article h1").css("color",
+            "blue")</span> или <span>$("article").find("h1").css("color", "blue")</span>
+        </div>
+        <div class="main__text">При обращении к селекторам с добавлением символа <span>+</span> например :
+          <span>$("h1 + p")</span>, скрипты будут применятся ко всем тегам <span>p</span>, перед которыми стоит
+          тег <span>h1</span>.
+        </div>
+        <div class="main__text">
+          <h3>Методы prev() и next()</h4> <br>
+            Метод <span>prev()</span> - выбирает следующий елемент <br>
+            Метод <span>next()</span> - Выбирает предыдущий элемент
+        </div>
+        <div class="main__text">Так же можно обратиться ко всем потомкам какого-либо тэга через символ
+          <span>></span>
+        </div>
+        <div class="main__text">
+          Если в коде много раз обращаются к одному и тому же элементу, то можно его превратить в переменную:
+        </div>
+        <img src="/images/jq1.jpg" alt="" class="img">
+        <h2 id="theme__1">Оптимизация выборки</h2>
+        <ul class="lesson__list">
+          <li><span>$(".content a.button")</span>
+            <p>Эта записть короче, но может плохо читаться другим юзером.</p>
+          </li>
+          <li><span>$("a.button", ".content")</span>
+            <p>Это уже лучше.</p>
+          </li>
+          <li><span>$("content").find("a.button")</span>
+            <p>Эта запись ниболее понятна.</p>
+          </li>
+        </ul>
+      </div>
+      <hr>
+    </article>
+    <article class="jQuery__Lesson" id="jQuerylesson__3">
+      <hr>
+      <h1><span>Lesson 3<br> Изменение атрибутов элементов.</span>
+        <p>L3. Изменение атрибутов элементов</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <div class="main__text">При ищменении каких-либо атрибутов, классов и их значений, можно записать сразу
+          несколько значений, для этого достаточно просто записать все в фигурных скобках:
+          <span>$(".nemeclass").css({"height". "100px": "font-size", "14px": "line-height", "150%"})</span>
+          <br><br>
+          Для оптимизации можно записывать следующим образом: <span>$(".nemeclass").css({height. "100px":
+            fontSize, "14px": lineHeight, "150%"})</span> <br>
+          (Сами отрибуты можно писать без кавычек, без тире, но с загланой буквы после нее)
+        </div>
+        <h2 id="theme__2">Манипуляции с классами</h2>
+        <ul class="lesson__list">
+          <li>addClass - добавляет класс к элементу</li>
+          <li>hasClass - проверяет причастность к определенному классу</li>
+          <li>removeClass - удаляет класс у элемента</li>
+          <li>toggleClass - преключает класс элемента на другой</li>
+        </ul>
+        <h2 id="theme__3">Манипуляции с атрибутами</h2>
+        <ul class="lesson__list">
+          <li>attr(attrName) - получает доступ к атрибуту</li>
+          <li>attr(attrName, attr value) - меняет значение атрибута</li>
+          <li>removeattr(attrName) - удаляет атрибут</li>
+        </ul>
+      </div>
+      <hr>
+    </article>
+    <article class="jQuery__Lesson" id="jQuerylesson__4">
+      <hr>
+      <h1><span>Lesson 4<br> События в jQuery.</span>
+        <p>L4. События в jQuery</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <div class="main__text">События - это любое деуствие пользователя, а иногда и браузера, будь то клик
+          мышки, прокрутка страници или ввод текста в инпут. <br><br>
+          jQuery способен обрабатывать эти события и запускать необходимые скрипты или функции.
+        </div>
+        <div class="main__text">
+          Как происходит обработка событий - при клике на какой-либо элемент происходит погружение в DOM-дерево
+          начиная с родительского элемента, тем самым, родительские элементы участвуют в обработке события. Затем
+          событие "всплывает" обратно, давая родительским элементам второй шанс на обработку события.
+        </div>
+        <h3 id="theme__4">Отмена действия по умолчанию</h3>
+        <div class="main__text">
+          Для отмены действия по умолчанию необходимо добавить строку <span>event.preventDefault()</span> <br>
+        </div>
+        <h3 id="theme__5">Отмена всплытия событий</h3>
+        <div class="main__text">
+          Для отмены всплытия событий необходимо добавить строку <span>event.stopPropagation()</span>
+        </div>
+        <div class="main__text">
+          <div class="info-icon">
+            <svg viewBox="0 0 64 64">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #00a4b5;
+                  }
+
+                  .cls-2 {
+                    fill: #00cde2;
+                  }
+
+                  .cls-3 {
+                    fill: #fff;
+                  }
+                </style>
+              </defs>
+              <title>Info</title>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <circle class="cls-1" cx="32" cy="32" r="32" />
+                  <circle class="cls-2" cx="32" cy="32" r="24" />
+                  <g id="HGC71j.tif">
+                    <path class="cls-3"
+                      d="M24.38,32.89a28.91,28.91,0,0,1,7.1-4.47,12.1,12.1,0,0,1,3.36-1,1.52,1.52,0,0,1,1.82,1.22,6.09,6.09,0,0,1-.11,2.91c-.72,3.07-1.57,6.11-2.35,9.17a6.06,6.06,0,0,0-.29,1.73c0,.49.19.63.67.51a8,8,0,0,0,2.22-1c.32-.2.62-.41.92-.63s.31-.23.55.09l.72,1v.12a4.3,4.3,0,0,0-.62.55,18.9,18.9,0,0,1-8.79,5H28.41a2,2,0,0,1-1.58-1.93,6.78,6.78,0,0,1,.12-2.24c.55-2.66,1.25-5.29,1.86-7.94.21-.92.48-1.83.62-2.77.07-.46-.08-.59-.53-.49a2.91,2.91,0,0,0-.36.1,15.73,15.73,0,0,0-3,1.45c-.22.14-.33.11-.45-.12-.21-.38-.44-.75-.66-1.12Z" />
+                    <path class="cls-3"
+                      d="M36.21,16.29a4.27,4.27,0,0,1,1.21.46,3.22,3.22,0,0,1,1.25,3.44A4.24,4.24,0,0,1,35,23.37a3.55,3.55,0,0,1-2.66-.64A2.59,2.59,0,0,1,31.38,21a4,4,0,0,1,1.23-3.66,4.24,4.24,0,0,1,2.24-1.1Z" />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <h3>Отмена одной строкой</h3> <br>
+          Что бы отменить два события выше, можно написать эту строку <span>return false</span>
+        </div>
+        <div class="main__text--code">
+          <div class="code-icon">
+            <svg viewBox="0 0 64 64">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #cfd8dd;
+                  }
+
+                  .cls-2 {
+                    fill: #92a6ad;
+                  }
+
+                  .cls-3 {
+                    fill: #37474f;
+                  }
+
+                  .cls-4 {
+                    fill: #78909c;
+                  }
+
+                  .cls-5 {
+                    fill: #74d800;
+                  }
+
+                  .cls-6 {
+                    fill: #ffda00;
+                  }
+
+                  .cls-7 {
+                    fill: #f74f80;
+                  }
+                </style>
+              </defs>
+              <title>Code</title>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <path class="cls-1"
+                    d="M4,0H60a4,4,0,0,1,4,4v8a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" />
+                  <circle class="cls-2" cx="6" cy="6" r="2" />
+                  <circle class="cls-2" cx="12" cy="6" r="2" />
+                  <circle class="cls-2" cx="18" cy="6" r="2" />
+                  <path class="cls-3"
+                    d="M0,12H64a0,0,0,0,1,0,0V60a4,4,0,0,1-4,4H4a4,4,0,0,1-4-4V12A0,0,0,0,1,0,12Z" />
+                  <rect class="cls-4" x="6" y="18" width="10" height="2" />
+                  <rect class="cls-4" x="10" y="22" width="22" height="2" />
+                  <rect class="cls-4" x="10" y="50" width="26" height="2" />
+                  <rect class="cls-4" x="10" y="26" width="28" height="2" />
+                  <rect class="cls-4" x="14" y="30" width="36" height="2" />
+                  <rect class="cls-4" x="14" y="34" width="28" height="2" />
+                  <rect class="cls-4" x="14" y="38" width="20" height="2" />
+                  <rect class="cls-4" x="14" y="42" width="26" height="2" />
+                  <rect class="cls-4" x="10" y="46" width="6" height="2" />
+                  <rect class="cls-4" x="6" y="54" width="6" height="2" />
+                  <rect class="cls-5" x="12" y="18" width="6" height="2" />
+                  <rect class="cls-5" x="16" y="22" width="8" height="2" />
+                  <rect class="cls-5" x="26" y="26" width="8" height="2" />
+                  <rect class="cls-5" x="22" y="30" width="8" height="2" />
+                  <rect class="cls-5" x="34" y="34" width="6" height="2" />
+                  <rect class="cls-5" x="28" y="38" width="6" height="2" />
+                  <rect class="cls-6" x="14" y="38" width="6" height="2" />
+                  <rect class="cls-6" x="14" y="30" width="6" height="2" />
+                  <rect class="cls-6" x="14" y="34" width="6" height="2" />
+                  <rect class="cls-6" x="10" y="26" width="6" height="2" />
+                  <rect class="cls-6" x="10" y="50" width="6" height="2" />
+                  <rect class="cls-5" x="14" y="42" width="6" height="2" />
+                  <rect class="cls-5" x="20" y="50" width="6" height="2" />
+                  <rect class="cls-7" x="24" y="34" width="6" height="2" />
+                  <rect class="cls-7" x="18" y="26" width="6" height="2" />
+                  <rect class="cls-7" x="28" y="42" width="6" height="2" />
+                  <rect class="cls-7" x="26" y="50" width="6" height="2" />
+                  <rect class="cls-7" x="44" y="30" width="6" height="2" />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <h3>События</h3> <br>
+          <h3>Базовые</h3><br>
+          <ul class="lesson__list">
+            <li><span>.on()</span> - Универсальный метод для установки обработчиков событий на выбранные элементы
+              страницы.
+            </li>
+            <li><span>.off()</span> - Удаляет обработчики, установленные с помощь .on().</li>
+            <li>
+              <span>.bind()</span> - Устанавливает обработчик события на выбранные элементы страницы. Обработчик
+              не сработает
+              на элементах, появившихся после его установки.
+            </li>
+            <li>
+              <span>.live()</span> - Устанавливает обработчик события на выбранные элементы страницы. Обработчик
+              сработает и на
+              элементах, появившихся после его установки.
+            </li>
+            <li>
+              <span>.delegate()</span> - Устанавливает обработчик события на выбранные элементы страницы. Элементы
+              выбираются с
+              помощью уточняющего селектора. Обработчик будет действовать и на элементах, появившихся после его
+              установки.
+            </li>
+            <li>
+              <span>.one()</span> - Устанавливает обработчик события на выбранные элементы страницы, который
+              сработает только
+              по одному разу, на каждом из элементов.
+            </li>
+            <li><span>.unbind()</span> - Удаляет обработчик событий у выбранных элементов.</li>
+            <li><span>.die()</span> - Удаляет обработчик событий, который был установлен с помощью live().</li>
+            <li><span>.undelegate()</span> - Удаляет обработчик событий, который был установлен с помощью
+              delegate().</li>
+            <li><span>.trigger()</span> - Выполняет указанное событие и запускает его обработчик.</li>
+            <li><span>.triggerHandler()</span> - Запускает обработчик указанного события, без его выполнения.</li>
+            <li>
+              <span>jQuery.proxy()</span> - По заданной функции, создает другую, внутри которой переменная this
+              будет равна
+              заданному значению.
+            </li>
+            <li><span>event</span> - Объект, содержащий данные о текущем событии. Передается всем обработчикам
+              событий.</li>
+          </ul>
+          <h3>События мыши</h3> <br>
+          <ul class="lesson__list">
+            <li>
+              <span>.click()</span> - Устанавливает обработчик "клика" мышью по элементу, либо, запускает это
+              событие.
+            </li>
+            <li>
+              <span>.dblclick()</span> - Устанавливает обработчик двойного "клика" мышью по элементу, либо,
+              запускает это
+              событие.
+            </li>
+            <li>
+              <span>.hover()</span> - Устанавливает обработчик двух событий: появления/исчезновения курсора над
+              элементом.
+            </li>
+            <li>
+              <span>.mousedown()</span> - Устанавливает обработчик нажатия кнопки мыши, либо, запускает это
+              событие.
+            </li>
+            <li>
+              <span>.mouseup()</span> - Устанавливает обработчик поднятия кнопки мыши, либо, запускает это
+              событие.
+            </li>
+            <li>
+              <span>.mouseenter()</span> - Устанавливает обработчик появления курсора в области элемента, либо,
+              запускает это
+              событие. Появление этого события, отработано лучше, чем стандартного mouseover.
+            </li>
+            <li>
+              <span>.mouseleave()</span> - Устанавливает обработчик выхода курсора из области элемента, либо,
+              запускает это
+              событие. Появление этого события, отработано лучше, чем стандартного mouseout.
+            </li>
+            <li>
+              <span>.mousemove()</span> - Устанавливает обработчик движения курсора в области элемента, либо,
+              запускает это
+              событие.
+            </li>
+            <li>
+              <span>.mouseout()</span> - Устанавливает обработчик выхода курсора из области элемента, либо,
+              запускает это
+              событие.
+            </li>
+            <li>
+              <span>.mouseover()</span> - Устанавливает обработчик появления курсора в области элемента, либо,
+              запускает это
+              событие.
+            </li>
+            <li>
+              <span>.toggle()</span> - Поочередно выполняет одну из двух или более заданных функций, в ответ на
+              "клик" по
+              элементу.
+            </li>
+          </ul>
+          <h3>События клавиатуры</h3> <br>
+          <ul class="lesson__list">
+            <li>
+              <span>.keydown()</span> - Устанавливает обработчик перехода клавиши клавиатуры в нажатое состояние,
+              либо, запускает это событие.
+            </li>
+            <li>
+              <span>.keyup()</span> - Устанавливает обработчик возвращение клавиши клавиатуры в ненажатое
+              состояние, либо, запускает это событие.
+            </li>
+            <li>
+              <span>.keypress()</span> - Устанавливает обработчик ввода символа с клавиатуры, либо, запускает это
+              событие.
+            </li>
+          </ul>
+          <h3>События формы</h3> <br>
+          <ul class="lesson__list">
+            <li>
+              <span>.focus()</span> - Устанавливает обработчик получения фокуса, либо, запускает это событие.
+            </li>
+            <li>
+              <span>.blur()</span> - Устанавливает обработчик потери фокуса, либо, запускает это событие.
+            </li>
+            <li>
+              <span>.focusin()</span> - Устанавливает обработчик получения фокуса самим элементом или одним из его
+              дочерних.
+            </li>
+            <li>
+              <span>.focusout()</span> - Устанавливает обработчик потери фокуса самим элементом или одним из его
+              дочерних.
+            </li>
+            <li>
+              <span>.select()</span> - Устанавливает обработчик выделения текста, либо, запускает это событие.
+            </li>
+            <li>
+              <span>.submit()</span> - Устанавливает обработчик отправки формы, либо, запускает это событие.
+            </li>
+            <li>
+              <span>.change()</span> - Устанавливает обработчик изменения элемента формы, либо, запускает это
+              событие.
+            </li>
+          </ul>
+          <h3>События загрузки страницы</h3> <br>
+          <ul class="lesson__list">
+            <li>
+              <span>.ready()</span> - Устанавливает обработчик готовности дерева DOM.
+            </li>
+            <li>
+              <span>.load()</span> - Устанавливает обработчик завершения загрузки элемента.
+            </li>
+            <li>
+              <span>.unload()</span> - Устанавливает обработчик ухода со страницы (при переходе по ссылке,
+              закрытии браузера и.т.д.).
+            </li>
+          </ul>
+          <h3>События браузера</h3> <br>
+          <ul class="lesson__list">
+            <li>
+              <span>.error()</span> - Устанавливает обработчик ошибки при загрузке элементов (например отсутствие
+              необходимой картинки на сервере).
+            </li>
+            <li>
+              <span>.resize()</span> - Устанавливает обработчик изменения размеров окна браузера, либо, запускает
+              это событие.
+            </li>
+            <li>
+              <span>.scroll()</span> - Устанавливает обработчик "прокрутки" элементов документа, либо, запускает
+              это событие.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </article>
+    <article class="jQuery__Lesson" id="jQuerylesson__5">
+      <hr>
+      <h1><span>Lesson 5<br> Анимации.</span>
+        <p>L5. Анимации</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <div class="main__text">Библиотека jQuery позволяет анимировать объекты при помощи различных функций.
+        </div>
+        <div class="main__text">Функция <span>hide()</span> - позволяет скрыть элемент на странице.
+          <br><br>Функция <span>show()</span> - позволяет показать скрыйтый элемент. <br><br>
+          Данные функции оперируют параметром display, давая ему значение none и обратно. Анимация происходит за
+          счет плавного изменения размера и прозрачности элемента.<br><br>
+          Аргументами этих функций выступают поеказатели времени.
+        </div>
+        <div class="lesson__doblebutton-container">
+          <div class="jQuery__button-container">
+            <button class="button-hide">Скрыть</button>
+            <div class="doblebutton-text_1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam,
+              labore!</div>
+          </div>
+          <div class="jQuery__button-container">
+            <button class="button-show">Показать</button>
+            <div class="doblebutton-text --hide">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, suscipit?</div>
+          </div>
+        </div>
+        <h2 id="theme__6">Slide</h2>
+        <div class="main__text">
+          Данные функции оперируют значением display , и анимация происходит за счет плавного измения высоты
+          элемента. <br><br>
+          <span>slideUp()</span> - разворачивает элемент. <br>
+          <span>slideDown()</span> - сворачивает элемент. <br>
+          <span>slideToggle()</span> - поочередно сворачивает и разворачивает элементы. <br>
+        </div>
+        <div class="slide__button-container">
+          <button class="slide-button shide">Скрыть</button>
+          <div class="slide__text1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, labore!
+          </div>
+        </div>
+        <div class="slide__button-container">
+          <button class="slide-button sshow">Показать</button>
+          <div style="display: none;" class="slide__text2">Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Totam, labore!
+          </div>
+        </div>
+        <div class="slide__button-container">
+          <button class="slide-button sshwhide">Скрыть/Показать</button>
+          <div class="slide__text3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, labore!
+          </div>
+        </div>
+        <h2 id="theme__7">Fade</h2>
+        <div class="main__text">
+          Эти функции оперируют opacity и display элемента. Анимация происходит за счет плавного изменения
+          прозрачности. <br><br>
+          <span>fadeIn()</span> - скрывает элемент. <br>
+          <span>fadeOut()</span> - показывает элемент. <br>
+          <span>fadeToggle()</span> - поочередно показывает и скрывает элемент. <br>
+          <span>fadeTo()</span> - плавно изменяет прозрачность элемента.
+        </div>
+        <div class="lesson__doblebutton-container">
+          <div class="jQuery__button-container">
+            <button class="fade-button fhide">Скрыть</button>
+            <div class="fade__text1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, labore!
+            </div>
+          </div>
+          <div class="jQuery__button-container">
+            <button class="fade-button fshwhide">Скрыть/Показать</button>
+            <div class="fade__text3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, labore!
+            </div>
+          </div>
+        </div>
+        <div class="jQuery__button-container">
+          <button class="fade-button fto">Поставить прозрачность 0.1</button>
+          <div class="fade__text2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, labore!
+          </div>
+        </div>
+        <h2 id="theme__8">Animate</h2>
+        <div class="main__text">
+          Все анимации в jQuery происходят благодаря методу <span>animate</span>. Данная функция берет необходимые
+          CSS свойства и изменяет их от исходного до заданного за нное количество итераций.
+        </div>
+        <div class="jQuery__button-container">
+          <button class="animate-button">Растянуть и изменить цвет</button>
+          <div class="animate__text"> </div>
+        </div>
+        <div class="main__text">
+          <div class="info-icon">
+            <svg viewBox="0 0 64 64">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #00a4b5;
+                  }
+
+                  .cls-2 {
+                    fill: #00cde2;
+                  }
+
+                  .cls-3 {
+                    fill: #fff;
+                  }
+                </style>
+              </defs>
+              <title>Info</title>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <circle class="cls-1" cx="32" cy="32" r="32" />
+                  <circle class="cls-2" cx="32" cy="32" r="24" />
+                  <g id="HGC71j.tif">
+                    <path class="cls-3"
+                      d="M24.38,32.89a28.91,28.91,0,0,1,7.1-4.47,12.1,12.1,0,0,1,3.36-1,1.52,1.52,0,0,1,1.82,1.22,6.09,6.09,0,0,1-.11,2.91c-.72,3.07-1.57,6.11-2.35,9.17a6.06,6.06,0,0,0-.29,1.73c0,.49.19.63.67.51a8,8,0,0,0,2.22-1c.32-.2.62-.41.92-.63s.31-.23.55.09l.72,1v.12a4.3,4.3,0,0,0-.62.55,18.9,18.9,0,0,1-8.79,5H28.41a2,2,0,0,1-1.58-1.93,6.78,6.78,0,0,1,.12-2.24c.55-2.66,1.25-5.29,1.86-7.94.21-.92.48-1.83.62-2.77.07-.46-.08-.59-.53-.49a2.91,2.91,0,0,0-.36.1,15.73,15.73,0,0,0-3,1.45c-.22.14-.33.11-.45-.12-.21-.38-.44-.75-.66-1.12Z" />
+                    <path class="cls-3"
+                      d="M36.21,16.29a4.27,4.27,0,0,1,1.21.46,3.22,3.22,0,0,1,1.25,3.44A4.24,4.24,0,0,1,35,23.37a3.55,3.55,0,0,1-2.66-.64A2.59,2.59,0,0,1,31.38,21a4,4,0,0,1,1.23-3.66,4.24,4.24,0,0,1,2.24-1.1Z" />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <h3>Отключение анимации</h3> <br>
+          Что бы отключить анимации для отладки кода нужно прописать - <span>jQuery.fx.off = true</span>
+        </div>
+      </div>
+      <hr>
+    </article>
+    <article class="jQuery__Lesson" id="jQuerylesson__6">
+      <hr>
+      <h1><span>Lesson 6<br> Манипуляции с DOM.</span>
+        <p>L6. Манипуляции с DOM</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <div class="main__text">
+          Создавать новые объекты можно двумя способами: используя синтакис jQuery или чистого JavaScript.
+        </div>
+        <h3>jQuery</h3>
+        <img src="/images/jq2.jpg" alt="" class="img img--l">
+        <div class="main__text">
+          Данный код очень не быстрый, поэтому его лучше разбить:
+        </div>
+        <img src="/images/jq3.jpg" alt="" class="img img--l">
+        <h3>JavaScript</h3>
+        <div class="main__text">Тек же можно создать элемент с помощью чистого JavaScript:</div>
+        <img src="/images/jq4.jpg" alt="" class="img">
+        <h2 id="theme__9">Манипуляции с содержимым</h2>
+        <div class="main__text--code">
+          <div class="code-icon">
+            <svg viewBox="0 0 64 64">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #cfd8dd;
+                  }
+
+                  .cls-2 {
+                    fill: #92a6ad;
+                  }
+
+                  .cls-3 {
+                    fill: #37474f;
+                  }
+
+                  .cls-4 {
+                    fill: #78909c;
+                  }
+
+                  .cls-5 {
+                    fill: #74d800;
+                  }
+
+                  .cls-6 {
+                    fill: #ffda00;
+                  }
+
+                  .cls-7 {
+                    fill: #f74f80;
+                  }
+                </style>
+              </defs>
+              <title>Code</title>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <path class="cls-1"
+                    d="M4,0H60a4,4,0,0,1,4,4v8a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" />
+                  <circle class="cls-2" cx="6" cy="6" r="2" />
+                  <circle class="cls-2" cx="12" cy="6" r="2" />
+                  <circle class="cls-2" cx="18" cy="6" r="2" />
+                  <path class="cls-3"
+                    d="M0,12H64a0,0,0,0,1,0,0V60a4,4,0,0,1-4,4H4a4,4,0,0,1-4-4V12A0,0,0,0,1,0,12Z" />
+                  <rect class="cls-4" x="6" y="18" width="10" height="2" />
+                  <rect class="cls-4" x="10" y="22" width="22" height="2" />
+                  <rect class="cls-4" x="10" y="50" width="26" height="2" />
+                  <rect class="cls-4" x="10" y="26" width="28" height="2" />
+                  <rect class="cls-4" x="14" y="30" width="36" height="2" />
+                  <rect class="cls-4" x="14" y="34" width="28" height="2" />
+                  <rect class="cls-4" x="14" y="38" width="20" height="2" />
+                  <rect class="cls-4" x="14" y="42" width="26" height="2" />
+                  <rect class="cls-4" x="10" y="46" width="6" height="2" />
+                  <rect class="cls-4" x="6" y="54" width="6" height="2" />
+                  <rect class="cls-5" x="12" y="18" width="6" height="2" />
+                  <rect class="cls-5" x="16" y="22" width="8" height="2" />
+                  <rect class="cls-5" x="26" y="26" width="8" height="2" />
+                  <rect class="cls-5" x="22" y="30" width="8" height="2" />
+                  <rect class="cls-5" x="34" y="34" width="6" height="2" />
+                  <rect class="cls-5" x="28" y="38" width="6" height="2" />
+                  <rect class="cls-6" x="14" y="38" width="6" height="2" />
+                  <rect class="cls-6" x="14" y="30" width="6" height="2" />
+                  <rect class="cls-6" x="14" y="34" width="6" height="2" />
+                  <rect class="cls-6" x="10" y="26" width="6" height="2" />
+                  <rect class="cls-6" x="10" y="50" width="6" height="2" />
+                  <rect class="cls-5" x="14" y="42" width="6" height="2" />
+                  <rect class="cls-5" x="20" y="50" width="6" height="2" />
+                  <rect class="cls-7" x="24" y="34" width="6" height="2" />
+                  <rect class="cls-7" x="18" y="26" width="6" height="2" />
+                  <rect class="cls-7" x="28" y="42" width="6" height="2" />
+                  <rect class="cls-7" x="26" y="50" width="6" height="2" />
+                  <rect class="cls-7" x="44" y="30" width="6" height="2" />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <h3>Объекты кода</h3>
+          <div class="main__text">Тут представлены функции для утановки элементов:</div>
+          <ul class="lesson__list">
+            <li><span>.text()</span> - Возвращает/изменяет (в зависимости от числа параметров) текст, находящийся
+              в элементах на странице.
+            </li>
+            <li><span>.append()</span> - Добавляет заданное содержимое в конец элементов на странице.
+              <span>.appendTo()</span> вставляет содержимое непосредственно в область, стоящую в аргументе.
+            </li>
+            <li><span>.prepend()</span> - Добавляет заданное содержимое в начало элементов на странице.
+              <span>.prependTo()</span> вставляет содержимое непосредственно в область, стоящую в аргументе.
+            </li>
+            <li><span>.after()</span> - Добавляет заданное содержимое после элементов на странице.
+              <span>.insertAfter()</span> вставляет содержимое непосредственно в область, стоящую в аргументе.
+            </li>
+            <li><span>.before()</span> - Добавляет заданное содержимое перед элементами на странице.
+              <span>.insertBefore()</span> вставляет содержимое непосредственно в область, стоящую в аргументе.
+            </li>
+            <li><span>.wrap()</span> - Окружает элементы на странице заданными html-элементами.
+              <span>.wrapAll()</span> окружает все элеменнты с указанным селектором в заданным html-элементом.
+            </li>
+            <li><span>.wrapInner()</span> - Окружает содержимое элементов на странице заданными html-элементами.
+            </li>
+          </ul>
+        </div>
+        <h2 id="theme__10">Замена элементов</h2>
+        <ul class="lesson__list">
+          <li><span>replaceWith</span> - заменяет элемент на тот, который указан в аргументе.</li>
+          <li><span>replaceAll</span> - этот метод ставит указанный элемент на место того, который указан в
+            аргументе.</li>
+          <img src="/images/jq5.jpg" alt="" class="img">
+        </ul>
+        <h3 id="theme__11">Клонирование</h3>
+        <div class="main__text">
+          <span>clone()</span> - позволяет клонировать элемент для дальнейшей встаки куда-либо. Так же с помщью
+          этого метода можно клонировать обработчики событий.
+        </div>
+        <img src="/images/jq6.jpg" alt="" class="img">
+        <h3 id="theme__12">Удлание элемента</h3>
+        <div class="main__text">
+          <span>detach</span> - позволяет удалить элемент из DOM, но при этом сохраняет о нем все данные в jQuery,
+          что позволяет работать с ним в будущем.
+        </div>
+        <div class="jQuery__detach-container">
+          <div class="jQuery__detach-element --left-element">
+            <button class="jQuery__detach-button --left">Вставить влево</button>
+            <div class="jQuery__detach-text">Блок с текстом</div>
+          </div>
+          <div class="jQuery__detach-element --right-element">
+            <button class="jQuery__detach-button --right">Вставить вправо</button>
+          </div>
+        </div>
+        <h3 id="theme__13">Очистка</h3>
+        <div class="main__text">
+          <span>empty()</span> - убирает содержимое элемента, но не навсегда. <br><br>
+          <span>remove()</span> - удаляет содержимое элемента навсегда.
+        </div>
+        <h2 id="theme__14">Параметры стилей</h2>
+        <ul class="lesson__list">
+          <li>
+            <div class="main__text">
+              <span>offset()</span> - возвращает позицию DOM элемента относительно документа.
+            </div>
+            <img src="/images/jq7.jpg" alt="" class="img img--l">
+            <div class="main__text">Чтобы с помощью метода <span>offset()</span> утановить элемент где-либо, нужно
+              писать так:
+              <span>$('.class').offset({top:10, left:100})</span>
+            </div>
+          </li>
+          <li>
+            <div class="main__text">
+              <span>psition()</span> - возвращает позицию DOМ элемента относительно родителя.
+            </div>
+            <img src="/images/jq8.jpg" alt="" class="img img--l">
+          </li>
+          <li>
+            <div class="main__text">
+              <span>height()</span> - возвращает высоту элемента за вычетом отступов и границ. Значения
+              возвращаются без указания единиц измерения.
+            </div>
+            <div class="jQuery__button-container">
+              <button class="getp">Paragraph</button>
+              <button class="getd">Document</button>
+              <button class="getw">Window</button>
+            </div>
+            <div class="main__text paragraph"></div>
+          </li>
+          <li>
+            <div class="main__text"><span>innerHeight()</span> - возвращает высоту элемента включая падинги.</div>
+          </li>
+          <div class="jQuery__button-container">
+            <button class="innerh">Проверить высоту этой кнопки</button>
+            <div class="main__text">Высота кнопки: <span class="innerh-text"></span></div>
+          </div>
+        </ul>
+      </div>
+      <hr>
+    </article>
+    <article class="jQuery__Lesson" id="jQuerylesson__7">
+      <hr>
+      <h1><span>Lesson 7<br> Слайдер.</span>
+        <p>L7. Слайдер</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <div class="slider__container">
+          <div class="slider__prev n"><a href="#">
+              < </a>
+          </div>
+          <div class="slider">
+            <img class="slider__img curry" src="/images/obl1.jpg">
+            <img class="slider__img" src="/images/obl2.jpeg">
+            <img class="slider__img" src="/images/obl3.jpg">
+            <img class="slider__img" src="/images/obl4.jpg">
+            <img class="slider__img" src="/images/obl5.jpg">
+          </div>
+          <div class="slider__next n"><a href="#">></a></div>
+        </div>
+        <img src="/images/jq9.jpg" alt="" class="img">
+      </div>
+      <hr>
+    </article>
+    <article class="jQuery__Lesson" id="jQuerylesson__8">
+      <hr>
+      <h1><span>Lesson 8<br> Кнопка "вверх".</span>
+        <p>L8. Кнопка "вверх"</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <img src="/images/jq10.jpg" alt="" class="img">
+      </div>
+      <hr>
+    </article>
+    <article class="jQuery__Lesson" id="jQuerylesson__9">
+      <hr>
+      <h1><span>Lesson 9<br> Счетчик чисел.</span>
+        <p>L9. Счетчик чисел</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <div class="wrapper__number">
+          <div class="counter col-fourth">
+            <i class="fa fa-code fa-2x"></i>
+            <div class="count">234234</div>
+            <p class="count-text"></p>
+          </div>
+          <div class="counter col-fourth">
+            <i class="fa fa-coffee fa-2x"></i>
+            <div class="count">987</div>
+            <p class="count-text"></p>
+          </div>
+          <div class="counter col-fourth">
+            <i class="fa fa-lightbulb-o fa-2x"></i>
+            <div class="count">765</div>
+            <p class="count-text"></p>
+          </div>
+          <div class="counter col-fourth end">
+            <i class="fa fa-bug fa-2x"></i>
+            <div class="count">1345</div>
+            <p class="count-text"></p>
+          </div>
+        </div>
+        <img src="/images/jq11.jpg" alt="" class="img">
+      </div>
+      <hr>
+    </article>
+    <article class="jQuery__Lesson" id="jQuerylesson__10">
+      <hr>
+      <h1><span>Lesson 10<br> To do приложение.</span>
+        <p>L10. To do приложение</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <div id="container">
+          <div id="tasks">
+            <div id="notification">Task list is empty.</div>
+            <ul id="tasksList">
+            </ul>
+          </div>
+          <div id="task__footer">
+            <input type="text" id="taskInput" placeholder="Your task">
+            <button id="taskAdd">+</button>
+          </div>
+        </div>
+        <h2>HTML</h2>
+        <img src="/images/jq13.jpg" alt="" class="img">
+        <h2>jQuery</h2>
+        <img src="/images/jq12.jpg" alt="" class="img img--l">
+      </div>
+      <hr>
+    </article>
+    <article class="jQuery__Lesson" id="jQuerylesson__11">
+      <hr>
+      <h1><span>Lesson 11 <br> Skillbar.</span>
+        <p>L11. Skillbar</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <h2>My skills</h2>
+        <div class="skillbar" data-percent="65%">
+          <div class="skillbar-title" style="background: #88cd2a;"><span>HTML5</span></div>
+          <div class="skillbar-bar" style="background: #88cd2a;"></div>
+          <div class="skillbar-bar-percent">65%</div>
+        </div>
+        <div class="skillbar" data-percent="85%">
+          <div class="skillbar-title" style="background: #00a8ff;"><span>CSS</span></div>
+          <div class="skillbar-bar" style="background: #00a8ff;"></div>
+          <div class="skillbar-bar-percent">85%</div>
+        </div>
+        <div class="skillbar" data-percent="75%">
+          <div class="skillbar-title" style="background: #243046;"><span>jQuery</span></div>
+          <div class="skillbar-bar" style="background: #243046;"></div>
+          <div class="skillbar-bar-percent">75%</div>
+        </div>
+        <div class="skillbar" data-percent="65%">
+          <div class="skillbar-title" style="background: #e7d465;"><span>JavaScript</span></div>
+          <div class="skillbar-bar" style="background: #e7d465;"></div>
+          <div class="skillbar-bar-percent">65%</div>
+        </div>
+      </div>
+      <hr>
+    </article>
+    <article class="jQuery__Lesson" id="jQuerylesson__12">
+      <hr>
+      <h1><span>Lesson 12<br> Аккордеон.</span>
+        <p>L12. Аккордеон</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <ul class="accordion">
+          <li>
+            <div class="accordion-element">
+              <div class="accordion-header">First</div>
+              <div class="accordion-body">Lorem ipsum dolor sit amet.</div>
+            </div>
+          </li>
+          <li>
+            <div class="accordion-element">
+              <div class="accordion-header">Second</div>
+              <div class="accordion-body">Lorem ipsum dolor sit amet.</div>
+            </div>
+          </li>
+          <li>
+            <div class="accordion-element">
+              <div class="accordion-header">Third</div>
+              <div class="accordion-body">Lorem ipsum dolor sit amet.</div>
+            </div>
+          </li>
+        </ul>
+        <img src="/images/jq14.jpg" alt="" class="img">
+      </div>
+      <hr>
+    </article>
+  </section>
+  <!-- ========================================== ASIDE ========================================= -->
+  <!-- ========================================== ASIDE ========================================= -->
+  <aside class="aside">
+    <div class="aside__inner">
+      <div class="sidebar__heading">
+        <hr>
+        jQuery
+        <hr>
+      </div>
+      <ul class="aside__list">
+        <li class="aside__element" title="Lesson 1">
+          <a class="aside__link" href="#jQuerylesson__1">
+            <div class="side__text"><span>1.</span>
+              <p>Синтаксис.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+        <li class="aside__element" title="Lesson 2">
+          <a class="aside__link" href="#jQuerylesson__2">
+            <div class="side__text">2. <p>Селекторы.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+          <div class="aside__themes-container">
+            <a href="#theme__1" class="aside__theme">
+              <p>Оптимизация выборки</p>
+            </a>
+          </div>
+        </li>
+        <li class="aside__element" title="Lesson 3">
+          <a class="aside__link" href="#jQuerylesson__3">
+            <div class="side__text">3. <p>Изменение атрибутов.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+          <div class="aside__themes-container">
+            <a href="#theme__2" class="aside__theme">
+              <p>Манипуляции с классами</p>
+            </a>
+            <a href="#theme__3" class="aside__theme">
+              <p>Манипуляции с атрибутами</p>
+            </a>
+          </div>
+        </li>
+        <li class="aside__element" title="Lesson 4">
+          <a class="aside__link" href="#jQuerylesson__4">
+            <div class="side__text">4. <p>События.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+          <div class="aside__themes-container">
+            <a href="#theme__4" class="aside__theme">
+              <p>Отмена действия по умолчанию</p>
+            </a>
+            <a href="#theme__5" class="aside__theme">
+              <p>Отмена всплытия события</p>
+            </a>
+          </div>
+        </li>
+        <li class="aside__element" title="Lesson 5">
+          <a class="aside__link" href="#jQuerylesson__5">
+            <div class="side__text">5. <p>Анимации.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+          <div class="aside__themes-container">
+            <a href="#theme__6" class="aside__theme">
+              <p>slide</p>
+            </a>
+            <a href="#theme__7" class="aside__theme">
+              <p>fade</p>
+            </a>
+            <a href="#theme__8" class="aside__theme">
+              <p>animate</p>
+            </a>
+          </div>
+        </li>
+        <li class="aside__element" title="Lesson 6">
+          <a class="aside__link" href="#jQuerylesson__6">
+            <div class="side__text">6. <p>Манипуляции с DOM.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+          <div class="aside__themes-container">
+            <a href="#lesson__6" class="aside__theme">
+              <p>Cоздание элементов</p>
+            </a>
+            <a href="#theme__9" class="aside__theme">
+              <p>Манипуляции с содержимым</p>
+            </a>
+            <a href="#theme__10" class="aside__theme">
+              <p>Замена элементов</p>
+            </a>
+            <a href="#theme__11" class="aside__theme">
+              <p>Клонирование</p>
+            </a>
+            <a href="#theme__12" class="aside__theme">
+              <p>Удаление элемента</p>
+            </a>
+            <a href="#theme__13" class="aside__theme">
+              <p>Очистка</p>
+            </a>
+            <a href="#theme__14" class="aside__theme">
+              <p>Параметры стилей</p>
+            </a>
+          </div>
+        </li>
+        <li class="aside__element" title="Lesson 7">
+          <a class="aside__link" href="#jQuerylesson__7">
+            <div class="side__text">7. <p>Slider.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+        <li class="aside__element" title="Lesson 8">
+          <a class="aside__link" href="#jQuerylesson__8">
+            <div class="side__text">8. <p>Back to top button.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+        <li class="aside__element" title="Lesson 9">
+          <a class="aside__link" href="#jQuerylesson__9">
+            <div class="side__text">9. <p>Счетчик чисел.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+        <li class="aside__element" title="Lesson 10">
+          <a class="aside__link" href="#jQuerylesson__10">
+            <div class="side__text">10. <p>To do приложение.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+        <li class="aside__element" title="Lesson 11">
+          <a class="aside__link" href="#jQuerylesson__11">
+            <div class="side__text">11. <p>Skillbar.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+        <li class="aside__element" title="Lesson 12">
+          <a class="aside__link" href="#jQuerylesson__12">
+            <div class="side__text">12. <p>Аккордеон.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+</div>
+<div class="aside__inner aside__mobile aside__jq">
+  <div class="sidebar__heading">
+    <hr>
+    jQuery
+    <hr>
+  </div>
+  <ul class="aside__list">
+    <li class="aside__element" title="Lesson 1">
+      <a class="aside__link" href="#lesson__1">
+        <div class="side__text"><span>1.</span>
+          <p>Синтаксис.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+    <li class="aside__element" title="Lesson 2">
+      <a class="aside__link" href="#lesson__2">
+        <div class="side__text">2. <p>Селекторы.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+      <div class="aside__themes-container">
+        <a href="#theme__1" class="aside__theme">
+          <p>Оптимизация выборки</p>
+        </a>
+      </div>
+    </li>
+    <li class="aside__element" title="Lesson 3">
+      <a class="aside__link" href="#lesson__3">
+        <div class="side__text">3. <p>Изменение атрибутов.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+      <div class="aside__themes-container">
+        <a href="#theme__2" class="aside__theme">
+          <p>Манипуляции с классами</p>
+        </a>
+        <a href="#theme__3" class="aside__theme">
+          <p>Манипуляции с атрибутами</p>
+        </a>
+      </div>
+    </li>
+    <li class="aside__element" title="Lesson 4">
+      <a class="aside__link" href="#lesson__4">
+        <div class="side__text">4. <p>События.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+      <div class="aside__themes-container">
+        <a href="#theme__4" class="aside__theme">
+          <p>Отмена действия по умолчанию</p>
+        </a>
+        <a href="#theme__5" class="aside__theme">
+          <p>Отмена всплытия события</p>
+        </a>
+      </div>
+    </li>
+    <li class="aside__element" title="Lesson 5">
+      <a class="aside__link" href="#lesson__5">
+        <div class="side__text">5. <p>Анимации.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+      <div class="aside__themes-container">
+        <a href="#theme__6" class="aside__theme">
+          <p>slide</p>
+        </a>
+        <a href="#theme__7" class="aside__theme">
+          <p>fade</p>
+        </a>
+        <a href="#theme__8" class="aside__theme">
+          <p>animate</p>
+        </a>
+      </div>
+    </li>
+    <li class="aside__element" title="Lesson 6">
+      <a class="aside__link" href="#lesson__6">
+        <div class="side__text">6. <p>Манипуляции с DOM.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+      <div class="aside__themes-container">
+        <a href="#lesson__6" class="aside__theme">
+          <p>Cоздание элементов</p>
+        </a>
+        <a href="#theme__9" class="aside__theme">
+          <p>Манипуляции с содержимым</p>
+        </a>
+        <a href="#theme__10" class="aside__theme">
+          <p>Замена элементов</p>
+        </a>
+        <a href="#theme__11" class="aside__theme">
+          <p>Клонирование</p>
+        </a>
+        <a href="#theme__12" class="aside__theme">
+          <p>Удаление элемента</p>
+        </a>
+        <a href="#theme__13" class="aside__theme">
+          <p>Очистка</p>
+        </a>
+        <a href="#theme__14" class="aside__theme">
+          <p>Параметры стилей</p>
+        </a>
+      </div>
+    </li>
+    <li class="aside__element" title="Lesson 7">
+      <a class="aside__link" href="#lesson__7">
+        <div class="side__text">7. <p>Slider.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+    <li class="aside__element" title="Lesson 8">
+      <a class="aside__link" href="#lesson__8">
+        <div class="side__text">8. <p>Back to top button.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+    <li class="aside__element" title="Lesson 9">
+      <a class="aside__link" href="#lesson__9">
+        <div class="side__text">9. <p>Счетчик чисел.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+    <li class="aside__element" title="Lesson 10">
+      <a class="aside__link" href="#lesson__10">
+        <div class="side__text">10. <p>To do приложение.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+    <li class="aside__element" title="Lesson 11">
+      <a class="aside__link" href="#lesson__11">
+        <div class="side__text">11. <p>Skillbar.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+    <li class="aside__element" title="Lesson 12">
+      <a class="aside__link" href="#lesson__12">
+        <div class="side__text">12. <p>Аккордеон.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+  </ul>
+</div>

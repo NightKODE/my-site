@@ -18,17 +18,21 @@ html {
   transition: all .3s;
 }
 
-.main__inner {
+.main__inner, .main__inner--no-aside {
   position: relative;
   max-width: 1400px;
   padding: 0 15px;
   margin: 0 auto;
-  /* overflow: hidden; */
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transition: all .3s;
+}
+.main__inner{
   display: flex;
 }
-
+.main__inner--no-aside{
+  section{
+    width: 100%;
+  }
+}
 .overlay {
   position: fixed;
   top: 0;
@@ -129,7 +133,9 @@ html {
 ::-webkit-scrollbar-button {
   display: none;
 }
-
+.hidden__container{
+  position: absolute;
+}
 /* ========================================== HEADER ========================================== */
 /* ========================================== HEADER ========================================== */
 .burger {
@@ -266,31 +272,16 @@ html {
   transition: all .3s;
 }
 .header__nav-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: end;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .header__nav-element {
   margin-left: 20px;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  /* justify-content: space-between; */
-  /* width: max-content; */
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -329,9 +320,6 @@ html {
   height: 39px;
   &:hover {
     border: solid 3px #f35510;
-    // svg{
-    //   fill: #007388;
-    // }
     path{
       fill: #f35510;
       
@@ -362,7 +350,9 @@ html {
     fill: #f35510;
   }
 }
-
+#light-button-mobile{
+  display: none;
+}
 
 /* ========================================== MAIN ========================================== */
 /* ========================================== MAIN ========================================== */
@@ -2784,7 +2774,51 @@ button {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
   }
-
+  .header__button-light-theme{
+    display: none;
+  }
+  #light-button-mobile{
+    background: rgba(255, 255, 255, 0.176);
+    backdrop-filter: blur(8.9px);
+    display: block;
+    right: 270px;
+    position: fixed;
+    bottom: 10px;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    border-radius: 50%;
+    .button-light__icon{
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      left: 7px;
+      svg{
+        transition: all .3s;
+      }
+      path{
+        transition: all .3s;
+      }
+    
+    }
+    svg{
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .moon--mobile{
+    transition: all .5s;
+    top: 7px;
+  }
+  .sun--mobile{
+    top: 60px;
+    transform: scale(1.2);
+    transition: all .5s;
+    svg{
+      fill: #f35510;
+    }
+  }
   /* --------- MAIN ---------- */
   .main__container {
     padding-top: 50px;

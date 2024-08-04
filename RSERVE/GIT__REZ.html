@@ -1,608 +1,467 @@
-<div class="wrapper">
-  <div class="overlay"></div>
-
-  <!-- ========================================== HEADER ========================================== -->
-  <!-- ========================================== HEADER ========================================== -->
-  <header class="header" id="header">
-    <a href="#" class="burger">
-      <span></span>
-    </a>
-    <div class="header__container">
+<div class="main__inner" id="MAINGIT">
+  <section class="section" id="GIT">
+    <article>
       <hr>
-      <div class="header__inner">
-        <div class="header__1st-block">
-          <div class="header__logo">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
-              <path style="fill:#25B6D2;"
-                d="M0,260.908l174.648-81.136v38.568l-132.08,57.848v0.728l132.08,57.848v38.568L0,292.212V260.908z" />
-              <path style="fill:#415E72;" d="M201.6,387.9l77.864-263.8h36.752L238.4,387.9H201.6z" />
-              <path style="fill:#E04F5F;" d="M512,293.284L337.352,373.34v-38.568l134.992-57.848v-0.728L337.352,218.34v-38.568L512,259.828
-              V293.284z" />
-            </svg>
-          </div>
-          <div class="header__search-block">
-            <button class="search__button">
-              <div class="search__button-icon">
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M9.625 2C5.41383 2 2 5.41383 2 9.625C2 13.8362 5.41383 17.25 9.625 17.25C11.7289 17.25 13.6322 16.3992 15.0128 15.0206C16.396 13.6393 17.25 11.7328 17.25 9.625C17.25 5.41383 13.8362 2 9.625 2ZM0 9.625C0 4.30926 4.30926 0 9.625 0C14.9407 0 19.25 4.30926 19.25 9.625C19.25 11.9242 18.4428 14.0363 17.098 15.6913L21.2065 19.7922C21.5973 20.1824 21.5979 20.8156 21.2078 21.2065C20.8176 21.5973 20.1844 21.5979 19.7935 21.2078L15.683 17.1047C14.0292 18.4455 11.9203 19.25 9.625 19.25C4.30926 19.25 0 14.9407 0 9.625Z"
-                    fill="#787A80" />
-                </svg>
-              </div>
-            </button>
-            <input class="header__search-stroke" placeholder="Search in ...">
-            </input>
-          </div>
+      <div class="lesson__inner">
+        <div class="main__text">
+          GIT - распределенная система управления версиями. <br> <br>
+          На каждом компьютере хранится полная версия репозитория, что позволяет локально работать над продуктом,
+          даже без интернета.
         </div>
-        <ul class="header__nav-container">
-          <li>
-            <a href="HTML.html" class="header__nav-element">
-              <div class="header__nav-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                  <title>file_type_html</title>
-                  <polygon points="5.902 27.201 3.655 2 28.345 2 26.095 27.197 15.985 30 5.902 27.201"
-                    style="fill:#e44f26" />
-                  <polygon points="16 27.858 24.17 25.593 26.092 4.061 16 4.061 16 27.858" style="fill:#f1662a" />
-                  <polygon
-                    points="16 13.407 11.91 13.407 11.628 10.242 16 10.242 16 7.151 15.989 7.151 8.25 7.151 8.324 7.981 9.083 16.498 16 16.498 16 13.407"
-                    style="fill:#ebebeb" />
-                  <polygon
-                    points="16 21.434 15.986 21.438 12.544 20.509 12.324 18.044 10.651 18.044 9.221 18.044 9.654 22.896 15.986 24.654 16 24.65 16 21.434"
-                    style="fill:#ebebeb" />
-                  <polygon
-                    points="15.989 13.407 15.989 16.498 19.795 16.498 19.437 20.507 15.989 21.437 15.989 24.653 22.326 22.896 22.372 22.374 23.098 14.237 23.174 13.407 22.341 13.407 15.989 13.407"
-                    style="fill:#fff" />
-                  <polygon
-                    points="15.989 7.151 15.989 9.071 15.989 10.235 15.989 10.242 23.445 10.242 23.445 10.242 23.455 10.242 23.517 9.548 23.658 7.981 23.732 7.151 15.989 7.151"
-                    style="fill:#fff" />
-                </svg>
-              </div>
-              <p>HTML</p>
-            </a>
-          </li>
-          <li>
-            <a href="CSS.html" class="header__nav-element">
-              <div class="header__nav-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                  <title>file_type_css</title>
-                  <polygon points="5.902 27.201 3.656 2 28.344 2 26.095 27.197 15.985 30 5.902 27.201"
-                    style="fill:#1572b6" />
-                  <polygon points="16 27.858 24.17 25.593 26.092 4.061 16 4.061 16 27.858" style="fill:#33a9dc" />
-                  <polygon
-                    points="16 13.191 20.09 13.191 20.372 10.026 16 10.026 16 6.935 16.011 6.935 23.75 6.935 23.676 7.764 22.917 16.282 16 16.282 16 13.191"
-                    style="fill:#fff" />
-                  <polygon
-                    points="16.019 21.218 16.005 21.222 12.563 20.292 12.343 17.827 10.67 17.827 9.24 17.827 9.673 22.68 16.004 24.438 16.019 24.434 16.019 21.218"
-                    style="fill:#ebebeb" />
-                  <polygon
-                    points="19.827 16.151 19.455 20.29 16.008 21.22 16.008 24.436 22.344 22.68 22.391 22.158 22.928 16.151 19.827 16.151"
-                    style="fill:#fff" />
-                  <polygon
-                    points="16.011 6.935 16.011 8.855 16.011 10.018 16.011 10.026 8.555 10.026 8.555 10.026 8.545 10.026 8.483 9.331 8.342 7.764 8.268 6.935 16.011 6.935"
-                    style="fill:#ebebeb" />
-                  <polygon
-                    points="16 13.191 16 15.111 16 16.274 16 16.282 12.611 16.282 12.611 16.282 12.601 16.282 12.539 15.587 12.399 14.02 12.325 13.191 16 13.191"
-                    style="fill:#ebebeb" />
-                </svg>
-              </div>
-              <p>CSS</p>
-            </a>
-          </li>
-          <li>
-            <a href="SCSS.html" class="header__nav-element">
-              <div class="header__nav-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-label="Sass" role="img" viewBox="0 0 512 512">
-                  <rect width="512" height="512" rx="15%" fill="#c69" />
-                  <path
-                    d="M258,88c-96,33-158,100-152,140s66,72,93,93h0c-35,18-79,45-78,80,2,48,54,33,76,19s44-53,30-94c31-8,58,2,66,8,31,22,15,47,4,51s-4,6,3,4,22-12,22-29c0-43-46-63-103-48-33-35-78-51-76-89,1-14,6-50,95-95s152-27,144,14c-12,62-120,104-158,68-2-4-9-7-5,4,20,50,182,27,189-79C410,79,329,64,258,88ZM172,408c-25,8-24-8-23-14,3-17,17-38,59-59C220,373,193,402,172,408Z"
-                    fill="#fff" />
-                </svg>
-              </div>
-              <p>SCSS</p>
-            </a>
-          </li>
-          <li>
-            <a href="#MAIN" class="header__nav-element">
-              <div class="header__nav-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                  <title>file_type_git</title>
-                  <path
-                    d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551"
-                    style="fill:#dd4c35" />
-                  <path
-                    d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314"
-                    style="fill:#fff" />
-                </svg>
-              </div>
-              <p>GIT</p>
-            </a>
-          </li>
-          <li>
-            <a href="JS.html" class="header__nav-element">
-              <div class="header__nav-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-label="JavaScript" role="img" viewBox="0 0 512 512">
-                  <rect width="512" height="512" rx="15%" fill="#f7df1e" />
-                  <path
-                    d="m324,370c10,17 24,29 47,29 20,0 33,-10 33,-24 0,-16 -13,-22 -35,-32l-12,-5c-35,-15 -58,-33 -58,-72 0,-36 27,-64 70,-64 31,0 53,11 68,39l-37,24c-8,-15 -17,-21 -31,-21 -14,0 -23,9 -23,21 0,14 9,20 30,29l12,5c41,18 64,35 64,76 0,43 -34,67 -80,67 -45,0 -74,-21 -88,-49zm-170,4c8,13 14,25 31,25 16,0 26,-6 26,-30V203h48v164c0,50 -29,72 -72,72 -39,0 -61,-20 -72,-44z" />
-                </svg>
-              </div>
-              <p>JS</p>
-            </a>
-          </li>
-          <li class="header__nav-element"><a href="#podval">Footer</a></li>
+      </div>
+      <hr>
+    </article>
+    <article class="GIT__Lessons lesson__1" id="gitlesson__1">
+      <hr>
+      <h1><span>Lesson 1. <br> Для чего нужен GIT.</span>
+        <p>L1. Для чего нужен GIT.</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <ul class="lesson__list">
+          <li>Позволяет сохранить разные версии проекта. </li>
+          <li>Позволяет быстро переходить к разным версиям проекта. </li>
+          <li>Позволяет откатиться к предыдущим версиям приложения.</li>
+          <li>Упрощает и улучшает процесс командной работы над одним проектом. </li>
+          <li>Позволяет осуществлять разработку различных функций в проекте в отдельной ветке независимо от всех
+            остальных разработчиков.</li>
         </ul>
       </div>
       <hr>
-    </div>
-  </header>
-  <!-- ========================================== MAIN ========================================= -->
-  <!-- ========================================== MAIN ========================================= -->
-  <main class="main__container" id="MAIN">
-    <div class="main__inner">
-      <section class="section" id="GIT">
-        <article>
-          <hr>
-          <div class="lesson__inner">
+    </article>
+    <article class="GIT__Lessons lesson__2" id="gitlesson__2">
+      <hr>
+      <h1><span>Lesson 2. <br> GIT и GitHub.</span>
+        <p>L2. GIT и GitHub.</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <div class="lesson__image-container">
+          <div class="lesson__block-img">
+            <h2>GIT</h2>
             <div class="main__text">
-              GIT - распределенная система управления версиями. <br> <br>
-              На каждом компьютере хранится полная версия репозитория, что позволяет локально работать над продуктом,
-              даже без интернета.
+              Распределенная система контроля версий.
+              Локальная работа над продуктом: создание веток, ответвлений, версий и т.д.
             </div>
           </div>
-          <hr>
-        </article>
-        <article class="GIT__Lessons lesson__1" id="lesson__1">
-          <hr>
-          <h1><span>Lesson 1. <br> Для чего нужен GIT.</span>
-            <p>L1. Для чего нужен GIT.</p>
-          </h1>
-          <hr>
-          <div class="lesson__inner">
-            <ul class="lesson__list">
-              <li>Позволяет сохранить разные версии проекта. </li>
-              <li>Позволяет быстро переходить к разным версиям проекта. </li>
-              <li>Позволяет откатиться к предыдущим версиям приложения.</li>
-              <li>Упрощает и улучшает процесс командной работы над одним проектом. </li>
-              <li>Позволяет осуществлять разработку различных функций в проекте в отдельной ветке независимо от всех
-                остальных разработчиков.</li>
-            </ul>
-          </div>
-          <hr>
-        </article>
-        <article class="GIT__Lessons lesson__2" id="lesson__2">
-          <hr>
-          <h1><span>Lesson 2. <br> GIT и GitHub.</span>
-            <p>L2. GIT и GitHub.</p>
-          </h1>
-          <hr>
-          <div class="lesson__inner">
-            <div class="lesson__image-container">
-              <div class="lesson__block-img">
-                <h2>GIT</h2>
-                <div class="main__text">
-                  Распределенная система контроля версий.
-                  Локальная работа над продуктом: создание веток, ответвлений, версий и т.д.
-                </div>
-              </div>
-              <div class="lesson__block">
-                <h2>GitHub</h2>
-                <div class="main__text">
-                  Сервис хостинга Git репозиториев.
-                  Хранит основную версию продукта для разработчиков.
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr>
-        </article>
-        <article class="GIT__Lessons lesson__3" id="lesson__3">
-          <hr>
-          <h1><span>Lesson 3. <br> Рабочие области GIT.</span>
-            <p>L3. Рабочие области GIT.</p>
-          </h1>
-          <hr>
-          <div class="lesson__inner">
-            <ul class="lesson__list">
-              <li>
-                <span>Working directory</span> - рабочая директория.
-                <p>Видимая область проекта в которой содержатся файлы (папка проекта). </p>
-                <img src="/images/git1.jpg" alt="" class="img">
-              </li>
-              <li>
-                <span>Staging area</span> - индекс.
-                <p>
-                  В эту область добавляются файлы перед сохранением. <br> <br>
-                  <span>git status</span> - показывает изменения в индексе которые были подготовлены для сохранения
-                  (коммита).
-                </p>
-                <img src="/images/git2.jpg" alt="" class="img img--l">
-              </li>
-              <li>
-                <span>Repository</span> - репозиторий (папка.git).
-                <p>
-                  Здесь сохраняются все версии файлов проекта. <br> <br>
-                  Так же тут сохраняются коммиты (указатели на определенные версии проекта). <br> <br>
-                  На примере папки Objekts (в ней сохраняются все объекты репозитория).
-                </p>
-                <img src="/images/git3.jpg" alt="" class="img img--l">
-                <p>
-                  Папки появляются после создания объектов gitом. <br> <br>
-                  Файлы с длинными названиями (их названия основаны на хешах git-объектов). <br> <br>
-                  При изменении файла, в репозитории (папка Objects) сохранится два разных файла (первая версия и
-                  вторая).
-                </p>
-              </li>
-            </ul>
-          </div>
-          <hr>
-        </article>
-        <article class="GIT__Lessons lesson__4" id="lesson__4">
-          <hr>
-          <h1><span>Lesson 4. <br> Рабочий процесс GIT.</span>
-            <p>L4. Рабочий процесс GIT.</p>
-          </h1>
-          <hr>
-          <div class="lesson__inner">
-            <ul class="lesson__list">
-              <li>1. Создается папка с файлами - проект. <br> В нее добавлять файлы можно традиционным и не только
-                способами.</li>
-              <li>2. В терминале прописывается команда <span>git init</span>. <br> Она нужно для инициализации
-                репозитория GIT и создания скрытой папки.git. </li>
-              <li>3. В индекс файлы добавляются командой - <span>git add “name”</span> <br>После команды прописывается
-                имя файла, если поставить точку, то добавятся все модифицированные файлы и созданные. </li>
-              <li>4. После добавления изменений в индекс можно сохранить текущую версию проекта в репозиторий командой
-                -
-                <span>git commit -m "messege"</span>.
-              </li>
-              <li>5. Командой <span>git checkout</span> можно перейти к определенной версии проекта. <br> Из
-                репозитория
-                в рабочую директорию перезаписываются файлы, либо добавляются, либо удаляются, тем самым проект будет
-                состоять из нужных версий файлов. </li>
-            </ul>
-          </div>
-          <hr>
-        </article>
-        <article class="GIT__Lessons lesson__5" id="lesson__5">
-          <hr>
-          <h1><span>Lesson 5. <br> Статусы отслеживания файллов.</span>
-            <p>L5. Статусы отслеживания файллов.</p>
-          </h1>
-          <hr>
-          <div class="lesson__inner">
-            <ul class="lesson__list">
-              <li>
-                <span>Untracked</span> - неотслеживаемый.
-                <p>
-                  Новые файлы, добавленные в рабочую директорию имеют статус "неотслеживаемые” т.к. еще не находятся в
-                  репозитории. Этот статус имеют все новые файлы изначально.
-                </p>
-              </li>
-              <li>
-                <span>Staged</span> - подготовленный.
-                <p>
-                  Файлы, добавленные в индекс для сохранения командой <span>git add</span>, имеют статус
-                  “подготовленные”
-                </p>
-              </li>
-              <li>
-                <span>Unmpdified</span> - немодифицированный.
-                <p>
-                  Файлы, сохраненные в репозиторий командой <br> <span>git commit</span>, имеют статус
-                  “немодифицированный”
-                </p>
-              </li>
-              <li>
-                <span>Modified</span> - модифицированный.
-                <p>
-                  Файлы (находящиеся в РД, индексе и репозитории), взятые для каких-либо изменений, имеют статус
-                  модифицированные. Они могут в дальнейшем иметь статус “подготовленные” и “немодифицированные”.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <hr>
-        </article>
-        <article class="GIT__Lessons lesson__6" id="lesson__6">
-          <hr>
-          <h1><span>Lesson 6. <br> Объекты GIT.</span>
-            <p>L6. Объекты GIT.</p>
-          </h1>
-          <hr>
-          <div class="lesson__inner">
-            <ul class="lesson__list">
-              <li><span>Commit</span> - указатель на дерево (ссылка). </li>
-              <li><span>Blob</span> - файл.</li>
-              <li><span>Tree</span> - папка.</li>
-              <div class=" lesson__image-container">
-                <div class="lesson__block-img">
-                  <img src="/images/git4.jpg" alt="" class="img img--l">
-                </div>
-                <div class="lesson__block-img">
-                  <img src="/images/git5.jpg" alt="" class="img img--l">
-                </div>
-              </div>
-            </ul>
-          </div>
-          <hr>
-        </article>
-        <article class="GIT__Lessons lesson__7" id="lesson__7">
-          <hr>
-          <h1><span>Lesson 7. <br> Удаленный репозиторий GitHub.</span>
-            <p>L7. Удаленный репозиторий GitHub.</p>
-          </h1>
-          <hr>
-          <div class="lesson__inner">
+          <div class="lesson__block">
+            <h2>GitHub</h2>
             <div class="main__text">
-              Удаленный репозиторий позволяет хранить проект удаленно. <br><br>
-              Удаленные репозитории бывают публичные и частные. публичные репозитории могут скачивать все без
-              ограничений, но загружать изменения в него только с личным доступом. Личный доступ дает админ
-              репозитория
-              ( владелец на GitHub ). С частным репозиторием работать можно только с личным доступом.
+              Сервис хостинга Git репозиториев.
+              Хранит основную версию продукта для разработчиков.
             </div>
-            <h2>Как работать с удаленным репозиторием.</h2>
-            <ul class="lesson__list">
-              <li>1. Сначала уделенный репозиторий скачивается на компьютер командой <span>git clone "url"</span>.
-                <p>
-                  При скачивании git создает связь между локальным и удаленным репозиториями, при этом уделенному
-                  репозиторию задается имя по умолчанию - origin
-                </p>
-              </li>
-              <li>
-                Далее необходимо подключить удаленный репозиторий к локальному командой <br> <span>git remote add
-                  origin
-                  "url"</span> ( имя удаленного репозитория заданное на GItHub при его создании ).
-                <p>После этого на удаленный репозиторий можно загружать какие-лмбо изменения, но связь с ветками еще
-                  не
-                  устанавлена, это нужно делать далее. </p>
-              </li>
-              <li>
-                Теперь локальную ветку (например “new-feature”) необходимо связать с удаленной веткой (например
-                “main”,
-                как правило связывают ветки с одинаковым названием) командой <span>git push –u origin "branch"</span>.
-                <p>После создания связи между ветками загружать обновления можно обычной командой <span>git
-                    push</span>.
-                </p>
-              </li>
-              <li>
-                После проделанных действий загружать и скачивать какие-либо изменения в локальной ветке можно
-                командами
-                <span>git push</span> и <span>git pull</span> соответственно.
-              </li>
-            </ul>
           </div>
-          <hr>
-        </article>
-        <article class="GIT__Lessons lesson__8" id="lesson__8">
-          <hr>
-          <h1><span>Lesson 8. <br> Команды GIT.</span>
-            <p>L8. Команды GIT.</p>
-          </h1>
-          <hr>
-          <div class="lesson__inner">
-            <h2>Основные.</h2>
-            <ul class="lesson__list">
-              <li><span>git init</span> - cоздание репозитория</li>
-              <li><span>git status</span> - отображает текущее состояние репозитория </li>
-              <li><span>git add "file"</span> - добавляет файлы в индекс (поставив точку вместо имени файла добавятся
-                все измененные файлы) </li>
-              <li><span>git commit –m "message"</span> - создание коммита с записью изменений в репозиторий </li>
-              <li><span>git log</span> - просмотр истории изменений </li>
-              <li><span>git checkout "commit hash" </span>- переход в определенную версию проекта по хэшу коммита
-              </li>
-            </ul>
-            <h2>Ветвление.</h2>
-            <ul class="lesson__list">
-              <li><span>git checkout "branch name"</span> - переход на определенную версию проекта по названию ветки
-              </li>
-              <li><span>git branch "branch name"</span> - создание ветки </li>
-              <li><span>git checkout –b "branch name"</span> - создание ветки и переход в нее </li>
-              <li><span>git branch</span> - отображение существующих веток </li>
-              <li><span>git branch –d "branch name"</span> - удаление ветки ( текущую ветку удалить нельзя ) </li>
-              <li><span>git branch -m "name"</span> - переименование текущей ветки имя. </li>
-              <li><span>git merge –m "message" "feature branch name"</span> - слияние другой ветки в текущую </li>
-            </ul>
-            <h2>Удаленный репозиторий.</h2>
-            <ul class="lesson__list">
-              <li><span>git clone "url" </span>- клонирование удаленного репозитория к себе на компьютер. </li>
-              <li><span>git pull</span> - загрузка и применение изменений с удаленной ветки в локальную. </li>
-              <li><span>git push</span> - загрузка изменений из локальной ветки в ветку удаленного репозитория. </li>
-              <li><span>git branch –a</span> - отображает все ветки, включая те, которые находятся в удаленных
-                репозиториях. </li>
-              <li><span>git remote add origin "url"</span> - подключение удаленного репозитория. </li>
-              <li><span>git push –u origin "branch"</span> - загрузка изменения из локальной ветки в удаленную с
-                созданием связи между ними.</li>
-              <li><span>git push –u origin "branch"</span> - загрузка изменения из локальной ветки в удаленную с
-                созданием связи между ними. После создания связи между ветками загружать обновления можно обычной
-                командой git push.</li>
-            </ul>
-            <h2>Прочие.</h2>
-            <ul class="lesson__list">
-              <li><span>git –version</span> - проверка версии </li>
-              <li><span>git config --global user.name “...”</span> - установка имени юзера </li>
-              <li><span>git config --global user.mail “...”</span> - установка почты юзера </li>
-              <li><span>git config --list</span> - проверить настройки git </li>
-              <li><span>git cat-file -t "name"</span> - чтение типа файла.</li>
-              <li><span>git cat-file -p "name"</span> - чтение содержимого файла.</li>
-              <li><span>git remote</span> - проверка подключения удаленного репозитория </li>
-              <li><span>git remote –v</span> - проверка связи между локальным и удаленным репозиториями </li>
-              <li><span>git branch -vv</span> - список и состояние всех локальных и удаленных веток (только данные,
-                которые обновлены с удаленного сервера). </li>
-            </ul>
-          </div>
-          <hr>
-        </article>
-        <article class="GIT__Lessons lesson__9" id="lesson__9">
-          <hr>
-          <h1><span>Lesson 9. <br> Команды для консоли.</span>
-            <p>L9. Команды для консоли.</p>
-          </h1>
-          <hr>
-          <div class="lesson__inner">
-            <ul class="lesson__list">
-              <li><span>cd ~/Desktop</span> - переход в папку для работы в ней (тильда обозначает корневую папку
-                юзера/рабочий стол) </li>
-              <li><span>cd ..</span> - выход в родительскую папку (на уровень выше ) </li>
-              <li><span>mkdir my-project</span> - создание новой папки (имя папки) </li>
-              <li><span>ls</span> - проверка наличия файлов в папке </li>
-              <li><span>ls –Force</span> - отобразить скрытые папки в папке </li>
-              <li><span>echo "Some text" > file.txt</span> - создание файла (текст в самом файле, название файла и его
-                расширение ) </li>
-              <li><span>cat file.txt</span> - чтение файла </li>
-              <li><span>rm file.txt</span> - удаление файла </li>
-            </ul>
-          </div>
-          <hr>
-        </article>
-      </section>
-      <!-- ========================================== ASIDE ========================================= -->
-      <!-- ========================================== ASIDE ========================================= -->
-      <aside class="aside">
-        <div class="aside__inner">
-          <div class="sidebar__heading">
-            <hr>
-            GIT
-            <hr>
-          </div>
-          <ul class="aside__list">
-            <li class="aside__element" title="Lesson 1">
-              <a class="aside__link" href="#lesson__1">
-                <div class="side__text">1.
-                  <p>Что такое GIT.</p>
-                </div>
-              </a>
-              <div class="aside__line"></div>
-            </li>
-            <li class="aside__element" title="Lesson 2">
-              <a class="aside__link" href="#lesson__2">
-                <div class="side__text">2. <p>GIT и GitHub.</p>
-                </div>
-              </a>
-              <div class="aside__line"></div>
-            </li>
-            <li class="aside__element" title="Lesson 3">
-              <a class="aside__link" href="#lesson__3">
-                <div class="side__text">3. <p>Рабочие области GIT.</p>
-                </div>
-              </a>
-              <div class="aside__line"></div>
-            </li>
-            <li class="aside__element" title="Lesson 4">
-              <a class="aside__link" href="#lesson__4">
-                <div class="side__text">4. <p>Рабочий процесс GIT.</p>
-                </div>
-              </a>
-              <div class="aside__line"></div>
-            </li>
-            <li class="aside__element" title="Lesson 5">
-              <a class="aside__link" href="#lesson__5">
-                <div class="side__text">5. <p>Статусы отслеживания файлов.</p>
-                </div>
-              </a>
-              <div class="aside__line"></div>
-            </li>
-            <li class="aside__element" title="Lesson 6">
-              <a class="aside__link" href="#lesson__6">
-                <div class="side__text">6. <p>Объекты GIT.</p>
-                </div>
-              </a>
-              <div class="aside__line"></div>
-            </li>
-            <li class="aside__element" title="Lesson 7">
-              <a class="aside__link" href="#lesson__7">
-                <div class="side__text">7. <p>Удаленный репозиторий GitHub.</p>
-                </div>
-              </a>
-              <div class="aside__line"></div>
-            </li>
-            <li class="aside__element" title="Lesson 7">
-              <a class="aside__link" href="#lesson__8">
-                <div class="side__text">8. <p>Команды GIT.</p>
-                </div>
-              </a>
-              <div class="aside__line"></div>
-            </li>
-            <li class="aside__element" title="Lesson 7">
-              <a class="aside__link" href="#lesson__9">
-                <div class="side__text">9. <p>Команды для консоли.</p>
-                </div>
-              </a>
-              <div class="aside__line"></div>
-            </li>
-          </ul>
-          </divclas>
-      </aside>
-    </div>
-  </main>
-  <!-- ========================================== FOOTER ========================================= -->
-  <!-- ========================================== FOOTER ========================================= -->
-  <footer id="podval" class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="sblock">
-          <p class="footer__zag">Контактные данные</p>
-          <div class="footer__line"></div>
-          <ul>
-            <li class="fotter_contact"><a href="tel:+79937202040">+7(993)7202040</a></li>
-            <li class="fotter_contact"><a href="mailto:Felense2022@yandex.ru">Felense2022@yandex.ru</a></li>
-            <li class="fotter_contact"><a href="#">Instagram</a></li>
-            <li class="fotter_contact"><a href="#">Telegram</a></li>
-            <li class="fotter_contact"><a href="#">Facebook</a></li>
-            <li class="fotter_contact"><a href="#">Vk</a></li>
-          </ul>
-        </div>
-        <div class="sblock">
-          <p class="footer__zag">Дополнительно</p>
-          <div class="footer__line"></div>
-          <ul>
-            <li class="fotter_contact"><a href="Snippets.html">Сниппеты</a></li>
-            <li class="fotter_contact"><a href="Links.html">Полезные ссылки</a></li>
-            <li class="fotter_contact"><a href="VSCode.html">Настройка VSCode</a></li>
-            <li class="fotter_contact"><a href="#">Пункт</a></li>
-            <li class="fotter_contact"><a href="#">Пункт</a></li>
-            <li class="fotter_contact"><a href="#">Пункт</a></li>
-          </ul>
-        </div>
-        <div class="form">
-          <hr>
-          <div class="form__text">Оставьте тзыв.</div>
-          <div class="form__container">
-            <form action="" name="Форма в подвале">
-              <div class="input-1">
-                <div class="form__text2">Имя Oтчество</div>
-                <div class="form__text2">Почта</div>
-                <div class="input__div"><input class="input__footer input__footer--1" placeholder="Иван Иванов"
-                    type="text"></div>
-                <div class="input__div"><input class="input__footer" placeholder="@mail" type="text"></div>
-              </div>
-              <div class="textarea__container">
-                <div class="form__text2">Отзыв</div>
-                <textarea class="input__footer--otz" placeholder="Не пиши сюда больше..." name="text"></textarea>
-              </div>
-              <div class="form__buttons">
-                <button class="but-1" type="submit">Подтвердить</BUtton>
-                <button class="but-2" type="reset">Стереть</BUtton>
-              </div>
-            </form>
-          </div>
-          <hr>
         </div>
       </div>
+      <hr>
+    </article>
+    <article class="GIT__Lessons lesson__3" id="gitlesson__3">
+      <hr>
+      <h1><span>Lesson 3. <br> Рабочие области GIT.</span>
+        <p>L3. Рабочие области GIT.</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <ul class="lesson__list">
+          <li>
+            <span>Working directory</span> - рабочая директория.
+            <p>Видимая область проекта в которой содержатся файлы (папка проекта). </p>
+            <img src="/images/git1.jpg" alt="" class="img">
+          </li>
+          <li>
+            <span>Staging area</span> - индекс.
+            <p>
+              В эту область добавляются файлы перед сохранением. <br> <br>
+              <span>git status</span> - показывает изменения в индексе которые были подготовлены для сохранения
+              (коммита).
+            </p>
+            <img src="/images/git2.jpg" alt="" class="img img--l">
+          </li>
+          <li>
+            <span>Repository</span> - репозиторий (папка.git).
+            <p>
+              Здесь сохраняются все версии файлов проекта. <br> <br>
+              Так же тут сохраняются коммиты (указатели на определенные версии проекта). <br> <br>
+              На примере папки Objekts (в ней сохраняются все объекты репозитория).
+            </p>
+            <img src="/images/git3.jpg" alt="" class="img img--l">
+            <p>
+              Папки появляются после создания объектов gitом. <br> <br>
+              Файлы с длинными названиями (их названия основаны на хешах git-объектов). <br> <br>
+              При изменении файла, в репозитории (папка Objects) сохранится два разных файла (первая версия и
+              вторая).
+            </p>
+          </li>
+        </ul>
+      </div>
+      <hr>
+    </article>
+    <article class="GIT__Lessons lesson__4" id="gitlesson__4">
+      <hr>
+      <h1><span>Lesson 4. <br> Рабочий процесс GIT.</span>
+        <p>L4. Рабочий процесс GIT.</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <ul class="lesson__list">
+          <li>1. Создается папка с файлами - проект. <br> В нее добавлять файлы можно традиционным и не только
+            способами.</li>
+          <li>2. В терминале прописывается команда <span>git init</span>. <br> Она нужно для инициализации
+            репозитория GIT и создания скрытой папки.git. </li>
+          <li>3. В индекс файлы добавляются командой - <span>git add “name”</span> <br>После команды прописывается
+            имя файла, если поставить точку, то добавятся все модифицированные файлы и созданные. </li>
+          <li>4. После добавления изменений в индекс можно сохранить текущую версию проекта в репозиторий командой
+            -
+            <span>git commit -m "messege"</span>.
+          </li>
+          <li>5. Командой <span>git checkout</span> можно перейти к определенной версии проекта. <br> Из
+            репозитория
+            в рабочую директорию перезаписываются файлы, либо добавляются, либо удаляются, тем самым проект будет
+            состоять из нужных версий файлов. </li>
+        </ul>
+      </div>
+      <hr>
+    </article>
+    <article class="GIT__Lessons lesson__5" id="gitlesson__5">
+      <hr>
+      <h1><span>Lesson 5. <br> Статусы отслеживания файллов.</span>
+        <p>L5. Статусы отслеживания файллов.</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <ul class="lesson__list">
+          <li>
+            <span>Untracked</span> - неотслеживаемый.
+            <p>
+              Новые файлы, добавленные в рабочую директорию имеют статус "неотслеживаемые” т.к. еще не находятся в
+              репозитории. Этот статус имеют все новые файлы изначально.
+            </p>
+          </li>
+          <li>
+            <span>Staged</span> - подготовленный.
+            <p>
+              Файлы, добавленные в индекс для сохранения командой <span>git add</span>, имеют статус
+              “подготовленные”
+            </p>
+          </li>
+          <li>
+            <span>Unmpdified</span> - немодифицированный.
+            <p>
+              Файлы, сохраненные в репозиторий командой <br> <span>git commit</span>, имеют статус
+              “немодифицированный”
+            </p>
+          </li>
+          <li>
+            <span>Modified</span> - модифицированный.
+            <p>
+              Файлы (находящиеся в РД, индексе и репозитории), взятые для каких-либо изменений, имеют статус
+              модифицированные. Они могут в дальнейшем иметь статус “подготовленные” и “немодифицированные”.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <hr>
+    </article>
+    <article class="GIT__Lessons lesson__6" id="gitlesson__6">
+      <hr>
+      <h1><span>Lesson 6. <br> Объекты GIT.</span>
+        <p>L6. Объекты GIT.</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <ul class="lesson__list">
+          <li><span>Commit</span> - указатель на дерево (ссылка). </li>
+          <li><span>Blob</span> - файл.</li>
+          <li><span>Tree</span> - папка.</li>
+          <div class=" lesson__image-container">
+            <div class="lesson__block-img">
+              <img src="/images/git4.jpg" alt="" class="img img--l">
+            </div>
+            <div class="lesson__block-img">
+              <img src="/images/git5.jpg" alt="" class="img img--l">
+            </div>
+          </div>
+        </ul>
+      </div>
+      <hr>
+    </article>
+    <article class="GIT__Lessons lesson__7" id="gitlesson__7">
+      <hr>
+      <h1><span>Lesson 7. <br> Удаленный репозиторий GitHub.</span>
+        <p>L7. Удаленный репозиторий GitHub.</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <div class="main__text">
+          Удаленный репозиторий позволяет хранить проект удаленно. <br><br>
+          Удаленные репозитории бывают публичные и частные. публичные репозитории могут скачивать все без
+          ограничений, но загружать изменения в него только с личным доступом. Личный доступ дает админ
+          репозитория
+          ( владелец на GitHub ). С частным репозиторием работать можно только с личным доступом.
+        </div>
+        <h2>Как работать с удаленным репозиторием.</h2>
+        <ul class="lesson__list">
+          <li>1. Сначала уделенный репозиторий скачивается на компьютер командой <span>git clone "url"</span>.
+            <p>
+              При скачивании git создает связь между локальным и удаленным репозиториями, при этом уделенному
+              репозиторию задается имя по умолчанию - origin
+            </p>
+          </li>
+          <li>
+            Далее необходимо подключить удаленный репозиторий к локальному командой <br> <span>git remote add
+              origin
+              "url"</span> ( имя удаленного репозитория заданное на GItHub при его создании ).
+            <p>После этого на удаленный репозиторий можно загружать какие-лмбо изменения, но связь с ветками еще
+              не
+              устанавлена, это нужно делать далее. </p>
+          </li>
+          <li>
+            Теперь локальную ветку (например “new-feature”) необходимо связать с удаленной веткой (например
+            “main”,
+            как правило связывают ветки с одинаковым названием) командой <span>git push –u origin "branch"</span>.
+            <p>После создания связи между ветками загружать обновления можно обычной командой <span>git
+                push</span>.
+            </p>
+          </li>
+          <li>
+            После проделанных действий загружать и скачивать какие-либо изменения в локальной ветке можно
+            командами
+            <span>git push</span> и <span>git pull</span> соответственно.
+          </li>
+        </ul>
+      </div>
+      <hr>
+    </article>
+    <article class="GIT__Lessons lesson__8" id="gitlesson__8">
+      <hr>
+      <h1><span>Lesson 8. <br> Команды GIT.</span>
+        <p>L8. Команды GIT.</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <h2>Основные.</h2>
+        <ul class="lesson__list">
+          <li><span>git init</span> - cоздание репозитория</li>
+          <li><span>git status</span> - отображает текущее состояние репозитория </li>
+          <li><span>git add "file"</span> - добавляет файлы в индекс (поставив точку вместо имени файла добавятся
+            все измененные файлы) </li>
+          <li><span>git commit –m "message"</span> - создание коммита с записью изменений в репозиторий </li>
+          <li><span>git log</span> - просмотр истории изменений </li>
+          <li><span>git checkout "commit hash" </span>- переход в определенную версию проекта по хэшу коммита
+          </li>
+        </ul>
+        <h2>Ветвление.</h2>
+        <ul class="lesson__list">
+          <li><span>git checkout "branch name"</span> - переход на определенную версию проекта по названию ветки
+          </li>
+          <li><span>git branch "branch name"</span> - создание ветки </li>
+          <li><span>git checkout –b "branch name"</span> - создание ветки и переход в нее </li>
+          <li><span>git branch</span> - отображение существующих веток </li>
+          <li><span>git branch –d "branch name"</span> - удаление ветки ( текущую ветку удалить нельзя ) </li>
+          <li><span>git branch -m "name"</span> - переименование текущей ветки имя. </li>
+          <li><span>git merge –m "message" "feature branch name"</span> - слияние другой ветки в текущую </li>
+        </ul>
+        <h2>Удаленный репозиторий.</h2>
+        <ul class="lesson__list">
+          <li><span>git clone "url" </span>- клонирование удаленного репозитория к себе на компьютер. </li>
+          <li><span>git pull</span> - загрузка и применение изменений с удаленной ветки в локальную. </li>
+          <li><span>git push</span> - загрузка изменений из локальной ветки в ветку удаленного репозитория. </li>
+          <li><span>git branch –a</span> - отображает все ветки, включая те, которые находятся в удаленных
+            репозиториях. </li>
+          <li><span>git remote add origin "url"</span> - подключение удаленного репозитория. </li>
+          <li><span>git push –u origin "branch"</span> - загрузка изменения из локальной ветки в удаленную с
+            созданием связи между ними.</li>
+          <li><span>git push –u origin "branch"</span> - загрузка изменения из локальной ветки в удаленную с
+            созданием связи между ними. После создания связи между ветками загружать обновления можно обычной
+            командой git push.</li>
+        </ul>
+        <h2>Прочие.</h2>
+        <ul class="lesson__list">
+          <li><span>git –version</span> - проверка версии </li>
+          <li><span>git config --global user.name “...”</span> - установка имени юзера </li>
+          <li><span>git config --global user.mail “...”</span> - установка почты юзера </li>
+          <li><span>git config --list</span> - проверить настройки git </li>
+          <li><span>git cat-file -t "name"</span> - чтение типа файла.</li>
+          <li><span>git cat-file -p "name"</span> - чтение содержимого файла.</li>
+          <li><span>git remote</span> - проверка подключения удаленного репозитория </li>
+          <li><span>git remote –v</span> - проверка связи между локальным и удаленным репозиториями </li>
+          <li><span>git branch -vv</span> - список и состояние всех локальных и удаленных веток (только данные,
+            которые обновлены с удаленного сервера). </li>
+        </ul>
+      </div>
+      <hr>
+    </article>
+    <article class="GIT__Lessons lesson__9" id="gitlesson__9">
+      <hr>
+      <h1><span>Lesson 9. <br> Команды для консоли.</span>
+        <p>L9. Команды для консоли.</p>
+      </h1>
+      <hr>
+      <div class="lesson__inner">
+        <ul class="lesson__list">
+          <li><span>cd ~/Desktop</span> - переход в папку для работы в ней (тильда обозначает корневую папку
+            юзера/рабочий стол) </li>
+          <li><span>cd ..</span> - выход в родительскую папку (на уровень выше ) </li>
+          <li><span>mkdir my-project</span> - создание новой папки (имя папки) </li>
+          <li><span>ls</span> - проверка наличия файлов в папке </li>
+          <li><span>ls –Force</span> - отобразить скрытые папки в папке </li>
+          <li><span>echo "Some text" > file.txt</span> - создание файла (текст в самом файле, название файла и его
+            расширение ) </li>
+          <li><span>cat file.txt</span> - чтение файла </li>
+          <li><span>rm file.txt</span> - удаление файла </li>
+        </ul>
+      </div>
+      <hr>
+    </article>
+  </section>
+  <!-- ========================================== ASIDE ========================================= -->
+  <!-- ========================================== ASIDE ========================================= -->
+  <aside class="aside">
+    <div class="aside__inner">
+      <div class="sidebar__heading">
+        <hr>
+        GIT
+        <hr>
+      </div>
+      <ul class="aside__list">
+        <li class="aside__element" title="Lesson 1">
+          <a class="aside__link" href="#gitlesson__1">
+            <div class="side__text">1.
+              <p>Что такое GIT.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+        <li class="aside__element" title="Lesson 2">
+          <a class="aside__link" href="#gitlesson__2">
+            <div class="side__text">2. <p>GIT и GitHub.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+        <li class="aside__element" title="Lesson 3">
+          <a class="aside__link" href="#gitlesson__3">
+            <div class="side__text">3. <p>Рабочие области GIT.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+        <li class="aside__element" title="Lesson 4">
+          <a class="aside__link" href="#gitlesson__4">
+            <div class="side__text">4. <p>Рабочий процесс GIT.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+        <li class="aside__element" title="Lesson 5">
+          <a class="aside__link" href="#gitlesson__5">
+            <div class="side__text">5. <p>Статусы отслеживания файлов.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+        <li class="aside__element" title="Lesson 6">
+          <a class="aside__link" href="#gitlesson__6">
+            <div class="side__text">6. <p>Объекты GIT.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+        <li class="aside__element" title="Lesson 7">
+          <a class="aside__link" href="#gitlesson__7">
+            <div class="side__text">7. <p>Удаленный репозиторий GitHub.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+        <li class="aside__element" title="Lesson 7">
+          <a class="aside__link" href="#gitlesson__8">
+            <div class="side__text">8. <p>Команды GIT.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+        <li class="aside__element" title="Lesson 7">
+          <a class="aside__link" href="#gitlesson__9">
+            <div class="side__text">9. <p>Команды для консоли.</p>
+            </div>
+            <div class="aside__line"></div>
+          </a>
+        </li>
+      </ul>
     </div>
-    <div>
-      <a class="button__up" href="#MAIN">
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="18" viewBox="0 0 12 18" fill="none">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M0.792893 6.20711C0.402369 5.81658 0.402369 5.18342 0.792893 4.79289L5.29289 0.292892C5.68342 -0.0976315 6.31658 -0.0976315 6.70711 0.292892L11.2071 4.79289C11.5976 5.18342 11.5976 5.81658 11.2071 6.20711C10.8166 6.59763 10.1834 6.59763 9.79289 6.20711L7 3.41421L7 17C7 17.5523 6.55228 18 6 18C5.44772 18 5 17.5523 5 17L5 3.41421L2.20711 6.20711C1.81658 6.59763 1.18342 6.59763 0.792893 6.20711Z"
-            fill="#979EA2" />
-        </svg>
-        <p>Вверх</p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="18" viewBox="0 0 12 18" fill="none">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M0.792893 6.20711C0.402369 5.81658 0.402369 5.18342 0.792893 4.79289L5.29289 0.292892C5.68342 -0.0976315 6.31658 -0.0976315 6.70711 0.292892L11.2071 4.79289C11.5976 5.18342 11.5976 5.81658 11.2071 6.20711C10.8166 6.59763 10.1834 6.59763 9.79289 6.20711L7 3.41421L7 17C7 17.5523 6.55228 18 6 18C5.44772 18 5 17.5523 5 17L5 3.41421L2.20711 6.20711C1.81658 6.59763 1.18342 6.59763 0.792893 6.20711Z"
-            fill="#979EA2" />
-        </svg>
+  </aside>
+</div>
+<div class="aside__inner aside__mobile aside__git">
+  <div class="sidebar__heading">
+    <hr>
+    GIT
+    <hr>
+  </div>
+  <ul class="aside__list">
+    <li class="aside__element" title="Lesson 1">
+      <a class="aside__link" href="#lesson__1">
+        <div class="side__text">1.
+          <p>Что такое GIT.</p>
+        </div>
+        <div class="aside__line"></div>
       </a>
-    </div>
-  </footer>
+    </li>
+    <li class="aside__element" title="Lesson 2">
+      <a class="aside__link" href="#lesson__2">
+        <div class="side__text">2. <p>GIT и GitHub.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+    <li class="aside__element" title="Lesson 3">
+      <a class="aside__link" href="#lesson__3">
+        <div class="side__text">3. <p>Рабочие области GIT.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+    <li class="aside__element" title="Lesson 4">
+      <a class="aside__link" href="#lesson__4">
+        <div class="side__text">4. <p>Рабочий процесс GIT.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+    <li class="aside__element" title="Lesson 5">
+      <a class="aside__link" href="#lesson__5">
+        <div class="side__text">5. <p>Статусы отслеживания файлов.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+    <li class="aside__element" title="Lesson 6">
+      <a class="aside__link" href="#lesson__6">
+        <div class="side__text">6. <p>Объекты GIT.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+    <li class="aside__element" title="Lesson 7">
+      <a class="aside__link" href="#lesson__7">
+        <div class="side__text">7. <p>Удаленный репозиторий GitHub.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+    <li class="aside__element" title="Lesson 7">
+      <a class="aside__link" href="#lesson__8">
+        <div class="side__text">8. <p>Команды GIT.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+    <li class="aside__element" title="Lesson 7">
+      <a class="aside__link" href="#lesson__9">
+        <div class="side__text">9. <p>Команды для консоли.</p>
+        </div>
+        <div class="aside__line"></div>
+      </a>
+    </li>
+  </ul>
 </div>
