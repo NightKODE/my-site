@@ -1,10 +1,15 @@
 @import "variables";
 @import "mixins";
 
+:root {
+  --header-height: 113px;
+}
+
 /* ========================================== GLOBAL ========================================== */
 /* ========================================== GLOBAL ========================================== */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
   background-image: url(/images/grass1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -18,21 +23,25 @@ html {
   transition: all .3s;
 }
 
-.main__inner, .main__inner--no-aside {
+.main__inner,
+.main__inner--no-aside {
   position: relative;
   max-width: 1400px;
   padding: 0 15px;
   margin: 0 auto;
   transition: all .3s;
 }
-.main__inner{
+
+.main__inner {
   display: flex;
 }
-.main__inner--no-aside{
-  section{
+
+.main__inner--no-aside {
+  section {
     width: 100%;
   }
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -133,9 +142,11 @@ html {
 ::-webkit-scrollbar-button {
   display: none;
 }
-.hidden__container{
+
+.hidden__container {
   position: absolute;
 }
+
 /* ========================================== HEADER ========================================== */
 /* ========================================== HEADER ========================================== */
 .burger {
@@ -218,6 +229,7 @@ html {
   width: 200px;
   transition: all .3s;
 }
+
 .header__search-block:hover .header__search-stroke-light {
   width: 200px;
   transition: all .3s;
@@ -248,7 +260,8 @@ html {
   width: 0px;
   transition: all 0.3s ease-in;
 }
-.header__search-stroke-light{
+
+.header__search-stroke-light {
   background: white;
   color: black;
   font-size: 18px;
@@ -266,11 +279,13 @@ html {
   color: #787A80;
   transition: all .3s;
 }
-.header__search-stroke-light::placeholder{
+
+.header__search-stroke-light::placeholder {
   background-color: white;
   color: #404144;
   transition: all .3s;
 }
+
 .header__nav-container {
   display: flex;
   width: fit-content;
@@ -318,39 +333,48 @@ html {
   overflow: hidden;
   width: 39px;
   height: 39px;
+
   &:hover {
     border: solid 3px #f35510;
-    path{
+
+    path {
       fill: #f35510;
-      
+
     }
   }
 }
-.button-light__icon{
+
+.button-light__icon {
   position: absolute;
   height: 22px;
   width: 22px;
   top: 0;
-  svg{
+
+  svg {
     transition: all .3s;
   }
-  path{
+
+  path {
     transition: all .3s;
   }
 
 }
-.moon{
+
+.moon {
   transition: all .5s;
 }
-.sun{
+
+.sun {
   top: 30px;
   transform: scale(1.2);
   transition: all .5s;
-  svg{
+
+  svg {
     fill: #f35510;
   }
 }
-#light-button-mobile{
+
+#light-button-mobile {
   display: none;
 }
 
@@ -437,6 +461,10 @@ p {
   -webkit-transform: translateY(8px);
   transform: translateY(8px);
   margin-right: 15px;
+  svg{
+    height: 100%;
+    width: 100%;
+  }
 }
 
 hr {
@@ -2073,6 +2101,31 @@ th {
   max-width: 350px;
 }
 
+/* ------------- JavaScript__LESSON ------------ */
+/* ------------- JavaScript__LESSON ------------ */
+.JS__Lesson button {
+  padding: 20px;
+  margin-bottom: 50px;
+  color: white;
+  border-radius: 15px;
+  background: hsla(212, 13%, 40%, 0.5);
+  display: block;
+  font-size: 20px;
+  transition: all .3s;
+  &:hover {
+    transform: scale(1.1);
+    color: #00afce;
+  }
+}
+
+.button__prompt,
+.button__switch,
+.button__for,
+.button__break,
+.button__continue {
+  margin: 0 auto;
+}
+
 /* ========================================== ASIDE ========================================== */
 /* ========================================== ASIDE ========================================== */
 .aside {
@@ -2318,8 +2371,6 @@ th {
 .input-1 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto [2];
-  -ms-grid-columns: auto [2];
   grid-template: repeat(2, auto)/repeat(2, auto);
 }
 
@@ -2492,14 +2543,11 @@ button {
 }
 
 .button__up svg {
-  -webkit-transform: scale(1.5);
   transform: scale(1.5);
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .button__up:hover svg {
-  -webkit-transform: scale(2);
   transform: scale(2);
 }
 
@@ -2535,6 +2583,7 @@ button {
   .header__search-stroke {
     width: 200px;
   }
+
   .header__search-stroke-light {
     width: 200px;
   }
@@ -2608,10 +2657,14 @@ button {
     left: 0;
     background-color: hsla(0, 0%, 0%, 0.6);
     z-index: 100;
-    min-width: 320px;
+    min-width: 350px;
     font-family: Lato;
     transform: translateX(-100%);
     transition: all 0.3s;
+
+    .aside__list {
+      height: 100%;
+    }
   }
 
   .aside__mobile--open {
@@ -2624,7 +2677,7 @@ button {
     right: 100px;
     position: fixed;
     bottom: 10px;
-    z-index: 100;
+    z-index: 750;
     width: 150px;
     height: 60px;
     background: rgba(255, 255, 255, 0.176);
@@ -2670,7 +2723,7 @@ button {
     right: 0;
     background-color: hsla(0, 0%, 0%, 0.6);
     z-index: 100;
-    min-width: 320px;
+    min-width: 350px;
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
     -webkit-transition: all 0.3s;
@@ -2774,51 +2827,61 @@ button {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
   }
-  .header__button-light-theme{
+
+  .header__button-light-theme {
     display: none;
   }
-  #light-button-mobile{
+
+  #light-button-mobile {
     background: rgba(255, 255, 255, 0.176);
     backdrop-filter: blur(8.9px);
     display: block;
     right: 270px;
     position: fixed;
     bottom: 10px;
-    z-index: 100;
+    z-index: 750;
     width: 60px;
     height: 60px;
     margin: 0;
     border-radius: 50%;
-    .button-light__icon{
+
+    .button-light__icon {
       position: absolute;
       height: 40px;
       width: 40px;
       left: 7px;
-      svg{
+
+      svg {
         transition: all .3s;
       }
-      path{
+
+      path {
         transition: all .3s;
       }
-    
+
     }
-    svg{
+
+    svg {
       width: 40px;
       height: 40px;
     }
   }
-  .moon--mobile{
+
+  .moon--mobile {
     transition: all .5s;
     top: 7px;
   }
-  .sun--mobile{
+
+  .sun--mobile {
     top: 60px;
     transform: scale(1.2);
     transition: all .5s;
-    svg{
+
+    svg {
       fill: #f35510;
     }
   }
+
   /* --------- MAIN ---------- */
   .main__container {
     padding-top: 50px;

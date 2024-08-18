@@ -1,8 +1,13 @@
 @charset "UTF-8";
+:root {
+  --header-height: 113px;
+}
+
 /* ========================================== GLOBAL ========================================== */
 /* ========================================== GLOBAL ========================================== */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
   background-image: url(/images/grass1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -18,7 +23,8 @@ html {
   transition: all 0.3s;
 }
 
-.main__inner, .main__inner--no-aside {
+.main__inner,
+.main__inner--no-aside {
   position: relative;
   max-width: 1400px;
   padding: 0 15px;
@@ -538,6 +544,12 @@ p {
   -webkit-transform: translateY(8px);
   transform: translateY(8px);
   margin-right: 15px;
+}
+.att-icon svg,
+.info-icon svg,
+.code-icon svg {
+  height: 100%;
+  width: 100%;
 }
 
 hr {
@@ -2230,6 +2242,33 @@ th {
   max-width: 350px;
 }
 
+/* ------------- JavaScript__LESSON ------------ */
+/* ------------- JavaScript__LESSON ------------ */
+.JS__Lesson button {
+  padding: 20px;
+  margin-bottom: 50px;
+  color: white;
+  border-radius: 15px;
+  background: hsla(212, 13%, 40%, 0.5);
+  display: block;
+  font-size: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.JS__Lesson button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #00afce;
+}
+
+.button__prompt,
+.button__switch,
+.button__for,
+.button__break,
+.button__continue {
+  margin: 0 auto;
+}
+
 /* ========================================== ASIDE ========================================== */
 /* ========================================== ASIDE ========================================== */
 .aside {
@@ -2484,9 +2523,9 @@ th {
 .input-1 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto [2];
-  -ms-grid-columns: auto [2];
-  grid-template: repeat(2, auto)/repeat(2, auto);
+  -ms-grid-rows: (auto)[2];
+  -ms-grid-columns: (auto)[2];
+      grid-template: repeat(2, auto)/repeat(2, auto);
 }
 
 .form {
@@ -2660,14 +2699,14 @@ button {
 
 .button__up svg {
   -webkit-transform: scale(1.5);
-  transform: scale(1.5);
+          transform: scale(1.5);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .button__up:hover svg {
   -webkit-transform: scale(2);
-  transform: scale(2);
+          transform: scale(2);
 }
 
 /* ---------------------- adaptive --------------------------- */
@@ -2758,12 +2797,15 @@ button {
     left: 0;
     background-color: hsla(0, 0%, 0%, 0.6);
     z-index: 100;
-    min-width: 320px;
+    min-width: 350px;
     font-family: Lato;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+  }
+  .aside__mobile .aside__list {
+    height: 100%;
   }
   .aside__mobile--open {
     -webkit-transform: translateX(0%);
@@ -2775,7 +2817,7 @@ button {
     right: 100px;
     position: fixed;
     bottom: 10px;
-    z-index: 100;
+    z-index: 750;
     width: 150px;
     height: 60px;
     background: rgba(255, 255, 255, 0.176);
@@ -2823,7 +2865,7 @@ button {
     right: 0;
     background-color: hsla(0, 0%, 0%, 0.6);
     z-index: 100;
-    min-width: 320px;
+    min-width: 350px;
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
     -webkit-transition: all 0.3s;
@@ -2939,7 +2981,7 @@ button {
     right: 270px;
     position: fixed;
     bottom: 10px;
-    z-index: 100;
+    z-index: 750;
     width: 60px;
     height: 60px;
     margin: 0;

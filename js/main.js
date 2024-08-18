@@ -9,6 +9,7 @@ $(document).ready(function () {
   const mainSNIP = $('#MAINSNIP');
   const mainLINKS = $('#MAINLINKS');
   const mainVSCODE = $('#MAINVSCODE');
+  const mainPage = $('#MAINPAGE');
   $('#MAINhtml').slideUp();
   $('#MAINCSS').slideUp();
   $('#MAINSCSS').slideUp();
@@ -19,33 +20,13 @@ $(document).ready(function () {
   $('#MAINLINKS').slideUp();
   $('#MAINVSCODE').slideUp();
 
-  $('.header__nav-element').on('click', function () {
-    if ($(this).hasClass('now')) {
-      $('html,body').animate({ scrollTop: 0 }, 900)
-    }
-  })
-  $('#snippets__link').on('click', function () {
-    if ($(this).hasClass('now')) {
-      $('html,body').animate({ scrollTop: 0 }, 900)
-    }
-  })
-  $('#links__link').on('click', function () {
-    if ($(this).hasClass('now')) {
-      $('html,body').animate({ scrollTop: 0 }, 900)
-    }
-  })
-  $('#vscode__link').on('click', function () {
-    if ($(this).hasClass('now')) {
-      $('html,body').animate({ scrollTop: 0 }, 900)
-    }
-  })
-  //HTML
-  $('#html__link').on('click', function (e) {
+  //MAIN
+  $('#main__link').on('click', function (e) {
     e.preventDefault();
-    $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainHtml.slideUp()) {
+    $('html, body').animate({ scrollTop: 0 });
+    if (mainPage.slideDown()) {
       $(this).addClass('now');
-      mainHtml.slideDown();
+      mainHtml.slideUp();
       mainCSS.slideUp();
       mainSCSS.slideUp();
       mainGIT.slideUp();
@@ -54,23 +35,33 @@ $(document).ready(function () {
       mainSNIP.slideUp();
       mainLINKS.slideUp();
       mainVSCODE.slideUp();
-      $('#MAINPAGE').slideUp();
     }
-    $('#css__link').removeClass('now');
-    $('#scss__link').removeClass('now');
-    $('#git__link').removeClass('now');
-    $('#js__link').removeClass('now');
-    $('#jq__link').removeClass('now');
-    $('#snippets__link').removeClass('now');
-    $('#links__link').removeClass('now');
-    $('#vscode__link').removeClass('now');
+    $('#html__link, #css__link. #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+
+  });
+  //HTML
+  $('#html__link').on('click', function (e) {
+    e.preventDefault();
+    $('html,body').animate({ scrollTop: 0 })
+    if (mainHtml.slideDown()) {
+      $(this).addClass('now');
+      mainCSS.slideUp();
+      mainSCSS.slideUp();
+      mainGIT.slideUp();
+      mainJAVA.slideUp();
+      mainJQ.slideUp();
+      mainSNIP.slideUp();
+      mainLINKS.slideUp();
+      mainVSCODE.slideUp();
+      mainPage.slideUp();
+    }
+    $('#css__link. #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   });
   //CSS
   $('#css__link').on('click', function (e) {
     e.preventDefault();
     $('html,body').animate({ scrollTop: 0 }, 300)
     if (mainCSS.slideDown()) {
-      mainCSS.slideDown();
       $(this).addClass('now');
       mainHtml.slideUp();
       mainSCSS.slideUp();
@@ -80,17 +71,9 @@ $(document).ready(function () {
       mainSNIP.slideUp();
       mainLINKS.slideUp();
       mainVSCODE.slideUp();
-      $('#MAINPAGE').slideUp();
-
+      mainPage.slideUp();
     }
-    $('#html__link').removeClass('now');
-    $('#scss__link').removeClass('now');
-    $('#git__link').removeClass('now');
-    $('#js__link').removeClass('now');
-    $('#jq__link').removeClass('now');
-    $('#snippets__link').removeClass('now');
-    $('#links__link').removeClass('now');
-    $('#vscode__link').removeClass('now');
+    $('#html__link, #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   });
   //SASS
   $('#scss__link').on('click', function (e) {
@@ -107,24 +90,16 @@ $(document).ready(function () {
       mainSNIP.slideUp();
       mainLINKS.slideUp();
       mainVSCODE.slideUp();
-      $('#MAINPAGE').slideUp();
+      mainPage.slideUp();
 
     }
-    $('#html__link').removeClass('now');
-    $('#css__link').removeClass('now');
-    $('#git__link').removeClass('now');
-    $('#js__link').removeClass('now');
-    $('#jq__link').removeClass('now');
-    $('#snippets__link').removeClass('now');
-    $('#links__link').removeClass('now');
-    $('#vscode__link').removeClass('now');
+    $('#html__link, #css__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   })
   //GIT
   $('#git__link').on('click', function (e) {
     e.preventDefault();
     $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainGIT.slideUp()) {
-      mainGIT.slideDown();
+    if (mainGIT.slideDown()) {
       $(this).addClass('now');
       mainHtml.slideUp();
       mainCSS.slideUp();
@@ -134,24 +109,16 @@ $(document).ready(function () {
       mainSNIP.slideUp();
       mainLINKS.slideUp();
       mainVSCODE.slideUp();
-      $('#MAINPAGE').slideUp();
+      mainPage.slideUp();
 
     }
-    $('#html__link').removeClass('now');
-    $('#scss__link').removeClass('now');
-    $('#css__link').removeClass('now');
-    $('#js__link').removeClass('now');
-    $('#jq__link').removeClass('now');
-    $('#snippets__link').removeClass('now');
-    $('#links__link').removeClass('now');
-    $('#vscode__link').removeClass('now');
+    $('#html__link, #scss__link, #css__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   })
   //JAVASCRIPT
   $('#js__link').on('click', function (e) {
     e.preventDefault();
     $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainJAVA.slideUp()) {
-      mainJAVA.slideDown();
+    if (mainJAVA.slideDown()) {
       $(this).addClass('now');
       mainHtml.slideUp();
       mainCSS.slideUp();
@@ -161,24 +128,16 @@ $(document).ready(function () {
       mainSNIP.slideUp();
       mainLINKS.slideUp();
       mainVSCODE.slideUp();
-      $('#MAINPAGE').slideUp();
+      mainPage.slideUp();
 
     }
-    $('#html__link').removeClass('now');
-    $('#scss__link').removeClass('now');
-    $('#git__link').removeClass('now');
-    $('#css__link').removeClass('now');
-    $('#jq__link').removeClass('now');
-    $('#snippets__link').removeClass('now');
-    $('#links__link').removeClass('now');
-    $('#vscode__link').removeClass('now');
+    $('#html__link, #scss__link, #git__link, #css__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   })
   //JQ
   $('#jq__link').on('click', function (e) {
     e.preventDefault();
     $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainJQ.slideUp()) {
-      mainJQ.slideDown();
+    if (mainJQ.slideDown()) {
       $(this).addClass('now');
       mainHtml.slideUp();
       mainCSS.slideUp();
@@ -188,26 +147,17 @@ $(document).ready(function () {
       mainSNIP.slideUp();
       mainLINKS.slideUp();
       mainVSCODE.slideUp();
-      $('#MAINPAGE').slideUp();
+      mainPage.slideUp();
 
     }
-    $('#html__link').removeClass('now');
-    $('#scss__link').removeClass('now');
-    $('#git__link').removeClass('now');
-    $('#js__link').removeClass('now');
-    $('#css__link').removeClass('now');
-    $('#snippets__link').removeClass('now');
-    $('#links__link').removeClass('now');
-    $('#vscode__link').removeClass('now');
+    $('#html__link, #scss__link, #git__link, #js__link, #css__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   })
   //SNIPPETS
   $('#snippets__link').on('click', function (e) {
     e.preventDefault();
     $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainSNIP.slideUp()) {
-      mainSNIP.slideDown();
+    if (mainSNIP.slideDown()) {
       $(this).addClass('now');
-      mainHtml.slideUp();
       mainCSS.slideUp();
       mainSCSS.slideUp();
       mainGIT.slideUp();
@@ -215,24 +165,16 @@ $(document).ready(function () {
       mainJQ.slideUp();
       mainLINKS.slideUp();
       mainVSCODE.slideUp();
-      $('#MAINPAGE').slideUp();
-
+      mainPage.slideUp();
+      mainHtml.slideUp();
     }
-    $('#html__link').removeClass('now');
-    $('#scss__link').removeClass('now');
-    $('#git__link').removeClass('now');
-    $('#js__link').removeClass('now');
-    $('#jq__link').removeClass('now');
-    $('#css__link').removeClass('now');
-    $('#links__link').removeClass('now');
-    $('#vscode__link').removeClass('now');
+    $('#html__link, #scss__link, #git__link, #js__link, #jq__link, #css__link, #links__link, #vscode__link').removeClass('now');
   })
   //LINKS
   $('#links__link').on('click', function (e) {
     e.preventDefault();
     $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainLINKS.slideUp()) {
-      mainLINKS.slideDown();
+    if (mainLINKS.slideDown()) {
       $(this).addClass('now');
       mainHtml.slideUp();
       mainCSS.slideUp();
@@ -242,24 +184,16 @@ $(document).ready(function () {
       mainJQ.slideUp();
       mainSNIP.slideUp();
       mainVSCODE.slideUp();
-      $('#MAINPAGE').slideUp();
+      mainPage.slideUp();
 
     }
-    $('#html__link').removeClass('now');
-    $('#scss__link').removeClass('now');
-    $('#git__link').removeClass('now');
-    $('#js__link').removeClass('now');
-    $('#jq__link').removeClass('now');
-    $('#snippets__link').removeClass('now');
-    $('#css__link').removeClass('now');
-    $('#vscode__link').removeClass('now');
+    $('#html__link, #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #css__link, #vscode__link').removeClass('now');
   })
   //VSCODE
   $('#vscode__link').on('click', function (e) {
     e.preventDefault();
     $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainVSCODE.slideUp()) {
-      mainVSCODE.slideDown();
+    if (mainVSCODE.slideDown()) {
       $(this).addClass('now');
       mainHtml.slideUp();
       mainCSS.slideUp();
@@ -269,17 +203,10 @@ $(document).ready(function () {
       mainJQ.slideUp();
       mainSNIP.slideUp();
       mainLINKS.slideUp();
-      $('#MAINPAGE').slideUp();
+      mainPage.slideUp();
 
     }
-    $('#html__link').removeClass('now');
-    $('#scss__link').removeClass('now');
-    $('#git__link').removeClass('now');
-    $('#js__link').removeClass('now');
-    $('#jq__link').removeClass('now');
-    $('#snippets__link').removeClass('now');
-    $('#links__link').removeClass('now');
-    $('#css__link').removeClass('now');
+    $('#html__link, #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #css__link').removeClass('now');
   })
   // Header burrger follow
 
@@ -308,13 +235,13 @@ $(document).ready(function () {
   $('.podval').click(function () {
     $('.header__container').removeClass('header__top--open');
     $('.overlay').removeClass('overlay--show')
-  })
+  });
   // Aside
   $('.aside__link').on("click", function () {
     $('.aside__mobile').removeClass('aside__mobile--open');
     if ($(this).hasClass('aside-active')) {
-      $(this).removeClass('aside-active');
-      $(this).next('.aside__themes-container').slideUp(300);
+      // $(this).removeClass('aside-active');
+      // $(this).next('.aside__themes-container').slideUp(300);
     } else {
       $('.aside__link').removeClass('aside-active');
       $('.aside__themes-container').slideUp(300);
@@ -322,6 +249,21 @@ $(document).ready(function () {
       $(this).next('.aside__themes-container').slideDown(300);
     }
   });
+  // const scrollElement = () =>{
+  //   const windowHeight = $(window).height(80)
+  //   if ($('#htmllesson__3').windowHeight){
+  //     // for(let classEnd = 1; classEnd<100; classEnd++);
+  //     alert('Высота до элемента равна 80px')
+  //   }
+  // }
+  // scrollElement()
+  // for(let classEnd = 1; classEnd<100; classEnd++);
+  // const positionElement = $('article').offset().top;
+  // const heights = []
+  // $("article").each(function(index, element){
+  //   heights.push($(element).height());
+  //   console.log(positionElement);
+  // });
   //Button themes
   $('.button__themes').on('click', function (e) {
     e.preventDefault();
@@ -346,6 +288,12 @@ $(document).ready(function () {
     if ($('#links__link').hasClass('now')) {
       $('.aside__links').toggleClass('aside__mobile--open');
     };
+    if($('.header__container').hasClass('header__top--open')){
+      $('.header__container').removeClass('header__top--open');
+    };
+    if($('.overlay').hasClass('overlay--show')){
+      $('.overlay').removeClass('overlay--show')
+    }
   });
   $('.main__inner').on('click', function () {
     $('.aside__mobile').removeClass('aside__mobile--open');
@@ -546,9 +494,6 @@ $(document).ready(function () {
       $btnTop.fadeOut(10);
     }
   })
-  $btnTop.on('click', function () {
-    $('html,body').animate({ scrollTop: 0 }, 900)
-  });
 
   // Счетчик
   $('.count').each(function () {
@@ -589,13 +534,13 @@ $(document).ready(function () {
         displayNotification();
       }, 295)
     })
-  })
+  });
   //SKILLBAR
   $('.skillbar').each(function () {
     $(this).find('.skillbar-bar').animate({
       width: $(this).attr('data-percent')
     }, 2000)
-  })
+  });
   //ACCORDION
   $('.accordion-header').on("click", function () {
     if ($(this).hasClass('active')) {
@@ -607,5 +552,69 @@ $(document).ready(function () {
       $(this).addClass('active');
       $(this).next('.accordion-body').slideDown(300);
     }
-  })
+  });
+  //JavaScript lesson 16
+  //button__prompt
+  $('.button__prompt').on('click', function () {
+    let userAge = prompt('Сколько вам лет?', 18);
+    if (userAge >= 18) {
+      alert('Доступ к сайту разрешен)')
+    } else (
+      alert('Доступ все равно разрешен, ограничений по возрасту нет)')
+    )
+  });
+  //button__switch
+  $('.button__switch').on('click', function () {
+    let ageSwitch = +prompt('Сколько вам лет?', 18);
+    switch (true) {
+      case ageSwitch < 1: {
+        alert('Такого возраста не бывает')
+        break
+      }
+      case ageSwitch >= 100 && ageSwitch <= 150: {
+        alert('Не верю, покажи паспорт)')
+        break
+      }
+      case ageSwitch > 150: {
+        alert('Вампир что-ли?)')
+        break
+      }
+      default: {
+        alert('Ваш возраст ' + ageSwitch + '?')
+      }
+    }
+  });
+  //button__for
+  $('.button__for').on('click', function () {
+    for (let i = 0; i < 4; i++) {
+      alert(i)
+    }
+  });
+  //button__break
+  $('.button__break').on('click', function () {
+    let breakCount = 1
+    while (breakCount < 10) {
+      alert(breakCount)
+      if (breakCount % 5 === 0) {
+        alert('Цикл прерван')
+        break
+      }
+      breakCount++
+    }
+  });
+  //button__ocntinue
+  $('.button__continue').on('click', function(){
+    for(let contCount = 1; contCount < 10; contCount++){
+      if (contCount % 2 === 0){
+        continue
+      }
+      alert(contCount)
+    }
+  });
+  // for(let classEnd = 1; classEnd<100; classEnd++);
+  // if($('.lesson__${classEnd}').ofset() === 80){
+  //   $('.aside__element').attr('title')
+  // }
+
 })
+
