@@ -1,6 +1,10 @@
 $(document).ready(function () {
+  // $('main').on('click', function(){
+  //   console.log('main.js is ready!')
+  // });
   // ---------------nothing pages--------------
   const mainHtml = $('#MAINhtml');
+  const mainElements = $('#MAINelements')
   const mainCSS = $('#MAINCSS');
   const mainSCSS = $('#MAINSCSS');
   const mainGIT = $('#MAINGIT');
@@ -36,8 +40,27 @@ $(document).ready(function () {
       mainLINKS.slideUp();
       mainVSCODE.slideUp();
     }
-    $('#html__link, #css__link. #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('#elements__link, #html__link, #css__link. #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+  });
 
+  //ELEMENTS
+  $('#elements__link').on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 });
+    if (mainEelements.slideDown()) {
+      $(this).addClass('now');
+      mainPage.slideUp();
+      mainHtml.slideUp();
+      mainCSS.slideUp();
+      mainSCSS.slideUp();
+      mainGIT.slideUp();
+      mainJAVA.slideUp();
+      mainJQ.slideUp();
+      mainSNIP.slideUp();
+      mainLINKS.slideUp();
+      mainVSCODE.slideUp();
+    }
+    $('#main__link, #html__link, #css__link. #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   });
   //HTML
   $('#html__link').on('click', function (e) {
@@ -55,7 +78,7 @@ $(document).ready(function () {
       mainVSCODE.slideUp();
       mainPage.slideUp();
     }
-    $('#css__link. #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('#main__link, #elements__link, #css__link. #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   });
   //CSS
   $('#css__link').on('click', function (e) {
@@ -73,14 +96,13 @@ $(document).ready(function () {
       mainVSCODE.slideUp();
       mainPage.slideUp();
     }
-    $('#html__link, #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('#main__link, #elements__link, #html__link, #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   });
   //SASS
   $('#scss__link').on('click', function (e) {
     e.preventDefault();
     $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainSCSS.slideUp()) {
-      mainSCSS.slideDown();
+    if (mainSCSS.slideDown()) {
       $(this).addClass('now');
       mainHtml.slideUp();
       mainCSS.slideUp();
@@ -93,7 +115,7 @@ $(document).ready(function () {
       mainPage.slideUp();
 
     }
-    $('#html__link, #css__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('#main__link, #elements__link, #html__link, #css__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   })
   //GIT
   $('#git__link').on('click', function (e) {
@@ -112,7 +134,7 @@ $(document).ready(function () {
       mainPage.slideUp();
 
     }
-    $('#html__link, #scss__link, #css__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('#main__link, #elements__link, #html__link, #scss__link, #css__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   })
   //JAVASCRIPT
   $('#js__link').on('click', function (e) {
@@ -131,7 +153,7 @@ $(document).ready(function () {
       mainPage.slideUp();
 
     }
-    $('#html__link, #scss__link, #git__link, #css__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('#main__link, #elements__link, #html__link, #scss__link, #git__link, #css__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   })
   //JQ
   $('#jq__link').on('click', function (e) {
@@ -150,7 +172,7 @@ $(document).ready(function () {
       mainPage.slideUp();
 
     }
-    $('#html__link, #scss__link, #git__link, #js__link, #css__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('#main__link, #elements__link, #html__link, #scss__link, #git__link, #js__link, #css__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   })
   //SNIPPETS
   $('#snippets__link').on('click', function (e) {
@@ -168,7 +190,7 @@ $(document).ready(function () {
       mainPage.slideUp();
       mainHtml.slideUp();
     }
-    $('#html__link, #scss__link, #git__link, #js__link, #jq__link, #css__link, #links__link, #vscode__link').removeClass('now');
+    $('#main__link, #elements__link, #html__link, #scss__link, #git__link, #js__link, #jq__link, #css__link, #links__link, #vscode__link').removeClass('now');
   })
   //LINKS
   $('#links__link').on('click', function (e) {
@@ -187,7 +209,7 @@ $(document).ready(function () {
       mainPage.slideUp();
 
     }
-    $('#html__link, #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #css__link, #vscode__link').removeClass('now');
+    $('#main__link, #elements__link, #html__link, #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #css__link, #vscode__link').removeClass('now');
   })
   //VSCODE
   $('#vscode__link').on('click', function (e) {
@@ -206,8 +228,32 @@ $(document).ready(function () {
       mainPage.slideUp();
 
     }
-    $('#html__link, #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #css__link').removeClass('now');
+    $('#main__link, #elements__link, #html__link, #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #css__link').removeClass('now');
   })
+  //FIRST__MODAL
+  $('.first-modal__button-continue').on('click', function(){
+    $('.overlay').removeClass('overlay--show');
+    $(this).animate({
+      opacity: 0,
+      bottom: -500,
+    },300);
+    $('.first-modal__text').animate({
+      opacity: 0,
+      right: -1500,
+    }, 300);
+    $('.first-modal__container').animate({
+      opacity: 0,
+      left: -1500,
+    }, 300);
+    $('.first-modal__hr').animate({
+      top: -500,
+      opacity: 0,
+    }, 300);
+    $('.first-modal__heading').animate({
+      top: -500,
+      opacity: 0,
+    }, 300);
+  });
   // Header burrger follow
 
   // setInterval(() => {
@@ -455,7 +501,7 @@ $(document).ready(function () {
   $('.innerh').click(function () {
     $('.innerh-text').text(innerHeight.innerHeight())
   })
-  // Slider
+  // SLIDER
   $('.slider__next').click(function (e) {
     e.preventDefault();
     const sImg = $('.slider__img.curry');
@@ -471,7 +517,7 @@ $(document).ready(function () {
       nextImg.fadeIn(1000);
       nextImg.addClass('curry');
     }
-  })
+  });
   $('.slider__prev').click(function (e) {
     e.preventDefault();
     const sImg = $('.slider__img.curry');
@@ -483,7 +529,7 @@ $(document).ready(function () {
     sImg.removeClass('curry');
     prevImg.fadeIn(1000);
     prevImg.addClass('curry');
-  })
+  });
   // Back to top button
   const $btnTop = $('.button__back-to-top');
   $btnTop.fadeOut();
@@ -522,7 +568,6 @@ $(document).ready(function () {
 
   $('#taskAdd').on('click', function () {
     if (!$taskInput.val()) { return false; }
-
     $tasksList.append("<li>" + $taskInput.val() + "<button class='delete'>&#10006</button></li>");
     $taskInput.val("");
     displayNotification();
@@ -615,6 +660,67 @@ $(document).ready(function () {
   // if($('.lesson__${classEnd}').ofset() === 80){
   //   $('.aside__element').attr('title')
   // }
-
+/* ========================================== ELEMENTS ========================================== */
+/* ========================================== ELEMENTS ========================================== */
+//ACCORDION
+$('.elements__accordeon-heading').on("click", function () {
+  if ($(this).hasClass('active2')) {
+    $(this).removeClass('active2');
+    $(this).next('.elements__accordeon-body').slideUp(300);
+    $(this).children('.elements__accordeon-icon').children('.elements__accordeon-icon-2').removeClass('active-accordion');
+  } else {
+    $('.elements__accordeon-header').removeClass('active2');
+    $('.elements__accordeon-body').slideUp(300);
+    $('.elements__accordeon-icon-2').removeClass('active-accordion');
+    $(this).addClass('active2');
+    $(this).next('.elements__accordeon-body').slideDown(300);
+    $(this).children('.elements__accordeon-icon').children('.elements__accordeon-icon-2').addClass('active-accordion');
+  }
+});
+//MODAL
+$('.elements__modal-col').on('click', function(){
+  $('.overlay').toggleClass('overlay--show');
+  $('.elements__modal-container').toggleClass('overlay--show');
+});
+$('.elements__modal-close').on('click', function(){
+  $('.overlay').toggleClass('overlay--show');
+  $('.elements__modal-container').toggleClass('overlay--show');
+});
+//SLICK__SLIDER
+// $('.elements__slider-container').slick();
+// $('.elements__slider-container').slick({
+//   dots: true,
+//   arrows: false,
+//   slidesToShow: 3,
+//   infinite: true,
+//   // draggable: true,
+//   // waitForAnimate: false,
+//   appendDots: $('.elements__slider-dots-container'),
+//   responsive:
+//   [
+//     {
+//       breakpoint: 750,
+//       settings:{
+//         slidesToShow: 2,
+//       },
+//     },
+//     {
+//       breakpoint: 550,
+//       settings:{
+//         slidesToShow: 1,
+//         draggable: true,
+//         dots: true,
+//       },
+//     },
+//   ]
+// })
+// $('.elements__slider-prev').on('click', function (e) {
+//   e.preventDefault()
+//   $('.elements__slider-container').slick('slickPrev')
+// })
+// $('.elements__slider-next').on('click', function (e) {
+//   e.preventDefault()
+//   $('.elements__slider-container').slick('slickNext')
+// })
 })
 
