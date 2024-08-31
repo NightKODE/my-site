@@ -232,6 +232,7 @@ $(document).ready(function () {
   })
   //FIRST__MODAL
   $('.first-modal__button-continue').on('click', function(){
+    $('.first-modal').addClass('disable');
     $('.overlay').removeClass('overlay--show');
     $(this).animate({
       opacity: 0,
@@ -253,6 +254,9 @@ $(document).ready(function () {
       top: -500,
       opacity: 0,
     }, 300);
+    // setTimeout(function(){
+
+    // })
   });
   // Header burrger follow
 

@@ -190,6 +190,10 @@ html {
   transform: scale(1.2);
 }
 
+.disable {
+  display: none;
+}
+
 /* ========================================== HEADER ========================================== */
 /* ========================================== HEADER ========================================== */
 .burger {
@@ -2659,8 +2663,29 @@ button {
     margin-bottom: 30px;
   }
   /* --------- ASIDE ---------- */
+  /* --------- ASIDE ---------- */
   .sidebar__heading {
     font-size: 35px;
+  }
+  /* --------- FIRST__MODAL ---------- */
+  /* --------- FIRST__MODAL ---------- */
+  .first-modal .first-modal__hr {
+    margin-bottom: 20px;
+  }
+  .first-modal__container {
+    padding: 40px;
+  }
+  .first-modal__heading {
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+  .first-modal__text {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .first-modal__button-continue {
+    font-size: 25px;
+    padding: 17px;
   }
 }
 /* --------------- 1000px ---------------- */
@@ -2909,6 +2934,26 @@ button {
   }
   .button__btt-text {
     display: none;
+  }
+  /* --------- FIRST__MODAL ---------- */
+  /* --------- FIRST__MODAL ---------- */
+  .first-modal .first-modal__hr {
+    margin-bottom: 10px;
+  }
+  .first-modal__container {
+    padding: 20px;
+  }
+  .first-modal__heading {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .first-modal__text {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  .first-modal__button-continue {
+    font-size: 12px;
+    padding: 10px;
   }
 }
 @media (max-width: 500px) {
