@@ -3027,4 +3027,8 @@ button {
 .overlay--show {
   visibility: visible;
   opacity: 1;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

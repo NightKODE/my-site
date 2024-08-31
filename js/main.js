@@ -23,10 +23,21 @@ $(document).ready(function () {
   $('#MAINSNIP').slideUp();
   $('#MAINLINKS').slideUp();
   $('#MAINVSCODE').slideUp();
-
+  const asideClose = () => {
+    if ($('.aside__mobile').hasClass('aside__mobile--open')) {
+      $('.aside__mobile').removeClass('aside__mobile--open')
+    }
+  };
+  const buttonThemesHide = () => {
+    $('.button__themes').addClass('hide')
+  };
+  const buttonThemesShow = () =>{
+    $('.button__themes').removeClass('hide')
+  };
   //MAIN
   $('#main__link').on('click', function (e) {
     e.preventDefault();
+    buttonThemesShow();
     $('html, body').animate({ scrollTop: 0 });
     if (mainPage.slideDown()) {
       $(this).addClass('now');
@@ -40,12 +51,13 @@ $(document).ready(function () {
       mainLINKS.slideUp();
       mainVSCODE.slideUp();
     }
-    $('#elements__link, #html__link, #css__link. #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('#elements__link, #html__link, #css__link, #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   });
 
   //ELEMENTS
   $('#elements__link').on('click', function (e) {
     e.preventDefault();
+    buttonThemesShow();
     $('html, body').animate({ scrollTop: 0 });
     if (mainEelements.slideDown()) {
       $(this).addClass('now');
@@ -60,11 +72,12 @@ $(document).ready(function () {
       mainLINKS.slideUp();
       mainVSCODE.slideUp();
     }
-    $('#main__link, #html__link, #css__link. #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('#main__link, #html__link, #css__link, #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   });
   //HTML
   $('#html__link').on('click', function (e) {
     e.preventDefault();
+    buttonThemesShow();
     $('html,body').animate({ scrollTop: 0 })
     if (mainHtml.slideDown()) {
       $(this).addClass('now');
@@ -78,11 +91,12 @@ $(document).ready(function () {
       mainVSCODE.slideUp();
       mainPage.slideUp();
     }
-    $('#main__link, #elements__link, #css__link. #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('#main__link, #elements__link, #css__link, #scss__link, #git__link, #js__link, #jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
   });
   //CSS
   $('#css__link').on('click', function (e) {
     e.preventDefault();
+    buttonThemesShow();
     $('html,body').animate({ scrollTop: 0 }, 300)
     if (mainCSS.slideDown()) {
       $(this).addClass('now');
@@ -101,6 +115,7 @@ $(document).ready(function () {
   //SASS
   $('#scss__link').on('click', function (e) {
     e.preventDefault();
+    buttonThemesShow();
     $('html,body').animate({ scrollTop: 0 }, 300)
     if (mainSCSS.slideDown()) {
       $(this).addClass('now');
@@ -120,6 +135,7 @@ $(document).ready(function () {
   //GIT
   $('#git__link').on('click', function (e) {
     e.preventDefault();
+    buttonThemesShow();
     $('html,body').animate({ scrollTop: 0 }, 300)
     if (mainGIT.slideDown()) {
       $(this).addClass('now');
@@ -139,6 +155,7 @@ $(document).ready(function () {
   //JAVASCRIPT
   $('#js__link').on('click', function (e) {
     e.preventDefault();
+    buttonThemesShow();
     $('html,body').animate({ scrollTop: 0 }, 300)
     if (mainJAVA.slideDown()) {
       $(this).addClass('now');
@@ -158,6 +175,7 @@ $(document).ready(function () {
   //JQ
   $('#jq__link').on('click', function (e) {
     e.preventDefault();
+    buttonThemesShow();
     $('html,body').animate({ scrollTop: 0 }, 300)
     if (mainJQ.slideDown()) {
       $(this).addClass('now');
@@ -177,6 +195,7 @@ $(document).ready(function () {
   //SNIPPETS
   $('#snippets__link').on('click', function (e) {
     e.preventDefault();
+    buttonThemesHide();
     $('html,body').animate({ scrollTop: 0 }, 300)
     if (mainSNIP.slideDown()) {
       $(this).addClass('now');
@@ -195,6 +214,7 @@ $(document).ready(function () {
   //LINKS
   $('#links__link').on('click', function (e) {
     e.preventDefault();
+    buttonThemesShow();
     $('html,body').animate({ scrollTop: 0 }, 300)
     if (mainLINKS.slideDown()) {
       $(this).addClass('now');
@@ -214,6 +234,7 @@ $(document).ready(function () {
   //VSCODE
   $('#vscode__link').on('click', function (e) {
     e.preventDefault();
+    buttonThemesHide();
     $('html,body').animate({ scrollTop: 0 }, 300)
     if (mainVSCODE.slideDown()) {
       $(this).addClass('now');
@@ -299,24 +320,13 @@ $(document).ready(function () {
       $(this).next('.aside__themes-container').slideDown(300);
     }
   });
-  // const scrollElement = () =>{
-  //   const windowHeight = $(window).height(80)
-  //   if ($('#htmllesson__3').windowHeight){
-  //     // for(let classEnd = 1; classEnd<100; classEnd++);
-  //     alert('Высота до элемента равна 80px')
-  //   }
-  // }
-  // scrollElement()
-  // for(let classEnd = 1; classEnd<100; classEnd++);
-  // const positionElement = $('article').offset().top;
-  // const heights = []
-  // $("article").each(function(index, element){
-  //   heights.push($(element).height());
-  //   console.log(positionElement);
-  // });
   //Button themes
+
   $('.button__themes').on('click', function (e) {
     e.preventDefault();
+    if ($('#main__link').hasClass('now')){
+      $('.aside__main').toggleClass('aside__mobile--open')
+    }
     if ($('#html__link').hasClass('now')) {
       $('.aside__html').toggleClass('aside__mobile--open');
     };
@@ -343,12 +353,24 @@ $(document).ready(function () {
     };
     if($('.overlay').hasClass('overlay--show')){
       $('.overlay').removeClass('overlay--show')
-    }
+    };
+
   });
   $('.main__inner').on('click', function () {
     $('.aside__mobile').removeClass('aside__mobile--open');
     $('.header__container').removeClass('header__top--open');
   });
+  $('header').on('click', function(){
+    asideClose()
+  })
+  $('footer').on('click', function(){
+    asideClose()
+  })
+
+  // let now = $('#snippets__link').hasClass('now') === true
+  // ? $('.button__themes').css('display', 'none')
+  // : $('.button__themes').css('display', 'flex')
+  // : $('#snippets__link').hasClass('now')
   // Light theme button 
   $('.header__button-light-theme').on('click', function () {
     $(this).toggleClass('light');
