@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./css/fonts.css">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
-  <title>My site!</title>
+  <title>TEST</title>
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -417,11 +417,14 @@ c-0.23,0-0.43-0.08-0.58-0.25S21.92,14.86,21.92,14.62z" />
           <!-- TODO переназначить номер -->
           <article class="React__Lesson" id="lesson__1">
             <hr>
-            <h1><span>Lesson 1<br> Одностраничные приложения - SPA (single page application).</span><p>L1. SPA</p></h1>
+            <h1><span>Lesson 1<br> Одностраничные приложения - SPA (single page application).</span>
+              <p>L1. SPA</p>
+            </h1>
             <hr>
             <div class="lesson__inner">
               <div class="main__text">
-                В одностраничном приложении клиент запрашивает только одну страницу <span>HTML</span> и <span>JS</span>, <span>CSS</span> для всего приложения.
+                В одностраничном приложении клиент запрашивает только одну страницу <span>HTML</span> и <span>JS</span>,
+                <span>CSS</span> для всего приложения.
                 <br><br>
                 При навигации по "страницам" весь визуал меняет сам клиент при помощи <span>JavaScript</span>.
               </div>
@@ -434,8 +437,9 @@ c-0.23,0-0.43-0.08-0.58-0.25S21.92,14.86,21.92,14.62z" />
               </ul>
               <h2 id="reacttheme__1-2">Недостатки SPA</h2>
               <ul class="lesson__list">
-                <li>Для поисковой оптимизации необходимо выполнить дополнительную настройку сервера для корректного сканирования ботами, такими ка Googlebot.</li>
-                <li>Большой размер файла JavaScript влияет на время начальной загрузки приложения.  </li>
+                <li>Для поисковой оптимизации необходимо выполнить дополнительную настройку сервера для корректного
+                  сканирования ботами, такими ка Googlebot.</li>
+                <li>Большой размер файла JavaScript влияет на время начальной загрузки приложения. </li>
               </ul>
             </div>
             <hr>
@@ -448,8 +452,47 @@ c-0.23,0-0.43-0.08-0.58-0.25S21.92,14.86,21.92,14.62z" />
             <hr>
             <div class="lesson__inner">
               <div class="main__text">
-                
+                React-библиотеку можно подключить двумя способами:
               </div>
+              <h2 id="react__1-1">Просто подключение</h2>
+              <div class="main__text">
+                В простом подключении достаточно просто добавить нестколько ссылок в тег <span>head</span> в
+                html-документ, а в при поключении файла со скриптами добавить type:
+              </div>
+              <img src="images/react5.png" alt="" class="img img--l">
+              <img src="images/react6.png" alt="" class="img img--l">
+              <h2 id="react__1-2">Создвние приложения React</h2>
+              <div class="main__text">
+                Для создания приложения React необходим Node.js, в котором его можно создать, а
+                затем запускать на подобии "Live server" для VSCode.
+                <br><br>
+                Алгоритм следующий:
+              </div>
+              <ol class="lesson__order-list">
+                <li>
+                  <div class="main__text">Создаем папку с будущего проекта</div>
+                </li>
+                <li>
+                  <div class="main__text">В текстовом редакторе открываем терминал и вводим команду <span>npx
+                      create-react-app .</span>,
+                    после чего создастся шаблонный проект:
+                  </div>
+                  <img src="images/react7.jpg" alt="" class="img">
+                </li>
+                <li>
+                  <div class="main__text">В начале документа со скриптами пишем следующее:</div>
+                  <img src="images/react8.png" alt="" class="img img--l">
+                </li>
+                <li>
+                  <div class="main__text">
+                    На следующем этапе проект необходимо "построить" командой <span>npm run build</span>, после чего
+                    будет создана папка buil.
+                  </div>
+                </li>
+                <li>
+                  <div class="main__text">Теперь проект можно запускать командой <span>npm run start</span>.</div>
+                </li>
+              </ol>
             </div>
             <hr>
           </article>
@@ -502,7 +545,8 @@ c-0.23,0-0.43-0.08-0.58-0.25S21.92,14.86,21.92,14.62z" />
                   </svg>
                 </div>
                 <h3>Class</h3> <br>
-                Для того чтобы присвоить класс тегу, необходимо приписать ему <span>className</span>, а не <span>class</span>, т.к. свойство <span>class</span>
+                Для того чтобы присвоить класс тегу, необходимо приписать ему <span>className</span>, а не
+                <span>class</span>, т.к. свойство <span>class</span>
                 будет конфликтовать с классами JS.
               </div>
             </div>
@@ -510,7 +554,7 @@ c-0.23,0-0.43-0.08-0.58-0.25S21.92,14.86,21.92,14.62z" />
           </article>
         </section>
       </div>
-      
+
     </main>
     <!-- ========================================== FOOTER ========================================= -->
     <!-- ========================================== FOOTER ========================================= -->
