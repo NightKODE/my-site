@@ -1,7 +1,10 @@
 $(document).ready(function () {
-  // $('main').on('click', function(){
-  //   console.log('main.js is ready!')
-  // });
+  const testJQ = () => {
+    console.log('main.js is ready!')
+  }
+  $('main').on('click', function(){
+
+  });
   // ---------------nothing pages--------------
   const mainHtml = $('#MAINhtml');
   const mainElements = $('#MAINelements')
@@ -31,234 +34,158 @@ $(document).ready(function () {
   const buttonThemesHide = () => {
     $('.button__themes').addClass('hide')
   };
-  const buttonThemesShow = () =>{
+  const buttonThemesShow = () => {
     $('.button__themes').removeClass('hide')
+  };
+  const removeNowHeader = () => {
+    if ($('.header__nav-element').hasClass('now')) {
+      $('.header__nav-element').removeClass('now')
+    }
+  };
+  const removeNowAll = () => {
+    $('.main__link, #snippets__link, #links__link, #vscode__link').removeClass('now')
+  };
+  const loaderHide = () => {
+    $('.overlay').toggleClass('show');
+    $('.loader').toggleClass('show');
+  };
+  const loader = () => {
+    $('.overlay').toggleClass('show');
+    $('.loader').toggleClass('show');
+    setTimeout(loaderHide, 1000)
+  };
+  const mainSlide = (a, b, c, d, e, f, g, h, i, j, k) => {
+    a.slideDown();
+    b.slideUp();
+    c.slideUp();
+    d.slideUp();
+    e.slideUp();
+    f.slideUp();
+    g.slideUp();
+    h.slideUp();
+    i.slideUp();
+    j.slideUp();
+    k.slideUp();
+    loader();
   };
   //MAIN
   $('.main__link').on('click', function (e) {
     e.preventDefault();
     buttonThemesShow();
     $('html, body').animate({ scrollTop: 0 });
-    if (mainPage.slideDown()) {
-      $(this).addClass('now');
-      mainHtml.slideUp();
-      mainCSS.slideUp();
-      mainSCSS.slideUp();
-      mainGIT.slideUp();
-      mainJAVA.slideUp();
-      mainJQ.slideUp();
-      mainSNIP.slideUp();
-      mainLINKS.slideUp();
-      mainVSCODE.slideUp();
-    }
-    $('#elements__link, .html__link, .css__link, .scss__link, .git__link, .js__link, .jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    mainSlide(mainPage, mainElements, mainHtml, mainCSS, mainSCSS, mainGIT, mainJAVA, mainJQ, mainSNIP, mainLINKS, mainVSCODE);
+    removeNowHeader();
+    $(this).addClass('now')
+    $('#snippets__link, #links__link, #vscode__link').removeClass('now');
   });
   //ELEMENTS
-  $('#elements__link').on('click', function (e) {
+  $('.elements__link').on('click', function (e) {
     e.preventDefault();
     buttonThemesShow();
     $('html, body').animate({ scrollTop: 0 });
-    if (mainEelements.slideDown()) {
-      $(this).addClass('now');
-      mainPage.slideUp();
-      mainHtml.slideUp();
-      mainCSS.slideUp();
-      mainSCSS.slideUp();
-      mainGIT.slideUp();
-      mainJAVA.slideUp();
-      mainJQ.slideUp();
-      mainSNIP.slideUp();
-      mainLINKS.slideUp();
-      mainVSCODE.slideUp();
-    }
-    $('.main__link, .html__link, .css__link, .scss__link, .git__link, .js__link, .jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    mainSlide(mainElements, mainJAVA, mainJQ, mainSNIP, mainLINKS, mainVSCODE, mainPage, mainHtml, mainCSS, mainSCSS, mainGIT);
+    removeNowHeader();
+    $(this).addClass('now');
+    removeNowAll()
   });
   //HTML
   $('.html__link').on('click', function (e) {
     e.preventDefault();
     buttonThemesShow();
-    $('html,body').animate({ scrollTop: 0 })
-    if (mainHtml.slideDown()) {
-      $(this).addClass('now');
-      mainCSS.slideUp();
-      mainSCSS.slideUp();
-      mainGIT.slideUp();
-      mainJAVA.slideUp();
-      mainJQ.slideUp();
-      mainSNIP.slideUp();
-      mainLINKS.slideUp();
-      mainVSCODE.slideUp();
-      mainPage.slideUp();
-    }
-    console.log("work");
-    $('.main__link, #elements__link, .css__link, .scss__link, .git__link, .js__link, .jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('html,body').animate({ scrollTop: 0 });
+    mainSlide(mainHtml, mainCSS, mainSCSS, mainGIT, mainJAVA, mainJQ, mainSNIP, mainLINKS, mainVSCODE, mainPage, mainElements);
+    removeNowHeader();
+    $(this).addClass('now');
+    removeNowAll()
   });
   //CSS
   $('.css__link').on('click', function (e) {
     e.preventDefault();
     buttonThemesShow();
-    $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainCSS.slideDown()) {
-      $(this).addClass('now');
-      mainHtml.slideUp();
-      mainSCSS.slideUp();
-      mainGIT.slideUp();
-      mainJAVA.slideUp();
-      mainJQ.slideUp();
-      mainSNIP.slideUp();
-      mainLINKS.slideUp();
-      mainVSCODE.slideUp();
-      mainPage.slideUp();
-    }
-    $('.main__link, #elements__link, .html__link, .scss__link, .git__link, .js__link, .jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('html,body').animate({ scrollTop: 0 })
+    mainSlide(mainCSS, mainSCSS, mainGIT, mainJAVA, mainJQ, mainSNIP, mainLINKS, mainVSCODE, mainPage,mainElements, mainHtml);
+    removeNowHeader();
+    $(this).addClass('now');
+    removeNowAll()
   });
   //SASS
   $('.scss__link').on('click', function (e) {
     e.preventDefault();
     buttonThemesShow();
-    $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainSCSS.slideDown()) {
-      $(this).addClass('now');
-      mainHtml.slideUp();
-      mainCSS.slideUp();
-      mainGIT.slideUp();
-      mainJAVA.slideUp();
-      mainJQ.slideUp();
-      mainSNIP.slideUp();
-      mainLINKS.slideUp();
-      mainVSCODE.slideUp();
-      mainPage.slideUp();
-
-    }
-    $('.main__link, #elements__link, .html__link, .css__link, .git__link, .js__link, .jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('html,body').animate({ scrollTop: 0 })
+    mainSlide(mainSCSS, mainGIT, mainJAVA, mainJQ, mainSNIP, mainLINKS, mainVSCODE, mainPage, mainHtml, mainElements, mainCSS);
+    removeNowHeader();
+    $(this).addClass('now');
+    removeNowAll()
   });
   //GIT
   $('.git__link').on('click', function (e) {
     e.preventDefault();
     buttonThemesShow();
-    $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainGIT.slideDown()) {
-      $(this).addClass('now');
-      mainHtml.slideUp();
-      mainCSS.slideUp();
-      mainSCSS.slideUp();
-      mainJAVA.slideUp();
-      mainJQ.slideUp();
-      mainSNIP.slideUp();
-      mainLINKS.slideUp();
-      mainVSCODE.slideUp();
-      mainPage.slideUp();
-
-    }
-    $('.main__link, #elements__link, .html__link, .scss__link, .css__link, .js__link, .jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('html,body').animate({ scrollTop: 0 })
+    mainSlide(mainGIT, mainJAVA, mainJQ, mainSNIP, mainLINKS, mainVSCODE, mainPage, mainHtml, mainCSS, mainElements, mainSCSS);
+    removeNowHeader();
+    $(this).addClass('now');
+    removeNowAll()
   });
   //JAVASCRIPT
   $('.js__link').on('click', function (e) {
     e.preventDefault();
     buttonThemesShow();
-    $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainJAVA.slideDown()) {
-      $(this).addClass('now');
-      mainHtml.slideUp();
-      mainCSS.slideUp();
-      mainSCSS.slideUp();
-      mainGIT.slideUp();
-      mainJQ.slideUp();
-      mainSNIP.slideUp();
-      mainLINKS.slideUp();
-      mainVSCODE.slideUp();
-      mainPage.slideUp();
-
-    }
-    $('.main__link, #elements__link, .html__link, .scss__link, .git__link, .css__link, .jq__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('html,body').animate({ scrollTop: 0 })
+    mainSlide(mainJAVA, mainJQ, mainSNIP, mainLINKS, mainVSCODE, mainPage, mainHtml, mainCSS, mainSCSS, mainElements, mainGIT);
+    removeNowHeader();
+    $(this).addClass('now');
+    removeNowAll()
   });
   //JQ
   $('.jq__link').on('click', function (e) {
     e.preventDefault();
     buttonThemesShow();
-    $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainJQ.slideDown()) {
-      $(this).addClass('now');
-      mainHtml.slideUp();
-      mainCSS.slideUp();
-      mainSCSS.slideUp();
-      mainGIT.slideUp();
-      mainJAVA.slideUp();
-      mainSNIP.slideUp();
-      mainLINKS.slideUp();
-      mainVSCODE.slideUp();
-      mainPage.slideUp();
-
-    }
-    $('.main__link, #elements__link, .html__link, .scss__link, .git__link, .js__link, .css__link, #snippets__link, #links__link, #vscode__link').removeClass('now');
+    $('html,body').animate({ scrollTop: 0 })
+    mainSlide(mainJQ, mainSNIP, mainLINKS, mainVSCODE, mainPage, mainHtml, mainCSS, mainSCSS, mainGIT, mainElements, mainJAVA);
+    removeNowHeader();
+    $(this).addClass('now');
+    removeNowAll()
   });
   //SNIPPETS
   $('#snippets__link').on('click', function (e) {
     e.preventDefault();
     buttonThemesHide();
-    $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainSNIP.slideDown()) {
-      $(this).addClass('now');
-      mainCSS.slideUp();
-      mainSCSS.slideUp();
-      mainGIT.slideUp();
-      mainJAVA.slideUp();
-      mainJQ.slideUp();
-      mainLINKS.slideUp();
-      mainVSCODE.slideUp();
-      mainPage.slideUp();
-      mainHtml.slideUp();
-    }
-    $('.main__link, #elements__link, .html__link, .scss__link, .git__link, .js__link, .jq__link, .css__link, #links__link, #vscode__link').removeClass('now');
+    $('html,body').animate({ scrollTop: 0 })
+    mainSlide(mainSNIP, mainLINKS, mainVSCODE, mainPage, mainHtml, mainCSS, mainSCSS, mainGIT, mainJAVA, mainElements, mainJQ);
+    removeNowHeader();
+    $(this).addClass('now');
+    removeNowAll()
   });
   //LINKS
   $('#links__link').on('click', function (e) {
     e.preventDefault();
     buttonThemesShow();
-    $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainLINKS.slideDown()) {
-      $(this).addClass('now');
-      mainHtml.slideUp();
-      mainCSS.slideUp();
-      mainSCSS.slideUp();
-      mainGIT.slideUp();
-      mainJAVA.slideUp();
-      mainJQ.slideUp();
-      mainSNIP.slideUp();
-      mainVSCODE.slideUp();
-      mainPage.slideUp();
-
-    }
-    $('.main__link, #elements__link, .html__link, .scss__link, .git__link, .js__link, .jq__link, #snippets__link, .css__link, #vscode__link').removeClass('now');
+    $('html,body').animate({ scrollTop: 0 })
+    mainSlide(mainLINKS, mainVSCODE, mainPage, mainHtml, mainCSS, mainSCSS, mainGIT, mainJAVA, mainJQ, mainElements, mainSNIP);
+    removeNowHeader();
+    $(this).addClass('now');
+    removeNowAll()
   });
   //VSCODE
   $('#vscode__link').on('click', function (e) {
     e.preventDefault();
     buttonThemesHide();
-    $('html,body').animate({ scrollTop: 0 }, 300)
-    if (mainVSCODE.slideDown()) {
-      $(this).addClass('now');
-      mainHtml.slideUp();
-      mainCSS.slideUp();
-      mainSCSS.slideUp();
-      mainGIT.slideUp();
-      mainJAVA.slideUp();
-      mainJQ.slideUp();
-      mainSNIP.slideUp();
-      mainLINKS.slideUp();
-      mainPage.slideUp();
-
-    }
-    $('.main__link, #elements__link, .html__link, .scss__link, .git__link, .js__link, .jq__link, #snippets__link, #links__link, .css__link').removeClass('now');
+    $('html,body').animate({ scrollTop: 0 })
+    mainSlide(mainVSCODE, mainPage, mainHtml, mainCSS, mainSCSS, mainGIT, mainJAVA, mainJQ, mainElements, mainLINKS, mainSNIP);
+    removeNowHeader();
+    $(this).addClass('now');
+    removeNowAll()
   });
   //FIRST__MODAL
-  $('.first-modal__button-continue').on('click', function(){
+  $('.first-modal__button-continue').on('click', function () {
     $('.first-modal').addClass('disable');
-    $('.overlay').removeClass('overlay--show');
+    $('.overlay').removeClass('show');
     $(this).animate({
       opacity: 0,
       bottom: -500,
-    },300);
+    }, 300);
     $('.first-modal__text').animate({
       opacity: 0,
       right: -1500,
@@ -279,40 +206,28 @@ $(document).ready(function () {
 
     // })
   });
-  // Header burrger follow
-
-  // setInterval(() => {
-  //   if ($(window).scrollTop() > 0 && $('.header__inner-mobile').hasClass('header__top--open') === false) {
-  //     $('.burger').addClass('burger--follow')
-  //   } else {
-  //     $('.burger').removeClass('burger--follow')
-  //   }
-  // }, 0);
-
   // Header overlay and burger
   $('.burger, .overlay').on('click', function (e) {
     e.preventDefault()
     $('.header__inner-mobile').toggleClass('header__top--open');
-    $('.overlay').toggleClass('overlay--show');
+    $('.overlay').toggleClass('show');
     if ($('.aside__mobile').hasClass('aside__mobile--open')) {
       $('.aside__mobile').removeClass('aside__mobile--open')
     }
   });
   $('.header__inner-mobile').on('click', function () {
     $('.header__inner-mobile').toggleClass('header__top--open');
-    $('.overlay').removeClass('overlay--show');
+    $('.overlay').removeClass('show');
   });
   // Header footer link
   $('.podval').click(function () {
     $('.header__inner-mobile').removeClass('header__top--open');
-    $('.overlay').removeClass('overlay--show')
+    $('.overlay').removeClass('show')
   });
   // Aside
   $('.aside__link').on("click", function () {
     $('.aside__mobile').removeClass('aside__mobile--open');
     if ($(this).hasClass('aside-active')) {
-      // $(this).removeClass('aside-active');
-      // $(this).next('.aside__themes-container').slideUp(300);
     } else {
       $('.aside__link').removeClass('aside-active');
       $('.aside__themes-container').slideUp(300);
@@ -323,7 +238,7 @@ $(document).ready(function () {
   //Button themes
   $('.button__themes').on('click', function (e) {
     e.preventDefault();
-    if ($('.main__link').hasClass('now')){
+    if ($('.main__link').hasClass('now')) {
       $('.aside__main').toggleClass('aside__mobile--open')
     }
     if ($('.html__link').hasClass('now')) {
@@ -347,11 +262,11 @@ $(document).ready(function () {
     if ($('#links__link').hasClass('now')) {
       $('.aside__links').toggleClass('aside__mobile--open');
     };
-    if($('.header__inner-mobile').hasClass('header__top--open')){
+    if ($('.header__inner-mobile').hasClass('header__top--open')) {
       $('.header__inner-mobile').removeClass('header__top--open');
     };
-    if($('.overlay').hasClass('overlay--show')){
-      $('.overlay').removeClass('overlay--show')
+    if ($('.overlay').hasClass('show')) {
+      $('.overlay').removeClass('show')
     };
 
   });
@@ -359,10 +274,10 @@ $(document).ready(function () {
     $('.aside__mobile').removeClass('aside__mobile--open');
     $('.header__inner-mobile').removeClass('header__top--open');
   });
-  $('header').on('click', function(){
+  $('main').on('click', function () {
     asideClose()
   });
-  $('footer').on('click', function(){
+  $('footer').on('click', function () {
     asideClose()
   });
   // let now = $('#snippets__link').hasClass('now') === true
@@ -415,7 +330,7 @@ $(document).ready(function () {
       $('.header__button-footer-link').css('background-color', '#ffffff');
       $('.overlay').css('background', 'rgb(255 255 255 / 77%)');
       $('.interface-panel').css('background', '#b1b1b1');
-      $('.main__text').$('span').css('background', '#f35510');
+      $('.main__text').children('span').css('background', '#f35510');
 
     } else {
       $('.moon').css('top', '0px');
@@ -459,7 +374,7 @@ $(document).ready(function () {
       $('.header__button-footer-link').css('background-color', '');
       $('.overlay').css('background', '');
       $('.interface-panel').css('background', '');
-      $('.main__text').$('span').css('background', '');
+      $('.main__text').children('span').css('background', '');
     }
   });
   // jQuery lesson 1
@@ -685,9 +600,9 @@ $(document).ready(function () {
     }
   });
   //button__ocntinue
-  $('.button__continue').on('click', function(){
-    for(let contCount = 1; contCount < 10; contCount++){
-      if (contCount % 2 === 0){
+  $('.button__continue').on('click', function () {
+    for (let contCount = 1; contCount < 10; contCount++) {
+      if (contCount % 2 === 0) {
         continue
       }
       alert(contCount)
@@ -697,67 +612,67 @@ $(document).ready(function () {
   // if($('.lesson__${classEnd}').ofset() === 80){
   //   $('.aside__element').attr('title')
   // }
-/* ========================================== ELEMENTS ========================================== */
-/* ========================================== ELEMENTS ========================================== */
-//ACCORDION
-$('.elements__accordeon-heading').on("click", function () {
-  if ($(this).hasClass('active2')) {
-    $(this).removeClass('active2');
-    $(this).next('.elements__accordeon-body').slideUp(300);
-    $(this).children('.elements__accordeon-icon').children('.elements__accordeon-icon-2').removeClass('active-accordion');
-  } else {
-    $('.elements__accordeon-header').removeClass('active2');
-    $('.elements__accordeon-body').slideUp(300);
-    $('.elements__accordeon-icon-2').removeClass('active-accordion');
-    $(this).addClass('active2');
-    $(this).next('.elements__accordeon-body').slideDown(300);
-    $(this).children('.elements__accordeon-icon').children('.elements__accordeon-icon-2').addClass('active-accordion');
-  }
-});
-//MODAL
-$('.elements__modal-col').on('click', function(){
-  $('.overlay').toggleClass('overlay--show');
-  $('.elements__modal-container').toggleClass('overlay--show');
-});
-$('.elements__modal-close').on('click', function(){
-  $('.overlay').toggleClass('overlay--show');
-  $('.elements__modal-container').toggleClass('overlay--show');
-});
-//SLICK__SLIDER
-// $('.elements__slider-container').slick();
-// $('.elements__slider-container').slick({
-//   dots: true,
-//   arrows: false,
-//   slidesToShow: 3,
-//   infinite: true,
-//   // draggable: true,
-//   // waitForAnimate: false,
-//   appendDots: $('.elements__slider-dots-container'),
-//   responsive:
-//   [
-//     {
-//       breakpoint: 750,
-//       settings:{
-//         slidesToShow: 2,
-//       },
-//     },
-//     {
-//       breakpoint: 550,
-//       settings:{
-//         slidesToShow: 1,
-//         draggable: true,
-//         dots: true,
-//       },
-//     },
-//   ]
-// })
-// $('.elements__slider-prev').on('click', function (e) {
-//   e.preventDefault()
-//   $('.elements__slider-container').slick('slickPrev')
-// })
-// $('.elements__slider-next').on('click', function (e) {
-//   e.preventDefault()
-//   $('.elements__slider-container').slick('slickNext')
-// })
+  /* ========================================== ELEMENTS ========================================== */
+  /* ========================================== ELEMENTS ========================================== */
+  //ACCORDION
+  $('.elements__accordeon-heading').on("click", function () {
+    if ($(this).hasClass('active2')) {
+      $(this).removeClass('active2');
+      $(this).next('.elements__accordeon-body').slideUp(300);
+      $(this).children('.elements__accordeon-icon').children('.elements__accordeon-icon-2').removeClass('active-accordion');
+    } else {
+      $('.elements__accordeon-header').removeClass('active2');
+      $('.elements__accordeon-body').slideUp(300);
+      $('.elements__accordeon-icon-2').removeClass('active-accordion');
+      $(this).addClass('active2');
+      $(this).next('.elements__accordeon-body').slideDown(300);
+      $(this).children('.elements__accordeon-icon').children('.elements__accordeon-icon-2').addClass('active-accordion');
+    }
+  });
+  //MODAL
+  $('.elements__modal-col').on('click', function () {
+    $('.overlay').toggleClass('show');
+    $('.elements__modal-container').toggleClass('show');
+  });
+  $('.elements__modal-close').on('click', function () {
+    $('.overlay').toggleClass('show');
+    $('.elements__modal-container').toggleClass('show');
+  });
+  //SLICK__SLIDER
+  // $('.elements__slider-container').slick();
+  // $('.elements__slider-container').slick({
+  //   dots: true,
+  //   arrows: false,
+  //   slidesToShow: 3,
+  //   infinite: true,
+  //   // draggable: true,
+  //   // waitForAnimate: false,
+  //   appendDots: $('.elements__slider-dots-container'),
+  //   responsive:
+  //   [
+  //     {
+  //       breakpoint: 750,
+  //       settings:{
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 550,
+  //       settings:{
+  //         slidesToShow: 1,
+  //         draggable: true,
+  //         dots: true,
+  //       },
+  //     },
+  //   ]
+  // })
+  // $('.elements__slider-prev').on('click', function (e) {
+  //   e.preventDefault()
+  //   $('.elements__slider-container').slick('slickPrev')
+  // })
+  // $('.elements__slider-next').on('click', function (e) {
+  //   e.preventDefault()
+  //   $('.elements__slider-container').slick('slickNext')
+  // })
 })
 

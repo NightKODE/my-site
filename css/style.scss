@@ -206,7 +206,54 @@ html {
 .disable {
   display: none;
 }
+/* ----------- LOADER ------------ */
+/* ----------- LOADER ------------ */
+.loader {
+  height: 50px;
+  text-align: center;
+  font-size: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 150;
+  visibility: hidden;
+  opacity: 0;
+  div {
+    height: 100%;
+    width: 8px;
+    display: inline-block;
+    margin-left: 2px;
+    animation: delay 0.8s infinite ease-in-out;
+    background: #3dbed5;
+  }
+  .bar2{
+    animation-delay: -0.7s;
+  }
+  .bar3{
+    animation-delay: -0.6s;
+  }
+  .bar4{
+    animation-delay: -0.5s;
+  }
+  .bar5{
+    animation-delay: -0.4s;
+  }
+  .bar6{
+    animation-delay: -0.3s;
+  }
+}
 
+
+
+
+@keyframes delay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.05);
+  }  20% { 
+    transform: scaleY(1.0);
+  }
+}
 /* ========================================== HEADER ========================================== */
 /* ========================================== HEADER ========================================== */
 .burger {
@@ -3208,7 +3255,7 @@ button {
 
   .aside__mobile {
     display: block;
-    height: 100%;
+    height: calc(100% - 80px);
     position: fixed;
     top: 0;
     bottom: 0;
@@ -3221,10 +3268,13 @@ button {
     transition: all 0.3s;
 
     .aside__list {
-      height: 100%;
+      height: calc(100% - 85px);
     }
   }
+  .aside__inner{
+    margin-bottom: 0;
 
+  }
   .aside__mobile--open {
     transform: translateX(0%);
   }
@@ -3467,7 +3517,7 @@ button {
   }
 }
 
-.overlay--show {
+.show {
   visibility: visible;
   opacity: 1;
 }
