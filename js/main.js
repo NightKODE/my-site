@@ -17,15 +17,15 @@ $(document).ready(function () {
   const mainLINKS = $('#MAINLINKS');
   const mainVSCODE = $('#MAINVSCODE');
   const mainPage = $('#MAINPAGE');
-  $('#MAINhtml').slideUp();
-  $('#MAINCSS').slideUp();
-  $('#MAINSCSS').slideUp();
-  $('#MAINGIT').slideUp();
-  $('#MAINJAVA').slideUp();
-  $('#MAINJQ').slideUp();
-  $('#MAINSNIP').slideUp();
-  $('#MAINLINKS').slideUp();
-  $('#MAINVSCODE').slideUp();
+  $('#MAINhtml').fadeOut();
+  $('#MAINCSS').fadeOut();
+  $('#MAINSCSS').fadeOut();
+  $('#MAINGIT').fadeOut();
+  $('#MAINJAVA').fadeOut();
+  $('#MAINJQ').fadeOut();
+  $('#MAINSNIP').fadeOut();
+  $('#MAINLINKS').fadeOut();
+  $('#MAINVSCODE').fadeOut();
   const asideClose = () => {
     if ($('.aside__mobile').hasClass('aside__mobile--open')) {
       $('.aside__mobile').removeClass('aside__mobile--open')
@@ -55,17 +55,17 @@ $(document).ready(function () {
     setTimeout(loaderHide, 1000)
   };
   const mainSlide = (a, b, c, d, e, f, g, h, i, j, k) => {
-    a.slideDown();
-    b.slideUp();
-    c.slideUp();
-    d.slideUp();
-    e.slideUp();
-    f.slideUp();
-    g.slideUp();
-    h.slideUp();
-    i.slideUp();
-    j.slideUp();
-    k.slideUp();
+    a.fadeIn();
+    b.fadeOut();
+    c.fadeOut();
+    d.fadeOut();
+    e.fadeOut();
+    f.fadeOut();
+    g.fadeOut();
+    h.fadeOut();
+    i.fadeOut();
+    j.fadeOut();
+    k.fadeOut();
     loader();
   };
   //MAIN
