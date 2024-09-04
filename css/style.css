@@ -232,6 +232,37 @@ html {
   animation-delay: -0.3s;
 }
 
+.elements__loader {
+  height: 150px;
+  font-size: 10px;
+  margin: 0 auto 50px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.elements__loader div {
+  height: 100%;
+  width: 25px;
+  display: inline-block;
+  margin-left: 2px;
+  animation: delay 0.8s infinite ease-in-out;
+  background: #3dbed5;
+}
+.elements__loader .bar2 {
+  animation-delay: -0.7s;
+}
+.elements__loader .bar3 {
+  animation-delay: -0.6s;
+}
+.elements__loader .bar4 {
+  animation-delay: -0.5s;
+}
+.elements__loader .bar5 {
+  animation-delay: -0.4s;
+}
+.elements__loader .bar6 {
+  animation-delay: -0.3s;
+}
+
 @keyframes delay {
   0%, 40%, 100% {
     transform: scaleY(0.05);
@@ -2215,6 +2246,7 @@ th {
   height: fit-content;
   padding: 100px;
   color: white;
+  text-align: center;
   background: #007388;
   border: solid 3px #00b8ff;
   border-radius: 15px;
@@ -2223,7 +2255,7 @@ th {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 51;
+  z-index: 101;
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s;
@@ -2328,15 +2360,39 @@ th {
 /* ------------- POPUP ------------ */
 /* ------------- POPUP ------------ */
 .elements__popup-container {
-  background: rgba(183, 183, 183, 0.1);
+  position: fixed;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: rgba(195, 195, 195, 0.512);
   -webkit-backdrop-filter: blur(8.9px);
           backdrop-filter: blur(8.9px);
   border: 1px solid rgba(0, 0, 0, 0.21);
   border-radius: 30px;
   padding: 30px;
-  bottom: 0%;
-  right: 0%;
+  bottom: -100%;
+  right: 30px;
   overflow: hidden;
+  z-index: 100;
+  transition: all 0.3s;
+}
+
+.elements__popup-container-show {
+  bottom: 30px;
+}
+
+.elements__popup-button {
+  font-size: 20px;
+  display: block;
+  margin: 0 auto 50px;
+  color: inherit;
+  padding: 30px;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+.elements__popup-button:hover {
+  transform: scale(1.2);
 }
 
 /* ========================================== ASIDE ========================================== */
