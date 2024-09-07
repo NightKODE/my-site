@@ -47,15 +47,20 @@ $(document).ready(function () {
     $('.main__link, #snippets__link, #links__link, #vscode__link').removeClass('now')
   };
   const loaderHide = () => {
+    // $('.overlay').toggleClass('show')
+    // if($('.overlay').hasClass('show') == false){
+    // }
     $('.overlay').toggleClass('show');
     $('.loader').toggleClass('show');
   };
   const loader = () => {
-    $('.overlay').toggleClass('show')
-    if($('.overlay').hasClass('show') !== false){
-      $('.overlay').removeProp('show');
-    }else{}
     $('.loader').toggleClass('show');
+    if($('.overlay').hasClass('show')){
+      !$('.overlay').toggleClass('show')
+    }
+    if(!$('.overlay').hasClass('show')){
+      $('.overlay').toggleClass('show')
+    }
     setTimeout(loaderHide, 1000)
   };
   const mainSlide = (a, b, c, d, e, f, g, h, i, j, k) => {
@@ -213,9 +218,10 @@ $(document).ready(function () {
   // Header burger
   $('.burger, .overlay').on('click', function (e) {
     e.preventDefault()
+    $('.overlay').toggleClass('show')
     $('.header__inner-mobile').toggleClass('header__top--open');
     if ($('.aside__mobile').hasClass('aside__mobile--open')) {
-      $('.aside__mobile').removeClass('aside__mobile--open')
+      $('.aside__mobile').removeClass('aside__mobile--open');
     }
   });
   $('.header__inner-mobile').on('click', function () {
